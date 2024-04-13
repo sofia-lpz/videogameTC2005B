@@ -46,15 +46,15 @@
 
 ### **Summary**
 
-Sum up your game idea in 2 sentences. A kind of elevator pitch. Keep it simple!
+Is a strategic card-based adventure game in a visually distorted cityscape, where the player navigate an hypnotized protagonist on a quest to confront the magician responsible for their altered state of consciousness. The game combines exploration of a pixel art map with engaging card battles, unfolding the story through vividly illustrated cutscenes.
 
 ### **Gameplay**
 
-What should the gameplay be like? What is the goal of the game, and what kind of obstacles are in the way? What tactics should the player use to overcome them?
+The game integrates exploration with card-based combat. Each level on the 2D pixel art map represents a card battle that progressively reveals the storyline through both victories and defeats. Players encounter a variety of enemies transformed by the protagonist's distorted perception into fantastical beings. The primary objective is to reach the magician, overcoming obstacles such as complex cards and deceptive environments that tweak gameplay mechanics. Success in battles depends on strategic deck management and the ability to adapt tactics to the shifting conditions influenced by the magician effects.
 
 ### **Mindset**
 
-What kind of mindset do you want to provoke in the player? Do you want them to feel powerful, or weak? Adventurous, or nervous? Hurried, or calm? How do you intend to provoke those emotions?
+The game is designed to induce a sense of curiosity, encouraging players to continuously question the reality presented within the game. Exploration is meant to be adventurous, with card combat phases designed to be intense and strategic, creating an intellectually engaging atmosphere. This employs a unique blend of eerie, whimsical music and unsettling yet compelling cutscenes, utilizing images and dialogue boxes to enhance the narrative. This artistic approach supports the theme of fluctuating reality, aiming to disorient yet captivate players, making each session a uniquely challenging and immersive experience.
 
 ## _Technical_
 
