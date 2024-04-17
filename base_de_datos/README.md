@@ -1,4 +1,4 @@
-# Pokemon TCG
+# TCG
 
 ![ER-Model Image](./retoUML.jpg)
 
