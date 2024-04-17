@@ -31,4 +31,4 @@
 
 - **Match**
 
-  Tis table is to keep score of matches played. it includes a date, a playerID and a result which can say if the non npc player won or not. This is for showing stats later.
+  This table is to keep score of matches played. it includes a date, a playerID and a result which can say if the non npc player won or not. This is for showing stats later.
