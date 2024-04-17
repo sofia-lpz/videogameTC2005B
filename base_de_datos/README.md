@@ -18,7 +18,7 @@
 
 - **effect**
 
-  These are types that appear in the game and are applicable to different cards, as previously mentioned.
+  These are types that appear in the game and are applicable to different cards, as previously mentioned. They have a duration and a description and are related to the cardID, since they have a one to one relationship
 
 - **action**
 
