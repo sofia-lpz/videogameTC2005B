@@ -10,7 +10,7 @@
 
 ## Gameplay and Design
 
-1. As a player, I want a game that has a striking background so that I feel more attracted to the game.
+1. As a player, I want a game that has a striking background and map design so that I feel more attracted to the game.
 2. As a player, I want to be able to move around the map levels as the player so I can have a more immersive experience.
 3. As a player, I want to have character cards that have character design so I can feel attracted to them.
 4. As a player, I want to have a line story that explains my objective in the game so I can feel engaged.
