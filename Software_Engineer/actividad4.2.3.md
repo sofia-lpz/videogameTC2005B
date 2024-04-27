@@ -43,7 +43,7 @@ To play their card they need to have the necessary energy as dictated by the car
 
 - The match ends when either the player or the enemy lose all their health.
 
-If a player wins the match, they get rewarded with new cards or abilities and can carry on exploring the rest of the map.
+If a player wins the match, they get rewarded with new cards or abilities that they can use in the next matches and they can carry on exploring the rest of the map.
 
 ## Screen list
 
