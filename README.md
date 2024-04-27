@@ -1,4 +1,22 @@
 # Lost Illusion
+
+## Directory map
+Data_base
+- entity relation model UML
+
+Software_engineer
+- user stories
+- actividad 4.2.3 (26th of april, mechanics)
+- requirements.md?
+
+Videogame
+- unity files
+- GDD
+- Slides presentation
+
+Web_api
+- api example (social service with octavio example)
+
 ## Project Team
 The membersof the team for this project are:
 
