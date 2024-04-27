@@ -109,3 +109,13 @@ tcg game manager
 
 ## Illustrations
 
+![Sprite of the back of the cards] (/Videogame/LostIllusion/Assets/Sprites/Atrás.png)
+![Sprite of character cards] (/Videogame/LostIllusion/Assets/Sprites/Cartasmesa.png)
+![Sprite of dice] (/Videogame/LostIllusion/Assets/Sprites/Dado.png)
+![Sprite of dice] (/Videogame/LostIllusion/Assets/Sprites/deck.png)
+![Sprite of table] (/Videogame/LostIllusion/Assets/Sprites/Mesa.png)
+![Sprite of cards] (/Videogame/LostIllusion/Assets/Sprites/Poderes.png)
+
+
+
+
