@@ -31,13 +31,21 @@ The player will be able to navigate a 2d pixel art map of the town using their a
 
 - TCG
 
-When the player encounters a character a 1v1 card match will start. Their deck will be made up of the objects they've collected during the exploration part of the game and some will be predetermined. They are in the players inventory.
+When the player encounters a character a 1v1 card match will start. First, they will choose 3 characters from the characters they have in their inventory. Their deck will be made up of the objects they've collected during the exploration part of the game and some will be predetermined. They are in the players inventory.
+Also there are 4 elements that the characters will have, fire, water, snow, air. To counter a water character, you will have to use a snow character, this will make that the water character receives more damage and does less damage. This as this, fire defeats snow and is countered by water, snow defeats water and is countered by fire, water defeats fire and is countered by snow. Air doesn't have a counter or defeats the other elements, what air does is to react to the effect that the element effect that the enemy has and makes damage to more than one player, but the damage that air characters do, is lower to others.
+The player can choose the active character at any time but it will have energy cost to switch active characters.
 
 ### Game flow
 
-- First the player must roll some dice. This determines the number of energy poitns they have for the turn, and is random.
+- First the player will choose the 3 characters that they will use.
 
-- Players can play one card per turn. These have different effects such as healing, which increases their health, attack, which lowers the health of the opponent, (y que mas?)
+- A coin will toss to decide which player starts their turn first.
+
+- Then the player must roll some dice. This determines the number of energy poitns they have for the turn, and is random.
+
+- Also the player will decide its starting character.
+
+- Players can play the cards they want per turn, they are limited by their energy in the round, the energy resets each round. These have different effects such as healing, which increases their health, attack, which lowers the health of the opponent, effects such as attack buffs or defense buffs, these have an element.
 
 To play their card they need to have the necessary energy as dictated by the card. When they play the card the energy points are spent and their turn is over.
 
@@ -60,7 +68,7 @@ Here the player can move through the town
 
 ### TCG match
 
-### table
+### Table
 Here the player can see their match cards and the enemy cards as well as some parts of the enemy
 
 ### enemy
@@ -108,14 +116,5 @@ tcg game manager
 
 
 ## Illustrations
-
-![Sprite of the back of the cards] (/Videogame/LostIllusion/Assets/Sprites/Atrás.png)
-![Sprite of character cards] (/Videogame/LostIllusion/Assets/Sprites/Cartasmesa.png)
-![Sprite of dice] (/Videogame/LostIllusion/Assets/Sprites/Dado.png)
-![Sprite of dice] (/Videogame/LostIllusion/Assets/Sprites/deck.png)
-![Sprite of table] (/Videogame/LostIllusion/Assets/Sprites/Mesa.png)
-![Sprite of cards] (/Videogame/LostIllusion/Assets/Sprites/Poderes.png)
-
-
 
 
