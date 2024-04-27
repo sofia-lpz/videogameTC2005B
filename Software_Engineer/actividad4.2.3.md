@@ -76,8 +76,7 @@ At the end of the game, which might include at least 3 card matches, an outcome 
 
 ## Asset list
 
+## Classes to add
 
+## Illustrations
 
-Listado de assets
-    Listado de clases a programar
-    Ilustraciones de las pantallas, ambientes, personajes: Pueden ser dibujos hechos a mano, o capturas de pantalla del tabajo que ya tengan realizado
