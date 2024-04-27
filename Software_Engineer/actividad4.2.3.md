@@ -76,7 +76,36 @@ At the end of the game, which might include at least 3 card matches, an outcome 
 
 ## Asset list
 
+- Scenes
+
+Main
+Map
+match
+
+- Prefabs
+
+main character
+enemies
+
+- sprites
+
+main character
+tilesets
+
+- Scripts
+
+map game manager
+scene changer
+tcg game manager
+
+
+
 ## Classes to add
+
+map game manager
+scene changer
+tcg game manager
+
 
 ## Illustrations
 
