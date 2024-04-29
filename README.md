@@ -6,6 +6,7 @@ Data_base
 
 Software_engineer
 - user stories
+- Casos de uso
 - actividad 4.2.3 (26th of april, mechanics)
 - requirements.md?
 
