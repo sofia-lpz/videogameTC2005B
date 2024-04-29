@@ -5,10 +5,10 @@ The level of priority will be managed from 1 to 3, given 3 the highest level of 
 ## TCG aspects
 
 1. Interactive Game
- - Description As a player, I want to play an interactive card game in which I can have a battle so I can experiment a fight.
- - Validation: Have an interactive game, fighting experience.
- - Priority: 3.
- - Estimated Time: 4-5 sprints.
+   - Description As a player, I want to play an interactive card game in which I can have a battle so I can experiment a fight.
+   - Validation: Have an interactive game, fighting experience.
+   - Priority: 3.
+   - Estimated Time: 4-5 sprints.
    
 2. Character cards
    - Description: As a player, I want to unlock new character cards so I can change my strategy if I want to.
