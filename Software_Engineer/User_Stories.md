@@ -61,22 +61,22 @@ The level of priority will be managed from 1 to 3, given 3 the highest level of 
 ## Gameplay and Design
 
 10. Background
-   - Description: As a player, I want a game that has a striking background and map design so that I feel more attracted to the game.
-   - Validation: Have map design, feel attracted to the game.
-   - Priority: 1.
-   - Estimated time: 1-2 sprints.
+    - Description: As a player, I want a game that has a striking background and map design so that I feel more attracted to the game.
+    - Validation: Have map design, feel attracted to the game.
+    - Priority: 1.
+    - Estimated time: 1-2 sprints.
     
 11. Movement Experience
-   - Description: As a player, I want to be able to move around the map levels as the player so I can have a more immersive experience.
-   - Validation: Move around a map, have immersive experience.
-   - Priority: 1.
-   - Estimated time: 1-2 sprints.
+    - Description: As a player, I want to be able to move around the map levels as the player so I can have a more immersive experience.
+    - Validation: Move around a map, have immersive experience.
+    - Priority: 1.
+    - Estimated time: 1-2 sprints.
      
 12. Character Card Design
-   - Description: As a player, I want to have character cards that have character design so I can feel attracted to them.
-   - Validation: Have character cards design, feel attracted to them.
-   - Priority: 2.
-   - Estimated time: 1-2 sprints.
+    - Description: As a player, I want to have character cards that have character design so I can feel attracted to them.
+    - Validation: Have character cards design, feel attracted to them.
+    - Priority: 2.
+    - Estimated time: 1-2 sprints.
      
 13. Story
     - Description: As a player, I want to have a line story that explains my objective in the game so I can feel engaged.
