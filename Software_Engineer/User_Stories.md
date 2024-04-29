@@ -69,32 +69,32 @@ The level of priority will be managed from 1 to 3, given 3 the highest level of 
 ## Interactivity
 
 11. Web Page
-   - Description: As a player, I want to check on a web page my progress so I can follow my course.
-   - Validation: Have web page, check progress.
-   - Priority: 3.
-   - Estimated time: 5-6 sprints.
+    - Description: As a player, I want to check on a web page my progress so I can follow my course.
+    - Validation: Have web page, check progress.
+    - Priority: 3.
+    - Estimated time: 5-6 sprints.
      
 12. Game interaction
-   - Description: As a player, I want the game to be intuitive so I can easily get along with the game.
-   - Validation: Intuitive game, get along with the game.
-   - Priority: 2
-   - Estimated Time: 4-5 sprints.
+    - Description: As a player, I want the game to be intuitive so I can easily get along with the game.
+    - Validation: Intuitive game, get along with the game.
+    - Priority: 2
+    - Estimated Time: 4-5 sprints.
      
 13. Music and sound effects
-   - Description: As a player, I want to have music and sound effects that keep me in the game ambience.
-   - Validation: Have music and sound effects, Have game ambience.
-   - Priority: 1.
-   - Estimated time: 6-7 sprints.
+    - Description: As a player, I want to have music and sound effects that keep me in the game ambience.
+    - Validation: Have music and sound effects, Have game ambience.
+    - Priority: 1.
+    - Estimated time: 6-7 sprints.
 
 ## Connectivity
 
 14. Progress saving
-   - Description: As a player, I want to have an account so I can save my progress.
-   - Validation: Have account, save progress.
-   - Priority: 2.
-   - Estimated time: 4-5 sprints.
+    - Description: As a player, I want to have an account so I can save my progress.
+    - Validation: Have account, save progress.
+    - Priority: 2.
+    - Estimated time: 4-5 sprints.
 15. Devices
-   - Description: As a player, I want to have access to the game from various devices so I can play from any device I want.
-   - Validation: Have access from various devices.
-   - Priority: 2.
-   - Estimated time: 4-5 sprints.
+    - Description: As a player, I want to have access to the game from various devices so I can play from any device I want.
+    - Validation: Have access from various devices.
+    - Priority: 2.
+    - Estimated time: 4-5 sprints.
