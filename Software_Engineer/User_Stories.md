@@ -1,12 +1,37 @@
 # ***User Stories***
+## Priority tags
+The level of priority will be managed from 1 to 3, given 3 the highest level of priority and 1 the lowest.
 
 ## TCG aspects
 
-1. As a player, I want to play a TCG game in which I can choose the 3 characters to play against other 3 characters so I can experiment a fight.
-2. As a player, I want to unlock new character cards as I advance in the game so I can change my strategy if I want to.
-3. As a player, I want to have cards that have different element character cards so I can create strategies.
-4. As a player, I want to have differente effect cards so I can interact and make actions with my character cards.
-5. As a player, I want to have energy costs for my cards so I can develop a greater strategy against my opponent.
+1. Interactive Game
+ - Description As a player, I want to play an interactive card game in which I can have a battle so I can experiment a fight.
+ - Validation: Have an interactive game, fighting experience.
+ - Priority: 3.
+ - Estimated Time: 4-5 sprints.
+   
+2. Character cards
+   - Description: As a player, I want to unlock new character cards so I can change my strategy if I want to.
+   - Validation: Have a variety of character cards, have a strategy.
+   - Priority: 3.
+   - Estimated time: 1-2 sprints.
+     
+3. Regular cards
+   - Description: As a player, I want to have cards that have different element character cards so I can create strategies.
+   - Validation: Have a variety of regular cards, have element synergy.
+   - Priority: 3.
+   - Estimated time: 1-2 sprints.
+     
+4. Effect cards
+   - Description:  As a player, I want to have different effect cards so I can interact and make actions with them.
+   - Validation: Have effect cards, cards trigger actions.
+   - Priority: 2.
+   - Estimated time: 3-4 sprints.
+5. Difficulty
+   -  Description: As a player I want the card game to have different levels of difficulty so I can develop a better strategy.
+   -  Validation: Different difficulty levels, develop strategy.
+   -  Priority: 1.
+   -  Estimated time: 6-7 sprints. 
 
 ## Gameplay and Design
 
