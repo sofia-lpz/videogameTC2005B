@@ -11,11 +11,13 @@ insert into player (username, password, level, score) values
 4 healing cards
 
 6 support cards
+-4 leaf clover (adds luck, increases attack)
 
 8 attack cards
 - sharp stick (initial weapon)
 
 6 defense cards
+All of these reduce damage taken
 - hide (your opponent cant see you)
 - stare (you've made your oponent uncomfortable and distracted!)
 - mock (your opponent is embarrassed)
