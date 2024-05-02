@@ -36,3 +36,10 @@ create table deck(
     foreign key (card) references card(cardId)
 ); engine=myisam DEFAULT CHARSET=utf8mb4;
 
+create table card_type(
+    card varchar(15) NOT NULL,
+    type enum ('healing', 'attack', 'shield', 'support') NOT NULL,
+    primary key (card, type),
+    foreign key (card) references card(cardId)
+); engine=myisam DEFAULT CHARSET=utf8mb4;
+
