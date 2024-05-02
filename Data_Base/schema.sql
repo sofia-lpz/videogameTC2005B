@@ -14,12 +14,11 @@ create table card(
     cardId varchar(15) NOT NULL DEFAULT 'card' AUTO_INCREMENT,
     name varchar(50) NOT NULL,
     energy_cost SMALLINT NOT NULL,
-    type enum ('healing', 'attack', 'defense', 'support') NOT NULL,
-    element enum ('weapon', 'tool', 'food', '') NOT NULL,
+    effect enum ('healing', 'attack', 'defense', 'support') NOT NULL,
+    type enum ('creature', 'hypnosis', 'snack', 'weapon', 'tool', 'skill') NOT NULL,
     description varchar(100) NOT NULL,
     primary key (cardId)
 ); engine=myisam DEFAULT CHARSET=utf8mb4;
-
 
 create table match(
 matchId varchar(15) NOT NULL DEFAULT 'match' AUTO_INCREMENT,
@@ -39,4 +38,3 @@ create table deck(
     foreign key (player) references player(username),
     foreign key (card) references card(cardId)
 ); engine=myisam DEFAULT CHARSET=utf8mb4;
-
