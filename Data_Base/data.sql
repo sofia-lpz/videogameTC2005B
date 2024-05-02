@@ -26,10 +26,7 @@ All of these reduce damage taken
 add run away mechanic?
 
 
-
-
-
-Ideas for card objects
+Ideas for card elements (so its not just fire water ice etc)
 'creature', 'hypnosis', 'snack', 'weapon', 'skill', 'charms'
 
 snack
@@ -45,6 +42,7 @@ Weapons
 - sharp stick
 - sword
 - pocket knife
+- butcher knife
 
 hypnosis
 - sleep
@@ -62,6 +60,6 @@ creature (as in creatures you can keep in your pocket)
 objects
 - 4 leaf clover (is lucky)
 - 3 leaf clover
-
+- 
 
 */
