@@ -1,4 +1,4 @@
-# TCG
+# ENTITY RELATIONSHIP MODEL
 
 ![ER-Model Image](./retoUML.jpg)
 
