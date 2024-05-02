@@ -6,7 +6,7 @@ create table player(
     username varchar(50) NOT NULL DEFAULT 'name',
     password varchar(50) NOT NULL DEFAULT 'password',
     level SMALLINT NOT NULL DEFAULT 0,
-    score INT NOT NULL DEFAULT 0,
+    score INT NOT NULL DEFAULT 0, --matches won
     primary key (username)
 ); engine=myisam DEFAULT CHARSET=utf8mb4;
 
@@ -14,7 +14,8 @@ create table card(
     cardId varchar(15) NOT NULL DEFAULT 'card' AUTO_INCREMENT,
     name varchar(50) NOT NULL,
     energy_cost SMALLINT NOT NULL,
-
+    type enum ('healing', 'attack', 'defense', 'support') NOT NULL,
+    element enum ('weapon', 'tool', 'food', '') NOT NULL,
     description varchar(100) NOT NULL,
     primary key (cardId)
 ); engine=myisam DEFAULT CHARSET=utf8mb4;
@@ -22,24 +23,20 @@ create table card(
 
 create table match(
 matchId varchar(15) NOT NULL DEFAULT 'match' AUTO_INCREMENT,
+timestamp timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 player varchar(50) NOT NULL,
+-- player life?
+-- player energy?
 won boolean NOT NULL,
 primary key (matchId)
 foreign key (player1) references player(username),
-); engine=myisam DEFAULT CHARSET=utf8mb4;
+); engine= InnoDB DEFAULT CHARSET=utf8mb4;
 
 create table deck(
     player varchar(50) NOT NULL,
     card varchar(15) NOT NULL,
     primary key (player, card),
     foreign key (player) references player(username),
-    foreign key (card) references card(cardId)
-); engine=myisam DEFAULT CHARSET=utf8mb4;
-
-create table card_type(
-    card varchar(15) NOT NULL,
-    type enum ('healing', 'attack', 'shield', 'support') NOT NULL,
-    primary key (card, type),
     foreign key (card) references card(cardId)
 ); engine=myisam DEFAULT CHARSET=utf8mb4;
 
