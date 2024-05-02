@@ -82,24 +82,43 @@ When the player encounters a character a 1v1 card match will start. There are 2 
 
 First, they will choose 3 characters cards from the characters cards they have in their inventory. Their deck will be made up of the action cards they've collected during the exploration part of the game and some will be predetermined. They are in the players inventory. Each character card has 10 health points.
 
+<p align="center">
+  <img src="/Videogame/LostIllusion/Assets/Sprites/Preview.PNG" width="500" height="300">
+</p>
+
 There are 4 elements that the characters cards will have, fire, water, snow, air. If the element is countered, the winning element will make more damage and receive less damage. The elements synergy is the following:
 1. Fire beats Snow
 2. Snow beats Water
 3. Water beats Fire
 4. Air doesn't have a counter nor can counter other element, this will be explained later.
-![Element synergy image](/Videogame/LostIllusion/Assets/Sprites/Elementos.png)
+   
+<p align="center">
+  <img src="/Videogame/LostIllusion/Assets/Sprites/ElementSynergy.png" width="500" height="300">
+</p>
 
 After selecting the 3 character cards, there will be a coin toss to decide which player starts their turn first, after this both players will roll 2 dice to determine the energy that they will have that turn, the energy will be used to use action cards, this will have an energy cost, the player can play all the cards they want, it is limited by the energy. After rolling the dice, both players at the same time will choose their active character. The player can choose the active character at any time but it will have energy cost to switch active characters.
+
+<p align="center">
+  <img src="/Videogame/LostIllusion/Assets/Sprites/Dado.png" width="300" height="300">
+</p>
 
 Each character card will have a passive ability, depending on their role, the roles will be: dps, tank, support. Some examples of the passive abilities are:
 1. DPS character that his passive ability is to deal more damage of its element
 2. Tank character that when its attacked provides a shield
 3. Support character that if a character receives a lethal strike, this means that his health points reach zero, the character revives with 3 health points.
 
+<p align="center">
+  <img src="/Videogame/LostIllusion/Assets/Sprites/Cartasmesa2.PNG" width="500" height="300">
+</p>
+
 The action cards will help to do the actions the character will do, within the action cards there are many actions that can be made, there are cards to attack the character card of the opponent, other to heal your current active character, other to buff the attack damage of the main character, and other to apply defense to your current active character. Also, some of the action cards will have an element, this will be for various purposes such as:
 1. For damage buffs, the card will only buff the damage of the element that the card has.
 2. For defense, the cards will apply defense against the element that the card has.
 3. For attack, the cards will attack causing damage of that element.
+
+<p align="center">
+  <img src="/Videogame/LostIllusion/Assets/Sprites/Poderes2.PNG" width="500" height="300">
+</p>
 
  If the player uses the action card that has the same element as the active character it will produce a succesful attack that will apply the element effect on the opponent, this will help for the wind element, when the wind element attacks a character card that has an element effect, it will produce damage of that element to the character cards. If a player uses attack action card that the element of the card does not match the element of the active character, the damage will be decreasen and the element effect won't be applied.
 
