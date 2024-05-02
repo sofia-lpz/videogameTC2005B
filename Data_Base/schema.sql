@@ -5,8 +5,7 @@ use colometa;
 create table player(
     username varchar(50) NOT NULL DEFAULT 'name',
     password varchar(50) NOT NULL DEFAULT 'password',
-    level SMALLINT NOT NULL DEFAULT 0,
-    score INT NOT NULL DEFAULT 0, --matches won
+    matches_won SMALLINT NOT NULL DEFAULT 0,
     primary key (username)
 ); engine=myisam DEFAULT CHARSET=utf8mb4;
 
@@ -27,8 +26,6 @@ create table match(
 matchId varchar(15) NOT NULL DEFAULT 'match' AUTO_INCREMENT,
 timestamp timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 player varchar(50) NOT NULL,
--- player life?
--- player energy?
 won boolean NOT NULL,
 primary key (matchId)
 foreign key (player1) references player(username),
