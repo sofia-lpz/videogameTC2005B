@@ -9,12 +9,28 @@ insert into player (username, password, level, score) values
 -- 24 cards minimum
 /*
 4 healing cards
-4 support cards
+- candy
+
+6 support cards
+- 4 leaf clover
+
 8 attack cards
-8 defense cards
+- sharp stick (initial weapon)
+
+6 defense cards
+- hide (your opponent cant see you)
+- stare (you've made your oponent uncomfortable and distracted!)
+- mock (your opponent is embarrassed)
 
 
-'creature', 'hypnosis', 'snack', 'weapon', 'tool', 'skill', 'objects'
+add run away mechanic?
+
+
+
+
+
+Ideas for card objects
+'creature', 'hypnosis', 'snack', 'weapon', 'skill', 'charms'
 
 snack
 - candy
@@ -36,7 +52,7 @@ hypnosis
 - turn into chicken
 - fear
 
-creature
+creature (as in creatures you can keep in your pocket)
 - beetle
 - snake
 - spider
