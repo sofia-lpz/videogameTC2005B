@@ -5,6 +5,7 @@ insert into player (username, password, level, score) values
 ('player', 'password', 1, 0);
 
 
+
 -- ideas for cards
 -- 24 cards minimum excluding characters
 /*
@@ -32,6 +33,7 @@ Ideas for card elements (so its not just fire water ice etc)
 snack
 - candy
 - apple
+- orange (you can eat it or throw it as an attack?)
 - chocolate
 - plum juice
 - sandwich
@@ -40,9 +42,15 @@ snack
 
 Weapons
 - sharp stick
-- sword
+- sword (is it a sword? or are you imagining it?)
 - pocket knife
 - butcher knife
+- teapot (throw it at your opponent)
+- frying pan
+- rake
+- shovel
+- watering can
+- broken glass bottle
 
 hypnosis
 - sleep
@@ -60,6 +68,13 @@ creature (as in creatures you can keep in your pocket)
 objects
 - 4 leaf clover (is lucky)
 - 3 leaf clover
-- 
-
+- friendship bracelet
+- daisy
+- severed finger (is it an actual finger? or are you hallucinating?)
+- star shaped stone
+- rabbit foot (super lucky)
+- horseshoe
+- bottlecap
+- can
+- glass bottle
 */
