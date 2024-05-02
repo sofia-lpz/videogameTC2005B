@@ -51,6 +51,8 @@ Weapons
 - shovel
 - watering can
 - broken glass bottle
+- sickle
+- wheelbarrow 
 
 hypnosis
 - sleep
