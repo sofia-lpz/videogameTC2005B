@@ -17,6 +17,9 @@ create table card(
     effect enum ('healing', 'attack', 'defense', 'support') NOT NULL,
     type enum ('creature', 'hypnosis', 'snack', 'weapon', 'tool', 'skill') NOT NULL,
     description varchar(100) NOT NULL,
+    self_health SMALL INT NOT NULL DEFAULT 0, --set this to positive if its healing
+    oponent_health SMALL INT NOT NULL DEFAULT 0, --set this to negative if its attack
+    
     primary key (cardId)
 ); engine=myisam DEFAULT CHARSET=utf8mb4;
 
