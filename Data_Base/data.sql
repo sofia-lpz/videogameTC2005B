@@ -6,13 +6,11 @@ insert into player (username, password, level, score) values
 
 
 -- ideas for cards
--- 24 cards minimum
+-- 24 cards minimum excluding characters
 /*
 4 healing cards
-- candy
 
 6 support cards
-- 4 leaf clover
 
 8 attack cards
 - sharp stick (initial weapon)
