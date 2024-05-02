@@ -78,6 +78,12 @@ How will the player interact with the game? Will they be able to choose the cont
 
 ### **Mechanics**
 
+- Map (might be scrapped due to time constraints)
+
+The player will be able to navigate a 2d pixel art map of the town in a top down angle using their arrow keys. They will be able to find objects in the map which can later be used in the card matches. They will also encounter characters as they progress through the map who they can interact with for the card matches. Because of the players distorted perception these characters might appear as fantastical beings, and act erratically because of their own distorted perceptions.
+
+- TCG
+
 When the player encounters a character a 1v1 card match will start. There are 2 types of cards, the character cards and the action cards.
 
 First, they will choose 3 characters cards from the characters cards they have in their inventory. Their deck will be made up of the action cards they've collected during the exploration part of the game and some will be predetermined. They are in the players inventory. Each character card has 10 health points.
