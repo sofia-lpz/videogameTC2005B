@@ -25,6 +25,7 @@ create table match(
 matchId varchar(15) NOT NULL DEFAULT 'match' AUTO_INCREMENT,
 timestamp timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 player varchar(50) NOT NULL,
+-- add player health?
 won boolean NOT NULL,
 primary key (matchId)
 foreign key (player1) references player(username),
@@ -44,3 +45,18 @@ create table dialogue(
     text varchar(200) NOT NULL,
     primary key (dialogueId)
 ); engine=myisam DEFAULT CHARSET=utf8mb4;
+
+--donde se ponian las foreign keys?
+
+CREATE VIEW PlayerWins AS
+SELECT player, COUNT(*) as Wins
+FROM match
+WHERE won = true
+GROUP BY player;
+
+CREATE VIEW PlayerDeck AS
+SELECT player, GROUP_CONCAT(card) as Cards
+FROM deck
+GROUP BY player;
+
+
