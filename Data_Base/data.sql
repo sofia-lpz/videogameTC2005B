@@ -1,4 +1,4 @@
-use colmeta;
+use colometa;
 
 insert into player (username, password, level, score) values 
 ('admin', 'admin', 1, 0),

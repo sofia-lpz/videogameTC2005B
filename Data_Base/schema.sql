@@ -9,6 +9,18 @@ create table player(
     primary key (username)
 ); engine=myisam DEFAULT CHARSET=utf8mb4;
 
+create table npc(
+    name varchar(50) NOT NULL,
+    description varchar(100) NOT NULL,
+    primary key (name)
+); engine=myisam DEFAULT CHARSET=utf8mb4;
+
+create table team(
+    username varchar(50) NOT NULL,
+    npc varchar(50) NOT NULL,
+    primary key (username, npc),
+);
+
 create table card(
     cardId varchar(15) NOT NULL DEFAULT 'card' AUTO_INCREMENT,
     name varchar(50) NOT NULL,
@@ -17,14 +29,20 @@ create table card(
     type enum ('creature', 'hypnosis', 'snack', 'weapon', 'tool', 'skill') NOT NULL,
     description varchar(100) NOT NULL,
     dialogue varchar(100) NOT NULL, 
-    --dialogue to display when card is used (for example, "you've made your opponent uncomfortable and distracted!")
+    --dialogue to display when card is used (for example, "you've made your opponent uncomfortable!")
+
     self_health SMALL INT NOT NULL DEFAULT 0, --set this to positive if its healing
     oponent_health SMALL INT NOT NULL DEFAULT 0, --set this to negative if its attack
     defense SMALL INT NOT NULL DEFAULT 0, --set this to positive if its defense
     luck SMALL INT NOT NULL DEFAULT 0, --set this to positive if its support
     foreign key (effect) references effect(effectId), --can be null
     primary key (cardId)
+    key (energy_cost)
 ); engine=myisam DEFAULT CHARSET=utf8mb4;
+
+create table type_dialogue(
+    primary key (type, dialogue),
+);
 
 create table effect( --used particularly by hypnosis cards
     effectId varchar(15) NOT NULL DEFAULT 'effect' AUTO_INCREMENT,
@@ -35,6 +53,7 @@ create table effect( --used particularly by hypnosis cards
     attack_decrease SMALLINT NOT NULL DEFAULT 0, --decrease enemy attack by this many points
     defense_decrease SMALLINT NOT NULL DEFAULT 0, --decrease enemy defense by this many points
     primary key (effectId)
+
 ); engine=myisam DEFAULT CHARSET=utf8mb4;
 
 create table match(
@@ -49,6 +68,9 @@ primary key (matchId)
 foreign key (player1) references player(username),
 ); engine= InnoDB DEFAULT CHARSET=utf8mb4;
 
+create table stats();
+--save stats here after match for stats page
+
 create table deck(
     player varchar(50) NOT NULL,
     card varchar(15) NOT NULL,
@@ -61,35 +83,9 @@ create table dialogue(
     dialogueId varchar(15) NOT NULL DEFAULT 'dialogue' AUTO_INCREMENT,
     speaker varchar(50) NOT NULL, 
     text varchar(200) NOT NULL,
-    primary key (dialogueId)
+    primary key (dialogueId, speaker),
 ); engine=myisam DEFAULT CHARSET=utf8mb4;
 
 --donde se ponian las foreign keys?
-
-CREATE VIEW PlayerWins AS
-SELECT player, COUNT(*) as Wins
-FROM match
-WHERE won = true
-GROUP BY player;
-
-CREATE VIEW PlayerDeck AS
-SELECT player, GROUP_CONCAT(card) as Cards
-FROM deck
-GROUP BY player;
-
-create trigger update_wins
-after insert on match
-for each row
-begin
-    if new.won = true then
-        update player
-        set matches_won = matches_won + 1
-        where username = new.player;
-    end if;
-end;
-
-create trigger update_deck
--- after win, add the npc card to the player's deck
-
 
 
