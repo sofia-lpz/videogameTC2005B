@@ -9,7 +9,7 @@ create table player(
     primary key (username)
 ); engine=myisam DEFAULT CHARSET=utf8mb4;
 
-create table npc(
+create table villager(
     name varchar(50) NOT NULL,
     description varchar(100) NOT NULL,
     primary key (name)
@@ -17,8 +17,8 @@ create table npc(
 
 create table team(
     username varchar(50) NOT NULL,
-    npc varchar(50) NOT NULL,
-    primary key (username, npc),
+    villager varchar(50) NOT NULL,
+    primary key (username, villager),
 );
 
 create table card(
@@ -39,10 +39,6 @@ create table card(
     primary key (cardId)
     key (energy_cost)
 ); engine=myisam DEFAULT CHARSET=utf8mb4;
-
-create table type_dialogue(
-    primary key (type, dialogue),
-);
 
 create table effect( --used particularly by hypnosis cards
     effectId varchar(15) NOT NULL DEFAULT 'effect' AUTO_INCREMENT,
@@ -85,7 +81,4 @@ create table dialogue(
     text varchar(200) NOT NULL,
     primary key (dialogueId, speaker),
 ); engine=myisam DEFAULT CHARSET=utf8mb4;
-
---donde se ponian las foreign keys?
-
 

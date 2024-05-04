@@ -10,18 +10,38 @@ insert into player (username, password, level, score) values
 -- 24 cards minimum excluding characters
 /*
 4 healing cards
+- plum juice (+? health)
+- plum jam (+? health)
+- candy (+? health)
+- bandage (+? health)
 
 6 support cards
--4 leaf clover (adds luck, increases attack)
+- 4 leaf clover (increases attack)
+- friendship bracelet (increases defense)
+- horse shoe (increases attack)
+
 
 8 attack cards
+----------weapons ()
 - sharp stick (initial weapon)
+- sword (is it a sword? or are you imagining it?)
+ 
+ ----------creatures
+
+ ----------hypnosis (3)
+- sleep (enemy skips turn)
+- confusion ()
+- fear (reduces enemy attack, increases his defense)
 
 6 defense cards
 All of these reduce damage taken
 - hide (your opponent cant see you)
 - stare (you've made your oponent uncomfortable and distracted!)
 - mock (your opponent is embarrassed)
+
+
+
+
 
 
 add run away mechanic?
@@ -38,7 +58,7 @@ snack
 - plum juice
 - sandwich
 - peach
-- jam
+- plum jam
 
 Weapons
 - sharp stick
