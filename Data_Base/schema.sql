@@ -16,9 +16,25 @@ create table card(
     effect enum ('healing', 'attack', 'defense', 'support') NOT NULL,
     type enum ('creature', 'hypnosis', 'snack', 'weapon', 'tool', 'skill') NOT NULL,
     description varchar(100) NOT NULL,
+    dialogue varchar(100) NOT NULL, 
+    --dialogue to display when card is used (for example, "you've made your opponent uncomfortable and distracted!")
     self_health SMALL INT NOT NULL DEFAULT 0, --set this to positive if its healing
     oponent_health SMALL INT NOT NULL DEFAULT 0, --set this to negative if its attack
+    defense SMALL INT NOT NULL DEFAULT 0, --set this to positive if its defense
+    luck SMALL INT NOT NULL DEFAULT 0, --set this to positive if its support
+    foreign key (effect) references effect(effectId), --can be null
     primary key (cardId)
+); engine=myisam DEFAULT CHARSET=utf8mb4;
+
+create table effect( --used particularly by hypnosis cards
+    effectId varchar(15) NOT NULL DEFAULT 'effect' AUTO_INCREMENT,
+    ame enum ('chicken', 'sleep', 'confusion'),
+    description varchar(100) NOT NULL,
+    -- how to add if its sleep, enemy skips turn with trigger? <---
+    accuracy SMALLINT NOT NULL DEFAULT 0, --decrease enemy accuracy by this many points
+    attack_decrease SMALLINT NOT NULL DEFAULT 0, --decrease enemy attack by this many points
+    defense_decrease SMALLINT NOT NULL DEFAULT 0, --decrease enemy defense by this many points
+    primary key (effectId)
 ); engine=myisam DEFAULT CHARSET=utf8mb4;
 
 create table match(
@@ -60,7 +76,6 @@ CREATE VIEW PlayerDeck AS
 SELECT player, GROUP_CONCAT(card) as Cards
 FROM deck
 GROUP BY player;
-
 
 create trigger update_wins
 after insert on match
