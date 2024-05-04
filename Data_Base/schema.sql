@@ -37,3 +37,10 @@ create table deck(
     foreign key (player) references player(username),
     foreign key (card) references card(cardId)
 ); engine=myisam DEFAULT CHARSET=utf8mb4;
+
+create table dialogue(
+    dialogueId varchar(15) NOT NULL DEFAULT 'dialogue' AUTO_INCREMENT,
+    speaker varchar(50) NOT NULL, 
+    text varchar(200) NOT NULL,
+    primary key (dialogueId)
+); engine=myisam DEFAULT CHARSET=utf8mb4;
