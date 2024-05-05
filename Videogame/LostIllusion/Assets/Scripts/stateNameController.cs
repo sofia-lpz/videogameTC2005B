@@ -13,6 +13,8 @@ public class stateNameController : MonoBehaviour
 {
     // To use, call stateNameController.theNameOfYourVariable
     // and access it from any script in any scene you want
+    
+    //this script doesn't need to be attached to any object
 
 
     //for example in this format
