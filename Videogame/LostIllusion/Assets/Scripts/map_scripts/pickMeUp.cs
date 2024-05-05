@@ -30,8 +30,8 @@ public class pickMeUp : collideableObject
         interacted = true;
         GameObject descriptionCanvas = Object.Instantiate(prefabDescriptionCanvas);
 
-        inventory_temp.inventory.Add(gameObject.name);
-        Debug.Log("Picked up: " + inventory_temp.inventory[inventory_temp.inventory.Count - 1]);
+        stateNameController.inventory.Add(gameObject.name);
+        Debug.Log("Picked up: " + stateNameController.inventory[stateNameController.inventory.Count - 1]);
         Destroy(gameObject);
         }
     }
