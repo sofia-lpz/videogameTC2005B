@@ -6,7 +6,7 @@ using TMPro;
 public class dialogue : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI textComponent;
-    [SerializeField] string[] lines;
+    [SerializeField] List<string> lines;
     [SerializeField] float textSpeed = 0.05f;
     [SerializeField] int index;
     AudioSource audioSource;
@@ -16,6 +16,14 @@ public class dialogue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        lines = new List<string>
+        {
+            "Hello, I am a dialogue box.",
+            "I am here to help you.",
+            "Press the space bar to continue.",
+            "I will disappear after the last line.",
+            "Goodbye!"
+        };
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = Resources.Load<AudioClip>("Audio/soundEffects/text");
         textComponent.text = "";
@@ -60,7 +68,7 @@ public class dialogue : MonoBehaviour
 
     public void NextLine()
     {
-        if (index < lines.Length - 1)
+        if (index < lines.Count - 1)
         {
             index++;
             textComponent.text = "";
@@ -68,7 +76,8 @@ public class dialogue : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false);
+            Destroy(transform.parent.gameObject);
+            Debug.Log("Dialogue canvas deleted.");
         }
     }
 }

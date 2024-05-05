@@ -1853,7 +1853,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_day_83
+      name: huh
       rect:
         serializedVersion: 2
         x: 768
@@ -28838,7 +28838,6 @@ TextureImporter:
       bedroom_day_827: 1651375461
       bedroom_day_828: -1040434096
       bedroom_day_829: -1539672279
-      bedroom_day_83: -633237286
       bedroom_day_830: 260966305
       bedroom_day_831: 1289332306
       bedroom_day_832: -2022734475
@@ -29027,6 +29026,7 @@ TextureImporter:
       bedroom_day_998: 126285420
       bedroom_day_999: 1322409674
       book: -1617624575
+      huh: -633237286
       tv: 1451365252
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
