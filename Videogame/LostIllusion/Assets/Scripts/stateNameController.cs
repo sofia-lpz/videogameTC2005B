@@ -18,6 +18,7 @@ public class stateNameController : MonoBehaviour
 
 
     //for example in this format
-    [SerializeField] public static string scoreGameOver = "0";
+    [SerializeField] public static string enemy_name = "COLA";
+    
 }
 
