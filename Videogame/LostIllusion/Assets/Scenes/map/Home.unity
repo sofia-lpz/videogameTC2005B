@@ -6030,6 +6030,7 @@ MonoBehaviour:
     maxNormalAngle: 0
   collidedObjects: []
   interacted: 0
+  prefabDescriptionCanvas: {fileID: 74898504176640536, guid: 3eda015329492b64893a9a3251d98229, type: 3}
 --- !u!1 &1559986623
 GameObject:
   m_ObjectHideFlags: 0
