@@ -1,6 +1,9 @@
 /*
 Control the movements of the character
 
+If there is an object called "freezesPlayer" in the scene, the player will not be able to move
+5/5/2024
+
 Luis Daniel Filorio Luna A01028418
 10-04-2024
 */
@@ -27,12 +30,12 @@ public class Character_Movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (GameObject.FindWithTag("freezesPlayer") != null)
         {
-            return; // If it's active, don't allow the player to move
+            return;
         }
 
         movement.x = 0f;

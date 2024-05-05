@@ -20,4 +20,14 @@ public class menuButtons : MonoBehaviour
         string sceneName = stateNameController.scenes[stateNameController.player_level];
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
+
+    public void resume()
+    {
+        Destroy(transform.parent.gameObject);
+    }
+
+    public void quit()
+    {
+        SceneManager.LoadScene("MainTitle", LoadSceneMode.Single);
+    }
 }

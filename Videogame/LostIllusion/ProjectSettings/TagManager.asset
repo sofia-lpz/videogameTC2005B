@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - freezesPlayer
+  - pause
   layers:
   - Default
   - TransparentFX
