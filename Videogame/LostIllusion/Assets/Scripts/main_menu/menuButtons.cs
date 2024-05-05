@@ -5,13 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class menuButtons : MonoBehaviour
 {
-    void login()
+    public void login()
     {
         SceneManager.LoadScene("login", LoadSceneMode.Single);
     }
 
-    void register()
+    public void register()
     {
         SceneManager.LoadScene("register", LoadSceneMode.Single);
     }  
+
+    public void play()
+    {
+        string sceneName = stateNameController.scenes[stateNameController.player_level];
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+    }
 }
