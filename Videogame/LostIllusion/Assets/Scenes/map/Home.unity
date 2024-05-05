@@ -5755,8 +5755,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1471262708}
   - component: {fileID: 1471262707}
-  - component: {fileID: 1471262706}
   - component: {fileID: 1471262705}
+  - component: {fileID: 1471262709}
   m_Layer: 0
   m_Name: book
   m_TagString: Untagged
@@ -5809,34 +5809,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75, y: 0.875}
   m_EdgeRadius: 0
---- !u!114 &1471262706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471262704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44c58701c5ba2374c95a750b20d15433, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectCollider: {fileID: 0}
-  contactFilter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 8
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
-  collidedObjects: []
 --- !u!212 &1471262707
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5904,6 +5876,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1471262709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471262704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b85a9cc20d44064ab79a32781d93a31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectCollider: {fileID: 0}
+  contactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  collidedObjects: []
 --- !u!1 &2020685424
 GameObject:
   m_ObjectHideFlags: 0

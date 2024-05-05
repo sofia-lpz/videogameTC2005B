@@ -16,17 +16,16 @@ public class collideableObject : MonoBehaviour
 
 
 
-    public void Update()
+    public virtual void Update()
 {
-
     objectCollider.OverlapCollider(contactFilter, collidedObjects);
-    foreach (var obj in collidedObjects)
+    foreach (var other in collidedObjects)
     {
-        onCollision(obj.gameObject);
+        onCollision(other.gameObject);
     }
 }
 
-    public void onCollision(GameObject other)
+    public virtual void onCollision(GameObject other)
     {
         Debug.Log("Collision detected: " + other.name);
     }
