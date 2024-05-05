@@ -13,6 +13,7 @@ using UnityEngine.SceneManagement;
 public class fightMe : collideableObject
 {
     [SerializeField] public bool interacted = false;
+    [SerializeField] public GameObject prefabDialogueCanvas;
     
     public override void onCollision(GameObject other)
     {
@@ -24,12 +25,28 @@ public class fightMe : collideableObject
         }
     }
 
-    void onFight(GameObject other)
+void onFight(GameObject other)
+{
+    string sceneName = "match_" + gameObject.name;
+    if (!interacted)
     {
-        string sceneName = "match_" + gameObject.name;
-        if (!interacted){
         interacted = true;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
-        }
+        GameObject dialogueCanvas = Object.Instantiate(prefabDialogueCanvas);
+        StartCoroutine(WaitAndLoadScene(sceneName, dialogueCanvas));
     }
+}
+
+IEnumerator WaitAndLoadScene(string sceneName, GameObject dialogueCanvas)
+{
+    // Wait until the dialogue canvas is destroyed
+    while (dialogueCanvas != null)
+    {
+        yield return null; // Wait for next frame
+    }
+
+    yield return new WaitForSeconds(1.0f); // Wait for 1 second
+
+    // Load the scene
+    UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+}
 }

@@ -6146,6 +6146,7 @@ MonoBehaviour:
     maxNormalAngle: 0
   collidedObjects: []
   interacted: 0
+  prefabDialogueCanvas: {fileID: 4481119704672500748, guid: 5fc3c12f47e90df49bfc97526a031b82, type: 3}
 --- !u!61 &1559986627
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7018,6 +7019,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1035817365
       objectReference: {fileID: 0}
+    - target: {fileID: 5653762998157662737, guid: 953785e2d0656f848bbd5e24083beedb, type: 3}
+      propertyPath: dialogueCanvasPrefab
+      value: 
+      objectReference: {fileID: 4481119704672500748, guid: 5fc3c12f47e90df49bfc97526a031b82, type: 3}
     - target: {fileID: 5698615574556556650, guid: 953785e2d0656f848bbd5e24083beedb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.98

@@ -20,6 +20,7 @@ public class Character_Movement : MonoBehaviour
     [SerializeField] KeyCode down;
     [SerializeField] KeyCode left;
     [SerializeField] KeyCode right;
+    [SerializeField] GameObject DialogueCanvas;
 
     void Start()
     {
@@ -29,6 +30,11 @@ public class Character_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameObject.FindWithTag("freezesPlayer") != null)
+        {
+            return; // If it's active, don't allow the player to move
+        }
+
         movement.x = 0f;
         movement.y = 0f;
 

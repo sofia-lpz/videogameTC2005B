@@ -27,5 +27,18 @@ public class stateNameController : MonoBehaviour
     [SerializeField] public static string enemy_name = "nombre";
     [SerializeField] public static int player_level = 0;
     [SerializeField] public static List<string> inventory = new List<string>();
+
+    public static List<string> enemy1_init_lines = new List<string> {
+        "Hola " + player_username,
+        "QUE?",
+        "QUIERES UNA PELEA?",
+        "TE DARE UNA PELEA",
+    };
+    
+    public static List<string> enemy1_repeat_lines = new List<string> {
+        "Ah, de nuevo " + player_username,
+        "ESTA VEZ NO TE ESCAPARAS",
+    };
 }
+
 
