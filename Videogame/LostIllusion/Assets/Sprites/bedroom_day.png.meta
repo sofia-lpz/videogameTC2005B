@@ -9749,13 +9749,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bedroom_day_459
+      name: tv
       rect:
         serializedVersion: 2
-        x: 576
-        y: 256
-        width: 16
-        height: 16
+        x: 580
+        y: 241
+        width: 22
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -28427,7 +28427,6 @@ TextureImporter:
       bedroom_day_456: 1499286813
       bedroom_day_457: -1343607707
       bedroom_day_458: -615060100
-      bedroom_day_459: 1451365252
       bedroom_day_46: -158696412
       bedroom_day_460: -1956480662
       bedroom_day_461: 473962109
@@ -29028,6 +29027,7 @@ TextureImporter:
       bedroom_day_998: 126285420
       bedroom_day_999: 1322409674
       book: -1617624575
+      tv: 1451365252
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
