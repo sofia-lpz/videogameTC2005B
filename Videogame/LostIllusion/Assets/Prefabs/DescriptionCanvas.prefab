@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &4556012710183689748
+--- !u!1001 &7973455790221511897
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -88,14 +88,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2407321209769370398, guid: 5fc3c12f47e90df49bfc97526a031b82, type: 3}
+      propertyPath: dialogueName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4481119704672500748, guid: 5fc3c12f47e90df49bfc97526a031b82, type: 3}
       propertyPath: m_Name
       value: DescriptionCanvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
-    - {fileID: 2422603987103345476, guid: 5fc3c12f47e90df49bfc97526a031b82, type: 3}
     - {fileID: 209399391422227079, guid: 5fc3c12f47e90df49bfc97526a031b82, type: 3}
+    - {fileID: 2422603987103345476, guid: 5fc3c12f47e90df49bfc97526a031b82, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fc3c12f47e90df49bfc97526a031b82, type: 3}

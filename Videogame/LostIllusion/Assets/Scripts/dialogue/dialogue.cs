@@ -5,20 +5,19 @@ using TMPro;
 
 public class dialogue : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI textComponent;
-    [SerializeField] List<string> lines;
-    [SerializeField] float textSpeed = 0.05f;
-    [SerializeField] int index;
+    [SerializeField] TextMeshProUGUI dialogueBox;
+    [SerializeField] TextMeshProUGUI dialogueName;
+    List<string> lines;
+    float textSpeed = 0.05f;
+    int index;
     AudioSource audioSource;
-    [SerializeField] float minPitch = 0.9f;
-    [SerializeField] float maxPitch = 1.1f;
 
     // Start is called before the first frame update
-    void Start()
+    public void Initialize(string object_name)
     {
         lines = new List<string>
         {
-            "Hello, I am a dialogue box.",
+            "Hello, I am a " + object_name + ".",
             "I am here to help you.",
             "Press the space bar to continue.",
             "I will disappear after the last line.",
@@ -26,9 +25,10 @@ public class dialogue : MonoBehaviour
         };
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = Resources.Load<AudioClip>("Audio/soundEffects/text");
-        textComponent.text = "";
+        dialogueBox.text = "";
         StartDialogue();
     }
+    
 
     // Update is called once per frame
     void Update()
@@ -36,14 +36,14 @@ public class dialogue : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (textComponent.text == lines[index])
+            if (dialogueBox.text == lines[index])
             {
                 NextLine();
             }
             else
             {
                 StopAllCoroutines();
-                textComponent.text = lines[index];
+                dialogueBox.text = lines[index];
             }
         }
     }
@@ -58,7 +58,7 @@ public class dialogue : MonoBehaviour
     {
         foreach (char c in lines[index].ToCharArray())
         {
-            textComponent.text += c;
+            dialogueBox.text += c;
             if (c != ' '){
                 audioSource.pitch = Random.Range(0.9f, 1.1f);
                 audioSource.Play();
@@ -72,12 +72,12 @@ public class dialogue : MonoBehaviour
         if (index < lines.Count - 1)
         {
             index++;
-            textComponent.text = "";
+            dialogueBox.text = "";
             StartCoroutine(TypeLine());
         }
         else
         {
-            Destroy(transform.parent.gameObject);
+            Destroy(gameObject);
             Debug.Log("Dialogue canvas deleted.");
         }
     }

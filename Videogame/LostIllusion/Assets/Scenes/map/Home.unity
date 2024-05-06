@@ -6013,7 +6013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b85a9cc20d44064ab79a32781d93a31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectCollider: {fileID: 0}
+  objectCollider: {fileID: 1471262705}
   contactFilter:
     useTriggers: 0
     useLayerMask: 0
@@ -6023,14 +6023,14 @@ MonoBehaviour:
     useOutsideNormalAngle: 0
     layerMask:
       serializedVersion: 2
-      m_Bits: 0
+      m_Bits: 8
     minDepth: 0
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
   collidedObjects: []
   interacted: 0
-  prefabDescriptionCanvas: {fileID: 74898504176640536, guid: 3eda015329492b64893a9a3251d98229, type: 3}
+  prefabDescriptionCanvas: {fileID: 4481119704672500748, guid: 5fc3c12f47e90df49bfc97526a031b82, type: 3}
 --- !u!1 &1559986623
 GameObject:
   m_ObjectHideFlags: 0

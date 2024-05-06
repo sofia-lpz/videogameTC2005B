@@ -19,16 +19,17 @@ public class pickMeUp : collideableObject
         base.onCollision(other);
         if (other.tag == "Player"){
             if (Input.GetKeyDown(KeyCode.Return)){
-                onPickUp(other);
+                onPickUp();
             }
         }
     }
 
-    void onPickUp(GameObject other)
+    void onPickUp()
     {
         if (!interacted){
         interacted = true;
         GameObject descriptionCanvas = Object.Instantiate(prefabDescriptionCanvas);
+        descriptionCanvas.GetComponent<dialogue>().Initialize(gameObject.name);
 
         stateNameController.inventory.Add(gameObject.name);
         Debug.Log("Picked up: " + stateNameController.inventory[stateNameController.inventory.Count - 1]);
