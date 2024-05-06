@@ -16,17 +16,20 @@ public class stateNameController : MonoBehaviour
     
     //this script doesn't need to be attached to any object
 
-
-    //for example in this format
     public static List<string> scenes = new List<string> {
         "Home",
         "Outside",
         };
 
-    [SerializeField] public static string player_username = "Dev";
-    [SerializeField] public static string enemy_name = "nombre";
-    [SerializeField] public static int player_level = 0;
-    [SerializeField] public static List<string> inventory = new List<string>();
+    public static int match_tv = 0; //set to 1 if the tv match has been won, -1 if lost, 0 if never played
+
+
+
+    
+
+    public static string player_username = "nombre de usuario";
+    public static int player_level = 0;
+    public static List<string> inventory = new List<string>();
     
 
     public static List<string> tv_init_lines = new List<string> {
