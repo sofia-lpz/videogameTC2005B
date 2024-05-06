@@ -14,29 +14,65 @@ public class fightMe : collideableObject
 {
     [SerializeField] public bool interacted = false;
     [SerializeField] public GameObject prefabDialogueCanvas;
+    int dialogueIndex = 0;
+    string sceneNameFight;
     
     public override void onCollision(GameObject other)
     {
+        sceneNameFight = "match_" + gameObject.name;
+
         base.onCollision(other);
         if (other.tag == "Player"){
             if (Input.GetKeyDown(KeyCode.Return)){
-                onFight(other);
+                var fieldInfo = typeof(stateNameController).GetField(sceneNameFight);
+                int fieldValue = (int)fieldInfo.GetValue(null);
+
+                if (fieldValue == 0)
+                {
+                    onFight(other);
+                }
+                else
+                {
+                    onTalkAfter(fieldValue);
+                }
+
             }
         }
     }
 
 void onFight(GameObject other)
 {
-    string sceneName = "match_" + gameObject.name;
+    
     if (!interacted)
     {
         interacted = true;
         GameObject dialogueCanvas = Object.Instantiate(prefabDialogueCanvas);
-        dialogueCanvas.GetComponent<dialogue>().Initialize(gameObject.name, "enemy");
+        
+        var fieldInfo = typeof(stateNameController).GetField(sceneNameFight);
+        
+            int fieldValue = (int)fieldInfo.GetValue(null);
+            dialogueIndex = fieldValue;
+        
 
-        StartCoroutine(WaitAndLoadScene(sceneName, dialogueCanvas));
+        dialogueCanvas.GetComponent<dialogue>().Initialize(gameObject.name, dialogueIndex);
+
+        StartCoroutine(WaitAndLoadScene(sceneNameFight, dialogueCanvas));
     }
 }
+
+void onTalkAfter(int fieldValue)
+    {
+        GameObject dialogueCanvas = Object.Instantiate(prefabDialogueCanvas);
+        
+        if (fieldValue == 1)
+        {
+            dialogueCanvas.GetComponent<dialogue>().Initialize(gameObject.name, 1);
+        }
+        else
+        {
+            dialogueCanvas.GetComponent<dialogue>().Initialize(gameObject.name, 2);
+        }
+    }
 
 IEnumerator WaitAndLoadScene(string sceneName, GameObject dialogueCanvas)
 {

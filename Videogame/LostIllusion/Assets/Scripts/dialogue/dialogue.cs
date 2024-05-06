@@ -13,13 +13,13 @@ public class dialogue : MonoBehaviour
     AudioSource audioSource;
 
     // Start is called before the first frame update
-    public void Initialize(string object_name, string object_type)
+    public void Initialize(string object_name, int index)
     {
         if (dialogueName != null){
             dialogueName.text = object_name;
         }
         
-        lines = stateNameController.dialoguesDictionary[object_name];
+        lines = stateNameController.dialoguesDictionary[object_name][index];
         
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = Resources.Load<AudioClip>("Audio/soundEffects/text");

@@ -12,14 +12,14 @@ public class talkToMe : collideableObject
         base.onCollision(other);
         if (other.tag == "Player"){
             if (Input.GetKeyDown(KeyCode.Return)){
-                onTalk(other);
+                onTalk();
             }
         }
     }
 
-    void onTalk(GameObject other)
+    void onTalk()
     {
         GameObject dialogueCanvas = Object.Instantiate(prefabDialogueCanvas);
-        dialogueCanvas.GetComponent<dialogue>().Initialize(gameObject.name, "chatter");
+        dialogueCanvas.GetComponent<dialogue>().Initialize(gameObject.name, 0);
     }
 }
