@@ -15,34 +15,11 @@ public class dialogue : MonoBehaviour
     // Start is called before the first frame update
     public void Initialize(string object_name, string object_type)
     {
-        if (object_type == "enemy")
-        {
-            lines = new List<string>
-            {
-                "Hello, I am Mr. " + object_name + ".",
-                "I am here to fight you.",
-                "Press the space bar to continue."
-            };
+        if (dialogueName != null){
             dialogueName.text = object_name;
         }
-        else if (object_type == "pickable")
-        {
-            lines = new List<string>
-            {
-                "You've picked up a " + object_name + ".",
-                "neat!"
-            };
-        }
-        else if (object_type == "chatter")
-        {
-            lines = new List<string>
-            {
-                "Hello, I am " + object_name + ".",
-                "I am here to talk to you.",
-                "bla bla bla bla"
-            };
-            dialogueName.text = object_name;
-        }
+        
+        lines = stateNameController.dialoguesDictionary[object_name];
         
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = Resources.Load<AudioClip>("Audio/soundEffects/text");
