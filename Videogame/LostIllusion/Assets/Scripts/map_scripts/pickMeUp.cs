@@ -29,7 +29,7 @@ public class pickMeUp : collideableObject
         if (!interacted){
         interacted = true;
         GameObject descriptionCanvas = Object.Instantiate(prefabDescriptionCanvas);
-        descriptionCanvas.GetComponent<dialogue>().Initialize(gameObject.name);
+        descriptionCanvas.GetComponent<dialogue>().Initialize(gameObject.name, "pickable");
 
         stateNameController.inventory.Add(gameObject.name);
         Debug.Log("Picked up: " + stateNameController.inventory[stateNameController.inventory.Count - 1]);

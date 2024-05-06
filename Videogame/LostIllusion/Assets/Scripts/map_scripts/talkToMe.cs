@@ -20,5 +20,6 @@ public class talkToMe : collideableObject
     void onTalk(GameObject other)
     {
         GameObject dialogueCanvas = Object.Instantiate(prefabDialogueCanvas);
+        dialogueCanvas.GetComponent<dialogue>().Initialize(gameObject.name, "chatter");
     }
 }

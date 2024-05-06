@@ -32,6 +32,8 @@ void onFight(GameObject other)
     {
         interacted = true;
         GameObject dialogueCanvas = Object.Instantiate(prefabDialogueCanvas);
+        dialogueCanvas.GetComponent<dialogue>().Initialize(gameObject.name, "enemy");
+
         StartCoroutine(WaitAndLoadScene(sceneName, dialogueCanvas));
     }
 }
