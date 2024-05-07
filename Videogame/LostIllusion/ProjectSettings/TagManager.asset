@@ -3,12 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - freezesPlayer
+  - pause
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
@@ -40,4 +42,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 2820228153
+    locked: 0
+  - name: Foreground1
+    uniqueID: 3757099683
+    locked: 0
+  - name: Foreground2
+    uniqueID: 2327740941
+    locked: 0
+  - name: Foreground3
+    uniqueID: 2805291339
+    locked: 0
+  - name: Interactables
+    uniqueID: 721222773
+    locked: 0
+  - name: Player
+    uniqueID: 1035817365
     locked: 0

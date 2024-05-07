@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Videogame/LostIllusion/Assets/Audio/soundEffects/buzzer.ogg.meta
+guid: 037404783717fd3478140df42b3fc21d
+=======
+guid: 4e08978d8ebd91f4ba4d962ffbcc75ce
+>>>>>>> 11b42e33d4e6ac24dbda02bf1b3595b540578a49:Videogame/LostIllusion/Assets/Resources/Audio/soundEffects/buzzer.ogg.meta
+AudioImporter:
+  externalObjects: {}
+  serializedVersion: 7
+  defaultSettings:
+    serializedVersion: 2
+    loadType: 0
+    sampleRateSetting: 0
+    sampleRateOverride: 44100
+    compressionFormat: 1
+    quality: 1
+    conversionMode: 0
+    preloadAudioData: 0
+  platformSettingOverrides: {}
+  forceToMono: 0
+  normalize: 1
+  loadInBackground: 0
+  ambisonic: 0
+  3D: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
