@@ -13,7 +13,7 @@ public class dialogue : MonoBehaviour
     AudioSource audioSource;
 
     // Start is called before the first frame update
-    public void Initialize(string object_name, int index)
+    public virtual void Initialize(string object_name, int index)
     {
         if (dialogueName != null){
             dialogueName.text = object_name;
@@ -29,7 +29,7 @@ public class dialogue : MonoBehaviour
     
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         
         if (Input.GetKeyDown(KeyCode.Space))
@@ -46,13 +46,13 @@ public class dialogue : MonoBehaviour
         }
     }
 
-    void StartDialogue()
+    public virtual void StartDialogue()
     {
         index = 0;
         StartCoroutine(TypeLine());
     }
 
-    IEnumerator TypeLine()
+    public virtual IEnumerator TypeLine()
     {
         foreach (char c in lines[index].ToCharArray())
         {
@@ -65,7 +65,7 @@ public class dialogue : MonoBehaviour
         }
     }
 
-    public void NextLine()
+    public virtual void NextLine()
     {
         if (index < lines.Count - 1)
         {
