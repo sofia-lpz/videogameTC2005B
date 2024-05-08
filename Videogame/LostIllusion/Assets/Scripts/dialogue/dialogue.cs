@@ -11,6 +11,7 @@ public class dialogue : MonoBehaviour
     float textSpeed = 0.05f;
     int index;
     AudioSource audioSource;
+    private int charIndex = 0;
 
     // Start is called before the first frame update
     public virtual void Initialize(string object_name, int index)
@@ -57,6 +58,23 @@ public class dialogue : MonoBehaviour
 
     public virtual IEnumerator TypeLine()
     {
+
+/*
+uncomment this to start debugging pausing the dialogue
+
+        for (i = charIndex; i < lines[index].ToCharArray.Length; i++)
+        {
+            dialogueBox.text += lines[index].ToCharArray[i];
+            if (lines[index].ToCharArray[i] != ' '){
+                audioSource.pitch = Random.Range(0.9f, 1.1f);
+                audioSource.Play();
+            }
+            yield return new WaitForSeconds(textSpeed);
+        }
+*/
+
+
+
         foreach (char c in lines[index].ToCharArray())
         {
             dialogueBox.text += c;
