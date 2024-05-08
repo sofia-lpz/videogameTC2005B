@@ -31,7 +31,10 @@ public class dialogue : MonoBehaviour
     // Update is called once per frame
     public virtual void Update()
     {
-        
+        if (stateNameController.gamePaused){
+            StopAllCoroutines();
+            return;
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (dialogueBox.text == lines[index])

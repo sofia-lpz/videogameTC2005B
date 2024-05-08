@@ -19,10 +19,13 @@ public class stateNameController : MonoBehaviour
 
     /*LIST OF SCENES*/
     public static List<string> scenes = new List<string> {
+        "Instructions",
+        "cutscene0",
         "Home",
-        "Outside",
+        "Outside"
         };
     
+    public static bool gamePaused = false;
 
 /*MATCH RESULTS*/
     public static int match_tv = 0; //set to 1 if the tv match has been won, -1 if lost, 0 if never played
@@ -66,6 +69,8 @@ public class stateNameController : MonoBehaviour
     tv_lines_lost
 };
 
+
+// to do, make a dictionary of dictionaries instead of dictionary of lists
 public static Dictionary<string, List<List<string>>> dialoguesDictionary = new Dictionary<string, List<List<string>>> {
     {"tv", tv_lines},
     {"talk2tv", new List<List<string>> { tv2talk_lines }},

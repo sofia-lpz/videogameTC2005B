@@ -33,7 +33,7 @@ public class Character_Movement : MonoBehaviour
     
     void Update()
     {
-        if (GameObject.FindWithTag("freezesPlayer") != null)
+        if (stateNameController.gamePaused)
         {
             return;
         }
