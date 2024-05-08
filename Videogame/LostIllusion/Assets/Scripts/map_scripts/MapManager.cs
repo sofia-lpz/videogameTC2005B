@@ -11,6 +11,7 @@ public class MapManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P) && !stateNameController.gamePaused)
         {
             GameObject pauseCanvas = Object.Instantiate(PauseCanvasPrefab);
+            stateNameController.gamePaused = true;
         
         }
     }
