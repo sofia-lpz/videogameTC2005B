@@ -46,7 +46,7 @@
 
 ### **Summary**
 
-Is a strategic card-based adventure game in a visually distorted cityscape, where the player navigate an hypnotized protagonist on a quest to confront the magician responsible for their altered state of consciousness. The game combines exploration of a pixel art map with engaging card battles, unfolding the story through vividly illustrated cutscenes.
+Is a strategic card-based adventure game in a visually distorted cityscape, where the player navigate an hypnotized protagonist on a quest to confront the magician responsible for their altered state of consciousness. Throughout the players journey, he will encounter various opponents that will join its team if he defeats them also he will discover new places and new cards to use in combat. The game combines exploration of a pixel art map with engaging card battles, unfolding the story through vividly illustrated cutscenes and giving more reasons to why he was hypnotized be the magician.
 
 ### **Gameplay**
 
