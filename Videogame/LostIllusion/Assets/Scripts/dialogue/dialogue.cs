@@ -11,9 +11,10 @@ public class dialogue : MonoBehaviour
     float textSpeed = 0.05f;
     int index;
     AudioSource audioSource;
+    private int charIndex = 0;
 
     // Start is called before the first frame update
-    public void Initialize(string object_name, int index)
+    public virtual void Initialize(string object_name, int index)
     {
         if (dialogueName != null){
             dialogueName.text = object_name;
@@ -29,9 +30,12 @@ public class dialogue : MonoBehaviour
     
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
-        
+        if (stateNameController.gamePaused){
+            StopAllCoroutines();
+            return;
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (dialogueBox.text == lines[index])
@@ -46,14 +50,31 @@ public class dialogue : MonoBehaviour
         }
     }
 
-    void StartDialogue()
+    public virtual void StartDialogue()
     {
         index = 0;
         StartCoroutine(TypeLine());
     }
 
-    IEnumerator TypeLine()
+    public virtual IEnumerator TypeLine()
     {
+
+/*
+uncomment this to start debugging pausing the dialogue
+
+        for (i = charIndex; i < lines[index].ToCharArray.Length; i++)
+        {
+            dialogueBox.text += lines[index].ToCharArray[i];
+            if (lines[index].ToCharArray[i] != ' '){
+                audioSource.pitch = Random.Range(0.9f, 1.1f);
+                audioSource.Play();
+            }
+            yield return new WaitForSeconds(textSpeed);
+        }
+*/
+
+
+
         foreach (char c in lines[index].ToCharArray())
         {
             dialogueBox.text += c;
@@ -65,7 +86,7 @@ public class dialogue : MonoBehaviour
         }
     }
 
-    public void NextLine()
+    public virtual void NextLine()
     {
         if (index < lines.Count - 1)
         {

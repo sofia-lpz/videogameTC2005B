@@ -23,6 +23,7 @@ public class menuButtons : MonoBehaviour
 
     public void resume()
     {
+        stateNameController.gamePaused = false;
         Destroy(transform.parent.gameObject);
     }
 
