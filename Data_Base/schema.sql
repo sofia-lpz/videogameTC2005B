@@ -12,6 +12,7 @@ create table player(
 create table villager(
     name varchar(50) NOT NULL,
     description varchar(100) NOT NULL,
+    element enum('fire', 'water', 'earth', 'wind', 'light', 'dark') NOT NULL,
     primary key (name)
 ); engine=myisam DEFAULT CHARSET=utf8mb4;
 

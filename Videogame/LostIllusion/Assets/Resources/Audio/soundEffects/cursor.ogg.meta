@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Videogame/LostIllusion/Assets/Audio/soundEffects/cursor1.ogg.meta
+guid: f850eec250711da4fa8ff7d5b0ba03f4
+=======
 guid: ac0ae3dcaaa0a5e46b96bccb40fa4efb
+>>>>>>> 11b42e33d4e6ac24dbda02bf1b3595b540578a49:Videogame/LostIllusion/Assets/Resources/Audio/soundEffects/cursor1.ogg.meta
 AudioImporter:
   externalObjects: {}
   serializedVersion: 7
