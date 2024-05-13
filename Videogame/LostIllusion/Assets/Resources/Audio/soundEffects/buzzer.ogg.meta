@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Videogame/LostIllusion/Assets/Audio/soundEffects/buzzer.ogg.meta
+guid: 037404783717fd3478140df42b3fc21d
+=======
 guid: 4e08978d8ebd91f4ba4d962ffbcc75ce
+>>>>>>> 11b42e33d4e6ac24dbda02bf1b3595b540578a49:Videogame/LostIllusion/Assets/Resources/Audio/soundEffects/buzzer.ogg.meta
 AudioImporter:
   externalObjects: {}
   serializedVersion: 7
