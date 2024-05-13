@@ -14,5 +14,11 @@ public class MapManager : MonoBehaviour
             stateNameController.gamePaused = true;
         
         }
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            stateNameController.gamePaused = false;
+            Destroy(GameObject.Find("PauseCanvas(Clone)"));
+        }
     }
 }

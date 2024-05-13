@@ -30,10 +30,14 @@ create table card(
     type enum ('creature', 'hypnosis', 'snack', 'weapon', 'tool', 'skill') NOT NULL,
     description varchar(100) NOT NULL,
 
+--chaneg names
+
     self_health SMALL INT NOT NULL DEFAULT 0, --set this to positive if its healing
     oponent_health SMALL INT NOT NULL DEFAULT 0, --set this to negative if its attack
     defense SMALL INT NOT NULL DEFAULT 0, --set this to positive if its defense
     luck SMALL INT NOT NULL DEFAULT 0, --set this to positive if its support
+
+
     constraint fk_card_effect foreign key (effect) references effect(effectId) on delete restrict on update cascade, --can be null
     primary key (cardId)
     key (energy_cost)
