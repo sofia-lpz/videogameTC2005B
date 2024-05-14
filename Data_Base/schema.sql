@@ -19,7 +19,7 @@ create table villager(
 create table team(
     username varchar(50) NOT NULL,
     villager varchar(50) NOT NULL,
-    primary key (username, villager),
+    primary key (username, villager)
 );
 
 create table card(
@@ -27,32 +27,20 @@ create table card(
     name varchar(50) NOT NULL,
     energy_cost SMALLINT NOT NULL,
     effect enum ('healing', 'attack', 'defense', 'support') NOT NULL,
-    type enum ('creature', 'hypnosis', 'snack', 'weapon', 'tool', 'skill') NOT NULL,
+    type enum ('creature', 'hypnosis', 'snack', 'weapon', 'skill') NOT NULL,
     description varchar(100) NOT NULL,
 
 --change names, check effects to card relations
 
-    self_health SMALL INT NOT NULL DEFAULT 0, --set this to positive if its healing
-    oponent_health SMALL INT NOT NULL DEFAULT 0, --set this to negative if its attack
-    defense SMALL INT NOT NULL DEFAULT 0, --set this to positive if its defense
-    support_increase SMALL INT NOT NULL DEFAULT 0, --set this to positive if its support
+    player_health SMALL INT NOT NULL DEFAULT 0, --(to add to player health)
+    player_attack SMALL INT NOT NULL DEFAULT 0, --(to subtract from enemy health) 
 
+    player_defense SMALL INT NOT NULL DEFAULT 0, --(to be subtracted from enemy attack in the turn)
+    player_support SMALL INT NOT NULL DEFAULT 0, --(to be added to player attack in the turn)
+    
+    enemy_defense SMALL INT NOT NULL DEFAULT 0, --(to be subtracted from enemy if hypnosis card type)
 
-    constraint fk_card_effect foreign key (effect) references effect(effectId) on delete restrict on update cascade, --can be null
     primary key (cardId)
-    key (energy_cost)
-); engine=myisam DEFAULT CHARSET=utf8mb4;
-
-create table effect( --used particularly by hypnosis cards
-    effectId varchar(15) NOT NULL DEFAULT 'effect' AUTO_INCREMENT,
-    ame enum ('chicken', 'sleep', 'confusion'),
-    description varchar(100) NOT NULL,
-
-    accuracy SMALLINT NOT NULL DEFAULT 0, --decrease enemy accuracy by this many points
-    attack_decrease SMALLINT NOT NULL DEFAULT 0, --decrease enemy attack by this many points
-    defense_decrease SMALLINT NOT NULL DEFAULT 0, --decrease enemy defense by this many points
-    primary key (effectId)
-
 ); engine=myisam DEFAULT CHARSET=utf8mb4;
 
 create table match(
@@ -61,19 +49,18 @@ create table match(
     player varchar(50) NOT NULL,
     won boolean NOT NULL,
     primary key (matchId, player)
-    constraint fk_match_player foreign key (player1) references player(username) on delete restrict on update cascade,
+    constraint fk_match_player foreign key (player) references player(username) on delete restrict on update cascade,
 ); engine= InnoDB DEFAULT CHARSET=utf8mb4;
 
 create table stats(
-    statsId varchar(15) NOT NULL DEFAULT 'stats' AUTO_INCREMENT,
     player varchar(50) NOT NULL,
-    most_used_card varchar(15) NOT NULL,
-    most_used_villager varchar(15) NOT NULL,
-    least_used_card varchar(15) NOT NULL,
-    least_used_villager varchar(15) NOT NULL,
+    most_used_card varchar(50) NOT NULL,
+    most_used_villager varchar(50) NOT NULL,
+    least_used_card varchar(50) NOT NULL,
+    least_used_villager varchar(50) NOT NULL,
     found_objects SMALLINT NOT NULL DEFAULT 0,
 
-    primary key (player, statsId),
+    primary key (player),
     constraint stats_player foreign key (player) references player(username) on delete restrict on update cascade,
     constraint stats_MU_card foreign key (most_used_card) references card(cardId) on delete restrict on update cascade,
     foreign key stats_MU_villager foreign key (most_used_villager) references villager(name) on delete restrict on update cascade,

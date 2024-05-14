@@ -17,6 +17,7 @@ router.get("player/:id/stats", colometaController.getAlumnos);
 
 router.get("/dialogues", colometaController.getAlumnos);
 
+router.get("/dialogue/:id", colometaController.getAlumnos);
 
 //References:
 //router.get("/", tareasController.getAll);
