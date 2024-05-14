@@ -19,8 +19,10 @@ public class dialogue : MonoBehaviour
         if (dialogueName != null){
             dialogueName.text = object_name;
         }
+
+        stateNameController.freezePlayer = true;
         
-        lines = stateNameController.dialoguesDictionary[object_name][index];
+        lines = dialogueData.dialoguesDictionary[object_name][index];
         
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = Resources.Load<AudioClip>("Audio/soundEffects/text");
@@ -97,6 +99,7 @@ uncomment this to start debugging pausing the dialogue
         else
         {
             Destroy(gameObject);
+            stateNameController.freezePlayer = false;
             Debug.Log("Dialogue canvas deleted.");
         }
     }
