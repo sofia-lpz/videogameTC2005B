@@ -1,8 +1,8 @@
-import * as pronosService from './pronos.service.js'
+import * as colometaService from './colometa.service.js'
 
 const getCarreras = async (req, res) => {
   try {
-    const carreras = await pronosService.getCarreras();
+    const carreras = await colometaService.getCarreras();
     res.send({ status: "OK", data: carreras });
   } catch (error) {
     console.error(error);
@@ -20,7 +20,7 @@ const getAlumno = async (req, res) => {
   }
 
   try {
-    const alumno = await pronosService.getAlumno(matricula);
+    const alumno = await colometaService.getAlumno(matricula);
     res.send({ status: "OK", data: alumno });
   } catch (error) {
     console.error(error);
@@ -37,8 +37,8 @@ const getCarreraSemestre = async (req, res) => {
   }
 
   try {
-    const pronostico = await pronosService.getCarreraSemestre(carrera, semestre);
-    res.send({ status: "OK", data: pronostico });
+    const colometatico = await colometaService.getCarreraSemestre(carrera, semestre);
+    res.send({ status: "OK", data: colometatico });
   }
 catch(error){
   console.error(error);
