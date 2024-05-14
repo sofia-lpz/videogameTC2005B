@@ -1,8 +1,8 @@
-import * as pronosMysql from './pronos.mysql.js'
+import * as colometaMysql from './colometa.mysql.js'
 
 const getCarreras = async () => {
   try {
-    const carreras = await pronosMysql.getCarreras();
+    const carreras = await colometaMysql.getCarreras();
     return carreras;
   } catch (err) {
     console.error(err);
@@ -11,7 +11,7 @@ const getCarreras = async () => {
 
 const getAlumno = async (matricula) => {
   try {
-    const alumno = await pronosMysql.getAlumno(matricula);
+    const alumno = await colometaMysql.getAlumno(matricula);
     return alumno;
   } catch (err) {
     console.error(err);

@@ -1,20 +1,21 @@
 import express from 'express'
-import * as pronosController from './pronos.controller.js'
+import * as colometaController from './colometa.controller.js'
 
 const router = express.Router();
 
-router.get("/carreras", pronosController.getCarreras);
-//regresa nombre de carrera itc, itd, etc
+router.get("/cards", colometaController.getCarreras);
 
-router.get("/matricula/:matricula", pronosController.getAlumno);
-//regresa json con datos del alumno
+router.get("/card/:id", colometaController.getCarreras);
 
-//router.get("/:carrera/:semestre", pronosController.getCarrerasSemestre);
+router.get("/player/:id", colometaController.getAlumnos);
 
-//CONVENTIONS FOR ROUTES
-//carreras son ITC, ITD, etc
-//programas son itc19, itc26, etc
+router.get("/villager/:id", colometaController.getAlumnos);
 
+router.get("/player/:id/matches", colometaController.getAlumnos);
+
+router.get("player/:id/stats", colometaController.getAlumnos);
+
+router.get("/dialogues", colometaController.getAlumnos);
 
 
 //References:
