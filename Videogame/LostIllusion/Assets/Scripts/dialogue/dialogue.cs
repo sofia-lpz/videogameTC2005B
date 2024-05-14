@@ -20,7 +20,7 @@ public class dialogue : MonoBehaviour
             dialogueName.text = object_name;
         }
         
-        lines = stateNameController.dialoguesDictionary[object_name][index];
+        lines = dialogueData.dialoguesDictionary[object_name][index];
         
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = Resources.Load<AudioClip>("Audio/soundEffects/text");
