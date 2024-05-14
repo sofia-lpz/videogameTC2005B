@@ -5,8 +5,8 @@ async function connectToDB()
   return await  mysql.createConnection({
     host: 'localhost',
     user: 'hagen',
-    database: 'bd',
-    password: 'M4sqls3rv3r.',
+    database: 'colometa',
+    password: 'colometa.',
   });
 }
 
