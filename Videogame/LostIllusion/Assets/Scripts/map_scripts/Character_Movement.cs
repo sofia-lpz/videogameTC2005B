@@ -33,11 +33,11 @@ public class Character_Movement : MonoBehaviour
     
     void Update()
     {
-        if (stateNameController.gamePaused)
+        if (stateNameController.gamePaused || stateNameController.freezePlayer)
         {
             return;
         }
-
+        
         movement.x = 0f;
         movement.y = 0f;
 
