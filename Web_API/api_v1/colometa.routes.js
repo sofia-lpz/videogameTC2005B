@@ -3,21 +3,31 @@ import * as colometaController from './colometa.controller.js'
 
 const router = express.Router();
 
-router.get("/cards", colometaController.getCarreras);
+//get all
+router.get("/cards", colometaController.getCards);
+router.get("/player/:username", colometaController.getPlayer);
+router.get("/dialogues", colometaController.getDialogues);
+router.get("/stats", colometaController.getStats);
+router.get("/matches", colometaController.getMatches);
+router.get("/villagers", colometaController.getVillagers);
 
-router.get("/card/:id", colometaController.getCarreras);
+router.get("/player/:username/team", colometaController.getPlayerMatches);
 
-router.get("/player/:id", colometaController.getAlumnos);
 
-router.get("/villager/:id", colometaController.getAlumnos);
+// get specific, might be useful for unity optimising?
+router.get("/card/:id", colometaController.getCard);
+router.get("/villager/:id", colometaController.getVillager);
+router.get("/dialogue/:id", colometaController.getDialogue);
 
-router.get("/player/:id/matches", colometaController.getAlumnos);
+//get specific by player, might be useful for website?
+router.get("/player/:username/matches", colometaController.getPlayerMatches);
+router.get("player/:username/stats", colometaController.getPlayerStats)
+router.get("/player/:username/deck", colometaController.getPlayerDeck);
 
-router.get("player/:id/stats", colometaController.getAlumnos);
+//posters
 
-router.get("/dialogues", colometaController.getAlumnos);
-
-router.get("/dialogue/:id", colometaController.getAlumnos);
+router.post("/matches", colometaController.createCarrera);
+router.post("/stats/player/:username", colometaController.createCarrera);
 
 //References:
 //router.get("/", tareasController.getAll);
