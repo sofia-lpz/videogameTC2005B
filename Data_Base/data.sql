@@ -1,8 +1,8 @@
 use colometa;
 
-insert into player (username, password, level, score) values 
-('admin', 'admin', 1, 0),
-('player', 'password', 1, 0);
+insert into player (username, password, matches_won) values
+('admin', 'admin', 0),
+('admin2', 'admin', 0);
 
 insert into card (cardId, name, energy_cost, effect, type, description) values
 ('1', 'plum juice', 3, 'healing', 'snack', 'drinking this grants 2 hp'),
