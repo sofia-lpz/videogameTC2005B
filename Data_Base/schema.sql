@@ -84,6 +84,7 @@ create table deck(
 create table dialogue(
     dialogueId varchar(15) NOT NULL DEFAULT 'dialogue',
     speaker varchar(50) NOT NULL, 
+    
     text varchar(200) NOT NULL,
     primary key (dialogueId, speaker)
 ) engine=myisam DEFAULT CHARSET=utf8mb4;
