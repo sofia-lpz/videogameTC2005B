@@ -51,4 +51,9 @@ public class menuButtons : MonoBehaviour
         stateNameController.gamePaused = false;
         Destroy(transform.parent.gameObject);
     }
+
+    public void debug()
+    {
+        Debug.Log("click!");
+    }
 }
