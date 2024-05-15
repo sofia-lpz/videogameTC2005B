@@ -37,12 +37,6 @@ public class dialogue : MonoBehaviour
         StartDialogue();
     }
 
-
-
-
-    
-    
-
     // Update is called once per frame
     public virtual void Update()
     {
