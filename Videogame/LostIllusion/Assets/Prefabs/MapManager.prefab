@@ -58,3 +58,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseCanvasPrefab: {fileID: 1751940820017322284, guid: e74808ed5c2b9224fa7cc7b675c7731f, type: 3}
+  InventoryCanvasPrefab: {fileID: 3651597494340531911, guid: ecfbfcd4f0df06740b28327e83d7e4dd, type: 3}

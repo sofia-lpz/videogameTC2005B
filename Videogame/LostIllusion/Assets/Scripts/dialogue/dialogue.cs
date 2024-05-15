@@ -21,15 +21,21 @@ public class dialogue : MonoBehaviour
         }
 
         stateNameController.freezePlayer = true;
-        
-        lines = dialogueData.dialoguesDictionary[object_name][index];
-        
+
+        List<List<string>> objectDialogue;
+        if (!dialogueData.dialoguesDictionary.TryGetValue(object_name, out objectDialogue)){
+            Debug.Log("No dialogue found for " + object_name);
+            lines = new List<string>() {"..."};
+        }
+        else{
+            lines = dialogueData.dialoguesDictionary[object_name][index];
+        }
+
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = Resources.Load<AudioClip>("Audio/soundEffects/text");
         dialogueBox.text = "";
         StartDialogue();
     }
-    
 
     // Update is called once per frame
     public virtual void Update()

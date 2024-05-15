@@ -45,4 +45,15 @@ public class menuButtons : MonoBehaviour
         audioSource.Play();
         SceneManager.LoadScene("MainTitle", LoadSceneMode.Single);
     }
+
+    public void quitInventory()
+    {
+        stateNameController.gamePaused = false;
+        Destroy(transform.parent.gameObject);
+    }
+
+    public void debug()
+    {
+        Debug.Log("click!");
+    }
 }

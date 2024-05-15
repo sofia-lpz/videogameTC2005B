@@ -5,6 +5,7 @@ using UnityEngine;
 public class MapManager : MonoBehaviour
 {
     [SerializeField] GameObject PauseCanvasPrefab;
+    [SerializeField] GameObject InventoryCanvasPrefab;
 
     void Update()
     {
@@ -15,10 +16,11 @@ public class MapManager : MonoBehaviour
         
         }
 
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I) && !stateNameController.gamePaused)
         {
-            stateNameController.gamePaused = false;
-            Destroy(GameObject.Find("PauseCanvas(Clone)"));
+            GameObject inventoryCanvas = Object.Instantiate(InventoryCanvasPrefab);
+            stateNameController.gamePaused = true;
         }
+
     }
 }
