@@ -6880,6 +6880,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MapManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6711814249203806308, guid: dd58caa57c8e2d640aee493667174021, type: 3}
+      propertyPath: InventoryCanvasPrefab
+      value: 
+      objectReference: {fileID: 3651597494340531911, guid: ecfbfcd4f0df06740b28327e83d7e4dd, type: 3}
     - target: {fileID: 8828024507673801939, guid: dd58caa57c8e2d640aee493667174021, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.8669381
