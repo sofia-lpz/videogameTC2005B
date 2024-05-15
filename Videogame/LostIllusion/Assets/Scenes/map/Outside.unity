@@ -20639,7 +20639,7 @@ MonoBehaviour:
     maxNormalAngle: 0
   collidedObjects: []
   interacted: 0
-  prefabDescriptionCanvas: {fileID: 5807186570002739413, guid: 3eda015329492b64893a9a3251d98229, type: 3}
+  prefabDescriptionCanvas: {fileID: 6286755694444886453, guid: 3eda015329492b64893a9a3251d98229, type: 3}
 --- !u!61 &1979685465
 BoxCollider2D:
   m_ObjectHideFlags: 0
