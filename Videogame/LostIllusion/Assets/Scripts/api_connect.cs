@@ -10,19 +10,23 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class api_connect : MonoBehaviour
-{
-    [SerializeField] string url;
-    [SerializeField] string getEndpoint;
+{/*
     public static string result;
+    public static string dialogueResults;
+    public string url = "http://localhost:3000/api";
 
-    public void Start()
-    {
-        GetData();
+    public void InitialGet(){
+        getDialogues();
     }
 
-    public void GetData(){
+    public void GetData(string getEndpoint){
         StartCoroutine(GetRequest(url + getEndpoint));
     }
+
+    public string getDialogues(){
+        dialogueResults = GetData("/dialogues");
+    }
+
 
     IEnumerator GetRequest(string uri)
     {
@@ -44,4 +48,5 @@ public class api_connect : MonoBehaviour
             
         }
     }
+    */
 }
