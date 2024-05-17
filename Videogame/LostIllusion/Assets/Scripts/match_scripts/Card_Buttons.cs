@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Card_Buttons : MonoBehaviour
 {
+    public int energyCost = 1;
 
     // Start is called before the first frame update
     void Start()
