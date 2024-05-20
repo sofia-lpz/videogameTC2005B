@@ -84,6 +84,7 @@ create table deck(
 create table dialogue(
     speaker varchar(50) NOT NULL,
     lineIndex SMALLINT NOT NULL DEFAULT 0,
+    storyIndex SMALLINT NOT NULL DEFAULT 0,
     
     text varchar(200) NOT NULL,
 
