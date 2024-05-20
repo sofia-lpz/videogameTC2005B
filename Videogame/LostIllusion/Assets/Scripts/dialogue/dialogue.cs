@@ -9,6 +9,7 @@ public class dialogue : MonoBehaviour
     [SerializeField] TextMeshProUGUI dialogueName;
     List<string> lines;
     float textSpeed = 0.05f;
+    float elipsisSpeed = 0.3f;
     int index;
     AudioSource audioSource;
     private int charIndex = 0;
@@ -81,8 +82,6 @@ uncomment this to start debugging pausing the dialogue
         }
 */
 
-
-
         foreach (char c in lines[index].ToCharArray())
         {
             dialogueBox.text += c;
@@ -90,7 +89,14 @@ uncomment this to start debugging pausing the dialogue
                 audioSource.pitch = Random.Range(0.9f, 1.1f);
                 audioSource.Play();
             }
-            yield return new WaitForSeconds(textSpeed);
+            if (c == '.' || c == '?' || c == '!')
+            {
+                yield return new WaitForSeconds(elipsisSpeed);
+            }
+            else
+            {
+                yield return new WaitForSeconds(textSpeed);
+            }
         }
     }
 

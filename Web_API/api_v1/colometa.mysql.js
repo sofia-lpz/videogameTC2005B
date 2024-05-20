@@ -1,10 +1,7 @@
-import mysql from "mysql2/promise"
+import mysql from "mysql2/promise";
 
-// NEEDS QUERIES
-
-async function connectToDB()
-{
-  return await  mysql.createConnection({
+async function connectToDB() {
+  return await mysql.createConnection({
     host: 'localhost',
     user: 'hagen',
     database: 'colometa',
@@ -12,218 +9,146 @@ async function connectToDB()
   });
 }
 
-async function getCards()
-{
+async function getCards() {
   let connection = null;
-  let query = `SELECT * from carta`
-  try
-  {
-    connection = await connectToDB()
-
-    const [results, _] = await connection.query(query)
-
-    console.log(`${results.length} rows returned`)
-    return results
-  }
-  catch(error)
-  {
-    console.log(error)
-  }
-  finally
-  {
-    if(connection !== null)
-    {
-      connection.end()
-      console.log('Connection closed successfuly')
+  let query = `SELECT * FROM card`;
+  try {
+    connection = await connectToDB();
+    const [results, _] = await connection.query(query);
+    console.log(`${results.length} rows returned`);
+    return results;
+  } catch (error) {
+    console.log(error);
+  } finally {
+    if (connection !== null) {
+      connection.end();
+      console.log('Connection closed successfully');
     }
   }
 }
 
-async function getPlayer(username)
-{
+async function getPlayer(username) {
   let connection = null;
-  let query = `SELECT * from jugador WHERE nombre = ?`
-  try
-  {
-    connection = await connectToDB()
-
-    const [results, _] = await connection.query(query, [username])
-
-    console.log(`${results.length} rows returned`)
-    return results
-  }
-  catch(error)
-  {
-    console.log(error)
-  }
-  finally
-  {
-    if(connection !== null)
-    {
-      connection.end()
-      console.log('Connection closed successfuly')
+  let query = `SELECT * FROM player WHERE username = ?`;
+  try {
+    connection = await connectToDB();
+    const [results, _] = await connection.query(query, [username]);
+    console.log(`${results.length} rows returned`);
+    return results;
+  } catch (error) {
+    console.log(error);
+  } finally {
+    if (connection !== null) {
+      connection.end();
+      console.log('Connection closed successfully');
     }
   }
 }
 
-async function getDialogues()
-{
+async function getDialogues() {
   let connection = null;
-  let query = `SELECT * from dialogo`
-  try
-  {
-    connection = await connectToDB()
-
-    const [results, _] = await connection.query(query)
-
-    console.log(`${results.length} rows returned`)
-    return results
-  }
-  catch(error)
-  {
-    console.log(error)
-  }
-  finally
-  {
-    if(connection !== null)
-    {
-      connection.end()
-      console.log('Connection closed successfuly')
+  let query = `SELECT * FROM dialogue`;
+  try {
+    connection = await connectToDB();
+    const [results, _] = await connection.query(query);
+    console.log(`${results.length} rows returned`);
+    return results;
+  } catch (error) {
+    console.log(error);
+  } finally {
+    if (connection !== null) {
+      connection.end();
+      console.log('Connection closed successfully');
     }
   }
 }
 
-async function getStats()
-{
+async function getStats() {
   let connection = null;
-  let query = `SELECT * from estadistica`
-  try
-  {
-    connection = await connectToDB()
-
-    const [results, _] = await connection.query(query)
-
-    console.log(`${results.length} rows returned`)
-    return results
-  }
-  catch(error)
-  {
-    console.log(error)
-  }
-  finally
-  {
-    if(connection !== null)
-    {
-      connection.end()
-      console.log('Connection closed successfuly')
+  let query = `SELECT * FROM stats`;
+  try {
+    connection = await connectToDB();
+    const [results, _] = await connection.query(query);
+    console.log(`${results.length} rows returned`);
+    return results;
+  } catch (error) {
+    console.log(error);
+  } finally {
+    if (connection !== null) {
+      connection.end();
+      console.log('Connection closed successfully');
     }
   }
 }
 
-async function getMatches()
-{
+async function getMatches() {
   let connection = null;
-  let query = `SELECT * from partido`
-  try
-  {
-    connection = await connectToDB()
-
-    const [results, _] = await connection.query(query)
-
-    console.log(`${results.length} rows returned`)
-    return results
-  }
-  catch(error)
-  {
-    console.log(error)
-  }
-  finally
-  {
-    if(connection !== null)
-    {
-      connection.end()
-      console.log('Connection closed successfuly')
+  let query = `SELECT * FROM tcg_match`;
+  try {
+    connection = await connectToDB();
+    const [results, _] = await connection.query(query);
+    console.log(`${results.length} rows returned`);
+    return results;
+  } catch (error) {
+    console.log(error);
+  } finally {
+    if (connection !== null) {
+      connection.end();
+      console.log('Connection closed successfully');
     }
   }
 }
 
-async function getVillagers()
-{
+async function getVillagers() {
   let connection = null;
-  let query = `SELECT * from aldeano`
-  try
-  {
-    connection = await connectToDB()
-
-    const [results, _] = await connection.query(query)
-
-    console.log(`${results.length} rows returned`)
-    return results
-  }
-  catch(error)
-  {
-    console.log(error)
-  }
-  finally
-  {
-    if(connection !== null)
-    {
-      connection.end()
-      console.log('Connection closed successfuly')
+  let query = `SELECT * FROM villager`;
+  try {
+    connection = await connectToDB();
+    const [results, _] = await connection.query(query);
+    console.log(`${results.length} rows returned`);
+    return results;
+  } catch (error) {
+    console.log(error);
+  } finally {
+    if (connection !== null) {
+      connection.end();
+      console.log('Connection closed successfully');
     }
   }
 }
 
-async function getPlayerTeam(username)
-{
+async function getPlayerTeam(username) {
   let connection = null;
-  let query = `SELECT * from equipo WHERE nombre = ?`
-  try
-  {
-    connection = await connectToDB()
-
-    const [results, _] = await connection.query(query, [username])
-
-    console.log(`${results.length} rows returned`)
-    return results
-  }
-  catch(error)
-  {
-    console.log(error)
-  }
-  finally
-  {
-    if(connection !== null)
-    {
-      connection.end()
-      console.log('Connection closed successfuly')
+  let query = `SELECT * FROM team WHERE username = ?`;
+  try {
+    connection = await connectToDB();
+    const [results, _] = await connection.query(query, [username]);
+    console.log(`${results.length} rows returned`);
+    return results;
+  } catch (error) {
+    console.log(error);
+  } finally {
+    if (connection !== null) {
+      connection.end();
+      console.log('Connection closed successfully');
     }
   }
 }
 
-async function getPlayerDeck(username)
-{
+async function getPlayerDeck(username) {
   let connection = null;
-  let query = `SELECT * from mazo WHERE nombre = ?`
-  try
-  {
-    connection = await connectToDB()
-
-    const [results, _] = await connection.query(query, [username])
-
-    console.log(`${results.length} rows returned`)
-    return results
-  }
-  catch(error)
-  {
-    console.log(error)
-  }
-  finally
-  {
-    if(connection !== null)
-    {
-      connection.end()
-      console.log('Connection closed successfuly')
+  let query = `SELECT * FROM deck WHERE username = ?`;
+  try {
+    connection = await connectToDB();
+    const [results, _] = await connection.query(query, [username]);
+    console.log(`${results.length} rows returned`);
+    return results;
+  } catch (error) {
+    console.log(error);
+  } finally {
+    if (connection !== null) {
+      connection.end();
+      console.log('Connection closed successfully');
     }
   }
 }
