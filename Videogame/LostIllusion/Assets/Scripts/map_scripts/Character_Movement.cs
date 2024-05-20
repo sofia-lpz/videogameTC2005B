@@ -18,6 +18,7 @@ public class Character_Movement : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 movement;
+    private Animator animator;
 
     [SerializeField] KeyCode up;
     [SerializeField] KeyCode down;
@@ -28,6 +29,7 @@ public class Character_Movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     
@@ -35,23 +37,68 @@ public class Character_Movement : MonoBehaviour
     {
         if (stateNameController.gamePaused || stateNameController.freezePlayer)
         {
+            animator.SetBool("Moving", false);
             return;
         }
         
         movement.x = 0f;
         movement.y = 0f;
 
-        if (Input.GetKey(up)){
+        if (Input.GetKey(up))
+        {
             movement.y = 1f;
-        } else if(Input.GetKey(down)){
+        }
+        if (Input.GetKey(down))
+        {
             movement.y = -1f;
-        } else if(Input.GetKey(left)){
+        }
+        if (Input.GetKey(left))
+        {
             movement.x = -1f;
-        } else if(Input.GetKey(right)){
+        }
+        if (Input.GetKey(right))
+        {
             movement.x = 1f;
         } 
 
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            StartCoroutine(tremble());
+        }
+
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+
+        if (movement.x != 0 || movement.y != 0)
+        {
+            animator.SetFloat("X", movement.x);
+            animator.SetFloat("Y", movement.y);
+            animator.SetBool("Moving", true);
+        }
+        else
+        {
+            animator.SetBool("Moving", false);
+        }
     }
+
+    IEnumerator tremble()
+{
+    float trembleAmount = 0.05f; // Adjust this value to change the intensity of the tremble
+    float trembleSpeed = 60f; // Adjust this value to change the speed of the tremble
+
+    Vector3 originalPosition = transform.position;
+
+    float elapsedTime = 0f;
+
+    while (elapsedTime < 0.75f) // Tremble for 1 second
+    {
+        float x = Mathf.Sin(Time.time * trembleSpeed) * trembleAmount;
+        transform.position = new Vector3(originalPosition.x + x, originalPosition.y, originalPosition.z);
+        elapsedTime += Time.deltaTime;
+        yield return null;
+    }
+
+    // Reset position
+    transform.position = originalPosition;
+}
 }
 
