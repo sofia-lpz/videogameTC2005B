@@ -11,6 +11,8 @@ public class CharacterButtons : MonoBehaviour
     [SerializeField] Color highlightColor = Color.yellow;
     [SerializeField] float initialPos;
     [SerializeField] float activePos;
+    private int energyCost = 1;
+    private bool firstClick = true;
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +22,30 @@ public class CharacterButtons : MonoBehaviour
         button.onClick.AddListener(OnButtonPressed);  
     }
 
+
     public void OnButtonPressed()
     {
+        if (TCG_Controller.instance.currentTurn == TCG_Controller.Turn.Enemy)
+        {
+            return;
+        }
+
+        if (TCG_Controller.instance.energy < energyCost && !firstClick)
+        {
+            TCG_Controller.instance.notEnoughEnergyText.text = "Not enough energy";
+            return;
+        }
+
+        if (GetComponent<Image>().color != highlightColor && TCG_Controller.instance.energy >= energyCost)
+        {
+            if (!firstClick) {
+                TCG_Controller.instance.energy -= energyCost;
+                TCG_Controller.instance.EnergyText.text = "Energy: " + TCG_Controller.instance.energy.ToString();
+            }    
+        } else {
+            firstClick = false;
+        }
+        
         if (currentButton != null)
         {
             currentButton.GetComponent<Image>().color = currentButton.normalColor;

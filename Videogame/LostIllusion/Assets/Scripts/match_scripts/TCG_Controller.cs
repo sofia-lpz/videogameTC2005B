@@ -1,6 +1,7 @@
 /*
     Script that works as the main controller for the TCG match,
 */
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
@@ -8,6 +9,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
+using Unity.VisualScripting.Dependencies.Sqlite;
 
 public class TCG_Controller : MonoBehaviour
 {
@@ -20,13 +22,14 @@ public class TCG_Controller : MonoBehaviour
     [SerializeField] Transform buttonParentCards;
     [SerializeField] Transform characterParent;	
     [SerializeField] float delay;
-    [SerializeField] TMP_Text EnergyText;
-    [SerializeField] int energy;
-    [SerializeField] TMP_Text notEnoughEnergyText;
+    public TMP_Text EnergyText;
+    public int energy;
+    public TMP_Text notEnoughEnergyText;
     [SerializeField] Button endTurnButton;    
     public enum Turn {Player, Enemy};
     public Turn currentTurn;
-    private int turnCount;
+    public static TCG_Controller instance;
+    public static int turnCount;
 
     // Start is called before the first frame update
     void Start()
