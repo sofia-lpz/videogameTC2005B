@@ -59,8 +59,8 @@ public class menuButtons : MonoBehaviour
 
     public void mainMenu()
     {
-        audioSource.Play();
-        SceneManager.LoadScene("Outside");
+        //audioSource.Play();
+        SceneManager.LoadScene("Outside", LoadSceneMode.Single);
         
     }
 }
