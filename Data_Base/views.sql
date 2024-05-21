@@ -1,56 +1,50 @@
-use colometa;
+CREATE VIEW PlayerInfo AS
+SELECT username, matches_won
+FROM player;
 
---VIEWS
+CREATE VIEW PlayerVillagers AS
+SELECT p.username, v.name AS villager_name, v.description, v.element
+FROM player p
+JOIN team t ON p.username = t.username
+JOIN villager v ON t.villager = v.name;
 
-CREATE VIEW PlayerWins AS
-SELECT username AS player, COUNT(*) AS Wins
-FROM tcg_match
-WHERE won = true
-GROUP BY username;
+CREATE VIEW PlayerCards AS
+SELECT p.username, c.cardId, c.name AS card_name, c.energy_cost, c.effect, c.type, c.description
+FROM player p
+JOIN deck d ON p.username = d.username
+JOIN card c ON d.cardId = c.cardId;
 
-CREATE VIEW PlayerDeck AS
-SELECT d.player, GROUP_CONCAT(d.cardId) AS Cards
-FROM deck AS d
-GROUP BY d.player;
+CREATE VIEW PlayerCardStats AS
+SELECT s.username, s.most_used_card, s.least_used_card, s.found_objects
+FROM stats s;
 
-CREATE VIEW PlayerTeam AS
-SELECT t.username AS player, GROUP_CONCAT(t.villager) AS Team
-FROM team AS t
-GROUP BY t.username;
+CREATE VIEW PlayerVillagerStats AS
+SELECT s.username, s.most_used_villager, s.least_used_villager
+FROM stats s;
 
-CREATE VIEW PlayerStats AS
-SELECT s.player, s.most_used_card, s.most_used_villager, s.least_used_card, s.least_used_villager, s.found_objects
-FROM stats AS s;
+CREATE VIEW MatchHistory AS
+SELECT m.matchId, m.timestamp, m.username, m.won
+FROM tcg_match m;
 
-CREATE VIEW PlayerMatches AS
-SELECT username AS player, COUNT(*) AS Matches
-FROM tcg_match
-GROUP BY username;
+CREATE VIEW AttackCards AS
+SELECT c.cardId, c.name AS card_name, c.energy_cost, c.effect, c.type, c.description
+FROM card c
+WHERE c.effect = 'attack';
 
---TRIGGERS
-DELIMITER //
+CREATE VIEW DefenseCards AS
+SELECT c.cardId, c.name AS card_name, c.energy_cost, c.effect, c.type, c.description
+FROM card c
+WHERE c.effect = 'defense';
 
-CREATE TRIGGER update_wins
-AFTER INSERT ON tcg_match
-FOR EACH ROW
-BEGIN
-    IF NEW.won = true THEN
-        UPDATE player
-        SET matches_won = matches_won + 1
-        WHERE username = NEW.username;
-    END IF;
-END //
+CREATE VIEW DetailedCardInfo AS
+SELECT c.cardId, c.name AS card_name, c.energy_cost, c.effect, c.type, c.description, 
+       c.player_health, c.player_attack, c.player_defense, c.player_support, c.enemy_defense
+FROM card c;
 
-
--- after win, add the npc card to the player's deck 'npc_card_id' missing
-CREATE TRIGGER update_deck
-AFTER INSERT ON tcg_match
-FOR EACH ROW
-BEGIN
-    IF NEW.won = true THEN
-        INSERT INTO deck (player, cardId)
-        VALUES (NEW.username, 'npc_card_id');
-    END IF;
-END //
-
-
+CREATE VIEW PlayerDeckAndVillagers AS
+SELECT p.username, d.cardId, c.name AS card_name, v.name AS villager_name
+FROM player p
+JOIN deck d ON p.username = d.username
+JOIN card c ON d.cardId = c.cardId
+JOIN team t ON p.username = t.username
+JOIN villager v ON t.villager = v.name;
