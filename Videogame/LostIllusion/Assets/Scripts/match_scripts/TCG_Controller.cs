@@ -30,7 +30,6 @@ public class TCG_Controller : MonoBehaviour
     [SerializeField] int maxCards;
     public enum Turn {Player, Enemy};
     public Turn currentTurn;
-    public static TCG_Controller instance;
     public static int turnCount;
 
     // Start is called before the first frame update
@@ -122,11 +121,9 @@ public class TCG_Controller : MonoBehaviour
 
     void StartPlayerTurn()
     {
-        turnCount += 1;
         energy = Random.Range(1, 10);
         EnergyText.text = "Energy: " + energy.ToString();
         EnableCharacterButtons();
-        if (turnCount == 1){HighlightRandomCharacter();}
         StartCoroutine(PrepareCards());
     }
 
@@ -138,14 +135,6 @@ public class TCG_Controller : MonoBehaviour
         }
     }
 
-    void HighlightRandomCharacter()
-    {
-        if (characterButtons.Count > 0)
-        {
-            int randomIndex = Random.Range(0, characterButtons.Count);
-            characterButtons[randomIndex].Highlight();
-        }
-    }
 
     public void OnCharacterPressed(CharacterButtons characterButton){
         if (currentTurn == Turn.Enemy)
