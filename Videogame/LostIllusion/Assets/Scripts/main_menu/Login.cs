@@ -23,18 +23,19 @@ public class LoginRegister : MonoBehaviour
     {
         if (loginButton != null)
         {
-            loginButton.onClick.AddListener(OnLoginButtonClicked);
+            loginButton.onClick.AddListener(onLoginButtonClicked);
         }
 
         if (registerButton != null)
         {
-            registerButton.onClick.AddListener(OnRegisterButtonClicked);
+            registerButton.onClick.AddListener(onRegisterButtonClicked);
         }
     }
 
     void onLoginButtonClicked()
     {
-        startCoroutine(Login());
+        StartCoroutine(Login());
+        
     }
 
     IEnumerator Login()
@@ -65,7 +66,7 @@ public class LoginRegister : MonoBehaviour
 
     void onRegisterButtonClicked()
     {
-        startCoroutine(Register());
+        StartCoroutine(Register());
     }
 
     IEnumerator Register()
