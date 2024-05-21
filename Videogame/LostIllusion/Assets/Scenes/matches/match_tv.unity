@@ -445,7 +445,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cards: []
-  numInitialCards: 6
+  characterButtons: []
+  numInitialCards: 5
   cardsPerTurn: 2
   numCharacters: 2
   buttonPrefab: {fileID: 6064211221271390237, guid: b680c6fc44c3e4b41b35b7a6acbafbc4, type: 3}
@@ -457,6 +458,7 @@ MonoBehaviour:
   energy: 3
   notEnoughEnergyText: {fileID: 1806191214}
   endTurnButton: {fileID: 1693526405}
+  maxCards: 5
   currentTurn: 0
 --- !u!1 &658031037
 GameObject:

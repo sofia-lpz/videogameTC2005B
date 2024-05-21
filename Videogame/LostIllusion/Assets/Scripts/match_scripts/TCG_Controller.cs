@@ -12,6 +12,7 @@ using Unity.VisualScripting;
 public class TCG_Controller : MonoBehaviour
 {
     [SerializeField] List<Card_Buttons> cards;
+    [SerializeField] List<CharacterButtons> characterButtons;
     [SerializeField] int numInitialCards;
     [SerializeField] int cardsPerTurn;
     [SerializeField] int numCharacters;
@@ -24,6 +25,7 @@ public class TCG_Controller : MonoBehaviour
     [SerializeField] int energy;
     [SerializeField] TMP_Text notEnoughEnergyText;
     [SerializeField] Button endTurnButton;    
+    [SerializeField] int maxCards;
     public enum Turn {Player, Enemy};
     public Turn currentTurn;
     private int turnCount;
@@ -33,7 +35,7 @@ public class TCG_Controller : MonoBehaviour
     {
         currentTurn = Turn.Player;
         EnergyText.text = "Energy: " + energy.ToString();  
-        endTurnButton.onClick.AddListener(EndTurn); 
+        endTurnButton.onClick.AddListener(EndTurn);
         StartCoroutine(PrepareCards());
         PrepareCharacters();
         endTurnButton.interactable = currentTurn == Turn.Player;
@@ -43,6 +45,7 @@ public class TCG_Controller : MonoBehaviour
     IEnumerator PrepareCards()
     {
         int cardsToCreate = (turnCount == 0) ? numInitialCards: cardsPerTurn;
+        cardsToCreate = Mathf.Min(cardsToCreate, maxCards - cards.Count);
         for (int i = 0; i < cardsToCreate; i++)
             {
             GameObject newCard = Instantiate(buttonPrefab, buttonParentCards); 
@@ -81,7 +84,18 @@ public class TCG_Controller : MonoBehaviour
     {
         for (int i = 0; i < numCharacters; i++)
             {
-                Instantiate(characterPrefab, characterParent);
+                GameObject newCharacter = Instantiate(characterPrefab, characterParent);
+                CharacterButtons charButton = newCharacter.GetComponent<CharacterButtons>();
+                characterButtons.Add(charButton);
+                Button buttonComponent = newCharacter.GetComponent<Button>();
+                if (buttonComponent != null)
+                {
+                    buttonComponent.onClick.AddListener(() => OnCharacterPressed(charButton));
+                }
+                else
+                {
+                    Debug.LogWarning("No Button component found on characterPrefab.");
+                }
             }
     }
 
@@ -105,9 +119,49 @@ public class TCG_Controller : MonoBehaviour
 
     void StartPlayerTurn()
     {
+        turnCount += 1;
         energy = Random.Range(1, 10);
         EnergyText.text = "Energy: " + energy.ToString();
+        EnableCharacterButtons();
+        if (turnCount == 1){HighlightRandomCharacter();}
         StartCoroutine(PrepareCards());
+    }
+
+    void EnableCharacterButtons()
+    {
+        foreach (var charButton in characterButtons)
+        {
+            charButton.gameObject.GetComponent<Button>().interactable = true;
+        }
+    }
+
+    void HighlightRandomCharacter()
+    {
+        if (characterButtons.Count > 0)
+        {
+            int randomIndex = Random.Range(0, characterButtons.Count);
+            characterButtons[randomIndex].Highlight();
+        }
+    }
+
+    public void OnCharacterPressed(CharacterButtons characterButton){
+        if (currentTurn == Turn.Enemy)
+        {
+            return;
+        } else {
+            if (energy >= 1)
+            {
+                characterButton.Highlight();
+                energy -= 1;
+                EnergyText.text = "Energy: " + energy.ToString();
+            } else {
+                if(Turn.Player == currentTurn) {
+                    notEnoughEnergyText.text = "Not enough energy";
+                    characterButton.gameObject.GetComponent<Button>().interactable = false;
+                }
+            }
+        }
+
     }
 }
 

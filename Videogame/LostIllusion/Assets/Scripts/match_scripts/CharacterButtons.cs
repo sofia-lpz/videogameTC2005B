@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class CharacterButtons : MonoBehaviour
 {
     public static CharacterButtons currentButton;
-    [SerializeField] Button button;
     [SerializeField] Color normalColor;
     [SerializeField] Color highlightColor = Color.yellow;
     [SerializeField] float initialPos;
@@ -15,12 +14,10 @@ public class CharacterButtons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        button = GetComponent<Button>();
-        normalColor = GetComponent<Image>().color;
-        button.onClick.AddListener(OnButtonPressed);  
+        normalColor = GetComponent<Image>().color;  
     }
 
-    public void OnButtonPressed()
+    public void Highlight()
     {
         if (currentButton != null)
         {
