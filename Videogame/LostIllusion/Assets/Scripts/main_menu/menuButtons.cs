@@ -56,4 +56,11 @@ public class menuButtons : MonoBehaviour
     {
         Debug.Log("click!");
     }
+
+    public void mainMenu()
+    {
+        audioSource.Play();
+        SceneManager.LoadScene("Outside");
+        
+    }
 }
