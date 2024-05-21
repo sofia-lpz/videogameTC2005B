@@ -12,8 +12,8 @@ create table player(
 create table villager(
     name varchar(50) NOT NULL,
     description varchar(100) NOT NULL,
-    element enum('fire', 'water', 'earth', 'wind', 'light', 'dark') NOT NULL,
     roll enum('support', 'attacker', 'defender') NOT NULL,
+    element enum('fire', 'water', 'earth', 'snow') NOT NULL,
     primary key (name)
 ) engine=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -80,14 +80,4 @@ create table deck(
     primary key (username,cardId),
     constraint deck_player foreign key (username) references player(username) on delete restrict on update cascade,
     constraint deck_card foreign key (cardId) references card(cardId) on delete restrict on update cascade
-) engine=myisam DEFAULT CHARSET=utf8mb4;
-
-create table dialogue(
-    speaker varchar(50) NOT NULL,
-    lineIndex SMALLINT NOT NULL DEFAULT 0,
-    storyIndex SMALLINT NOT NULL DEFAULT 0,
-    
-    text varchar(200) NOT NULL,
-
-    primary key (speaker, lineIndex)
 ) engine=myisam DEFAULT CHARSET=utf8mb4;

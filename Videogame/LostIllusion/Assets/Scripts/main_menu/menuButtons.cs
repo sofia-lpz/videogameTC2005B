@@ -20,6 +20,12 @@ public class menuButtons : MonoBehaviour
         SceneManager.LoadScene("login", LoadSceneMode.Single);
     }
 
+    public void back()
+    {
+        audioSource.Play();
+        SceneManager.LoadScene("MainTitle", LoadSceneMode.Single);
+    }
+
     public void register()
     {
         audioSource.Play();
