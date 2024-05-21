@@ -1,49 +1,56 @@
 use colometa;
 
+--VIEWS
+
 CREATE VIEW PlayerWins AS
-SELECT player, COUNT(*) as Wins
-FROM match
+SELECT username AS player, COUNT(*) AS Wins
+FROM tcg_match
 WHERE won = true
-GROUP BY player;
+GROUP BY username;
 
 CREATE VIEW PlayerDeck AS
-SELECT player, GROUP_CONCAT(card) as Cards
-FROM deck
-GROUP BY player;
+SELECT d.player, GROUP_CONCAT(d.cardId) AS Cards
+FROM deck AS d
+GROUP BY d.player;
 
 CREATE VIEW PlayerTeam AS
-SELECT player, GROUP_CONCAT(villager) as Team
-FROM team
-GROUP BY player;
+SELECT t.username AS player, GROUP_CONCAT(t.villager) AS Team
+FROM team AS t
+GROUP BY t.username;
 
 CREATE VIEW PlayerStats AS
-SELECT player, most_used_card, most_used_villager, least_used_card, least_used_villager, found_objects
-FROM stats
-GROUP BY player;
+SELECT s.player, s.most_used_card, s.most_used_villager, s.least_used_card, s.least_used_villager, s.found_objects
+FROM stats AS s;
 
 CREATE VIEW PlayerMatches AS
-SELECT player, COUNT(*) as Matches
-FROM match
-GROUP BY player;
+SELECT username AS player, COUNT(*) AS Matches
+FROM tcg_match
+GROUP BY username;
 
-CREATE VIEW VillagerTeam AS
---which players are teammates with each villager
-SELECT villager, GROUP_CONCAT(player) as Team
+--TRIGGERS
+DELIMITER //
+
+CREATE TRIGGER update_wins
+AFTER INSERT ON tcg_match
+FOR EACH ROW
+BEGIN
+    IF NEW.won = true THEN
+        UPDATE player
+        SET matches_won = matches_won + 1
+        WHERE username = NEW.username;
+    END IF;
+END //
 
 
-create trigger update_wins
-after insert on match
-for each row
-begin
-    if new.won = true then
-        update player
-        set matches_won = matches_won + 1
-        where username = new.player;
-    end if;
-end;
+-- after win, add the npc card to the player's deck 'npc_card_id' missing
+CREATE TRIGGER update_deck
+AFTER INSERT ON tcg_match
+FOR EACH ROW
+BEGIN
+    IF NEW.won = true THEN
+        INSERT INTO deck (player, cardId)
+        VALUES (NEW.username, 'npc_card_id');
+    END IF;
+END //
 
-create trigger update_deck
--- after win, add the npc card to the player's deck
 
-create trigger card_dialogue
--- after card is used, display the dialogue
