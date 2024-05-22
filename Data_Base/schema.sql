@@ -7,14 +7,14 @@ create table player(
     password varchar(50) NOT NULL DEFAULT 'password',
     matches_won SMALLINT NOT NULL DEFAULT 0,
     primary key (username)
-) engine=myisam DEFAULT CHARSET=utf8mb4;
+); engine=InnoDB DEFAULT CHARSET=utf8mb4;
 
 create table villager(
     name varchar(50) NOT NULL,
     description varchar(100) NOT NULL,
-    element enum('fire', 'water', 'earth', 'wind', 'light', 'dark') NOT NULL,
+    element enum('fire', 'water', 'earth', 'snow') NOT NULL,
     primary key (name)
-) engine=myisam DEFAULT CHARSET=utf8mb4;
+) engine=InnoDB DEFAULT CHARSET=utf8mb4;
 
 create table team(
     username varchar(50) NOT NULL,
@@ -58,15 +58,15 @@ create table tcg_match(
 ) engine= InnoDB DEFAULT CHARSET=utf8mb4;
 
 create table stats(
-    player varchar(50) NOT NULL,
+    username varchar(50) NOT NULL,
     most_used_card varchar(50) NOT NULL,
     most_used_villager varchar(50) NOT NULL,
     least_used_card varchar(50) NOT NULL,
     least_used_villager varchar(50) NOT NULL,
     found_objects SMALLINT NOT NULL DEFAULT 0,
 
-    primary key (player),
-    constraint stats_player foreign key (player) references player(username) on delete restrict on update cascade,
+    primary key (username),
+    constraint stats_player foreign key (username) references player(username) on delete restrict on update cascade,
     constraint stats_MU_card foreign key (most_used_card) references card(cardId) on delete restrict on update cascade,
     constraint stats_MU_villager foreign key (most_used_villager) references villager(name) on delete restrict on update cascade,
     constraint stats_LU_card foreign key (least_used_card) references card(cardId) on delete restrict on update cascade,
@@ -74,16 +74,9 @@ create table stats(
 ) engine=myisam DEFAULT CHARSET=utf8mb4;
 
 create table deck(
-    player varchar(50) NOT NULL,
+    username varchar(50) NOT NULL,
     cardId varchar(15) NOT NULL,
-    primary key (player,cardId),
-    constraint deck_player foreign key (player) references player(username) on delete restrict on update cascade,
+    primary key (username,cardId),
+    constraint deck_player foreign key (username) references player(username) on delete restrict on update cascade,
     constraint deck_card foreign key (cardId) references card(cardId) on delete restrict on update cascade
-) engine=myisam DEFAULT CHARSET=utf8mb4;
-
-create table dialogue(
-    dialogueId varchar(15) NOT NULL DEFAULT 'dialogue',
-    speaker varchar(50) NOT NULL, 
-    text varchar(200) NOT NULL,
-    primary key (dialogueId, speaker)
 ) engine=myisam DEFAULT CHARSET=utf8mb4;
