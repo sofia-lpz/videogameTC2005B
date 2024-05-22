@@ -55,18 +55,6 @@ public class dialogueData : stateNameController
 /*BOOK DESCRIPTION END*/
 
 
-/*COLMETA LINES*/
-public static List<string> colometa_lines_1 = new List<string> {
-    "3... 2... 1...",
-    "ah!",
-    "Now Adria, tell me...",
-    "...Do you feel hypnotized?"
-};
-
-public static List<List<string>> colometa_lines = new List<List<string>> {
-    colometa_lines_1
-};
-/*COLMETA LINES END*/
 
 
 // to do, make a dictionary of dictionaries instead of dictionary of lists
@@ -74,7 +62,8 @@ public static Dictionary<string, List<List<string>>> dialoguesDictionary = new D
     {"tv", tv_lines},
     {"talk2tv", new List<List<string>> { tv2talk_lines }},
     {"book", new List<List<string>> { bookDescription }},
-    {"COLOMETA", colometa_lines}
+    {"COLOMETA", cutsceneData.colometa_lines},
+    {"NARRATOR", cutsceneData.narrator_lines}
 };
 
 }

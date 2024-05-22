@@ -9,11 +9,7 @@ public class introManager : MonoBehaviour
 
     void Start()
     {
-        GameObject dialogueCanvas = Object.Instantiate(dialogueCanvasPrefab);
-        dialogueCanvas.GetComponent<dialogue>().Initialize("COLOMETA", 0);
-
-        GameObject cutsceneCanvas = Object.Instantiate(CutsceneCanvasPrefab);
-        cutsceneCanvas.GetComponent<dialogue>().Initialize("NARRATOR", 0);
+        StartCoroutine(scene());
 
     }
 
@@ -24,5 +20,15 @@ public class introManager : MonoBehaviour
             return;
         }
         
+    }
+
+    IEnumerator scene(){
+        GameObject cutsceneCanvas = Instantiate(CutsceneCanvasPrefab);
+        cutsceneCanvas.GetComponent<dialogue>().Initialize("NARRATOR", 0);
+
+        yield return new WaitForSeconds(1);
+
+        GameObject dialogueCanvas = Instantiate(dialogueCanvasPrefab);
+        dialogueCanvas.GetComponent<dialogue>().Initialize("COLOMETA", 0);
     }
 }

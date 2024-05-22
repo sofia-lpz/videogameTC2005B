@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 1040619240462148927}
   - component: {fileID: 8861831700023785147}
   - component: {fileID: 1097629932892070565}
+  - component: {fileID: 7388492642638496201}
   m_Layer: 5
   m_Name: CutsceneCanvas
   m_TagString: freezesPlayer
@@ -306,6 +307,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7388492642638496201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7323745493855922601}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af3992ac17b4c04f9c10ee149d3ec8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 5261376124899507219}
+  dialogueName: {fileID: 0}
 --- !u!1 &8550712229381099181
 GameObject:
   m_ObjectHideFlags: 0
