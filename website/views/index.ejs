@@ -3,44 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lost illusion</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #282c34;
-        }
-        .content{
-            display: block;
-        }
-
-        .content h1{
-            text-align: center;
-        }
-        #unityContainer {
-            width: 960px;
-            height: 600px;
-            background: #000;
-        }
-    </style>
+    <title>Lost Illusion</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <div class="content">
-        <h1>Lost illusion</h1>
+        <h1>Lost Illusion</h1>
         <div id="unityContainer"></div>
+        <div class="api-data" id="cards-container"></div>
+        <div class="api-data" id="player-info"></div>
+        <div class="api-data" id="player-matches"></div>
     </div>
-
     <script src="Build/UnityLoader.js"></script>
-    <script>
-        var unityInstance = UnityLoader.instantiate("unityContainer", "Build/myGame.json", {
-            onProgress: function (unityInstance, progress) {
-                console.log(progress * 100 + "%");
-            }
-        });
-    </script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
