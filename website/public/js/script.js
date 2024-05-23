@@ -1,63 +1,115 @@
-// var unityInstance = UnityLoader.instantiate("unityContainer", "Build/myGame.json", {
-//     onProgress: function (unityInstance, progress) {
-//         console.log(progress * 100 + "%");
-//     }
-// });
 
-const baseUrl = 'http://localhost:3000/api';
+// Function to fetch and display cards data
+function fetchAndDisplayCards() {
+fetch('http://localhost:3000/api/cards')
+    .then(response => response.json())
+    .then(data => {
+    const cardsDataContainer = document.getElementById('cardsData');
+    cardsDataContainer.innerHTML = JSON.stringify(data, null, 2);
+    })
+    .catch(error => {
+    console.error('Error fetching cards:', error);
+    });
+}
 
-// Función para hacer una solicitud fetch a la ruta /cards
-const fetchCards = async () => {
-  const response = await fetch(`${baseURL}/cards`);
-  const data = await response.json();
-  console.log(data); // Hacer algo con los datos devueltos
-};
+// Function to fetch and display player data by username
+function fetchAndDisplayPlayer(username) {
+fetch(`http://localhost:3000/api/player/${username}`)
+    .then(response => response.json())
+    .then(data => {
+    const playerDataContainer = document.getElementById('playerData');
+    playerDataContainer.innerHTML = JSON.stringify(data, null, 2);
+    })
+    .catch(error => {
+    console.error(`Error fetching player ${username}:`, error);
+    });
+}
 
-// Función para hacer una solicitud fetch a la ruta /player/:username
-const fetchPlayer = async (username) => {
-  const response = await fetch(`${baseURL}/player/${username}`);
-  const data = await response.json();
-  console.log(data); // Hacer algo con los datos devueltos
-};
+// Function to fetch and display dialogues data
+function fetchAndDisplayDialogues() {
+fetch('http://localhost:3000/api/dialogues')
+    .then(response => response.json())
+    .then(data => {
+    const dialoguesDataContainer = document.getElementById('dialoguesData');
+    dialoguesDataContainer.innerHTML = JSON.stringify(data, null, 2);
+    })
+    .catch(error => {
+    console.error('Error fetching dialogues:', error);
+    });
+}
 
-// Función para hacer una solicitud fetch a la ruta /dialogues
-const fetchDialogues = async () => {
-  const response = await fetch(`${baseURL}/dialogues`);
-  const data = await response.json();
-  console.log(data); // Hacer algo con los datos devueltos
-};
+// Function to fetch and display stats data
+function fetchAndDisplayStats() {
+fetch('http://localhost:3000/api/stats')
+    .then(response => response.json())
+    .then(data => {
+    const statsDataContainer = document.getElementById('statsData');
+    statsDataContainer.innerHTML = JSON.stringify(data, null, 2);
+    })
+    .catch(error => {
+    console.error('Error fetching stats:', error);
+    });
+}
 
-// Función para hacer una solicitud fetch a la ruta /stats
-const fetchStats = async () => {
-  const response = await fetch(`${baseURL}/stats`);
-  const data = await response.json();
-  console.log(data); // Hacer algo con los datos devueltos
-};
+// Function to fetch and display matches data
+function fetchAndDisplayMatches() {
+fetch('http://localhost:3000/api/matches')
+    .then(response => response.json())
+    .then(data => {
+    const matchesDataContainer = document.getElementById('matchesData');
+    matchesDataContainer.innerHTML = JSON.stringify(data, null, 2);
+    })
+    .catch(error => {
+    console.error('Error fetching matches:', error);
+    });
+}
 
-// Función para hacer una solicitud fetch a la ruta /matches
-const fetchMatches = async () => {
-  const response = await fetch(`${baseURL}/matches`);
-  const data = await response.json();
-  console.log(data); // Hacer algo con los datos devueltos
-};
+// Function to fetch and display villagers data
+function fetchAndDisplayVillagers() {
+fetch('http://localhost:3000/api/villagers')
+    .then(response => response.json())
+    .then(data => {
+    const villagersDataContainer = document.getElementById('villagersData');
+    villagersDataContainer.innerHTML = JSON.stringify(data, null, 2);
+    })
+    .catch(error => {
+    console.error('Error fetching villagers:', error);
+    });
+}
 
-// Función para hacer una solicitud fetch a la ruta /villagers
-const fetchVillagers = async () => {
-  const response = await fetch(`${baseURL}/villagers`);
-  const data = await response.json();
-  console.log(data); // Hacer algo con los datos devueltos
-};
+// Function to fetch and display player's team data by username
+function fetchAndDisplayPlayerTeam(username) {
+fetch(`http://localhost:3000/api/player/${username}/team`)
+    .then(response => response.json())
+    .then(data => {
+    const playerTeamDataContainer = document.getElementById('playerTeamData');
+    playerTeamDataContainer.innerHTML = JSON.stringify(data, null, 2);
+    })
+    .catch(error => {
+    console.error(`Error fetching player ${username}'s team:`, error);
+    });
+}
 
-// Función para hacer una solicitud fetch a la ruta /player/:username/team
-const fetchPlayerTeam = async (username) => {
-  const response = await fetch(`${baseURL}/player/${username}/team`);
-  const data = await response.json();
-  console.log(data); // Hacer algo con los datos devueltos
-};
+// Function to fetch and display player's deck data by username
+function fetchAndDisplayPlayerDeck(username) {
+fetch(`http://localhost:3000/api/player/${username}/deck`)
+    .then(response => response.json())
+    .then(data => {
+    const playerDeckDataContainer = document.getElementById('playerDeckData');
+    playerDeckDataContainer.innerHTML = JSON.stringify(data, null, 2);
+    })
+    .catch(error => {
+    console.error(`Error fetching player ${username}'s deck:`, error);
+    });
+}
 
-// Función para hacer una solicitud fetch a la ruta /player/:username/deck
-const fetchPlayerDeck = async (username) => {
-  const response = await fetch(`${baseURL}/player/${username}/deck`);
-  const data = await response.json();
-  console.log(data); // Hacer algo con los datos devueltos
-};
+// Call each function to fetch and display data
+fetchAndDisplayCards();
+fetchAndDisplayPlayer('exampleUsername');
+fetchAndDisplayDialogues();
+fetchAndDisplayStats();
+fetchAndDisplayMatches();
+fetchAndDisplayVillagers();
+fetchAndDisplayPlayerTeam('exampleUsername');
+fetchAndDisplayPlayerDeck('exampleUsername');
+
