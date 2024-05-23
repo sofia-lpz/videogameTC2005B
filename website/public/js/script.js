@@ -6,81 +6,58 @@
 
 const baseUrl = 'http://localhost:3000/api';
 
-// Function to fetch cards from the API
-async function fetchCards() {
-    try {
-        const response = await fetch(`${baseUrl}/cards`);
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        displayCards(data);
-    } catch (error) {
-        console.error('Error fetching cards:', error);
-    }
-}
+// Función para hacer una solicitud fetch a la ruta /cards
+const fetchCards = async () => {
+  const response = await fetch(`${baseURL}/cards`);
+  const data = await response.json();
+  console.log(data); // Hacer algo con los datos devueltos
+};
 
-// Function to fetch player info from the API
-async function fetchPlayer(username) {
-    try {
-        const response = await fetch(`${baseUrl}/player/${username}`);
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        displayPlayerInfo(data);
-    } catch (error) {
-        console.error('Error fetching player info:', error);
-    }
-}
+// Función para hacer una solicitud fetch a la ruta /player/:username
+const fetchPlayer = async (username) => {
+  const response = await fetch(`${baseURL}/player/${username}`);
+  const data = await response.json();
+  console.log(data); // Hacer algo con los datos devueltos
+};
 
-// Function to fetch player matches from the API
-async function fetchPlayerMatches(username) {
-    try {
-        const response = await fetch(`${baseUrl}/player/${username}/matches`);
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        displayPlayerMatches(data);
-    } catch (error) {
-        console.error('Error fetching player matches:', error);
-    }
-}
+// Función para hacer una solicitud fetch a la ruta /dialogues
+const fetchDialogues = async () => {
+  const response = await fetch(`${baseURL}/dialogues`);
+  const data = await response.json();
+  console.log(data); // Hacer algo con los datos devueltos
+};
 
-// Function to display cards on the webpage
-function displayCards(cards) {
-    const container = document.getElementById('cards-container');
-    container.innerHTML = '<h2>Cards</h2>';
-    cards.forEach(card => {
-        const cardElement = document.createElement('div');
-        cardElement.classList.add('card');
-        cardElement.innerHTML = `<h3>${card.title}</h3><p>${card.description}</p>`;
-        container.appendChild(cardElement);
-    });
-}
+// Función para hacer una solicitud fetch a la ruta /stats
+const fetchStats = async () => {
+  const response = await fetch(`${baseURL}/stats`);
+  const data = await response.json();
+  console.log(data); // Hacer algo con los datos devueltos
+};
 
-// Function to display player info on the webpage
-function displayPlayerInfo(player) {
-    const container = document.getElementById('player-info');
-    container.innerHTML = `<h2>Player Info</h2><div class="player-info"><h3>${player.username}</h3><p>${player.info}</p></div>`;
-}
+// Función para hacer una solicitud fetch a la ruta /matches
+const fetchMatches = async () => {
+  const response = await fetch(`${baseURL}/matches`);
+  const data = await response.json();
+  console.log(data); // Hacer algo con los datos devueltos
+};
 
-// Function to display player matches on the webpage
-function displayPlayerMatches(matches) {
-    const container = document.getElementById('player-matches');
-    container.innerHTML = '<h2>Player Matches</h2>';
-    matches.forEach(match => {
-        const matchElement = document.createElement('div');
-        matchElement.classList.add('player-match');
-        matchElement.innerHTML = `<h3>Match ID: ${match.id}</h3><p>${match.details}</p>`;
-        container.appendChild(matchElement);
-    });
-}
+// Función para hacer una solicitud fetch a la ruta /villagers
+const fetchVillagers = async () => {
+  const response = await fetch(`${baseURL}/villagers`);
+  const data = await response.json();
+  console.log(data); // Hacer algo con los datos devueltos
+};
 
-// Example usage: Fetch data when the page loads
-window.onload = function() {
-    fetchCards();
-    fetchPlayer('exampleUsername'); // Replace with actual username
-    fetchPlayerMatches('exampleUsername'); // Replace with actual username
+// Función para hacer una solicitud fetch a la ruta /player/:username/team
+const fetchPlayerTeam = async (username) => {
+  const response = await fetch(`${baseURL}/player/${username}/team`);
+  const data = await response.json();
+  console.log(data); // Hacer algo con los datos devueltos
+};
+
+// Función para hacer una solicitud fetch a la ruta /player/:username/deck
+const fetchPlayerDeck = async (username) => {
+  const response = await fetch(`${baseURL}/player/${username}/deck`);
+  const data = await response.json();
+  console.log(data); // Hacer algo con los datos devueltos
 };
