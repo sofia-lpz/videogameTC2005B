@@ -7,12 +7,11 @@ create table player(
     password varchar(50) NOT NULL DEFAULT 'password',
     matches_won SMALLINT NOT NULL DEFAULT 0,
     primary key (username)
-); engine=InnoDB DEFAULT CHARSET=utf8mb4;
+) engine=InnoDB DEFAULT CHARSET=utf8mb4;
 
 create table villager(
     name varchar(50) NOT NULL,
     description varchar(100) NOT NULL,
-    roll enum('support', 'attacker', 'defender') NOT NULL,
     element enum('fire', 'water', 'earth', 'snow') NOT NULL,
     primary key (name)
 ) engine=InnoDB DEFAULT CHARSET=utf8mb4;
