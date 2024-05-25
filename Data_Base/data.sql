@@ -12,13 +12,28 @@ insert into player (username, password, matches_won) values
 ('admin9', 'password9', 42),
 ('admin10', 'password10', 10);
 
+
 insert into villager (name, description, element) values
 ('villager1', 'A brave fire warrior', 'fire'),
 ('villager2', 'A wise water mage', 'water'),
 ('villager3', 'An earth guardian', 'earth'),
 ('villager4', 'A mysterious snow rogue', 'snow'),
 ('villager5', 'A swift water scout', 'water'),
-('villager6', 'A fire self healer', 'fire');
+('villager6', 'A fire self healer', 'fire'),
+('villager7', 'A snow warrior', 'snow'),
+('villager8', 'A water healer', 'water'),
+('villager9', 'A fire mage', 'fire'),
+('villager10', 'A snow warrior', 'snow'),
+('villager11', 'A water mage', 'water'),
+('villager12', 'An earth warrior', 'earth'),
+('villager13', 'A snow healer', 'snow'),
+('villager14', 'A fire warrior', 'fire'),
+('villager15', 'A water rogue', 'water'),
+('villager16', 'An earth warrior', 'earth'),
+('villager17', 'A snow warrior', 'snow'),
+('villager18', 'A water warrior', 'water'),
+('villager19', 'A fire warrior', 'fire'),
+('villager20', 'An earth warrior', 'earth');
 
 
 insert into stats (username, most_used_card, most_used_villager, least_used_card, least_used_villager, found_objects) values
@@ -31,7 +46,27 @@ insert into stats (username, most_used_card, most_used_villager, least_used_card
 ('admin7', '17', 'villager6', '16', 'villager5', 5),
 ('admin8', '20', 'villager3', '9', 'villager3', 9),
 ('admin9', '3', 'villager6', '9', 'villager3', 1),
-('admin10', '20', 'villager4', '17', 'villager2', 17);
+('admin10', '20', 'villager4', '17', 'villager2', 17),
+('admin11', '15', 'villager3', '23', 'villager2', 8),
+('admin12', '13', 'villager6', '19', 'villager5', 9),
+('admin13', '2', 'villager2', '22', 'villager2', 18),
+('admin14', '15', 'villager5', '1', 'villager3', 15),
+('admin15', '17', 'villager6', '16', 'villager5', 5),
+('admin16', '20', 'villager3', '9', 'villager3', 9),
+('admin17', '3', 'villager6', '9', 'villager3', 1),
+('admin18', '20', 'villager4', '17', 'villager2', 17),
+('admin19', '15', 'villager3', '23', 'villager2', 8),
+('admin20', '13', 'villager6', '19', 'villager5', 9),
+('admin21', '2', 'villager2', '22', 'villager2', 18),
+('admin22', '15', 'villager5', '1', 'villager3', 15),
+('admin23', '17', 'villager6', '16', 'villager5', 5),
+('admin24', '20', 'villager3', '9', 'villager3', 9),
+('admin25', '3', 'villager6', '9', 'villager3', 1),
+('admin26', '20', 'villager4', '17', 'villager2', 17),
+('admin27', '15', 'villager3', '23', 'villager2', 8),
+('admin28', '13', 'villager6', '19', 'villager5', 9),
+('admin29', '2', 'villager2', '22', 'villager2', 18),
+('admin30', '15', 'villager5', '1', 'villager3', 15);
 
 insert into deck (username, cardId) values
 ('admin1', '3'),
@@ -43,7 +78,27 @@ insert into deck (username, cardId) values
 ('admin7', '7'),
 ('admin8', '11'),
 ('admin9', '4'),
-('admin10', '5');
+('admin10', '5'),
+('admin11', '6'),
+('admin12', '8'),
+('admin13', '10'),
+('admin14', '12'),
+('admin15', '14'),
+('admin16', '16'),
+('admin17', '18'),
+('admin18', '19'),
+('admin19', '1'),
+('admin20', '13'),
+('admin21', '17'),
+('admin22', '22'),
+('admin23', '23'),
+('admin24', '24'),
+('admin25', '3'),
+('admin26', '21'),
+('admin27', '15'),
+('admin28', '20'),
+('admin29', '2'),
+('admin30', '9');
 
 
 insert into card (cardId, name, energy_cost, effect, type, description) values
@@ -62,15 +117,15 @@ insert into card (cardId, name, energy_cost, effect, type, description) values
 ('13', 'sharp stick', 1, 'attack', 'weapon', 'deals 1 damage to your opponent'),
 ('14', 'sleep', 2, 'attack', 'hypnosis', 'skips your opponents turn'),
 ('15', 'confusion', 2, 'attack', 'skill', 'deals 1 damage each turn for 2 turns'),
-('16', 'mock', 1, 'defense', 'skill', 'mock your opponent'),
-('17', 'mock', 1, 'defense', 'skill', 'mock your opponent'),
-('18', 'mock', 1, 'defense', 'skill', 'mock your opponent'),
-('19', 'mock', 1, 'defense', 'skill', 'mock your opponent'),
-('20', 'mock', 1, 'defense', 'skill', 'mock your opponent'),
-('21', 'mock', 1, 'defense', 'skill', 'mock your opponent'),
-('22', 'mock', 1, 'defense', 'skill', 'mock your opponent'),
-('23', 'mock', 1, 'defense', 'skill', 'mock your opponent'),
-('24', 'mock', 1, 'defense', 'skill', 'mock your opponent');
+('16', 'mock', 1, 'attack', 'skill', 'decreases the enemy attack by 1 point'),
+('17', 'hide', 2, 'defense', 'skill', 'decreases the enemy accuracy by 1 point'),
+('18', 'stare', 1, 'defense', 'skill', 'decreases the enemy attack by 1 point'),
+('19', 'block', 2, 'defense', 'skill', 'decreases the enemy attack by 2 points'),
+('20', 'dandelion', 3, 'defense', 'skill', 'decreases the enemy attack by 3 points'),
+('21', 'seashell', 2, 'defense', 'skill', 'decreases the enemy attack by 2 points'),
+('22', 'rabbit foot', 1, 'defense', 'skill', 'decreases the enemy attack by 1 point'),
+('23', 'wedding ring', 3, 'defense', 'skill', 'decreases the enemy attack by 3 points'),
+('24', 'wishbone', 2, 'defense', 'skill', 'decreases the enemy attack by 2 points');
 
 
 insert into team (username, villager) values
