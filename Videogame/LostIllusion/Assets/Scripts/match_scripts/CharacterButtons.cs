@@ -10,11 +10,30 @@ public class CharacterButtons : MonoBehaviour
     [SerializeField] Color highlightColor = Color.yellow;
     [SerializeField] float initialPos;
     [SerializeField] float activePos;
+    [SerializeField] int maxHealth = 10;
+    [SerializeField] int currentHealth;
+    public HealthBar healthBar;
 
     // Start is called before the first frame update
     void Start()
     {
-        normalColor = GetComponent<Image>().color;  
+        normalColor = GetComponent<Image>().color;
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);  
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space)) 
+        {
+            TakeDamage(1);
+        }
+    }
+
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
     }
 
     public void Highlight()
