@@ -445,11 +445,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cards: []
-  numInitialCards: 6
+  characterButtons: []
+  numInitialCards: 5
   cardsPerTurn: 2
   numCharacters: 2
   buttonPrefab: {fileID: 6064211221271390237, guid: b680c6fc44c3e4b41b35b7a6acbafbc4, type: 3}
-  characterPrefab: {fileID: 945019409317099598, guid: bedbda7112de53f49bd878ed03ba25ec, type: 3}
+  characterPrefab: {fileID: 4446682236968476676, guid: 78099686ed2a6c54b830cf00fc74099f, type: 3}
   buttonParentCards: {fileID: 1747708706}
   characterParent: {fileID: 1707328397}
   delay: 0.5
@@ -457,6 +458,7 @@ MonoBehaviour:
   energy: 3
   notEnoughEnergyText: {fileID: 1806191214}
   endTurnButton: {fileID: 1693526405}
+  maxCards: 5
   currentTurn: 0
 --- !u!1 &658031037
 GameObject:
@@ -1297,8 +1299,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.5599976, y: 0}
-  m_SizeDelta: {x: 800, y: 450}
+  m_AnchoredPosition: {x: 0, y: 25.800003}
+  m_SizeDelta: {x: 712.7819, y: 450}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1707328398
 MonoBehaviour:
