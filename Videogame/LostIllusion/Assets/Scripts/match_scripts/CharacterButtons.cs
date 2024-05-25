@@ -6,32 +6,54 @@ using UnityEngine.UI;
 public class CharacterButtons : MonoBehaviour
 {
     public static CharacterButtons currentButton;
-    [SerializeField] Button button;
     [SerializeField] Color normalColor;
     [SerializeField] Color highlightColor = Color.yellow;
     [SerializeField] float initialPos;
     [SerializeField] float activePos;
+    [SerializeField] int maxHealth = 10;
+    [SerializeField] int currentHealth;
+    public HealthBar healthBar;
+    public bool active;
 
     // Start is called before the first frame update
-    void Start()
+     public void Start()
     {
-        button = GetComponent<Button>();
-        normalColor = GetComponent<Image>().color;
-        button.onClick.AddListener(OnButtonPressed);  
-    }
-
-    public void OnButtonPressed()
-    {
-        if (currentButton != null)
-        {
-            currentButton.GetComponent<Image>().color = currentButton.normalColor;
-            currentButton.transform.position = new Vector3(currentButton.transform.position.x, currentButton.initialPos, currentButton.transform.position.z);
-        }
-
-        currentButton = this;
+        healthBar = GetComponent<HealthBar>();
         initialPos = transform.position.y;
         activePos = initialPos + 15f;
-        GetComponent<Image>().color = highlightColor;
-        transform.position = new Vector3(transform.position.x, activePos, transform.position.z);
+        normalColor = GetComponent<Image>().color;
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);  
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space)) 
+        {
+            TakeDamage(1);
+        }
+    }
+
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+    }
+
+    public void Highlight()
+    {
+        
+       if (active) 
+       {
+            GetComponent<Image>().color = normalColor;
+            transform.position = new Vector3(transform.position.x, initialPos, transform.position.z);
+            active = false;
+
+       } else {
+            GetComponent<Image>().color = highlightColor;
+            transform.position = new Vector3(transform.position.x, activePos, transform.position.z);
+            active = true;
+       }
+        
     }
 }

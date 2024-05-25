@@ -30,6 +30,7 @@ CREATE VIEW AttackCards AS
 SELECT c.cardId, c.name AS card_name, c.energy_cost, c.effect, c.type, c.description
 FROM card c
 WHERE c.effect = 'attack';
+<<<<<<< HEAD
 
 CREATE VIEW DefenseCards AS
 SELECT c.cardId, c.name AS card_name, c.energy_cost, c.effect, c.type, c.description
@@ -48,3 +49,45 @@ JOIN deck d ON p.username = d.username
 JOIN card c ON d.cardId = c.cardId
 JOIN team t ON p.username = t.username
 JOIN villager v ON t.villager = v.name;
+=======
+>>>>>>> e573d30d411053c6ffa321d1ed63f41bd03ba5b8
+
+CREATE VIEW DefenseCards AS
+SELECT c.cardId, c.name AS card_name, c.energy_cost, c.effect, c.type, c.description
+FROM card c
+WHERE c.effect = 'defense';
+
+<<<<<<< HEAD
+SELECT * FROM PlayerInfo;
+
+SELECT * FROM PlayerVillagers;
+
+SELECT * FROM PlayerCards;
+
+SELECT * FROM PlayerCardStats;
+
+SELECT * FROM PlayerVillagerStats;
+
+SELECT * FROM MatchHistory;
+
+SELECT * FROM AttackCards;
+
+SELECT * FROM DefenseCards;
+
+SELECT * FROM DetailedCardInfo;
+
+SELECT * FROM PlayerDeckAndVillagers;
+=======
+CREATE VIEW DetailedCardInfo AS
+SELECT c.cardId, c.name AS card_name, c.energy_cost, c.effect, c.type, c.description, 
+       c.player_health, c.player_attack, c.player_defense, c.player_support, c.enemy_defense
+FROM card c;
+
+CREATE VIEW PlayerDeckAndVillagers AS
+SELECT p.username, d.cardId, c.name AS card_name, v.name AS villager_name
+FROM player p
+JOIN deck d ON p.username = d.username
+JOIN card c ON d.cardId = c.cardId
+JOIN team t ON p.username = t.username
+JOIN villager v ON t.villager = v.name;
+>>>>>>> e573d30d411053c6ffa321d1ed63f41bd03ba5b8
