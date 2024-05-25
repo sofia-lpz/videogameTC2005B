@@ -35,6 +35,7 @@ public class LoginRegister : MonoBehaviour
     void onLoginButtonClicked()
     {
         StartCoroutine(Login());
+        
     }
 
     IEnumerator Login()

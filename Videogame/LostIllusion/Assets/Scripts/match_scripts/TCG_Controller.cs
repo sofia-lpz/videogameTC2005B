@@ -1,6 +1,7 @@
 /*
     Script that works as the main controller for the TCG match,
 */
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
@@ -8,10 +9,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
+using Unity.VisualScripting.Dependencies.Sqlite;
 
 public class TCG_Controller : MonoBehaviour
 {
     [SerializeField] List<Card_Buttons> cards;
+    [SerializeField] List<CharacterButtons> characterButtons;
     [SerializeField] int numInitialCards;
     [SerializeField] int cardsPerTurn;
     [SerializeField] int numCharacters;
@@ -20,29 +23,37 @@ public class TCG_Controller : MonoBehaviour
     [SerializeField] Transform buttonParentCards;
     [SerializeField] Transform characterParent;	
     [SerializeField] float delay;
-    [SerializeField] TMP_Text EnergyText;
-    [SerializeField] int energy;
-    [SerializeField] TMP_Text notEnoughEnergyText;
+    public TMP_Text EnergyText;
+    public int energy;
+    public TMP_Text notEnoughEnergyText;
     [SerializeField] Button endTurnButton;    
+    [SerializeField] int maxCards;
     public enum Turn {Player, Enemy};
     public Turn currentTurn;
-    private int turnCount;
+    public static int turnCount;
 
     // Start is called before the first frame update
     void Start()
     {
         currentTurn = Turn.Player;
         EnergyText.text = "Energy: " + energy.ToString();  
-        endTurnButton.onClick.AddListener(EndTurn); 
+        endTurnButton.onClick.AddListener(EndTurn);
         StartCoroutine(PrepareCards());
         PrepareCharacters();
         endTurnButton.interactable = currentTurn == Turn.Player;
+        Invoke("SelectCharacter", 0.5f);
+    }
+
+    void SelectCharacter()
+    {
+        characterButtons[0].Highlight();
     }
 
     // Coroutine that prepares the cards
     IEnumerator PrepareCards()
     {
         int cardsToCreate = (turnCount == 0) ? numInitialCards: cardsPerTurn;
+        cardsToCreate = Mathf.Min(cardsToCreate, maxCards - cards.Count);
         for (int i = 0; i < cardsToCreate; i++)
             {
             GameObject newCard = Instantiate(buttonPrefab, buttonParentCards); 
@@ -81,9 +92,20 @@ public class TCG_Controller : MonoBehaviour
     {
         for (int i = 0; i < numCharacters; i++)
             {
-                Instantiate(characterPrefab, characterParent);
+                GameObject newCharacter = Instantiate(characterPrefab, characterParent);
+                CharacterButtons charButton = newCharacter.GetComponent<CharacterButtons>();
+                //charButton.Init();
+                characterButtons.Add(charButton);
+                Button buttonComponent = newCharacter.GetComponent<Button>();
+                buttonComponent.onClick.AddListener(() => OnCharacterPressed(charButton));
+                
+
+                //if (i == 0){
+                  //  charButton.Highlight();
+                //}
             }
     }
+
 
     // Function that ends the turn
     public void EndTurn()
@@ -105,9 +127,42 @@ public class TCG_Controller : MonoBehaviour
 
     void StartPlayerTurn()
     {
-        energy = Random.Range(1, 10);
+        energy = Random.Range(4, 10);
         EnergyText.text = "Energy: " + energy.ToString();
+        EnableCharacterButtons();
         StartCoroutine(PrepareCards());
+    }
+
+    void EnableCharacterButtons()
+    {
+        foreach (var charButton in characterButtons)
+        {
+            charButton.gameObject.GetComponent<Button>().interactable = true;
+        }
+    }
+
+
+    public void OnCharacterPressed(CharacterButtons characterButton){
+        if (currentTurn == Turn.Enemy)
+        {
+            return;
+        } else {
+            if (energy >= 1 && characterButton.active == false)
+            {
+                for (int i = 0; i < numCharacters; i++)
+                {
+                    characterButtons[i].Highlight();
+                }
+                //characterButton.Highlight();
+                energy -= 1;
+                EnergyText.text = "Energy: " + energy.ToString();
+            } else{
+                if(Turn.Player == currentTurn) {
+                    notEnoughEnergyText.text = "Not enough energy";
+                }
+            }
+        }
+
     }
 }
 

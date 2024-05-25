@@ -7,7 +7,7 @@ create table player(
     password varchar(50) NOT NULL DEFAULT 'password',
     matches_won SMALLINT NOT NULL DEFAULT 0,
     primary key (username)
-); engine=InnoDB DEFAULT CHARSET=utf8mb4;
+) engine=InnoDB DEFAULT CHARSET=utf8mb4;
 
 create table villager(
     name varchar(50) NOT NULL,
