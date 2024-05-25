@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 7721633265613066935}
   - component: {fileID: 3607520062489652900}
   - component: {fileID: 669873260447827162}
+  - component: {fileID: 7481095266900319049}
   m_Layer: 5
   m_Name: Character
   m_TagString: Untagged
@@ -366,7 +367,21 @@ MonoBehaviour:
   activePos: 0
   maxHealth: 10
   currentHealth: 0
-  healthBar: {fileID: 8147172699778152325}
+  healthBar: {fileID: 0}
+  active: 0
+--- !u!114 &7481095266900319049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4446682236968476676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d1580abe810c0145b2894cca2212c58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 9172311921679111192}
 --- !u!1 &4938352010986961049
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,7 +392,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6189080959810608501}
   - component: {fileID: 9172311921679111192}
-  - component: {fileID: 8147172699778152325}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -458,19 +472,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8147172699778152325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4938352010986961049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d1580abe810c0145b2894cca2212c58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 0}
 --- !u!1 &6072003916462877702
 GameObject:
   m_ObjectHideFlags: 0

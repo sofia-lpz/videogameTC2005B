@@ -13,10 +13,14 @@ public class CharacterButtons : MonoBehaviour
     [SerializeField] int maxHealth = 10;
     [SerializeField] int currentHealth;
     public HealthBar healthBar;
+    public bool active;
 
     // Start is called before the first frame update
-    void Start()
+     public void Start()
     {
+        healthBar = GetComponent<HealthBar>();
+        initialPos = transform.position.y;
+        activePos = initialPos + 15f;
         normalColor = GetComponent<Image>().color;
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);  
@@ -39,16 +43,17 @@ public class CharacterButtons : MonoBehaviour
     public void Highlight()
     {
         
-        if (currentButton != null)
-        {
-            currentButton.GetComponent<Image>().color = currentButton.normalColor;
-            currentButton.transform.position = new Vector3(currentButton.transform.position.x, currentButton.initialPos, currentButton.transform.position.z);
-        }
+       if (active) 
+       {
+            GetComponent<Image>().color = normalColor;
+            transform.position = new Vector3(transform.position.x, initialPos, transform.position.z);
+            active = false;
 
-        currentButton = this;
-        initialPos = transform.position.y;
-        activePos = initialPos + 15f;
-        GetComponent<Image>().color = highlightColor;
-        transform.position = new Vector3(transform.position.x, activePos, transform.position.z);
+       } else {
+            GetComponent<Image>().color = highlightColor;
+            transform.position = new Vector3(transform.position.x, activePos, transform.position.z);
+            active = true;
+       }
+        
     }
 }
