@@ -1,29 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System; // for Action<string>
+
+[Serializable]
+public class Card
+{
+    public int cardID;
+    public string name;
+    public int energy_cost;
+    public string effect;
+    public string type;
+    public string description;
+    public int player_health;
+    public int player_attack;
+    public int player_defense;
+    public int player_support;
+    public int enemy_defense;
+}
+
+[Serializable]
+public class CardList
+{
+    public string status;
+    public List<Card> data;
+}
 
 public class api_processing : MonoBehaviour
 {
-    void CardProcessing(string cardResults)
+    
+
+    public static void CardProcessing(string result)
     {
-        cardData cardList = JsonUtility.FromJson<cardData>(cardResults);
-
-        foreach (card c in cardList.cards)
-        {
-            card newCard = new card();
-            newCard.cardID = c.cardID;
-            newCard.name = c.name;
-            newCard.energy_cost = c.energy_cost;
-            newCard.effect = c.effect;
-            newCard.type = c.type;
-            newCard.description = c.description;
-            newCard.player_health = c.player_health;
-            newCard.player_attack = c.player_attack;
-            newCard.player_defense = c.player_defense;
-            newCard.player_support = c.player_support;
-            newCard.enemy_defense = c.enemy_defense;
-
-            cardList.cards.Add(newCard);
-        }
+        Debug.Log("api_processing got: " + result);
+        CardList cardList = JsonUtility.FromJson<CardList>(result);
+        tcgData.Cards = cardList.data;
     }
 }

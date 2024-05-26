@@ -1,13 +1,8 @@
-/*
-Handles requests
-
-Sofia
-14.5.24
-*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using System; // for Action<string>
 
 public class api_connect : MonoBehaviour
 {
@@ -16,28 +11,30 @@ public class api_connect : MonoBehaviour
     public string url = "http://localhost:3000/api";
 
     public void InitialGet(){
-        GetData("/cards", cardResults);
+        GetData("/cards", api_processing.CardProcessing);
     }
 
-    public void GetData(string getEndpoint, string result){
-        StartCoroutine(GetRequest(url + getEndpoint, result));
-    }
-IEnumerator GetRequest(string uri, string result)
-{
-    using (UnityWebRequest www = UnityWebRequest.Get(uri))
+    public void GetData(string getEndpoint, Action<string> callback){
+        StartCoroutine(GetRequest(url + getEndpoint, callback));
+    }   
+
+    IEnumerator GetRequest(string uri, Action<string> callback)
     {
-        //make request and wait for response
-        yield return www.SendWebRequest();
+        using (UnityWebRequest www = UnityWebRequest.Get(uri))
+        {
+            //make request and wait for response
+            yield return www.SendWebRequest();
 
-        if (www.result != UnityWebRequest.Result.Success)
-        {
-            Debug.Log("request failed: " + www.error);
-        }
-        else
-        {
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log("request failed: " + www.error);
+            }
+            else
+            {
                 result = www.downloadHandler.text;
                 Debug.Log("request successful: " + result);
+                callback(result);
+            }
         }
     }
-}
 }

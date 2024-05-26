@@ -43,6 +43,7 @@ public class dialogueData : stateNameController
     public static List<string> tv2talk_lines = new List<string> {
         "Hola " + player_username,
         "Estoy aqui para platicar en el index 0",
+        "por cierto el nombre de la primera carta es: " + tcgData.Cards[0].name,
         "bla bla bla",
     };
 /*TV2TALK LINES END*/
