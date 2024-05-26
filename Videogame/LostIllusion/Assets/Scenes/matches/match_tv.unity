@@ -410,6 +410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 566437064}
   - component: {fileID: 566437065}
+  - component: {fileID: 566437066}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -460,6 +461,19 @@ MonoBehaviour:
   endTurnButton: {fileID: 1693526405}
   maxCards: 5
   currentTurn: 0
+--- !u!114 &566437066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566437063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bba9c8c69865704a8bfe74e2e9163b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PauseCanvasPrefab: {fileID: 1751940820017322284, guid: e74808ed5c2b9224fa7cc7b675c7731f, type: 3}
 --- !u!1 &658031037
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,7 +746,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 5.3200073, y: 0}
+  m_AnchoredPosition: {x: 5.3200684, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &799771002
