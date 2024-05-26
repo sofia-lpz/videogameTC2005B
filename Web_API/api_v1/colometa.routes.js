@@ -16,24 +16,17 @@ router.get("/player/:username/deck", colometaController.getPlayerDeck);
 
 
 // get specific, might be useful for unity optimising?
-router.get("/card/:id", colometaController.getCard);
-router.get("/villager/:id", colometaController.getVillager);
+//router.get("/card/:id", colometaController.getCard);
+//router.get("/villager/:id", colometaController.getVillager);
 
 
 //get specific by player, might be useful for website?
-router.get("/player/:username/matches", colometaController.getPlayerMatches);
-router.get("player/:username/stats", colometaController.getPlayerStats)
+//router.get("/player/:username/matches", colometaController.getPlayerMatches);
+//router.get("player/:username/stats", colometaController.getPlayerStats)
 
 //posters
 
-router.post("/matches", colometaController.createCarrera);
-router.post("/stats/player/:username", colometaController.createCarrera);
-
-//References:
-//router.get("/", tareasController.getAll);
-//router.get("/:tareaID", tareasController.getOne);
-//router.post("/", tareasController.create);
-//router.patch("/:tareaID", tareasController.update);
-//router.delete("/:tareaID", tareasController.deleteOne);
+//router.post("/matches", colometaController.createCarrera);
+//router.post("/stats/player/:username", colometaController.createCarrera);
 
 export { router }

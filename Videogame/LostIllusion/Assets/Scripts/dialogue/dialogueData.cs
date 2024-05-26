@@ -62,8 +62,8 @@ public static Dictionary<string, List<List<string>>> dialoguesDictionary = new D
     {"tv", tv_lines},
     {"talk2tv", new List<List<string>> { tv2talk_lines }},
     {"book", new List<List<string>> { bookDescription }},
-    {"COLOMETA", cutsceneData.colometa_lines},
-    {"NARRATOR", cutsceneData.narrator_lines}
+
 };
+
 
 }

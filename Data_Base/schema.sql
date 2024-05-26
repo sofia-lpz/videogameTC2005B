@@ -25,7 +25,7 @@ create table team(
 ) engine=InnoDB DEFAULT CHARSET=utf8mb4;
 
 create table card(
-    cardId SMALLINT NOT NULL AUTO_INCREMENT DEFAULT 0,
+    cardId SMALLINT NOT NULL AUTO_INCREMENT,
     name varchar(50) NOT NULL,
     energy_cost SMALLINT NOT NULL,
     effect enum ('healing', 'attack', 'defense', 'support') NOT NULL,
