@@ -12,7 +12,7 @@ create table player(
 create table villager(
     name varchar(50) NOT NULL,
     description varchar(100) NOT NULL,
-    element enum('fire', 'water', 'earth', 'snow') NOT NULL,
+    element enum('Reason', 'Dream', 'Terror', 'Ennui', 'Spirit') NOT NULL,
     primary key (name)
 ) engine=InnoDB DEFAULT CHARSET=utf8mb4;
 
