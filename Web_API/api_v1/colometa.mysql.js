@@ -3,9 +3,9 @@ import mysql from "mysql2/promise";
 async function connectToDB() {
   return await mysql.createConnection({
     host: 'localhost',
-    user: 'hagen',
+    user: 'colometa',
     database: 'colometa',
-    password: 'colometa.',
+    password: 'colometa',
   });
 }
 

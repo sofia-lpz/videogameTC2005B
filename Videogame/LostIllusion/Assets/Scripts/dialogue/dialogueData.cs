@@ -43,6 +43,7 @@ public class dialogueData : stateNameController
     public static List<string> tv2talk_lines = new List<string> {
         "Hola " + player_username,
         "Estoy aqui para platicar en el index 0",
+        "por cierto el nombre de la primera carta es: " + tcgData.Cards[0].name,
         "bla bla bla",
     };
 /*TV2TALK LINES END*/
@@ -55,18 +56,6 @@ public class dialogueData : stateNameController
 /*BOOK DESCRIPTION END*/
 
 
-/*COLMETA LINES*/
-public static List<string> colometa_lines_1 = new List<string> {
-    "3... 2... 1...",
-    "ah!",
-    "Now Adria, tell me...",
-    "...Do you feel hypnotized?"
-};
-
-public static List<List<string>> colometa_lines = new List<List<string>> {
-    colometa_lines_1
-};
-/*COLMETA LINES END*/
 
 
 // to do, make a dictionary of dictionaries instead of dictionary of lists
@@ -74,7 +63,8 @@ public static Dictionary<string, List<List<string>>> dialoguesDictionary = new D
     {"tv", tv_lines},
     {"talk2tv", new List<List<string>> { tv2talk_lines }},
     {"book", new List<List<string>> { bookDescription }},
-    {"COLOMETA", colometa_lines}
+
 };
+
 
 }
