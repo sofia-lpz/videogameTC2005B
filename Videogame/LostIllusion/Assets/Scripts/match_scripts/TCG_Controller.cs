@@ -32,6 +32,9 @@ public class TCG_Controller : MonoBehaviour
     public Turn currentTurn;
     public static int turnCount;
 
+
+    // to add pause, check stateNameController gamePaused; True menas paused, false means not paused
+
     // Start is called before the first frame update
     void Start()
     {
