@@ -24,7 +24,7 @@ router.get("/player/:username/deck", colometaController.getPlayerDeck);
 // router.get("/player/:username/matches", colometaController.getPlayerMatches);
 // router.get("player/:username/stats", colometaController.getPlayerStats)
 
-// //posters
+//posters
 
 // router.post("/matches", colometaController.createCarrera);
 // router.post("/stats/player/:username", colometaController.createCarrera);
