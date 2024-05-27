@@ -108,7 +108,7 @@ p {
 }
 
 .about-content {
-    max-width: 800px;
+    max-width: 1600px;
     text-align: center;
 }
 
@@ -214,7 +214,8 @@ p {
 
 .card-container .card img {
     width: 70%;
-    height: 300px;
+    max-width: 400px;
+    max-height: 200px;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -225,7 +226,6 @@ p {
 
 /* Pagina .credits */
 .credits-section {
-    padding: 40px 20px;
     background-color: #1e1e1e;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
