@@ -12,7 +12,7 @@ public class CharacterButtons : MonoBehaviour
     [SerializeField] float activePos;
     [SerializeField] float activePosE;
     [SerializeField] int maxHealth = 10;
-    [SerializeField] int currentHealth;
+    public int currentHealth;
     public HealthBar healthBar;
     public bool active;
 

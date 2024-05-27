@@ -383,7 +383,7 @@ MonoBehaviour:
   characterParent: {fileID: 1707328397}
   delay: 0.5
   EnergyText: {fileID: 58132786}
-  energy: 3
+  energy: 0
   notEnoughEnergyText: {fileID: 1806191214}
   endTurnButton: {fileID: 1693526405}
   maxCards: 5

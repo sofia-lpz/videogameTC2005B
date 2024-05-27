@@ -43,6 +43,7 @@ public class TCG_Controller : MonoBehaviour
     void Start()
     {
         currentTurn = Turn.Player;
+        energy = Random.Range(4, 10);
         EnergyText.text = "Energy: " + energy.ToString();  
         endTurnButton.onClick.AddListener(EndTurn);
         StartCoroutine(PrepareCards());
@@ -78,12 +79,24 @@ public class TCG_Controller : MonoBehaviour
     {
         foreach (CharacterButtons enemyCharacter in enemyCharacterButtons)
         {
-            if (enemyCharacter.active) // Asumiendo que active indica si el personaje está activo
+            if (enemyCharacter.active)
             {
                 return enemyCharacter;
             }
         }
-        return null; // No se encontró ningún personaje enemigo activo
+        return null;
+    }
+
+    CharacterButtons GetInactiveEnemyCharacter()
+    {
+        foreach (CharacterButtons enemyCharacter in enemyCharacterButtons)
+        {
+            if (!enemyCharacter.active)
+            {
+                return enemyCharacter;
+            }
+        }
+        return null;
     }
 
     // Function that is called when a card is pressed
@@ -101,9 +114,20 @@ public class TCG_Controller : MonoBehaviour
                 cards.Remove(cardButton);
                 Destroy(cardButton.gameObject);
                 CharacterButtons activeEnemy = GetActiveEnemyCharacter();
+                CharacterButtons inactiveEnemy = GetInactiveEnemyCharacter();
                 if (activeEnemy != null)
                 {
-                    activeEnemy.TakeDamage(2);
+                    if(activeEnemy.currentHealth == 0)
+                    {
+                        activeEnemy.HighlightEnemy();
+                        inactiveEnemy.HighlightEnemy();
+                        
+                    } else if(activeEnemy.currentHealth == 0 && inactiveEnemy.currentHealth == 0)
+                    {
+                        PlayerWins();
+                    } else {
+                        activeEnemy.TakeDamage(2);
+                    }
                 }
             } else {
                 if(Turn.Player == currentTurn)
@@ -124,11 +148,6 @@ public class TCG_Controller : MonoBehaviour
                 characterButtons.Add(charButton);
                 Button buttonComponent = newCharacter.GetComponent<Button>();
                 buttonComponent.onClick.AddListener(() => OnCharacterPressed(charButton));
-                
-
-                //if (i == 0){
-                  //  charButton.Highlight();
-                //}
             }
     }
 
@@ -182,7 +201,6 @@ public class TCG_Controller : MonoBehaviour
                     {
                         characterButtons[i].Highlight();
                     }
-                    //characterButton.Highlight();
                     energy -= 1;
                     EnergyText.text = "Energy: " + energy.ToString();
                     limit -= 1;
@@ -194,6 +212,12 @@ public class TCG_Controller : MonoBehaviour
             }
         }
     }
+
+    public void PlayerWins()
+    {
+        Debug.Log("Player wins");
+    }
+
 }
 
 

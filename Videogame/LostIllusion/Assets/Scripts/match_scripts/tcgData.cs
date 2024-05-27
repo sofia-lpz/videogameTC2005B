@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 [System.Serializable]
-public class TCGData
+public class tcgData
 {
-    public static int cardID;
-    public static int energyCost;
+   public static List<Card> Cards = new List<Card>();
 }
 
