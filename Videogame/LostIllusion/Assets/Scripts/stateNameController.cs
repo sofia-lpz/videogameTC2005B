@@ -20,6 +20,11 @@ public class stateNameController : MonoBehaviour
     public static bool gamePaused = false;
     public static bool freezePlayer = false;
 
+    /*FOR AUDIO*/
+    public static float volume = 0;
+    public static bool muted = false;
+    public static float storedVolume = 0;
+
     /*LIST OF SCENES*/
     public static List<string> scenes = new List<string> {
         "Instructions",

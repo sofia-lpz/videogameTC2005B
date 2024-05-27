@@ -1,34 +1,24 @@
-/*
-Handles requests
-
-Sofia
-14.5.24
-*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using System; // for Action<string>
 
 public class api_connect : MonoBehaviour
-{/*
+{
     public static string result;
-    public static string dialogueResults;
+    public static string cardResults;
     public string url = "http://localhost:3000/api";
 
     public void InitialGet(){
-        getDialogues();
+        GetData("/cards", api_processing.CardProcessing);
     }
 
-    public void GetData(string getEndpoint){
-        StartCoroutine(GetRequest(url + getEndpoint));
-    }
+    public void GetData(string getEndpoint, Action<string> callback){
+        StartCoroutine(GetRequest(url + getEndpoint, callback));
+    }   
 
-    public string getDialogues(){
-        dialogueResults = GetData("/dialogues");
-    }
-
-
-    IEnumerator GetRequest(string uri)
+    IEnumerator GetRequest(string uri, Action<string> callback)
     {
         using (UnityWebRequest www = UnityWebRequest.Get(uri))
         {
@@ -43,10 +33,8 @@ public class api_connect : MonoBehaviour
             {
                 result = www.downloadHandler.text;
                 Debug.Log("request successful: " + result);
-            
+                callback(result);
             }
-            
         }
     }
-    */
 }
