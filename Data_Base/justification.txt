@@ -1,0 +1,23 @@
+Relationships
+
+    Player to Team
+        One-to-Many: A player can have multiple villagers in their team.
+
+    Player to TCG Match
+        One-to-Many: A player can participate in multiple matches.
+
+    Player to Stats
+
+        One-to-One: Each player has one set of stats.
+
+    Player to Deck
+        One-to-Many: A player can have multiple cards in their deck.
+
+    Villager to Team
+        One-to-Many: A villager can be in multiple teams (considering that different players can have the same villager in their team).
+
+    Card to Stats
+        One-to-Many: A card can be the most or least used card for multiple players (considering different players might use the same card the most or least).
+
+    Card to Deck
+        One-to-Many: A card can be in multiple decks (considering different players can have the same card in their deck).
