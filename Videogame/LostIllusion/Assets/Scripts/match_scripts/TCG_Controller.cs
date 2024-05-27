@@ -75,7 +75,7 @@ public class TCG_Controller : MonoBehaviour
             turnCount++;
     }
 
-     CharacterButtons GetActiveEnemyCharacter()
+     CharacterButtons GetActiveEnemy()
     {
         foreach (CharacterButtons enemyCharacter in enemyCharacterButtons)
         {
@@ -87,7 +87,7 @@ public class TCG_Controller : MonoBehaviour
         return null;
     }
 
-    CharacterButtons GetInactiveEnemyCharacter()
+    CharacterButtons GetInactiveEnemy()
     {
         foreach (CharacterButtons enemyCharacter in enemyCharacterButtons)
         {
@@ -113,20 +113,19 @@ public class TCG_Controller : MonoBehaviour
                 cardButton.gameObject.GetComponent<Button>().interactable = false;
                 cards.Remove(cardButton);
                 Destroy(cardButton.gameObject);
-                CharacterButtons activeEnemy = GetActiveEnemyCharacter();
-                CharacterButtons inactiveEnemy = GetInactiveEnemyCharacter();
+                CharacterButtons activeEnemy = GetActiveEnemy();
+                CharacterButtons inactiveEnemy = GetInactiveEnemy();
                 if (activeEnemy != null)
                 {
-                    if(activeEnemy.currentHealth == 0)
+                    activeEnemy.TakeDamage(4);
+                    if(activeEnemy.currentHealth <= 0 && inactiveEnemy.currentHealth <= 0)
+                    {
+                        activeEnemy.HighlightEnemy();
+                        PlayerWins();
+                    } else if(activeEnemy.currentHealth <= 0)
                     {
                         activeEnemy.HighlightEnemy();
                         inactiveEnemy.HighlightEnemy();
-                        
-                    } else if(activeEnemy.currentHealth == 0 && inactiveEnemy.currentHealth == 0)
-                    {
-                        PlayerWins();
-                    } else {
-                        activeEnemy.TakeDamage(2);
                     }
                 }
             } else {
@@ -174,7 +173,7 @@ public class TCG_Controller : MonoBehaviour
     // Coroutine that simulates the enemy turn
     IEnumerator EnemyTurn()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(3);
         currentTurn = Turn.Player;
         endTurnButton.interactable = true;
         StartPlayerTurn();
