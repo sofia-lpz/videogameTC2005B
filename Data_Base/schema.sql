@@ -1,4 +1,4 @@
-DROP schema IF EXISTS colometa;
+DROP DATABASE IF EXISTS colometa;
 create schema colometa;
 use colometa;
 
