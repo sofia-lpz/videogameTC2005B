@@ -37,6 +37,12 @@ public class TCG_Controller : MonoBehaviour
     [SerializeField] int limit = 1;
 
 
+        [SerializeField] TextMeshPro card_name;
+
+    [SerializeField] TextMeshPro card_energyCost;
+    
+
+
     // to add pause, check stateNameController gamePaused; True menas paused, false means not paused
 
     // Start is called before the first frame update
@@ -62,17 +68,20 @@ public class TCG_Controller : MonoBehaviour
     // Coroutine that prepares the cards
     IEnumerator PrepareCards()
     {
+        
         int cardsToCreate = (turnCount == 0) ? numInitialCards: cardsPerTurn;
         cardsToCreate = Mathf.Min(cardsToCreate, maxCards - cards.Count);
         for (int i = 0; i < cardsToCreate; i++)
-            {
+        {
+            int cardID = Random.Range(0, tcgData.Cards.Count);
             GameObject newCard = Instantiate(buttonPrefab, buttonParentCards); 
             Card_Buttons cardButton = newCard.GetComponent<Card_Buttons>();
             cards.Add(cardButton);
+            cardButton.Init(tcgData.Cards[cardID]);
             cardButton.gameObject.GetComponent<Button>().onClick.AddListener(() => ButtonPressed(cardButton));
             yield return new WaitForSeconds(delay);
-            }
-            turnCount++;
+        }
+        turnCount++;
     }
 
      CharacterButtons GetActiveEnemy()
@@ -106,9 +115,9 @@ public class TCG_Controller : MonoBehaviour
         {
             return;
         } else {
-            if (energy >= cardButton.energyCost)
+            if (energy >= cardButton.card.energy_cost)
             {
-                energy -= cardButton.energyCost;
+                energy -= cardButton.card.energy_cost;
                 EnergyText.text = "Energy: " + energy.ToString();
                 cardButton.gameObject.GetComponent<Button>().interactable = false;
                 cards.Remove(cardButton);

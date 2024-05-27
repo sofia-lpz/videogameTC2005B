@@ -20,8 +20,8 @@ create table team(
     username varchar(50) NOT NULL,
     villager varchar(50) NOT NULL,
     primary key (username, villager),
-    constraint fk_team_username foreign key (username) references player(username) on delete restrict on update cascade,
-    constraint fk_team_villager foreign key (villager) references villager(name) on delete restrict on update cascade
+    constraint fk_team_username foreign key (username) references player(username),
+    constraint fk_team_villager foreign key (villager) references villager(name)
 ) engine=InnoDB DEFAULT CHARSET=utf8mb4;
 
 create table card(
