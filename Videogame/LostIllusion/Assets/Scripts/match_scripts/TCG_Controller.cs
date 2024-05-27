@@ -15,11 +15,13 @@ public class TCG_Controller : MonoBehaviour
 {
     [SerializeField] List<Card_Buttons> cards;
     [SerializeField] List<CharacterButtons> characterButtons;
+    [SerializeField] List<CharacterButtons> enemyCharacterButtons;
     [SerializeField] int numInitialCards;
     [SerializeField] int cardsPerTurn;
     [SerializeField] int numCharacters;
     [SerializeField] GameObject buttonPrefab;
     [SerializeField] GameObject characterPrefab;
+    [SerializeField] Transform enemyCharacterParent;
     [SerializeField] Transform buttonParentCards;
     [SerializeField] Transform characterParent;	
     [SerializeField] float delay;
@@ -32,6 +34,8 @@ public class TCG_Controller : MonoBehaviour
     public Turn currentTurn;
     public static int turnCount;
 
+    [SerializeField] int limit = 1;
+
 
     // to add pause, check stateNameController gamePaused; True menas paused, false means not paused
 
@@ -43,6 +47,7 @@ public class TCG_Controller : MonoBehaviour
         endTurnButton.onClick.AddListener(EndTurn);
         StartCoroutine(PrepareCards());
         PrepareCharacters();
+        PrepareEnemyCharacters();
         endTurnButton.interactable = currentTurn == Turn.Player;
         Invoke("SelectCharacter", 0.5f);
     }
@@ -50,6 +55,7 @@ public class TCG_Controller : MonoBehaviour
     void SelectCharacter()
     {
         characterButtons[0].Highlight();
+        enemyCharacterButtons[0].HighlightEnemy();
     }
 
     // Coroutine that prepares the cards
@@ -68,6 +74,18 @@ public class TCG_Controller : MonoBehaviour
             turnCount++;
     }
 
+     CharacterButtons GetActiveEnemyCharacter()
+    {
+        foreach (CharacterButtons enemyCharacter in enemyCharacterButtons)
+        {
+            if (enemyCharacter.active) // Asumiendo que active indica si el personaje está activo
+            {
+                return enemyCharacter;
+            }
+        }
+        return null; // No se encontró ningún personaje enemigo activo
+    }
+
     // Function that is called when a card is pressed
     public void ButtonPressed(Card_Buttons cardButton)
     {
@@ -82,6 +100,11 @@ public class TCG_Controller : MonoBehaviour
                 cardButton.gameObject.GetComponent<Button>().interactable = false;
                 cards.Remove(cardButton);
                 Destroy(cardButton.gameObject);
+                CharacterButtons activeEnemy = GetActiveEnemyCharacter();
+                if (activeEnemy != null)
+                {
+                    activeEnemy.TakeDamage(2);
+                }
             } else {
                 if(Turn.Player == currentTurn)
                 notEnoughEnergyText.text = "Not enough energy";
@@ -109,6 +132,16 @@ public class TCG_Controller : MonoBehaviour
             }
     }
 
+    public void PrepareEnemyCharacters()
+    {
+        for (int i = 0; i < numCharacters; i++)
+        {
+            GameObject newCharacter = Instantiate(characterPrefab, enemyCharacterParent);
+            CharacterButtons charEnemyButton = newCharacter.GetComponent<CharacterButtons>();
+            enemyCharacterButtons.Add(charEnemyButton);
+        }
+    }
+
 
     // Function that ends the turn
     public void EndTurn()
@@ -131,41 +164,35 @@ public class TCG_Controller : MonoBehaviour
     void StartPlayerTurn()
     {
         energy = Random.Range(4, 10);
+        limit = 1;
         EnergyText.text = "Energy: " + energy.ToString();
-        EnableCharacterButtons();
         StartCoroutine(PrepareCards());
     }
-
-    void EnableCharacterButtons()
-    {
-        foreach (var charButton in characterButtons)
-        {
-            charButton.gameObject.GetComponent<Button>().interactable = true;
-        }
-    }
-
 
     public void OnCharacterPressed(CharacterButtons characterButton){
         if (currentTurn == Turn.Enemy)
         {
             return;
         } else {
-            if (energy >= 1 && characterButton.active == false)
+            if (energy >= 1)
             {
-                for (int i = 0; i < numCharacters; i++)
+                if (characterButton.active == false && limit > 0)
                 {
-                    characterButtons[i].Highlight();
+                    for (int i = 0; i < numCharacters; i++)
+                    {
+                        characterButtons[i].Highlight();
+                    }
+                    //characterButton.Highlight();
+                    energy -= 1;
+                    EnergyText.text = "Energy: " + energy.ToString();
+                    limit -= 1;
                 }
-                //characterButton.Highlight();
-                energy -= 1;
-                EnergyText.text = "Energy: " + energy.ToString();
             } else{
                 if(Turn.Player == currentTurn) {
                     notEnoughEnergyText.text = "Not enough energy";
                 }
             }
         }
-
     }
 }
 

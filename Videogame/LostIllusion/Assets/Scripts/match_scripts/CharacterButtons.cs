@@ -10,6 +10,7 @@ public class CharacterButtons : MonoBehaviour
     [SerializeField] Color highlightColor = Color.yellow;
     [SerializeField] float initialPos;
     [SerializeField] float activePos;
+    [SerializeField] float activePosE;
     [SerializeField] int maxHealth = 10;
     [SerializeField] int currentHealth;
     public HealthBar healthBar;
@@ -21,6 +22,7 @@ public class CharacterButtons : MonoBehaviour
         healthBar = GetComponent<HealthBar>();
         initialPos = transform.position.y;
         activePos = initialPos + 15f;
+        activePosE = initialPos - 15f;
         normalColor = GetComponent<Image>().color;
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);  
@@ -28,13 +30,10 @@ public class CharacterButtons : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) 
-        {
-            TakeDamage(1);
-        }
+        
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
@@ -55,5 +54,20 @@ public class CharacterButtons : MonoBehaviour
             active = true;
        }
         
+    }
+
+    public void HighlightEnemy()
+    {
+        if (active) 
+        {
+            GetComponent<Image>().color = normalColor;
+            transform.position = new Vector3(transform.position.x, initialPos, transform.position.z);
+            active = false;
+
+        } else {
+            GetComponent<Image>().color = highlightColor;
+            transform.position = new Vector3(transform.position.x, activePosE, transform.position.z);
+            active = true;
+        }
     }
 }
