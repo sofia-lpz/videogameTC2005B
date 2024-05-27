@@ -18,9 +18,9 @@ INSERT INTO team (username, villager) VALUES
 
 -- Dummy data for card table
 INSERT INTO card (name, energy_cost, effect, type, description, player_health, player_attack, player_defense, player_support, enemy_defense) VALUES
-('hola luis', 2, 'attack', 'creature', 'Description 1', 10, 5, 0, 0, 0),
-('holaluis', 3, 'defense', 'skill', 'Description 2', 0, 0, 5, 0, 0),
-('soy yo', 1, 'support', 'snack', 'Description 3', 0, 0, 0, 5, 0);
+('hola luis', 2, 'attack', 'creature', 'Description 1', 2, 5, 0, 0, 0),
+('holaluis', 3, 'defense', 'skill', 'Description 2', 0, 3, 5, 0, 0),
+('soy yo', 1, 'support', 'snack', 'Description 3', 0, 4, 0, 5, 0);
 
 -- Dummy data for tcg_match table
 INSERT INTO tcg_match (timestamp, username, won) VALUES
