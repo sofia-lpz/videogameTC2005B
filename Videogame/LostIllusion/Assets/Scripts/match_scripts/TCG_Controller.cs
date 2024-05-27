@@ -126,7 +126,7 @@ public class TCG_Controller : MonoBehaviour
                 CharacterButtons inactiveEnemy = GetInactiveEnemy();
                 if (activeEnemy != null)
                 {
-                    activeEnemy.TakeDamage(4);
+                    activeEnemy.TakeDamage(cardButton.card.player_attack);
                     if(activeEnemy.currentHealth <= 0 && inactiveEnemy.currentHealth <= 0)
                     {
                         activeEnemy.HighlightEnemy();
