@@ -7,11 +7,14 @@ using UnityEngine.SceneManagement;
 public class menuButtons : MonoBehaviour
 {
     AudioSource audioSource;
+
+    [SerializeField] public AudioClip clickSound;
     
     public void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        audioSource.clip = Resources.Load<AudioClip>("Audio/soundEffects/cursor");
+        audioSource.clip = clickSound;
+
     }
 
     public void login()
@@ -23,7 +26,7 @@ public class menuButtons : MonoBehaviour
     public void back()
     {
         audioSource.Play();
-        SceneManager.LoadScene("MainTitle", LoadSceneMode.Single);
+        SceneManager.LoadScene("mainMenu", LoadSceneMode.Single);
     }
 
     public void register()
@@ -32,7 +35,7 @@ public class menuButtons : MonoBehaviour
         SceneManager.LoadScene("register", LoadSceneMode.Single);
     }  
 
-    public void play()
+    public void startGame()
     {
         audioSource.Play();
         string sceneName = stateNameController.scenes[stateNameController.player_level];
