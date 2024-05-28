@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e30b409b3f784d41be31dcefcadb5c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickSound: {fileID: 8300000, guid: f850eec250711da4fa8ff7d5b0ba03f4, type: 3}
 --- !u!82 &3991011348192140303
 AudioSource:
   m_ObjectHideFlags: 0
