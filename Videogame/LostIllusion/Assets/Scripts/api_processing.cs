@@ -13,6 +13,13 @@ public class api_processing : MonoBehaviour
         tcgData.Cards = cardList.data;
     }
 
+    public static void VillagerProcessing(string result)
+    {
+        Debug.Log("api_processing got: " + result);
+        VillagerList villagerList = JsonUtility.FromJson<VillagerList>(result);
+        tcgData.Villagers = villagerList.data;
+    }
+
 
 
 }

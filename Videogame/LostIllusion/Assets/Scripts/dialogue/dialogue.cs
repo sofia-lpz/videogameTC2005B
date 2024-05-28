@@ -41,6 +41,8 @@ public class dialogue : MonoBehaviour
     // Update is called once per frame
     public virtual void Update()
     {
+        audioSource.volume = stateNameController.volume;
+        
         if (stateNameController.gamePaused){
             StopAllCoroutines();
             return;
