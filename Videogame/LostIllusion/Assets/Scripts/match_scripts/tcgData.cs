@@ -5,5 +5,6 @@ using System.Collections.Generic;
 public class tcgData
 {
    public static List<Card> Cards = new List<Card>();
-}
 
+   public static List<Player> PlayerList = new List<Player>();
+}

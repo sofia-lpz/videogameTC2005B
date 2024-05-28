@@ -13,4 +13,6 @@ public class api_processing : MonoBehaviour
         tcgData.Cards = cardList.data;
     }
 
+
+
 }

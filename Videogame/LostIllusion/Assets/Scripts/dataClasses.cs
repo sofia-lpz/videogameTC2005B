@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-[Serializable]
 public class Card
 {
     public int cardID;
@@ -19,8 +17,6 @@ public class Card
     public int enemy_defense;
 }
 
-
-[Serializable]
 public class CardList
 {
     public string status;
@@ -33,6 +29,11 @@ public class Player{
     public int matches_won;
 }
 
+public class PlayerList{
+    public string status;
+    public List<Player> data;
+}
+
 public class Team{
     public string username;
     public string villager;
@@ -42,6 +43,11 @@ public class Villager{
     public string name;
     public string description;
     public string element;
+}
+
+public class VillagerList{
+    public string status;
+    public List<Villager> data;
 }
 
 public class Deck{
@@ -63,4 +69,9 @@ public class Match{
     public string timestamp;
     public string username;
     public bool won;
+}
+
+public class MatchList{
+    public string status;
+    public List<Match> data;
 }
