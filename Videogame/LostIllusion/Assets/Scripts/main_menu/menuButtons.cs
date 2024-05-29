@@ -52,7 +52,7 @@ public class menuButtons : MonoBehaviour
     public void quit()
     {
         audioSource.Play();
-        SceneManager.LoadScene("MainTitle", LoadSceneMode.Single);
+        SceneManager.LoadScene("mainMenu", LoadSceneMode.Single);
     }
 
     public void quitInventory()
