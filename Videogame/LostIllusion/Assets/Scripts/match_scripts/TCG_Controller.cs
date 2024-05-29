@@ -10,9 +10,11 @@ using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
 using Unity.VisualScripting.Dependencies.Sqlite;
+using UnityEngine.SceneManagement;
 
 public class TCG_Controller : MonoBehaviour
 {
+    [SerializeField] public string sceneName;
     [SerializeField] List<Card_Buttons> cards;
     [SerializeField] List<CharacterButtons> characterButtons;
     [SerializeField] List<CharacterButtons> enemyCharacterButtons;
@@ -35,6 +37,12 @@ public class TCG_Controller : MonoBehaviour
     public static int turnCount;
 
     [SerializeField] int limit = 1;
+
+
+        [SerializeField] TextMeshPro card_name;
+
+    [SerializeField] TextMeshPro card_energyCost;
+    
 
 
     // to add pause, check stateNameController gamePaused; True menas paused, false means not paused
@@ -62,17 +70,20 @@ public class TCG_Controller : MonoBehaviour
     // Coroutine that prepares the cards
     IEnumerator PrepareCards()
     {
+        
         int cardsToCreate = (turnCount == 0) ? numInitialCards: cardsPerTurn;
         cardsToCreate = Mathf.Min(cardsToCreate, maxCards - cards.Count);
         for (int i = 0; i < cardsToCreate; i++)
-            {
+        {
+            int cardID = Random.Range(0, tcgData.Cards.Count);
             GameObject newCard = Instantiate(buttonPrefab, buttonParentCards); 
             Card_Buttons cardButton = newCard.GetComponent<Card_Buttons>();
             cards.Add(cardButton);
+            cardButton.Init(tcgData.Cards[cardID]);
             cardButton.gameObject.GetComponent<Button>().onClick.AddListener(() => ButtonPressed(cardButton));
             yield return new WaitForSeconds(delay);
-            }
-            turnCount++;
+        }
+        turnCount++;
     }
 
      CharacterButtons GetActiveEnemy()
@@ -82,6 +93,18 @@ public class TCG_Controller : MonoBehaviour
             if (enemyCharacter.active)
             {
                 return enemyCharacter;
+            }
+        }
+        return null;
+    }
+
+    CharacterButtons GetActiveCharacter()
+    {
+        foreach (CharacterButtons character in characterButtons)
+        {
+            if (character.active)
+            {
+                return character;
             }
         }
         return null;
@@ -106,18 +129,20 @@ public class TCG_Controller : MonoBehaviour
         {
             return;
         } else {
-            if (energy >= cardButton.energyCost)
+            if (energy >= cardButton.card.energy_cost)
             {
-                energy -= cardButton.energyCost;
+                energy -= cardButton.card.energy_cost;
                 EnergyText.text = "Energy: " + energy.ToString();
                 cardButton.gameObject.GetComponent<Button>().interactable = false;
                 cards.Remove(cardButton);
                 Destroy(cardButton.gameObject);
                 CharacterButtons activeEnemy = GetActiveEnemy();
                 CharacterButtons inactiveEnemy = GetInactiveEnemy();
+                CharacterButtons activeCharacter = GetActiveCharacter();
                 if (activeEnemy != null)
                 {
-                    activeEnemy.TakeDamage(4);
+                    activeEnemy.TakeDamage(cardButton.card.player_attack);
+                    activeCharacter.Heal(cardButton.card.player_health);
                     if(activeEnemy.currentHealth <= 0 && inactiveEnemy.currentHealth <= 0)
                     {
                         activeEnemy.HighlightEnemy();
@@ -212,9 +237,15 @@ public class TCG_Controller : MonoBehaviour
         }
     }
 
+    public void LoadScene()
+    {
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+    }
+
     public void PlayerWins()
     {
         Debug.Log("Player wins");
+        Invoke("LoadScene", 2);
     }
 
 }
