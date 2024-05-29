@@ -59,7 +59,6 @@ public class Character_Movement : MonoBehaviour
             movement.x = 1f;
         }
 
-        // Normalize the movement vector to ensure consistent speed in all directions
         if (movement.sqrMagnitude > 1)
         {
             movement = movement.normalized;
