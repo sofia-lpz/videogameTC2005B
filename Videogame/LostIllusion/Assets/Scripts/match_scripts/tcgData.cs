@@ -6,5 +6,5 @@ public class tcgData
 {
    public static List<Card> Cards = new List<Card>();
 
-   public static List<Player> PlayerList = new List<Player>();
+   public static List<Villager> Villagers = new List<Villager>();
 }
