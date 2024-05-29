@@ -10,9 +10,11 @@ using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
 using Unity.VisualScripting.Dependencies.Sqlite;
+using UnityEngine.SceneManagement;
 
 public class TCG_Controller : MonoBehaviour
 {
+    [SerializeField] public string sceneName;
     [SerializeField] List<Card_Buttons> cards;
     [SerializeField] List<CharacterButtons> characterButtons;
     [SerializeField] List<CharacterButtons> enemyCharacterButtons;
@@ -96,6 +98,18 @@ public class TCG_Controller : MonoBehaviour
         return null;
     }
 
+    CharacterButtons GetActiveCharacter()
+    {
+        foreach (CharacterButtons character in characterButtons)
+        {
+            if (character.active)
+            {
+                return character;
+            }
+        }
+        return null;
+    }
+
     CharacterButtons GetInactiveEnemy()
     {
         foreach (CharacterButtons enemyCharacter in enemyCharacterButtons)
@@ -124,9 +138,11 @@ public class TCG_Controller : MonoBehaviour
                 Destroy(cardButton.gameObject);
                 CharacterButtons activeEnemy = GetActiveEnemy();
                 CharacterButtons inactiveEnemy = GetInactiveEnemy();
+                CharacterButtons activeCharacter = GetActiveCharacter();
                 if (activeEnemy != null)
                 {
                     activeEnemy.TakeDamage(cardButton.card.player_attack);
+                    activeCharacter.Heal(cardButton.card.player_health);
                     if(activeEnemy.currentHealth <= 0 && inactiveEnemy.currentHealth <= 0)
                     {
                         activeEnemy.HighlightEnemy();
@@ -221,9 +237,15 @@ public class TCG_Controller : MonoBehaviour
         }
     }
 
+    public void LoadScene()
+    {
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+    }
+
     public void PlayerWins()
     {
         Debug.Log("Player wins");
+        Invoke("LoadScene", 2);
     }
 
 }
