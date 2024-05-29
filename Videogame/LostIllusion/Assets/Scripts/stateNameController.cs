@@ -27,8 +27,6 @@ public class stateNameController : MonoBehaviour
 
     /*LIST OF SCENES*/
     public static List<string> scenes = new List<string> {
-        "Instructions",
-        "cutscene0",
         "Home",
         "Outside"
         };
