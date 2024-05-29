@@ -68,13 +68,22 @@ public static List<List<string>> colometa_lines = new List<List<string>> {
 };
 /*COLMETA LINES END*/
 
+/*dev_bunny dialogue start*/
+public static List<string> dev_bunny_lines_1 = new List<string> {
+    "Hello " + player_username,
+    "I'm the dev bunny",
+    "I'm here to help you",
+    tcgData.Cards.Count > 0 ? "The first card name is " + tcgData.Cards[0].name : "There are no cards available"
+};
+
 
 // to do, make a dictionary of dictionaries instead of dictionary of lists
 public static Dictionary<string, List<List<string>>> dialoguesDictionary = new Dictionary<string, List<List<string>>> {
     {"tv", tv_lines},
     {"talk2tv", new List<List<string>> { tv2talk_lines }},
     {"book", new List<List<string>> { bookDescription }},
-    {"COLOMETA", colometa_lines}
+    {"COLOMETA", colometa_lines},
+    {"dev_bunny", new List<List<string>> { dev_bunny_lines_1 }}
 };
 
 }
