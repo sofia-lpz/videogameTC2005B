@@ -32,7 +32,6 @@ public class Character_Movement : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    
     void Update()
     {
         if (stateNameController.gamePaused || stateNameController.freezePlayer)
@@ -41,8 +40,7 @@ public class Character_Movement : MonoBehaviour
             return;
         }
         
-        movement.x = 0f;
-        movement.y = 0f;
+        movement = Vector2.zero;
 
         if (Input.GetKey(up))
         {
@@ -59,7 +57,12 @@ public class Character_Movement : MonoBehaviour
         if (Input.GetKey(right))
         {
             movement.x = 1f;
-        } 
+        }
+
+        if (movement.sqrMagnitude > 1)
+        {
+            movement = movement.normalized;
+        }
 
         if (Input.GetKeyDown(KeyCode.T))
         {
@@ -81,24 +84,23 @@ public class Character_Movement : MonoBehaviour
     }
 
     IEnumerator tremble()
-{
-    float trembleAmount = 0.05f; // Adjust this value to change the intensity of the tremble
-    float trembleSpeed = 60f; // Adjust this value to change the speed of the tremble
-
-    Vector3 originalPosition = transform.position;
-
-    float elapsedTime = 0f;
-
-    while (elapsedTime < 0.75f) // Tremble for 1 second
     {
-        float x = Mathf.Sin(Time.time * trembleSpeed) * trembleAmount;
-        transform.position = new Vector3(originalPosition.x + x, originalPosition.y, originalPosition.z);
-        elapsedTime += Time.deltaTime;
-        yield return null;
+        float trembleAmount = 0.05f; // Adjust this value to change the intensity of the tremble
+        float trembleSpeed = 60f; // Adjust this value to change the speed of the tremble
+
+        Vector3 originalPosition = transform.position;
+
+        float elapsedTime = 0f;
+
+        while (elapsedTime < 0.75f) // Tremble for 1 second
+        {
+            float x = Mathf.Sin(Time.time * trembleSpeed) * trembleAmount;
+            transform.position = new Vector3(originalPosition.x + x, originalPosition.y, originalPosition.z);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        // Reset position
+        transform.position = originalPosition;
     }
-
-    // Reset position
-    transform.position = originalPosition;
 }
-}
-

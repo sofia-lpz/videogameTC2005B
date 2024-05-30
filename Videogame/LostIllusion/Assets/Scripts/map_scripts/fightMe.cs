@@ -46,6 +46,10 @@ void onFight(GameObject other)
     if (!interacted)
     {
         interacted = true;
+        stateNameController.freezePlayer = true;
+        stateNameController.playerPosInScene = other.transform.position.x;
+        stateNameController.playerPreviousScene = SceneManager.GetActiveScene().name;
+        
         GameObject dialogueCanvas = Object.Instantiate(prefabDialogueCanvas);
         
         var fieldInfo = typeof(stateNameController).GetField(sceneNameFight);

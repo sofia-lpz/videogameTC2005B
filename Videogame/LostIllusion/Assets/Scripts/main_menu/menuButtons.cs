@@ -42,6 +42,12 @@ public class menuButtons : MonoBehaviour
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 
+    public void startGameNOAUTH()
+    {
+        audioSource.Play();
+        SceneManager.LoadScene("Home", LoadSceneMode.Single);
+    }
+
     public void resume()
     {
         audioSource.Play();
