@@ -140,6 +140,30 @@ const getPlayerStats = async (req, res) => {
   }
 }
 
+const getAuth = async (req, res) => {
+  const {
+    params: { username, password },
+  } = req;
+  if (!username || !password) {
+    return;
+  }
+
+  try {
+    const auth = await colometaService.getAuth(username, password);
+
+    if (auth.length === 0) {
+      res.status(404).send({ status: "Error", data: "User or password incorrect" });
+      return;
+    }
+
+    res.send({ status: "OK", data: auth });
+  }
+  catch (error) {
+    console.error(error);
+    res.status(500).send({ status: "Error", data: error.message });
+  }
+}
+
 export {
   getCards,
   getPlayer,
@@ -150,5 +174,6 @@ export {
   getPlayerTeam,
   getPlayerDeck,
   getPlayerMatches,
-  getPlayerStats
+  getPlayerStats,
+  getAuth
 };
