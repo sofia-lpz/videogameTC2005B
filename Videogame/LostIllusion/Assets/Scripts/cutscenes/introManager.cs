@@ -6,11 +6,12 @@ public class introManager : MonoBehaviour
 {
     [SerializeField] public GameObject dialogueCanvasPrefab;
     [SerializeField] public GameObject CutsceneCanvasPrefab;
+    private GameObject cutsceneCanvas; // Declare cutsceneCanvas here
 
     void Start()
     {
-        StartCoroutine(scene());
-
+        cutsceneCanvas = Instantiate(dialogueCanvasPrefab);
+        cutsceneCanvas.GetComponent<dialogueCutscenes>().Initialize();
     }
 
     // Update is called once per frame
@@ -19,16 +20,13 @@ public class introManager : MonoBehaviour
         if (stateNameController.gamePaused){
             return;
         }
-        
-    }
-
-    IEnumerator scene(){
-        GameObject cutsceneCanvas = Instantiate(CutsceneCanvasPrefab);
-        cutsceneCanvas.GetComponent<dialogue>().Initialize("NARRATOR", 0);
-
-        yield return new WaitForSeconds(1);
-
-        GameObject dialogueCanvas = Instantiate(dialogueCanvasPrefab);
-        dialogueCanvas.GetComponent<dialogue>().Initialize("COLOMETA", 0);
+        if (cutsceneCanvas == null || cutsceneCanvas.Equals(null))
+        {
+            Debug.Log("cutsceneCanvas has been destroyed");
+        }
+        else
+        {
+            Debug.Log("cutsceneCanvas still exists");
+        }
     }
 }

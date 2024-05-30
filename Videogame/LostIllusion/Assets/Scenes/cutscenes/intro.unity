@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d918a39645cae74448b5d75e5d371e77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueCanvasPrefab: {fileID: 4481119704672500748, guid: 5fc3c12f47e90df49bfc97526a031b82, type: 3}
+  dialogueCanvasPrefab: {fileID: 7323745493855922601, guid: af9f06769d51559419ee30b3acdf340a, type: 3}
   CutsceneCanvasPrefab: {fileID: 7323745493855922601, guid: af9f06769d51559419ee30b3acdf340a, type: 3}
 --- !u!1 &1035016093
 GameObject:
