@@ -128,6 +128,7 @@ public class TCG_Controller : MonoBehaviour
         if (currentTurn == Turn.Enemy)
         {
             return;
+
         } else {
             if (energy >= cardButton.card.energy_cost)
             {
@@ -139,10 +140,13 @@ public class TCG_Controller : MonoBehaviour
                 CharacterButtons activeEnemy = GetActiveEnemy();
                 CharacterButtons inactiveEnemy = GetInactiveEnemy();
                 CharacterButtons activeCharacter = GetActiveCharacter();
+
                 if (activeEnemy != null)
                 {
+                    Debug.Log("Damage amount: " + cardButton.card.player_attack);
                     activeEnemy.TakeDamage(cardButton.card.player_attack);
                     activeCharacter.Heal(cardButton.card.player_health);
+                   
                     if(activeEnemy.currentHealth <= 0 && inactiveEnemy.currentHealth <= 0)
                     {
                         activeEnemy.HighlightEnemy();
@@ -166,10 +170,11 @@ public class TCG_Controller : MonoBehaviour
     {
         for (int i = 0; i < numCharacters; i++)
             {
+                int charID = Random.Range(0, tcgData.Villagers.Count);
                 GameObject newCharacter = Instantiate(characterPrefab, characterParent);
                 CharacterButtons charButton = newCharacter.GetComponent<CharacterButtons>();
-                //charButton.Init();
                 characterButtons.Add(charButton);
+                charButton.Init(tcgData.Villagers[charID]);
                 Button buttonComponent = newCharacter.GetComponent<Button>();
                 buttonComponent.onClick.AddListener(() => OnCharacterPressed(charButton));
             }
@@ -179,9 +184,11 @@ public class TCG_Controller : MonoBehaviour
     {
         for (int i = 0; i < numCharacters; i++)
         {
+            int charID = Random.Range(0, tcgData.Villagers.Count);
             GameObject newCharacter = Instantiate(characterPrefab, enemyCharacterParent);
             CharacterButtons charEnemyButton = newCharacter.GetComponent<CharacterButtons>();
             enemyCharacterButtons.Add(charEnemyButton);
+            charEnemyButton.Init(tcgData.Villagers[charID]);
         }
     }
 
@@ -198,6 +205,8 @@ public class TCG_Controller : MonoBehaviour
     // Coroutine that simulates the enemy turn
     IEnumerator EnemyTurn()
     {
+        CharacterButtons activeCharacter = GetActiveCharacter();
+        activeCharacter.TakeDamage(4);
         yield return new WaitForSeconds(3);
         currentTurn = Turn.Player;
         endTurnButton.interactable = true;
