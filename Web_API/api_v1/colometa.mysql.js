@@ -153,6 +153,42 @@ async function getPlayerDeck(username) {
   }
 }
 
+async function getPlayerMatches(username) {
+  let connection = null;
+  let query = `SELECT * FROM tcg_match WHERE username = ?`;
+  try {
+    connection = await connectToDB();
+    const [results, _] = await connection.query(query, [username]);
+    console.log(`${results.length} rows returned`);
+    return results;
+  } catch (error) {
+    console.log(error);
+  } finally {
+    if (connection !== null) {
+      connection.end();
+      console.log('Connection closed successfully');
+    }
+  }
+}
+
+async function getPlayerStats(username) {
+  let connection = null;
+  let query = `SELECT * FROM stats WHERE username = ?`;
+  try {
+    connection = await connectToDB();
+    const [results, _] = await connection.query(query, [username]);
+    console.log(`${results.length} rows returned`);
+    return results;
+  } catch (error) {
+    console.log(error);
+  } finally {
+    if (connection !== null) {
+      connection.end();
+      console.log('Connection closed successfully');
+    }
+  }
+}
+
 export {
   getCards,
   getPlayer,
@@ -161,5 +197,7 @@ export {
   getMatches,
   getVillagers,
   getPlayerTeam,
-  getPlayerDeck
+  getPlayerDeck,
+  getPlayerMatches,
+  getPlayerStats
 };
