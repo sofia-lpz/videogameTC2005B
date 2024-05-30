@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CharacterButtons : MonoBehaviour
 {
@@ -12,9 +13,15 @@ public class CharacterButtons : MonoBehaviour
     [SerializeField] float activePos;
     [SerializeField] float activePosE;
     [SerializeField] int maxHealth = 10;
-    public int currentHealth;
+    [SerializeField] TMP_Text characterName;
+    [SerializeField] TMP_Text characterDescription;
+     [SerializeField] TMP_Text characterElement;
+
+    public int currentHealth = 5;
     public HealthBar healthBar;
     public bool active;
+
+    public Villager character;
 
     // Start is called before the first frame update
      public void Start()
@@ -26,6 +33,14 @@ public class CharacterButtons : MonoBehaviour
         normalColor = GetComponent<Image>().color;
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);  
+    }
+
+    public void Init(Villager data)
+    {
+        character = data;
+        characterName.text = character.name;
+        characterDescription.text = character.description;
+        characterElement.text = character.element;
     }
 
     void Update()
