@@ -122,6 +122,18 @@ public class TCG_Controller : MonoBehaviour
         return null;
     }
 
+    CharacterButtons GetInactiveCharacter()
+    {
+        foreach (CharacterButtons character in characterButtons)
+        {
+            if (!character.active)
+            {
+                return character;
+            }
+        }
+        return null;
+    }
+
     // Function that is called when a card is pressed
     public void ButtonPressed(Card_Buttons cardButton)
     {
@@ -143,20 +155,75 @@ public class TCG_Controller : MonoBehaviour
 
                 if (activeEnemy != null)
                 {
-                    Debug.Log("Damage amount: " + cardButton.card.player_attack);
-                    activeEnemy.TakeDamage(cardButton.card.player_attack);
-                    activeCharacter.Heal(cardButton.card.player_health);
+                    if (cardButton.card.effect == "attack") 
+                    {
+                        if (activeCharacter.character.element == "Reason" && (activeEnemy.character.element == "Terror" || activeEnemy.character.element == "Spirit"))
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack + 1);
+                        }
+                        else if (activeCharacter.character.element == "Reason" && (activeEnemy.character.element == "Dream" || activeEnemy.character.element == "Ennvi"))
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack - 1);
+                        }
+                        else if (activeCharacter.character.element == "Terror" && (activeEnemy.character.element == "Ennvi" || activeEnemy.character.element == "Dream"))
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack + 1);
+                        }
+                        else if (activeCharacter.character.element == "Terror" && (activeEnemy.character.element == "Reason" || activeEnemy.character.element == "Spirit"))
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack - 1);
+                        }
+                        else if(activeCharacter.character.element == "Ennvi" && (activeEnemy.character.element == "Spirit" || activeEnemy.character.element == "Reason"))
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack + 1);
+                        }
+                        else if(activeCharacter.character.element == "Ennvi" && (activeEnemy.character.element == "Terror" || activeEnemy.character.element == "Dream"))
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack - 1);
+                        }
+                        else if(activeCharacter.character.element == "Spirit" && (activeEnemy.character.element == "Dream" || activeEnemy.character.element == "Terror"))
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack + 1);
+                        }
+                        else if(activeCharacter.character.element == "Spirit" && (activeEnemy.character.element == "Ennvi" || activeEnemy.character.element == "Reason"))
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack - 1);
+                        }
+                        else if(activeCharacter.character.element == "Dream" && (activeEnemy.character.element == "Reason" || activeEnemy.character.element == "Ennvi"))
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack + 1);
+                        }
+                        else if(activeCharacter.character.element == "Dream" && (activeEnemy.character.element == "Spirit" || activeEnemy.character.element == "Terror"))
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack - 1);
+                        }
+                        else 
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack);
+                        }
+                    } 
+                    else if (cardButton.card.effect == "support") 
+                    {
+                        activeCharacter.Heal(cardButton.card.player_health);
+                    }
+                    else if (cardButton.card.effect == "defense")
+                    {
+                        Debug.Log("Defense");
+                    }
+                    
                    
                     if(activeEnemy.currentHealth <= 0 && inactiveEnemy.currentHealth <= 0)
                     {
                         activeEnemy.HighlightEnemy();
                         PlayerWins();
-                    } else if(activeEnemy.currentHealth <= 0)
+                    } 
+                    else if(activeEnemy.currentHealth <= 0)
                     {
                         activeEnemy.HighlightEnemy();
                         inactiveEnemy.HighlightEnemy();
                     }
                 }
+
             } else {
                 if(Turn.Player == currentTurn)
                 notEnoughEnergyText.text = "Not enough energy";
@@ -206,7 +273,20 @@ public class TCG_Controller : MonoBehaviour
     IEnumerator EnemyTurn()
     {
         CharacterButtons activeCharacter = GetActiveCharacter();
+        CharacterButtons inactiveCharacter = GetInactiveCharacter();
         activeCharacter.TakeDamage(4);
+        
+        if(activeCharacter.currentHealth <= 0 && inactiveCharacter.currentHealth <= 0)
+        {
+            activeCharacter.Highlight();
+            EnemyWins();
+        }
+        else if(activeCharacter.currentHealth <= 0)
+        {
+            activeCharacter.Highlight();
+            inactiveCharacter.Highlight();
+        }
+
         yield return new WaitForSeconds(3);
         currentTurn = Turn.Player;
         endTurnButton.interactable = true;
@@ -254,6 +334,12 @@ public class TCG_Controller : MonoBehaviour
     public void PlayerWins()
     {
         Debug.Log("Player wins");
+        Invoke("LoadScene", 2);
+    }
+
+    public void EnemyWins()
+    {
+        Debug.Log("Enemy wins");
         Invoke("LoadScene", 2);
     }
 
