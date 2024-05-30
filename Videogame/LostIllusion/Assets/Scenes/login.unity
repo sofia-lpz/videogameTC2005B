@@ -2308,10 +2308,6 @@ MonoBehaviour:
   passwordField: {fileID: 902632043}
   loginButton: {fileID: 108727742}
   loginMessageText: {fileID: 422525538}
-  registerUsernameInput: {fileID: 0}
-  registerPasswordInput: {fileID: 0}
-  registerButton: {fileID: 0}
-  registerMessageText: {fileID: 0}
 --- !u!4 &1860638683
 Transform:
   m_ObjectHideFlags: 0
