@@ -2,15 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Card_Buttons : MonoBehaviour
 {
-    public int energyCost = 1;
+    [SerializeField] TMP_Text card_name;
+    [SerializeField] TMP_Text card_description;
+    [SerializeField] TMP_Text card_energyCost;
+    public int card_heal;
+    public int card_damage;
+
+
+    public Card card;
 
     // Start is called before the first frame update
-    void Start()
+    public void Init(Card data)
     {
-        
+        card = data;
+        card_name.text = card.name;
+        card_description.text = card.description;
+        card_energyCost.text = card.energy_cost.ToString();
+        card_damage = card.player_attack;
+        card_heal = card.player_health;
     }
 
     // Update is called once per frame

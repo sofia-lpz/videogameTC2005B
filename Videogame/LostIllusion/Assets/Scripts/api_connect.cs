@@ -12,6 +12,7 @@ public class api_connect : MonoBehaviour
 
     public void InitialGet(){
         GetData("/cards", api_processing.CardProcessing);
+        GetData("/villagers", api_processing.VillagerProcessing);
     }
 
     public void GetData(string getEndpoint, Action<string> callback){

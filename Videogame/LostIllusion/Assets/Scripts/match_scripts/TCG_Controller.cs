@@ -10,9 +10,11 @@ using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
 using Unity.VisualScripting.Dependencies.Sqlite;
+using UnityEngine.SceneManagement;
 
 public class TCG_Controller : MonoBehaviour
 {
+    [SerializeField] public string sceneName;
     [SerializeField] List<Card_Buttons> cards;
     [SerializeField] List<CharacterButtons> characterButtons;
     [SerializeField] List<CharacterButtons> enemyCharacterButtons;
@@ -35,6 +37,12 @@ public class TCG_Controller : MonoBehaviour
     public static int turnCount;
 
     [SerializeField] int limit = 1;
+
+
+        [SerializeField] TextMeshPro card_name;
+
+    [SerializeField] TextMeshPro card_energyCost;
+    
 
 
     // to add pause, check stateNameController gamePaused; True menas paused, false means not paused
@@ -62,17 +70,20 @@ public class TCG_Controller : MonoBehaviour
     // Coroutine that prepares the cards
     IEnumerator PrepareCards()
     {
+        
         int cardsToCreate = (turnCount == 0) ? numInitialCards: cardsPerTurn;
         cardsToCreate = Mathf.Min(cardsToCreate, maxCards - cards.Count);
         for (int i = 0; i < cardsToCreate; i++)
-            {
+        {
+            int cardID = Random.Range(0, tcgData.Cards.Count);
             GameObject newCard = Instantiate(buttonPrefab, buttonParentCards); 
             Card_Buttons cardButton = newCard.GetComponent<Card_Buttons>();
             cards.Add(cardButton);
+            cardButton.Init(tcgData.Cards[cardID]);
             cardButton.gameObject.GetComponent<Button>().onClick.AddListener(() => ButtonPressed(cardButton));
             yield return new WaitForSeconds(delay);
-            }
-            turnCount++;
+        }
+        turnCount++;
     }
 
      CharacterButtons GetActiveEnemy()
@@ -82,6 +93,18 @@ public class TCG_Controller : MonoBehaviour
             if (enemyCharacter.active)
             {
                 return enemyCharacter;
+            }
+        }
+        return null;
+    }
+
+    CharacterButtons GetActiveCharacter()
+    {
+        foreach (CharacterButtons character in characterButtons)
+        {
+            if (character.active)
+            {
+                return character;
             }
         }
         return null;
@@ -99,35 +122,108 @@ public class TCG_Controller : MonoBehaviour
         return null;
     }
 
+    CharacterButtons GetInactiveCharacter()
+    {
+        foreach (CharacterButtons character in characterButtons)
+        {
+            if (!character.active)
+            {
+                return character;
+            }
+        }
+        return null;
+    }
+
     // Function that is called when a card is pressed
     public void ButtonPressed(Card_Buttons cardButton)
     {
         if (currentTurn == Turn.Enemy)
         {
             return;
+
         } else {
-            if (energy >= cardButton.energyCost)
+            if (energy >= cardButton.card.energy_cost)
             {
-                energy -= cardButton.energyCost;
+                energy -= cardButton.card.energy_cost;
                 EnergyText.text = "Energy: " + energy.ToString();
                 cardButton.gameObject.GetComponent<Button>().interactable = false;
                 cards.Remove(cardButton);
                 Destroy(cardButton.gameObject);
                 CharacterButtons activeEnemy = GetActiveEnemy();
                 CharacterButtons inactiveEnemy = GetInactiveEnemy();
+                CharacterButtons activeCharacter = GetActiveCharacter();
+
                 if (activeEnemy != null)
                 {
-                    activeEnemy.TakeDamage(4);
+                    if (cardButton.card.effect == "attack") 
+                    {
+                        if (activeCharacter.character.element == "Reason" && (activeEnemy.character.element == "Terror" || activeEnemy.character.element == "Spirit"))
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack + 1);
+                        }
+                        else if (activeCharacter.character.element == "Reason" && (activeEnemy.character.element == "Dream" || activeEnemy.character.element == "Ennvi"))
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack - 1);
+                        }
+                        else if (activeCharacter.character.element == "Terror" && (activeEnemy.character.element == "Ennvi" || activeEnemy.character.element == "Dream"))
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack + 1);
+                        }
+                        else if (activeCharacter.character.element == "Terror" && (activeEnemy.character.element == "Reason" || activeEnemy.character.element == "Spirit"))
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack - 1);
+                        }
+                        else if(activeCharacter.character.element == "Ennvi" && (activeEnemy.character.element == "Spirit" || activeEnemy.character.element == "Reason"))
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack + 1);
+                        }
+                        else if(activeCharacter.character.element == "Ennvi" && (activeEnemy.character.element == "Terror" || activeEnemy.character.element == "Dream"))
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack - 1);
+                        }
+                        else if(activeCharacter.character.element == "Spirit" && (activeEnemy.character.element == "Dream" || activeEnemy.character.element == "Terror"))
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack + 1);
+                        }
+                        else if(activeCharacter.character.element == "Spirit" && (activeEnemy.character.element == "Ennvi" || activeEnemy.character.element == "Reason"))
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack - 1);
+                        }
+                        else if(activeCharacter.character.element == "Dream" && (activeEnemy.character.element == "Reason" || activeEnemy.character.element == "Ennvi"))
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack + 1);
+                        }
+                        else if(activeCharacter.character.element == "Dream" && (activeEnemy.character.element == "Spirit" || activeEnemy.character.element == "Terror"))
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack - 1);
+                        }
+                        else 
+                        {
+                            activeEnemy.TakeDamage(cardButton.card.player_attack);
+                        }
+                    } 
+                    else if (cardButton.card.effect == "support") 
+                    {
+                        activeCharacter.Heal(cardButton.card.player_health);
+                    }
+                    else if (cardButton.card.effect == "defense")
+                    {
+                        Debug.Log("Defense");
+                    }
+                    
+                   
                     if(activeEnemy.currentHealth <= 0 && inactiveEnemy.currentHealth <= 0)
                     {
                         activeEnemy.HighlightEnemy();
                         PlayerWins();
-                    } else if(activeEnemy.currentHealth <= 0)
+                    } 
+                    else if(activeEnemy.currentHealth <= 0)
                     {
                         activeEnemy.HighlightEnemy();
                         inactiveEnemy.HighlightEnemy();
                     }
                 }
+
             } else {
                 if(Turn.Player == currentTurn)
                 notEnoughEnergyText.text = "Not enough energy";
@@ -141,10 +237,11 @@ public class TCG_Controller : MonoBehaviour
     {
         for (int i = 0; i < numCharacters; i++)
             {
+                int charID = Random.Range(0, tcgData.Villagers.Count);
                 GameObject newCharacter = Instantiate(characterPrefab, characterParent);
                 CharacterButtons charButton = newCharacter.GetComponent<CharacterButtons>();
-                //charButton.Init();
                 characterButtons.Add(charButton);
+                charButton.Init(tcgData.Villagers[charID]);
                 Button buttonComponent = newCharacter.GetComponent<Button>();
                 buttonComponent.onClick.AddListener(() => OnCharacterPressed(charButton));
             }
@@ -154,9 +251,11 @@ public class TCG_Controller : MonoBehaviour
     {
         for (int i = 0; i < numCharacters; i++)
         {
+            int charID = Random.Range(0, tcgData.Villagers.Count);
             GameObject newCharacter = Instantiate(characterPrefab, enemyCharacterParent);
             CharacterButtons charEnemyButton = newCharacter.GetComponent<CharacterButtons>();
             enemyCharacterButtons.Add(charEnemyButton);
+            charEnemyButton.Init(tcgData.Villagers[charID]);
         }
     }
 
@@ -173,6 +272,21 @@ public class TCG_Controller : MonoBehaviour
     // Coroutine that simulates the enemy turn
     IEnumerator EnemyTurn()
     {
+        CharacterButtons activeCharacter = GetActiveCharacter();
+        CharacterButtons inactiveCharacter = GetInactiveCharacter();
+        activeCharacter.TakeDamage(4);
+        
+        if(activeCharacter.currentHealth <= 0 && inactiveCharacter.currentHealth <= 0)
+        {
+            activeCharacter.Highlight();
+            EnemyWins();
+        }
+        else if(activeCharacter.currentHealth <= 0)
+        {
+            activeCharacter.Highlight();
+            inactiveCharacter.Highlight();
+        }
+
         yield return new WaitForSeconds(3);
         currentTurn = Turn.Player;
         endTurnButton.interactable = true;
@@ -212,9 +326,21 @@ public class TCG_Controller : MonoBehaviour
         }
     }
 
+    public void LoadScene()
+    {
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+    }
+
     public void PlayerWins()
     {
         Debug.Log("Player wins");
+        Invoke("LoadScene", 2);
+    }
+
+    public void EnemyWins()
+    {
+        Debug.Log("Enemy wins");
+        Invoke("LoadScene", 2);
     }
 
 }
