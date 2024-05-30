@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
+[Serializable]
 public class Card
 {
     public int cardID;
@@ -17,6 +19,7 @@ public class Card
     public int enemy_defense;
 }
 
+[Serializable]
 public class CardList
 {
     public string status;
@@ -39,12 +42,14 @@ public class Team{
     public string villager;
 }
 
+[Serializable]
 public class Villager{
     public string name;
     public string description;
     public string element;
 }
 
+[Serializable]
 public class VillagerList{
     public string status;
     public List<Villager> data;

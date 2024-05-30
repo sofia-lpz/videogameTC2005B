@@ -1,7 +1,6 @@
 {
   "name": "web_api",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -12,8 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dependencies": "^0.0.1",
     "express": "^4.19.2",
-    "mysql2": "^3.9.7",
+    "mysql2": "^3.9.8",
     "nodemon": "^3.1.1"
-  }
+  },
+  "description": ""
 }

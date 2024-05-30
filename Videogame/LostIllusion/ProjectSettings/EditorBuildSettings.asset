@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/login.unity
     guid: 573aea066b3238143b93e277a30db9fa
   - enabled: 1
-    path: Assets/Scenes/Register.unity
+    path: Assets/Scenes/register.unity
     guid: 438c7544e37ca134289a5aa8fcc9c35a
   - enabled: 1
     path: Assets/Scenes/cutscenes/intro.unity
