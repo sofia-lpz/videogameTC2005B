@@ -10,7 +10,7 @@ public class api_connect : MonoBehaviour
     public static string cardResults;
     public string url = "http://localhost:3000/api";
 
-    public void InitialGet(){
+    public void Start(){
         GetData("/cards", api_processing.CardProcessing);
         GetData("/villagers", api_processing.VillagerProcessing);
     }
