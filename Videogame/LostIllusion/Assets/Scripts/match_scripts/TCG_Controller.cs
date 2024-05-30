@@ -14,6 +14,7 @@ using UnityEngine.SceneManagement;
 
 public class TCG_Controller : MonoBehaviour
 {
+    [SerializeField] public GameObject attackAnimationPrefab;
     [SerializeField] public string sceneName;
     [SerializeField] List<Card_Buttons> cards;
     [SerializeField] List<CharacterButtons> characterButtons;
@@ -152,6 +153,9 @@ public class TCG_Controller : MonoBehaviour
                 CharacterButtons activeEnemy = GetActiveEnemy();
                 CharacterButtons inactiveEnemy = GetInactiveEnemy();
                 CharacterButtons activeCharacter = GetActiveCharacter();
+
+GameObject newAttackAnimation = Instantiate(attackAnimationPrefab);
+newAttackAnimation.transform.localScale = new Vector3(2, 2, 2); // Change the 2s to your desired scale
 
                 if (activeEnemy != null)
                 {

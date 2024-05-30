@@ -104,6 +104,42 @@ const getPlayerDeck = async (req, res) => {
   }
 }
 
+const getPlayerMatches = async (req, res) => {
+  const {
+    params: { username },
+  } = req;
+  if (!username) {
+    return;
+  }
+
+  try {
+    const matches = await colometaService.getPlayerMatches(username);
+    res.send({ status: "OK", data: matches });
+  }
+  catch (error) {
+    console.error(error);
+    res.status(500).send({ status: "Error", data: error.message });
+  }
+}
+
+const getPlayerStats = async (req, res) => {
+  const {
+    params: { username },
+  } = req;
+  if (!username) {
+    return;
+  }
+
+  try {
+    const stats = await colometaService.getPlayerStats(username);
+    res.send({ status: "OK", data: stats });
+  }
+  catch (error) {
+    console.error(error);
+    res.status(500).send({ status: "Error", data: error.message });
+  }
+}
+
 export {
   getCards,
   getPlayer,
@@ -113,4 +149,6 @@ export {
   getVillagers,
   getPlayerTeam,
   getPlayerDeck,
+  getPlayerMatches,
+  getPlayerStats
 };

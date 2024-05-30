@@ -73,6 +73,24 @@ const getPlayerDeck = async (username) => {
   }
 }
 
+const getPlayerMatches = async (username) => {
+  try {
+    const playerMatches = await colometaMysql.getPlayerMatches(username);
+    return playerMatches;
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+const getPlayerStats = async (username) => {
+  try {
+    const playerStats = await colometaMysql.getPlayerStats(username);
+    return playerStats;
+  } catch (err) {
+    console.error(err);
+  }
+}
+
 export {
   getCards,
   getPlayer,
@@ -81,5 +99,7 @@ export {
   getMatches,
   getVillagers,
   getPlayerTeam,
-  getPlayerDeck
+  getPlayerDeck,
+  getPlayerMatches,
+  getPlayerStats
 };
