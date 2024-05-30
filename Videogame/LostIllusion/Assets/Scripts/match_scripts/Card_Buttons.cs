@@ -9,8 +9,8 @@ public class Card_Buttons : MonoBehaviour
     [SerializeField] TMP_Text card_name;
     [SerializeField] TMP_Text card_description;
     [SerializeField] TMP_Text card_energyCost;
-    [SerializeField] int card_heal;
-    [SerializeField] int card_damage;
+    public int card_heal;
+    public int card_damage;
 
 
     public Card card;
