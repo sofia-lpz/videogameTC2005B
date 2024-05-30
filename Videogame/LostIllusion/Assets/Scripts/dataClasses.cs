@@ -26,17 +26,20 @@ public class CardList
     public List<Card> data;
 }
 
+[Serializable]
 public class Player{
     public string username;
     public string password;
     public int matches_won;
 }
 
+[Serializable]
 public class PlayerList{
     public string status;
     public List<Player> data;
 }
 
+[Serializable]
 public class Team{
     public string username;
     public string villager;
@@ -55,11 +58,13 @@ public class VillagerList{
     public List<Villager> data;
 }
 
+[Serializable]
 public class Deck{
     public string username;
     public string cardId;
 }
 
+[Serializable]
 public class Stats{
     public string username;
     public string most_used_card;
@@ -69,6 +74,7 @@ public class Stats{
     public int found_objects;
 }
 
+[Serializable]
 public class Match{
     public int matchId;
     public string timestamp;
@@ -76,6 +82,7 @@ public class Match{
     public bool won;
 }
 
+[Serializable]
 public class MatchList{
     public string status;
     public List<Match> data;
