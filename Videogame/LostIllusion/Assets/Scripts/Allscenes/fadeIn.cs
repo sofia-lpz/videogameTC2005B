@@ -22,5 +22,6 @@ public class fadeIn : MonoBehaviour
             image.color = new Color(image.color.r, image.color.g, image.color.b, Mathf.Lerp(1, 0, t / fadeDuration));
             yield return null;
         }
+        Destroy(gameObject);
     }
 }

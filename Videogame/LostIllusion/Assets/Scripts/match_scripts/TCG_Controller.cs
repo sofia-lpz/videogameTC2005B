@@ -15,7 +15,7 @@ using UnityEngine.SceneManagement;
 public class TCG_Controller : MonoBehaviour
 {
     [SerializeField] public GameObject attackAnimationPrefab;
-    [SerializeField] public string sceneName;
+    [SerializeField] public GameObject fadeOutPrefab;
     [SerializeField] List<Card_Buttons> cards;
     [SerializeField] List<CharacterButtons> characterButtons;
     [SerializeField] List<CharacterButtons> enemyCharacterButtons;
@@ -36,6 +36,8 @@ public class TCG_Controller : MonoBehaviour
     public enum Turn {Player, Enemy};
     public Turn currentTurn;
     public static int turnCount;
+    private string sceneName = stateNameController.playerPreviousScene;
+    private bool gameOver = false; 
 
     [SerializeField] int limit = 1;    
 
@@ -132,7 +134,7 @@ public class TCG_Controller : MonoBehaviour
     // Function that is called when a card is pressed
     public void ButtonPressed(Card_Buttons cardButton)
     {
-        if (currentTurn == Turn.Enemy)
+        if (currentTurn == Turn.Enemy || gameOver)
         {
             return;
 
@@ -326,19 +328,26 @@ newAttackAnimation.transform.localScale = new Vector3(2, 2, 2); // Change the 2s
 
     public void LoadScene()
     {
+        Debug.Log("Loading scene: " + sceneName);
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        GameObject fadeOut = Instantiate(fadeOutPrefab);
+
     }
 
     public void PlayerWins()
     {
         Debug.Log("Player wins");
-        Invoke("LoadScene", 2);
+        gameOver = true;
+        resultHandler.match_won();
+        Invoke("LoadScene", 5);
     }
 
     public void EnemyWins()
     {
         Debug.Log("Enemy wins");
-        Invoke("LoadScene", 2);
+        gameOver = true;
+        resultHandler.match_lost();
+        Invoke("LoadScene", 5);
     }
 
 }

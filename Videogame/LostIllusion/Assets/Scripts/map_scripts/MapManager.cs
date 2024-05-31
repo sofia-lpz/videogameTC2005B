@@ -6,7 +6,13 @@ public class MapManager : MonoBehaviour
 {
     [SerializeField] GameObject PauseCanvasPrefab;
     [SerializeField] GameObject InventoryCanvasPrefab;
+    [SerializeField] GameObject playerPrefab;
 
+    void Start()
+    {
+        GameObject player = Instantiate(playerPrefab);
+        player.transform.position = new Vector3(stateNameController.playerXPosInScene, stateNameController.playerYPosInScene, 0);
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.P) && !stateNameController.gamePaused)
