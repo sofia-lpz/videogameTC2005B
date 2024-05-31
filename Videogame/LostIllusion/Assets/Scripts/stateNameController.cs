@@ -20,7 +20,8 @@ public class stateNameController : MonoBehaviour
     public static bool gamePaused = false;
     public static bool freezePlayer = false;
 
-    public static float playerPosInScene;
+    public static float playerXPosInScene = 0;
+    public static float playerYPosInScene = 0;
     public static string playerPreviousScene;
 
     /*FOR AUDIO*/

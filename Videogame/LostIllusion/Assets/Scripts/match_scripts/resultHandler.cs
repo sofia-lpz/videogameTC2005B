@@ -7,7 +7,7 @@ public class resultHandler : MonoBehaviour
 {
 
 
-    public void match_lost()
+    public static void match_lost()
     {
         string sceneName = SceneManager.GetActiveScene().name;
         var fieldInfo = typeof(stateNameController).GetField(sceneName);
@@ -15,8 +15,7 @@ public class resultHandler : MonoBehaviour
         {
             fieldInfo.SetValue(null, -1);
             
-            Debug.Log("Match lost");
-            StartCoroutine(WaitAndLoadScene());
+            Debug.Log("Match lost and logged");
         }
         else
         {
@@ -24,7 +23,7 @@ public class resultHandler : MonoBehaviour
         }
     }
 
- public void match_won()
+ public static void match_won()
     {
         string sceneName = SceneManager.GetActiveScene().name;
         var fieldInfo = typeof(stateNameController).GetField(sceneName);
@@ -32,22 +31,12 @@ public class resultHandler : MonoBehaviour
         {
             fieldInfo.SetValue(null, 1);
             Debug.Log(stateNameController.match_tv);
-            Debug.Log("Match won");
-            StartCoroutine(WaitAndLoadScene());
+            Debug.Log("Match won and logged");
         }
         else
         {
             Debug.LogError("Field " + sceneName + " does not exist in stateNameController");
         }
-    }
-
-    public IEnumerator WaitAndLoadScene()
-    {
-        Debug.Log("loading scene");
-        yield return new WaitForSeconds(1.0f); // Wait for 1 second
-
-        // Load the scene
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Home");
     }
 }
 

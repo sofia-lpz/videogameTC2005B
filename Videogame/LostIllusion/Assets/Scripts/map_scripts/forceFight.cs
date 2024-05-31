@@ -28,6 +28,7 @@ public class forceFight : triggerableObject
                 else
                 {
                     onTalkAfter(fieldValue);
+                    interacted = true;
                 }
         }
     }
@@ -38,7 +39,8 @@ void onFight(GameObject other)
     {
         interacted = true;
         stateNameController.freezePlayer = true;
-        stateNameController.playerPosInScene = other.transform.position.x;
+        stateNameController.playerXPosInScene = other.transform.position.x;
+        stateNameController.playerYPosInScene = other.transform.position.y;
         stateNameController.playerPreviousScene = SceneManager.GetActiveScene().name;
         
         GameObject dialogueCanvas = Object.Instantiate(prefabDialogueCanvas);

@@ -338,6 +338,7 @@ newAttackAnimation.transform.localScale = new Vector3(2, 2, 2); // Change the 2s
     {
         Debug.Log("Player wins");
         gameOver = true;
+        resultHandler.match_won();
         Invoke("LoadScene", 5);
     }
 
@@ -345,6 +346,7 @@ newAttackAnimation.transform.localScale = new Vector3(2, 2, 2); // Change the 2s
     {
         Debug.Log("Enemy wins");
         gameOver = true;
+        resultHandler.match_lost();
         Invoke("LoadScene", 5);
     }
 
