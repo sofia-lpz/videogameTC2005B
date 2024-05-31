@@ -91,6 +91,16 @@ const getPlayerStats = async (username) => {
   }
 }
 
+const getAuth = async (username, password) => {
+  try {
+    const auth = await colometaMysql.getAuth(username, password);
+    return auth;
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+
 export {
   getCards,
   getPlayer,
@@ -101,5 +111,6 @@ export {
   getPlayerTeam,
   getPlayerDeck,
   getPlayerMatches,
-  getPlayerStats
+  getPlayerStats,
+  getAuth
 };

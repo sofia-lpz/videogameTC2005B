@@ -27,7 +27,7 @@ async function getCards() {
   }
 }
 
-async function getPlayer(username) {
+async function getPlayer(username, password) {
   let connection = null;
   let query = `SELECT * FROM player WHERE username = ?`;
   try {
@@ -189,6 +189,24 @@ async function getPlayerStats(username) {
   }
 }
 
+async function getAuth(username, password) {
+  let connection = null;
+  let query = `SELECT * FROM player WHERE username = ? AND password = ?`;
+  try {
+    connection = await connectToDB();
+    const [results, _] = await connection.query(query, [username, password]);
+    console.log(`${results.length} rows returned`);
+    return results;
+  } catch (error) {
+    console.log(error);
+  } finally {
+    if (connection !== null) {
+      connection.end();
+      console.log('Connection closed successfully');
+    }
+  }
+}
+
 export {
   getCards,
   getPlayer,
@@ -199,5 +217,6 @@ export {
   getPlayerTeam,
   getPlayerDeck,
   getPlayerMatches,
-  getPlayerStats
+  getPlayerStats,
+  getAuth
 };

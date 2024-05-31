@@ -27,6 +27,6 @@ public class collideableObject : MonoBehaviour
 
     public virtual void onCollision(GameObject other)
     {
-        //Debug.Log("Collision detected: " + gameObject.name);
+        Debug.Log("Collision detected: " + gameObject.name);
     }
 }
