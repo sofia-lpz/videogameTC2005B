@@ -36,12 +36,8 @@ public class TCG_Controller : MonoBehaviour
     public enum Turn {Player, Enemy};
     public Turn currentTurn;
     public static int turnCount;
-<<<<<<< HEAD
-    public string Feedback;
-=======
     private string sceneName = stateNameController.playerPreviousScene;
     private bool gameOver = false; 
->>>>>>> b749235dadee4caf3cc2ba8d2bcbdc1543a8d027
 
     [SerializeField] int limit = 1;    
 

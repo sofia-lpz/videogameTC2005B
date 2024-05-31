@@ -45,11 +45,7 @@ public class menuButtons : MonoBehaviour
     public void startGameNOAUTH()
     {
         audioSource.Play();
-<<<<<<< HEAD
-        SceneManager.LoadScene("Outside", LoadSceneMode.Single);
-=======
         SceneManager.LoadScene("match_tv", LoadSceneMode.Single);
->>>>>>> b749235dadee4caf3cc2ba8d2bcbdc1543a8d027
     }
 
     public void resume()
