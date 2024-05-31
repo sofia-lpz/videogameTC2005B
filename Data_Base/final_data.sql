@@ -19,11 +19,11 @@ insert into deck (username, cardId) values
 ('admin1', '3');
 
 
-insert into card (cardId, name, energy_cost, effect, type, description) values
-('1', 'plum juice', 3, 'healing', 'snack', 'drinking this grants 2 hp'),
-('2', 'plum jam', 1, 'healing', 'snack', 'eating this grants 1 hp'),
-('3', 'candy', 2, 'healing', 'snack', 'this candy grants 1 hp healing for 2 rounds'),
-('4', 'bandage', 2, 'healing', 'skill', 'apply a bandage to receive 1 hp and remove effects'),
+insert into card (cardId, name, energy_cost, effect, type, description, player_health, player_attack, player_defense, player_support, enemy_defense) values
+('1', 'plum juice', 3, 'healing', 'snack', 'drinking this grants 3 hp', 3, 0, 0, 0, 0),
+('2', 'plum jam', 1, 'healing', 'snack', 'eating this grants 1 hp', 1, 0, 0, 0, 0),
+('3', 'candy', 2, 'healing', 'snack', 'this candy grants 2 hp', 2, 0, 0, 0, 0),
+('4', 'bandage', 3, 'healing', 'skill', 'apply bansage and heal your both characters 2 hp', 2, 0, 0, 0, 0),
 ('5', 'glove', 3, 'support', 'skill', 'applies immunity to the element damage for 1 round'),
 ('6', '4 leaf clover', 1, 'support', 'skill', 'increases wind attack by 1 point'),
 ('7', 'friendship bracelet', 1, 'support', 'skill', 'increases defense by 1 point'),

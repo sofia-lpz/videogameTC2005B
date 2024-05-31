@@ -36,6 +36,7 @@ public class TCG_Controller : MonoBehaviour
     public enum Turn {Player, Enemy};
     public Turn currentTurn;
     public static int turnCount;
+    public string Feedback;
 
     [SerializeField] int limit = 1;    
 
@@ -148,9 +149,6 @@ public class TCG_Controller : MonoBehaviour
                 CharacterButtons inactiveEnemy = GetInactiveEnemy();
                 CharacterButtons activeCharacter = GetActiveCharacter();
 
-GameObject newAttackAnimation = Instantiate(attackAnimationPrefab);
-newAttackAnimation.transform.localScale = new Vector3(2, 2, 2); // Change the 2s to your desired scale
-
                 if (activeEnemy != null)
                 {
                     if (cardButton.card.effect == "attack") 
@@ -158,6 +156,7 @@ newAttackAnimation.transform.localScale = new Vector3(2, 2, 2); // Change the 2s
                         if (activeCharacter.character.element == "Reason" && (activeEnemy.character.element == "Terror" || activeEnemy.character.element == "Spirit"))
                         {
                             activeEnemy.TakeDamage(cardButton.card.player_attack + 1);
+                            
                         }
                         else if (activeCharacter.character.element == "Reason" && (activeEnemy.character.element == "Dream" || activeEnemy.character.element == "Ennvi"))
                         {
@@ -199,14 +198,19 @@ newAttackAnimation.transform.localScale = new Vector3(2, 2, 2); // Change the 2s
                         {
                             activeEnemy.TakeDamage(cardButton.card.player_attack);
                         }
+                     Instantiate(attackAnimationPrefab);
                     } 
                     else if (cardButton.card.effect == "support") 
                     {
-                        activeCharacter.Heal(cardButton.card.player_health);
+                        Debug.Log("Support");
                     }
                     else if (cardButton.card.effect == "defense")
                     {
                         Debug.Log("Defense");
+                    }
+                    else if (cardButton.card.effect == "healing")
+                    {
+                        activeCharacter.Heal(cardButton.card.player_health);
                     }
                     
                    

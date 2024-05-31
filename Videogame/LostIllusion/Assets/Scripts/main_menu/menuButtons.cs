@@ -45,7 +45,7 @@ public class menuButtons : MonoBehaviour
     public void startGameNOAUTH()
     {
         audioSource.Play();
-        SceneManager.LoadScene("Home", LoadSceneMode.Single);
+        SceneManager.LoadScene("Outside", LoadSceneMode.Single);
     }
 
     public void resume()
