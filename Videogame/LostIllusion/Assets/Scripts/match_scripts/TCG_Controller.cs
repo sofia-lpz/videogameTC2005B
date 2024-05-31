@@ -15,7 +15,7 @@ using UnityEngine.SceneManagement;
 public class TCG_Controller : MonoBehaviour
 {
     [SerializeField] public GameObject attackAnimationPrefab;
-    [SerializeField] public string sceneName;
+    [SerializeField] public GameObject fadeOutPrefab;
     [SerializeField] List<Card_Buttons> cards;
     [SerializeField] List<CharacterButtons> characterButtons;
     [SerializeField] List<CharacterButtons> enemyCharacterButtons;
@@ -36,6 +36,7 @@ public class TCG_Controller : MonoBehaviour
     public enum Turn {Player, Enemy};
     public Turn currentTurn;
     public static int turnCount;
+    private string sceneName = stateNameController.playerPreviousScene;
 
     [SerializeField] int limit = 1;    
 
@@ -327,18 +328,20 @@ newAttackAnimation.transform.localScale = new Vector3(2, 2, 2); // Change the 2s
     public void LoadScene()
     {
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        GameObject fadeOut = Instantiate(fadeOutPrefab);
+
     }
 
     public void PlayerWins()
     {
         Debug.Log("Player wins");
-        Invoke("LoadScene", 2);
+        Invoke("LoadScene", 5);
     }
 
     public void EnemyWins()
     {
         Debug.Log("Enemy wins");
-        Invoke("LoadScene", 2);
+        Invoke("LoadScene", 5);
     }
 
 }

@@ -10,22 +10,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class fightMe : collideableObject
+public class fightMe : triggerableObject
 {
     [SerializeField] public bool interacted = false;
     [SerializeField] public GameObject prefabDialogueCanvas;
     int dialogueIndex = 0;
     string sceneNameFight;
     
-    public override void onCollision(GameObject other)
+    public override void onTriggerEnter(GameObject other)
     {
         sceneNameFight = "match_" + gameObject.name;
 
-        base.onCollision(other);
+        base.onTriggerEnter(other);
         if (other.tag == "Player"){
             if (Input.GetKeyDown(KeyCode.Return)){
                 var fieldInfo = typeof(stateNameController).GetField(sceneNameFight);
                 int fieldValue = (int)fieldInfo.GetValue(null);
+
+                
 
                 if (fieldValue == 0)
                 {
@@ -42,7 +44,6 @@ public class fightMe : collideableObject
 
 void onFight(GameObject other)
 {
-    
     if (!interacted)
     {
         interacted = true;
@@ -54,10 +55,9 @@ void onFight(GameObject other)
         
         var fieldInfo = typeof(stateNameController).GetField(sceneNameFight);
         
-            int fieldValue = (int)fieldInfo.GetValue(null);
-            dialogueIndex = fieldValue;
+        int fieldValue = (int)fieldInfo.GetValue(null);
+        dialogueIndex = fieldValue;
         
-
         dialogueCanvas.GetComponent<dialogue>().Initialize(gameObject.name, dialogueIndex);
 
         StartCoroutine(WaitAndLoadScene(sceneNameFight, dialogueCanvas));
