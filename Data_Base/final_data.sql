@@ -12,7 +12,7 @@ insert into villager (name, description, element) values
 ('Dream', 'Dream', 'Dream');
 
 insert into stats (username, most_used_card, most_used_villager, least_used_card, least_used_villager, found_objects) values
-('player', '9', 'villager4', '17', 'villager4', 0);
+('player', '9', 'Cat', '17', 'Cat', 0);
 
 insert into deck (username, cardId) values
 ('player', '3');
@@ -46,34 +46,11 @@ insert into card (cardId, name, energy_cost, effect, type, description, player_h
 
 
 insert into team (username, villager) values
-('player', 'villager3');
+('player', 'Cat');
 
 
 insert into tcg_match (matchId, timestamp, username, won) values
-(1, '2024-05-22 11:34:00', 'admin1', TRUE),
-(2, '2024-05-22 15:29:00', 'admin2', FALSE),
-(3, '2024-05-23 09:15:00', 'admin3', TRUE),
-(4, '2024-05-23 14:45:00', 'admin4', TRUE),
-(5, '2024-05-24 10:00:00', 'admin5', FALSE),
-(6, '2024-05-24 16:30:00', 'admin1', FALSE),
-(7, '2024-05-25 12:00:00', 'admin2', TRUE),
-(8, '2024-05-25 17:30:00', 'admin3', TRUE),
-(9, '2024-05-26 13:00:00', 'admin4', FALSE),
-(10, '2024-05-26 18:45:00', 'admin5', FALSE),
-(11, '2024-05-27 14:15:00', 'admin7', TRUE),
-(12, '2024-05-27 19:30:00', 'admin2', TRUE),
-(13, '2024-05-28 15:45:00', 'admin3', FALSE),
-(14, '2024-05-28 20:00:00', 'admin6', FALSE),
-(15, '2024-05-29 16:00:00', 'admin9', TRUE),
-(16, '2024-05-29 21:30:00', 'admin8', TRUE),
-(17, '2024-05-30 17:00:00', 'admin2', FALSE),
-(18, '2024-05-30 22:45:00', 'admin2', FALSE),
-(19, '2024-05-31 18:00:00', 'admin10', TRUE),
-(20, '2024-05-31 23:15:00', 'admin5', TRUE),
-(21, '2024-06-01 19:00:00', 'admin7', FALSE),
-(22, '2024-06-01 23:59:00', 'admin2', FALSE),
-(23, '2024-06-02 20:00:00', 'admin3', TRUE),
-(24, '2024-06-02 22:45:00', 'admin2', TRUE);
+(1, '2024-05-22 11:34:00', 'player', TRUE);
 
 
 
