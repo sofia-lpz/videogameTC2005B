@@ -37,13 +37,7 @@ public class TCG_Controller : MonoBehaviour
     public Turn currentTurn;
     public static int turnCount;
 
-    [SerializeField] int limit = 1;
-
-
-        [SerializeField] TextMeshPro card_name;
-
-    [SerializeField] TextMeshPro card_energyCost;
-    
+    [SerializeField] int limit = 1;    
 
 
     // to add pause, check stateNameController gamePaused; True menas paused, false means not paused
