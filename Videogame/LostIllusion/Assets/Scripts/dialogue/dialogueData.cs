@@ -98,6 +98,28 @@ public static List<List<string>> narrator_lines = new List<List<string>> {
 };
 /*NARRATOR LINES END*/
 
+/*WOMAN LINES START*/
+
+public static List<string> woman_lines_1 = new List<string> {
+    player_username.ToUpper() + "!",
+    "HAVE YOU SEEN MY DAUGHTER?",
+    "She never came back from the magic show",
+    "You-You were there, have you seen her?!",
+    "PLEASE HELP ME FIND HER"
+};
+
+public static List<string> woman_lines_2 = new List<string> {
+    "Have you found her?",
+    "I'm so worried",
+    "Please keep looking!"
+};
+
+public static List<List<string>> woman_lines = new List<List<string>> {
+    woman_lines_1,
+    woman_lines_2
+};
+
+
 /*dev_bunny dialogue start*/
 public static List<string> dev_bunny_lines_1 = new List<string> {
     "Hello " + player_username,
@@ -114,7 +136,8 @@ public static Dictionary<string, List<List<string>>> dialoguesDictionary = new D
     {"book", new List<List<string>> { bookDescription }},
     {"COLOMETA", colometa_lines},
     {"dev_bunny", new List<List<string>> { dev_bunny_lines_1 }},
-    {"NARRATOR", narrator_lines}
+    {"NARRATOR", narrator_lines},
+    {"WOMAN", woman_lines}
 
 };
 
