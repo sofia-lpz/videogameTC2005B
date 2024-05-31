@@ -35,8 +35,6 @@ public class dialogueData : stateNameController
     tv_lines_won,
     tv_lines_lost
 };
-
-
 /*TV LINES END*/
 
 /*TV2TALK LINES*/
@@ -63,10 +61,42 @@ public static List<string> colometa_lines_1 = new List<string> {
     "...Do you feel hypnotized?"
 };
 
+public static List<string> colometa_lines_2 = new List<string> {
+    "Ah... are you so sure?"
+};
+
 public static List<List<string>> colometa_lines = new List<List<string>> {
-    colometa_lines_1
+    colometa_lines_1,
+    colometa_lines_2
 };
 /*COLMETA LINES END*/
+
+/*NARRATOR LINES*/
+public static List<string> narrator_lines_1 = new List<string> {
+    "3... 2... 1...",
+    "and a million times more.",
+    "3... 2... 1..."
+};
+
+public static List<string> narrator_lines_2 = new List<string> {
+    "Your eyes open, you're awake suddenly",
+    "Don't magicians snap their fingers to wake people up?",
+    "won't you wake up?"
+};
+
+public static List<string> narrator_lines_3 = new List<string> {
+    "You feel the clammy hand of the magician on your shoulder",
+    "you feel the heat of the spotlight",
+    "not much more.",
+    "Not really, you say"
+};
+
+public static List<List<string>> narrator_lines = new List<List<string>> {
+    narrator_lines_1,
+    narrator_lines_2,
+    narrator_lines_3
+};
+/*NARRATOR LINES END*/
 
 /*dev_bunny dialogue start*/
 public static List<string> dev_bunny_lines_1 = new List<string> {
@@ -83,7 +113,13 @@ public static Dictionary<string, List<List<string>>> dialoguesDictionary = new D
     {"talk2tv", new List<List<string>> { tv2talk_lines }},
     {"book", new List<List<string>> { bookDescription }},
     {"COLOMETA", colometa_lines},
-    {"dev_bunny", new List<List<string>> { dev_bunny_lines_1 }}
+    {"dev_bunny", new List<List<string>> { dev_bunny_lines_1 }},
+    {"NARRATOR", narrator_lines}
+
 };
 
-}
+public static List<string> scaryLines = new List<string> {
+"won't you wake up?"
+};
+
+};
