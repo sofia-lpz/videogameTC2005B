@@ -6,11 +6,10 @@ insert into player (username, password, matches_won) values
 
 
 insert into villager (name, description, element) values
-('Worry Doll', 'A tiny doll. Tell it your sorrows and put it under your pillow, it''ll carry them for you', 'Spirit'),
-('Cat', 'It''s your cat! He can be so serious sometimes', 'Reason'),
-('terror', 'terror', 'terror'),
+('Cat', 'Its your cat!', 'Reason'),
+('Terror', 'Terror', 'Terror'),
 ('Sheep', 'A random sheep that escaped from a farm. Not very interested in going back', 'ennui'),
-('dream', 'dream', 'dream');
+('Dream', 'Dream', 'Dream');
 
 insert into stats (username, most_used_card, most_used_villager, least_used_card, least_used_villager, found_objects) values
 ('admin', '9', 'villager4', '17', 'villager4', 0);
