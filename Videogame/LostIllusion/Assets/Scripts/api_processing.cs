@@ -27,10 +27,12 @@ public class api_processing : MonoBehaviour
     public static void PlayerProcessing(string result)
     {
         Debug.Log("api_processing got: " + result);
-        Player player = JsonUtility.FromJson<Player>(result);
+        PlayerList playerList = JsonUtility.FromJson<PlayerList>(result);
         
-        Debug.Log("player status: " + player.status);
-        stateNameController.player = player;
+        Debug.Log("player status: " + playerList.status);
+        tcgData.playerStatus = playerList.status;
+
+        tcgData.Players = playerList.data;
     }
 
 

@@ -12,12 +12,13 @@ using UnityEngine;
 public class stateNameController : MonoBehaviour
 {
     /*PLAYER INFO*/
-    public static Player player = new Player();
+    public static List<Player> Players = new List<Player>();
 
-    public static string player_username = player.username;
-    public static int player_level = player.level;
-    public static int player_matches_won = player.matches_won;
-    public static int player_status = player.status;
+    public static string playerStatus;
+
+    public static string player_username = Players[0].username;
+    public static int player_level = Players[0].level;
+    public static int player_matches_won = Players[0].matches_won;
 
     public static List<string> inventory = new List<string>();
 

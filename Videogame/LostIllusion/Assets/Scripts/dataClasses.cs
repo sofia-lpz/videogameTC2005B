@@ -28,7 +28,6 @@ public class CardList
 
 [Serializable]
 public class Player{
-    public string status;
     public string username;
     public string password;
     public int matches_won;
@@ -39,6 +38,16 @@ public class Player{
 public class PlayerList{
     public string status;
     public List<Player> data;
+}
+
+
+
+
+
+[Serializable]
+public class PlayerStats{
+    public string status;
+    public List<Stats> data;
 }
 
 [Serializable]

@@ -4,6 +4,8 @@ using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
+using System; // for Action<string>
 
 public class login : MonoBehaviour
 {
@@ -11,8 +13,9 @@ public class login : MonoBehaviour
     [SerializeField] public TMP_InputField passwordField;
     [SerializeField] public Button loginButton;
     [SerializeField] public TMP_Text loginMessageText;
-    private string username = usernameField.text;
-    private string password = passwordField.text;
+    private string username;
+    private string password;
+    private string result;
 
     private bool loginSuccess = false;
 
@@ -56,7 +59,8 @@ public class login : MonoBehaviour
 
     bool authentification()
     {
-        if (stateNameController.player_status == "OK")
+        
+        if (tcgData.playerStatus == "OK")
         {
             Debug.Log("authentification success");
             return true;

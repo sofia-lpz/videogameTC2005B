@@ -1,7 +1,7 @@
 use colometa;
 
-insert into player (username, password, matches_won) values
-('player', 'admin', 0);
+insert into player (username, password, matches_won, level) values
+('player', 'admin', 0, 0);
 
 
 
