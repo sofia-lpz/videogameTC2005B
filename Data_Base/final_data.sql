@@ -7,8 +7,9 @@ insert into player (username, password, matches_won) values
 
 insert into villager (name, description, element) values
 ("Cat", "Its your cat!", "Reason"),
+("Doll", "Possesed doll", "Spirit"),
 ('Terror', 'Terror', 'Terror'),
-('Sheep', 'A random sheep that escaped from a farm. Not very interested in going back', 'ennui'),
+('Sheep', 'A random sheep that escaped from a farm. Not very interested in going back', 'Ennui'),
 ('Dream', 'Dream', 'Dream');
 
 insert into stats (username, most_used_card, most_used_villager, least_used_card, least_used_villager, found_objects) values
