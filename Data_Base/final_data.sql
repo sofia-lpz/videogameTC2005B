@@ -1,21 +1,21 @@
 use colometa;
 
 insert into player (username, password, matches_won) values
-('admin', 'admin', 0),
+('player', 'admin', 0);
 
 
 
 insert into villager (name, description, element) values
-('Cat', 'Its your cat!', 'Reason'),
+("Cat", "Its your cat!", "Reason"),
 ('Terror', 'Terror', 'Terror'),
 ('Sheep', 'A random sheep that escaped from a farm. Not very interested in going back', 'ennui'),
 ('Dream', 'Dream', 'Dream');
 
 insert into stats (username, most_used_card, most_used_villager, least_used_card, least_used_villager, found_objects) values
-('admin', '9', 'villager4', '17', 'villager4', 0);
+('player', '9', 'villager4', '17', 'villager4', 0);
 
 insert into deck (username, cardId) values
-('admin1', '3');
+('player', '3');
 
 
 insert into card (cardId, name, energy_cost, effect, type, description, player_health, player_attack, player_defense, player_support, enemy_defense, enemy_attack) values
@@ -46,16 +46,7 @@ insert into card (cardId, name, energy_cost, effect, type, description, player_h
 
 
 insert into team (username, villager) values
-('admin1', 'villager3'),
-('admin2', 'villager2'),
-('admin3', 'villager6'),
-('admin4', 'villager1'),
-('admin5', 'villager4'),
-('admin6', 'villager5'),
-('admin7', 'villager4'),
-('admin8', 'villager3'),
-('admin9', 'villager1'),
-('admin10', 'villager6');
+('player', 'villager3');
 
 
 insert into tcg_match (matchId, timestamp, username, won) values
