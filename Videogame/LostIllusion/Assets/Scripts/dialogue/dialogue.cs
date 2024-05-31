@@ -13,11 +13,15 @@ public class dialogue : MonoBehaviour
     int index;
     AudioSource audioSource;
     private int charIndex = 0;
+    private string speaker_name;
+    private Color originalColor;
 
     // Start is called before the first frame update
     public virtual void Initialize(string object_name, int index)
     {
-        if (dialogueName != null){
+        speaker_name = object_name;
+
+        if (dialogueName != null && object_name != "NARRATOR"){
             dialogueName.text = object_name;
         }
 
@@ -69,25 +73,20 @@ public class dialogue : MonoBehaviour
 
     public virtual IEnumerator TypeLine()
     {
+        // Store the original color
+        originalColor = dialogueBox.color;
 
-/*
-uncomment this to start debugging pausing the dialogue
-
-        for (i = charIndex; i < lines[index].ToCharArray.Length; i++)
+        if (dialogueData.scaryLines.Contains(lines[index]))
         {
-            dialogueBox.text += lines[index].ToCharArray[i];
-            if (lines[index].ToCharArray[i] != ' '){
-                audioSource.pitch = Random.Range(0.9f, 1.1f);
-                audioSource.Play();
-            }
-            yield return new WaitForSeconds(textSpeed);
+            // The line is in the scaryLines list
+            // Change the color of the text
+            dialogueBox.color = Color.red; // Replace Color.red with the desired color
         }
-*/
 
         foreach (char c in lines[index].ToCharArray())
         {
             dialogueBox.text += c;
-            if (c != ' '){
+            if (c != ' ' && speaker_name != "NARRATOR"){
                 audioSource.pitch = Random.Range(0.9f, 1.1f);
                 audioSource.Play();
             }
@@ -108,6 +107,7 @@ uncomment this to start debugging pausing the dialogue
         {
             index++;
             dialogueBox.text = "";
+            dialogueBox.color = originalColor; // Restore the original color here
             StartCoroutine(TypeLine());
         }
         else
