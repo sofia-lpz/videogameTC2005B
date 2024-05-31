@@ -42,7 +42,8 @@ create table card(
     player_support SMALLINT NOT NULL DEFAULT 0, 
     -- (to be added to player attack in the turn)
     
-    enemy_defense SMALLINT NOT NULL DEFAULT 0, 
+    enemy_defense SMALLINT NOT NULL DEFAULT 0,
+    enemy_attack SMALLINT NOT NULL DEFAULT 0, 
     -- (to be subtracted from enemy if hypnosis card type)
 
     primary key (cardId)
