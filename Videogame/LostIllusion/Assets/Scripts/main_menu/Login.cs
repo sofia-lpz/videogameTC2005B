@@ -60,7 +60,7 @@ public class login : MonoBehaviour
     bool authentification()
     {
         
-        if (tcgData.playerStatus == "OK")
+        if (stateNameController.playerStatus == "OK")
         {
             Debug.Log("authentification success");
             return true;

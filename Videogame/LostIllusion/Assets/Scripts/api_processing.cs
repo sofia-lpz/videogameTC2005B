@@ -30,9 +30,9 @@ public class api_processing : MonoBehaviour
         PlayerList playerList = JsonUtility.FromJson<PlayerList>(result);
         
         Debug.Log("player status: " + playerList.status);
-        tcgData.playerStatus = playerList.status;
+        stateNameController.playerStatus = playerList.status;
 
-        tcgData.Players = playerList.data;
+        stateNameController.Players = playerList.data;
     }
 
 
