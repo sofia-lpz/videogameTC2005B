@@ -11,6 +11,8 @@ router.get("/stats", colometaController.getStats);
 router.get("/matches", colometaController.getMatches);
 router.get("/villagers", colometaController.getVillagers);
 
+router.get("/auth/:username/:password", colometaController.getAuth);
+
 router.get("/player/:username/team", colometaController.getPlayerTeam);
 router.get("/player/:username/matches", colometaController.getPlayerMatches);
 router.get("/player/:username/stats", colometaController.getPlayerStats);

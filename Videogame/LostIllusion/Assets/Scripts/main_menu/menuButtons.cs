@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class menuButtons : MonoBehaviour
 {
     AudioSource audioSource;
-
+    
     [SerializeField] public AudioClip clickSound;
     
     public void Start()
@@ -45,7 +45,7 @@ public class menuButtons : MonoBehaviour
     public void startGameNOAUTH()
     {
         audioSource.Play();
-        SceneManager.LoadScene("Home", LoadSceneMode.Single);
+        SceneManager.LoadScene("match_tv", LoadSceneMode.Single);
     }
 
     public void resume()
