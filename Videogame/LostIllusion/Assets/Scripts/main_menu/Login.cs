@@ -11,6 +11,10 @@ public class login : MonoBehaviour
     [SerializeField] public TMP_InputField passwordField;
     [SerializeField] public Button loginButton;
     [SerializeField] public TMP_Text loginMessageText;
+    private string username = usernameField.text;
+    private string password = passwordField.text;
+
+    private bool loginSuccess = false;
 
     void Start()
     {
@@ -24,24 +28,63 @@ public class login : MonoBehaviour
 
     IEnumerator Login()
     {
-        string username = usernameField.text;
-        string password = passwordField.text;
-
+        username = usernameField.text;
+        password = passwordField.text;
+    
         if (username == "" || password == "")
         {
             loginMessageText.text = "Empty field";
             yield return null;
         }
-        else if (true) // authentification success
+        else
         {
-            loginMessageText.text = "Login exitoso";
-            yield return new WaitForSeconds(1);
-            SceneManager.LoadScene("mainMenu");
+            yield return GetAuthData(api_processing.PlayerProcessing);
+    
+            if (authentification()) // authentification success
+            {
+                loginMessageText.text = "Login exitoso";
+                yield return new WaitForSeconds(1);
+                SceneManager.LoadScene("mainMenu");
+            }
+            else
+            {
+                loginMessageText.text = "Usuario o contraseña inválidos";
+                yield return null;
+            }
+        }
+    }
+
+    bool authentification()
+    {
+        if (stateNameController.player_status == "OK")
+        {
+            Debug.Log("authentification success");
+            return true;
         }
         else
         {
-            loginMessageText.text = "Usuario o contraseña inválidos";
-            yield return null;
+            Debug.Log("authentification failed");
+            return false;
+        }
+    }
+
+    IEnumerator GetAuthData(Action<string> callback)
+    {
+        using (UnityWebRequest www = UnityWebRequest.Get("http://localhost:3000/api/auth/" + username + "/" + password))
+        {
+            //make request and wait for response
+            yield return www.SendWebRequest();
+
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log("request failed: " + www.error);
+            }
+            else
+            {
+                result = www.downloadHandler.text;
+                Debug.Log("request successful: " + result);
+                callback(result);
+            }
         }
     }
 }

@@ -28,9 +28,11 @@ public class CardList
 
 [Serializable]
 public class Player{
+    public string status;
     public string username;
     public string password;
     public int matches_won;
+    public int level;
 }
 
 [Serializable]

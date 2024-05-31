@@ -6,6 +6,7 @@ create table player(
     username varchar(50) NOT NULL DEFAULT 'name',
     password varchar(50) NOT NULL DEFAULT 'password',
     matches_won SMALLINT NOT NULL DEFAULT 0,
+    level SMALLINT NOT NULL DEFAULT 0,
     primary key (username)
 ) engine=InnoDB DEFAULT CHARSET=utf8mb4;
 
