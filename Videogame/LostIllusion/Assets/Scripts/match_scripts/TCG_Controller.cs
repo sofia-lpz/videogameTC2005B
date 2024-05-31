@@ -37,6 +37,7 @@ public class TCG_Controller : MonoBehaviour
     public Turn currentTurn;
     public static int turnCount;
     private string sceneName = stateNameController.playerPreviousScene;
+    private bool gameOver = false; 
 
     [SerializeField] int limit = 1;    
 
@@ -133,7 +134,7 @@ public class TCG_Controller : MonoBehaviour
     // Function that is called when a card is pressed
     public void ButtonPressed(Card_Buttons cardButton)
     {
-        if (currentTurn == Turn.Enemy)
+        if (currentTurn == Turn.Enemy || gameOver)
         {
             return;
 
@@ -327,6 +328,7 @@ newAttackAnimation.transform.localScale = new Vector3(2, 2, 2); // Change the 2s
 
     public void LoadScene()
     {
+        Debug.Log("Loading scene: " + sceneName);
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         GameObject fadeOut = Instantiate(fadeOutPrefab);
 
@@ -335,12 +337,14 @@ newAttackAnimation.transform.localScale = new Vector3(2, 2, 2); // Change the 2s
     public void PlayerWins()
     {
         Debug.Log("Player wins");
+        gameOver = true;
         Invoke("LoadScene", 5);
     }
 
     public void EnemyWins()
     {
         Debug.Log("Enemy wins");
+        gameOver = true;
         Invoke("LoadScene", 5);
     }
 
