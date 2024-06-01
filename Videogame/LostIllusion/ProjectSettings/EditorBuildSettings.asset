@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/map/sofia.unity
     guid: f4f3f246e89d2ae438dc2110cf7bc2ce
   - enabled: 1
+    path: Assets/Scenes/map/COLOMETA.unity
+    guid: 473938fe2df35314d878f899d0b081be
+  - enabled: 1
     path: Assets/Scenes/matches/match_tv.unity
     guid: a1554ca02be61d64baa3acafb3cc85b2
   - enabled: 1
