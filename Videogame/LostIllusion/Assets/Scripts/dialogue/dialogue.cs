@@ -80,7 +80,7 @@ public class dialogue : MonoBehaviour
         {
             // The line is in the scaryLines list
             // Change the color of the text
-            dialogueBox.color = Color.red; // Replace Color.red with the desired color
+            dialogueBox.color = Color.grey; // Replace Color.red with the desired color
         }
 
         foreach (char c in lines[index].ToCharArray())

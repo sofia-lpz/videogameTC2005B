@@ -353,7 +353,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1029202754}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64c3a0678531c644592f86d240e506a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 28cb4e95bf7874b419cee0271b03f06a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueCanvasPrefab: {fileID: 4481119704672500748, guid: 5fc3c12f47e90df49bfc97526a031b82, type: 3}

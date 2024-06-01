@@ -34,7 +34,7 @@ public class cutscene2Manager : MonoBehaviour
     public IEnumerator scene()
     {
         cutsceneCanvas = Instantiate(CutsceneCanvasPrefab);
-        cutsceneCanvas.GetComponent<dialogue>().Initialize("NARRATOR", 0);
+        cutsceneCanvas.GetComponent<dialogue>().Initialize("NARRATOR", 3);
     
         // Wait until the first canvas has been destroyed
         while (cutsceneCanvas != null)
@@ -43,12 +43,12 @@ public class cutscene2Manager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1.0f); // Wait for 1 second
-    
-        // Instantiate the next canvas here
-        cutsceneCanvas = Instantiate(dialogueCanvasPrefab);
-        cutsceneCanvas.GetComponent<dialogue>().Initialize("COLOMETA", 0);
 
-        // Wait until the second canvas has been destroyed
+
+        yield return new WaitForSeconds(1.0f); // Wait for 1 second
+        cutsceneCanvas = Instantiate(dialogueCanvasPrefab);
+        cutsceneCanvas.GetComponent<dialogue>().Initialize("COLOMETA", 2);
+
         while (cutsceneCanvas != null)
         {
             yield return null; // Wait for the next frame
@@ -56,7 +56,16 @@ public class cutscene2Manager : MonoBehaviour
 
         yield return new WaitForSeconds(1.0f); // Wait for 1 second
         cutsceneCanvas = Instantiate(CutsceneCanvasPrefab);
-        cutsceneCanvas.GetComponent<dialogue>().Initialize("NARRATOR", 1);
+        cutsceneCanvas.GetComponent<dialogue>().Initialize("NARRATOR", 5);
+
+        while (cutsceneCanvas != null)
+        {
+            yield return null; // Wait for the next frame
+        }
+
+        yield return new WaitForSeconds(1.0f); // Wait for 1 second
+        cutsceneCanvas = Instantiate(dialogueCanvasPrefab);
+        cutsceneCanvas.GetComponent<dialogue>().Initialize("COLOMETA", 3);
 
         while (cutsceneCanvas != null)
         {

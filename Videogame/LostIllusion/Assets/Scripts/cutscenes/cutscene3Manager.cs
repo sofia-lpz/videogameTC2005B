@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class introManager : MonoBehaviour
+public class cutscene3Manager : MonoBehaviour
 {
     [SerializeField] public GameObject dialogueCanvasPrefab;
     [SerializeField] public GameObject CutsceneCanvasPrefab;
@@ -34,7 +34,7 @@ public class introManager : MonoBehaviour
     public IEnumerator scene()
     {
         cutsceneCanvas = Instantiate(CutsceneCanvasPrefab);
-        cutsceneCanvas.GetComponent<dialogue>().Initialize("NARRATOR", 0);
+        cutsceneCanvas.GetComponent<dialogue>().Initialize("NARRATOR", 6);
     
         // Wait until the first canvas has been destroyed
         while (cutsceneCanvas != null)
@@ -43,29 +43,11 @@ public class introManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1.0f); // Wait for 1 second
-    
-        // Instantiate the next canvas here
-        cutsceneCanvas = Instantiate(dialogueCanvasPrefab);
-        cutsceneCanvas.GetComponent<dialogue>().Initialize("COLOMETA", 0);
 
-        // Wait until the second canvas has been destroyed
-        while (cutsceneCanvas != null)
-        {
-            yield return null; // Wait for the next frame
-        }
-
-        yield return new WaitForSeconds(1.0f); // Wait for 1 second
-        cutsceneCanvas = Instantiate(CutsceneCanvasPrefab);
-        cutsceneCanvas.GetComponent<dialogue>().Initialize("NARRATOR", 1);
-
-        while (cutsceneCanvas != null)
-        {
-            yield return null; // Wait for the next frame
-        }
 
         yield return new WaitForSeconds(1.0f); // Wait for 1 second
         cutsceneCanvas = Instantiate(dialogueCanvasPrefab);
-        cutsceneCanvas.GetComponent<dialogue>().Initialize("COLOMETA", 1);
+        cutsceneCanvas.GetComponent<dialogue>().Initialize("COLOMETA", 4);
 
         while (cutsceneCanvas != null)
         {
@@ -74,7 +56,16 @@ public class introManager : MonoBehaviour
 
         yield return new WaitForSeconds(1.0f); // Wait for 1 second
         cutsceneCanvas = Instantiate(CutsceneCanvasPrefab);
-        cutsceneCanvas.GetComponent<dialogue>().Initialize("NARRATOR", 2);
+        cutsceneCanvas.GetComponent<dialogue>().Initialize("NARRATOR", 7);
+
+        while (cutsceneCanvas != null)
+        {
+            yield return null; // Wait for the next frame
+        }
+
+        yield return new WaitForSeconds(1.0f); // Wait for 1 second
+        cutsceneCanvas = Instantiate(dialogueCanvasPrefab);
+        cutsceneCanvas.GetComponent<dialogue>().Initialize("COLOMETA", 5);
 
         while (cutsceneCanvas != null)
         {
