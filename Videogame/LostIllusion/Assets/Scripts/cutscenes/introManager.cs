@@ -64,7 +64,26 @@ public class introManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1.0f); // Wait for 1 second
+        cutsceneCanvas = Instantiate(dialogueCanvasPrefab);
+        cutsceneCanvas.GetComponent<dialogue>().Initialize("COLOMETA", 1);
+
+        while (cutsceneCanvas != null)
+        {
+            yield return null; // Wait for the next frame
+        }
+
+        yield return new WaitForSeconds(1.0f); // Wait for 1 second
+        cutsceneCanvas = Instantiate(CutsceneCanvasPrefab);
+        cutsceneCanvas.GetComponent<dialogue>().Initialize("NARRATOR", 2);
+
+        while (cutsceneCanvas != null)
+        {
+            yield return null; // Wait for the next frame
+        }
+
+        yield return new WaitForSeconds(1.0f); // Wait for 1 second
         cutsceneCanvas = Instantiate(fadeOutCanvasPrefab);
+        stateNameController.playedCutscenes.Add("intro");
         SceneManager.LoadScene(nextScene);
     }
 

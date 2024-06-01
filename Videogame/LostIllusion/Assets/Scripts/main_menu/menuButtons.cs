@@ -9,6 +9,7 @@ public class menuButtons : MonoBehaviour
     AudioSource audioSource;
     
     [SerializeField] public AudioClip clickSound;
+    [SerializeField] public string nextSceneMenu;
     
     public void Start()
     {
@@ -45,7 +46,7 @@ public class menuButtons : MonoBehaviour
     public void startGameNOAUTH()
     {
         audioSource.Play();
-        SceneManager.LoadScene("match_tv", LoadSceneMode.Single);
+        SceneManager.LoadScene(nextSceneMenu, LoadSceneMode.Single);
     }
 
     public void resume()

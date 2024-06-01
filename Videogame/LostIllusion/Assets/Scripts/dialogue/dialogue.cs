@@ -21,7 +21,7 @@ public class dialogue : MonoBehaviour
     {
         speaker_name = object_name;
 
-        if (dialogueName != null && object_name != "NARRATOR"){
+        if (dialogueName != null && object_name != "NARRATOR" && object_name != "cutsceneStart"){
             dialogueName.text = object_name;
         }
 
@@ -80,13 +80,13 @@ public class dialogue : MonoBehaviour
         {
             // The line is in the scaryLines list
             // Change the color of the text
-            dialogueBox.color = Color.red; // Replace Color.red with the desired color
+            dialogueBox.color = Color.grey; // Replace Color.red with the desired color
         }
 
         foreach (char c in lines[index].ToCharArray())
         {
             dialogueBox.text += c;
-            if (c != ' ' && speaker_name != "NARRATOR"){
+            if (c != ' ' && speaker_name != "NARRATOR" && speaker_name != "cutsceneStart"){
                 audioSource.pitch = Random.Range(0.9f, 1.1f);
                 audioSource.Play();
             }

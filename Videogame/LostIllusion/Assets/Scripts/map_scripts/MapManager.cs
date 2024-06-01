@@ -10,8 +10,17 @@ public class MapManager : MonoBehaviour
 
     void Start()
     {
-        GameObject player = Instantiate(playerPrefab);
+        /*
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+    if (player != null)
+    {
         player.transform.position = new Vector3(stateNameController.playerXPosInScene, stateNameController.playerYPosInScene, 0);
+    }
+    else
+    {
+        Debug.Log("No GameObject found with the Player tag");
+    }
+    */
     }
     void Update()
     {
