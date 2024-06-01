@@ -1,3 +1,12 @@
+/*
+fadeOut.cs
+
+This script is responsible for fading in an image
+It uses a coroutine to gradually increase the alpha value of the image's color over a specified duration, 
+creating a fade-in effect. The image is expected to be attached to the same GameObject as this script.
+
+Sofia Moreno
+*/
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;

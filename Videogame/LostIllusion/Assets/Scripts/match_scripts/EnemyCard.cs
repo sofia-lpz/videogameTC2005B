@@ -1,3 +1,13 @@
+/*
+EnemyCard.cs
+
+This script is responsible for managing the enemy cards in the trading card game. 
+It includes a Card object and properties for the card's name, description, energy cost, heal value, and damage value. 
+The EnemyCard constructor takes a Card object as input and initializes the properties with the data from the Card object. 
+This script is used to create enemy card objects that can be used in the game to represent the cards in the enemy's deck.
+
+Luis Filorio
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

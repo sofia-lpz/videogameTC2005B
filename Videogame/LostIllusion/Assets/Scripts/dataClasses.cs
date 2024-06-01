@@ -1,3 +1,14 @@
+/*
+dataClasses.cs
+
+This script defines the data structures for Cards and Players in the game. 
+It includes classes for individual Cards and Players, as well as classes for lists of Cards and Players. 
+Each class is marked as Serializable, allowing it to be converted to and from a JSON string for API communication. 
+The Card class includes properties for the card's ID, name, energy cost, effect, type, description, and various stats. 
+The Player class includes properties for the player's username, password, number of matches won, and level.
+
+Sofia Moreno
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

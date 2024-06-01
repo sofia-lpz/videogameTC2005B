@@ -1,3 +1,14 @@
+/*
+resultHandler.cs
+
+This script is responsible for handling the results of matches in the game. 
+It includes two public static methods, match_lost and match_won, which are called when a match is lost or won, respectively. 
+Both methods get the name of the active scene, which is used as the field name in the stateNameController class. 
+If the field exists, its value is set to -1 for a lost match or 1 for a won match. 
+If the field does not exist, an error message is logged.
+
+Sofia Moreno
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

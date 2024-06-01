@@ -1,3 +1,13 @@
+/*
+BgSoundManager.cs
+
+This script is responsible for managing the background and ambient sounds
+It creates two audio sources and assigns them audio clips for background music and ambient sound respectively. 
+These audio sources are set to loop and play as soon as the game starts. 
+In the Update method, the volume of these audio sources is updated to match the current volume setting in the game.
+
+Sofia Moreno
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,3 +1,15 @@
+/*
+dialogueCutscenes.cs
+TO DO: inherit dialogue.cs
+
+This script is responsible for managing the dialogue in cutscenes
+It displays the dialogue text in a dialogue box and plays a sound effect for each character of the text. 
+The script also allows the player to skip to the end of the current line of dialogue by pressing the space key. 
+The dialogue text and speaker's name are stored in a dictionary in the dialogueCutsceneData class. 
+The script retrieves the dialogue based on the name of the active scene.
+
+Sofia Moreno
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

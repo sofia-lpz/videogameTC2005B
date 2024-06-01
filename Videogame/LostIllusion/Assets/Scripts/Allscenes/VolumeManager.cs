@@ -1,3 +1,14 @@
+/*
+VolumeManager.cs
+
+This script is responsible for managing the volume settings
+It uses a slider to adjust the volume and displays the current volume percentage. 
+The script also provides a mute button that toggles between muting and unmuting the game's audio. 
+When the game is muted, the current volume level is stored so it can be restored when the game is unmuted. 
+The volume level and mute status are stored in the stateNameController class and are persistent across scenes.
+
+Sofia Moreno
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

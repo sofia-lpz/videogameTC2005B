@@ -1,3 +1,14 @@
+/*
+Login.cs
+
+This script is responsible for managing the login functionality of the game. 
+It takes the user's input for username and password, validates the input, and sends a request to the server for authentication. 
+If the username or password field is empty, it displays an error message. 
+If the authentication is successful, it loads the main menu scene. 
+If the authentication fails, it displays an error message.
+
+Sofia Moreno
+*/
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;

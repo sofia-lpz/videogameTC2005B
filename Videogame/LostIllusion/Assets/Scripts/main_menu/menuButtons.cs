@@ -1,3 +1,13 @@
+/*
+menuButtons.cs
+
+This script is responsible for managing the functionality of the menu buttons in the game. 
+It includes methods for logging in, registering, starting the game, resuming the game, quitting the game, and debugging. 
+Each method plays a click sound, changes the game state as necessary, and loads the appropriate scene. 
+The script also includes a method for quitting the inventory, which unpauses the game and destroys the inventory game object.
+
+Sofia Moreno
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,3 +1,13 @@
+/*
+MapManager.cs
+
+This script is responsible for managing the map in the game. 
+It handles the instantiation of the Pause and Inventory canvases when the respective keys are pressed, and sets the game state to paused. 
+It also contains commented-out code for setting the player's position based on saved state data when the scene starts, 
+which will be used for scene transitions.
+
+Sofia Moreno
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

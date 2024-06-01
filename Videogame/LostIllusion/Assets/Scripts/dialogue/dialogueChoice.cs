@@ -1,3 +1,14 @@
+/*
+dialogueChoice.cs
+UNUSED
+
+This script is responsible for managing the dialogue choices 
+It moves the position of the game object based on the player's input. 
+If the player presses the down arrow key, the game object moves down, indicating a "no" choice. 
+If the player presses the up arrow key, the game object moves back to its original position, indicating a "yes" choice.
+
+Sofia Moreno
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,3 +1,14 @@
+/*
+triggerCutscene.cs
+
+This script is responsible for triggering a cutscene in a Unity game when the player enters a specific area. 
+It inherits from the triggerableObject class and overrides its Start and onTriggerEnter methods. 
+When the player enters the trigger area, the script saves the player's position and the current scene, 
+then starts the cutscene.
+The script also ensures that each cutscene can only be triggered once.
+
+Sofia Moreno
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,11 +21,10 @@ public class triggerCutscene : triggerableObject
     [SerializeField] public GameObject CutsceneCanvasPrefab;
     [SerializeField] public string cutsceneName;
 
-
     public override void Start()
     {
         base.Start();
-if (stateNameController.playedCutscenes.Contains(cutsceneName)){
+        if (stateNameController.playedCutscenes.Contains(cutsceneName)){
             Destroy(gameObject);
         }
     }
@@ -41,6 +51,4 @@ if (stateNameController.playedCutscenes.Contains(cutsceneName)){
         Destroy(cutsceneCanvas);
         SceneManager.LoadScene(cutsceneName); 
     }
-
-
 }

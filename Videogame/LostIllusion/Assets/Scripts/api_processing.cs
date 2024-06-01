@@ -1,3 +1,14 @@
+/*
+api_processing.cs
+
+This script is responsible for processing the data received from the API in the game. 
+Each method takes a JSON string as input, logs the string for debugging purposes, 
+deserializes the string into a list of objects using the JsonUtility class, 
+logs the name of the first object and the status of the list for debugging purposes, 
+and stores the list in a static variable for use in other parts of the game.
+
+Sofia Moreno
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

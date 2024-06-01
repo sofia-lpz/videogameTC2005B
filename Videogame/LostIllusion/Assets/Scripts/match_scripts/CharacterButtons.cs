@@ -1,3 +1,14 @@
+/*
+CharacterButtons.cs
+
+This script is responsible for managing the character buttons in the game. 
+Each character button is associated with a Villager object, which contains data such as the character's name, description, and element. 
+The Init method is used to initialize the character button with the data from a Villager object. 
+The character's name, description, and element are displayed on the button using TextMeshPro text fields. 
+The script also manages the character's health bar and active status, and includes methods for updating the health bar and toggling the active status.
+
+Luis Filorio
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

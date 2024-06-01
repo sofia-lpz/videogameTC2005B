@@ -1,3 +1,13 @@
+/*
+fadeIn.cs
+
+This script is responsible for fading out an image
+It uses a coroutine to gradually decrease the alpha value of the image's color over a specified duration, 
+creating a fade-out effect for scene changes.
+Once the fade-out is complete, the GameObject is destroyed so the scene can be clickable
+
+Sofia Moreno
+*/
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;

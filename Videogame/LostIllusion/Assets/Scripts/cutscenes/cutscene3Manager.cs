@@ -1,3 +1,14 @@
+/*
+cutscene3Manager.cs
+
+This script is responsible for managing cutscenes
+It controls the flow of the cutscene by instantiating different types of canvases (dialogue, cutscene, fade out) 
+and initializing them with appropriate parameters. 
+The cutscene progresses based on user input (pressing the 'S' key to skip) or when the current canvas is destroyed. 
+Once the cutscene is over, it adds the cutscene to the list of played cutscenes and loads the next scene.
+
+Sofia Moreno
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

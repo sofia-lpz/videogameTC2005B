@@ -1,3 +1,13 @@
+/*
+Card_Buttons.cs
+
+This script is responsible for managing the card buttons in the trading card game. 
+Each card button is associated with a Card object, which contains data such as the card's name, description, energy cost, damage, and heal values. 
+The Init method is used to initialize the card button with the data from a Card object. 
+The card's name, description, and energy cost are displayed on the button using TextMeshPro text fields.
+
+Luis Filorio
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

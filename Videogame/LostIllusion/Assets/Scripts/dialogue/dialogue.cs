@@ -1,3 +1,14 @@
+/*
+dialogue.cs
+
+This script is responsible for managing the dialogue
+It displays the dialogue text in a dialogue box and plays a sound effect for each character of the text. 
+The script also allows the player to skip to the end of the current line of dialogue by pressing the space key. 
+The dialogue text and speaker's name are stored in a dictionary in the dialogueData class. 
+The script also changes the color of the text if the line is in the scaryLines list in the dialogueData class.
+
+Sofia Moreno
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

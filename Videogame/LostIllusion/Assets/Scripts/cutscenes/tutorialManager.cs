@@ -1,3 +1,13 @@
+/*
+tutorialManager.cs
+
+This script is responsible for managing the tutorial.
+It controls the flow of the tutorial by playing a click sound and fading in a "skip" text when the space key is pressed. 
+The tutorial can be skipped by pressing the space key, which triggers a fade-out effect and then loads the specified scene. 
+The script also adjusts the volume of the audio source to match the current volume setting in the game.
+
+Sofia Moreno
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,3 +1,15 @@
+/*
+forceFight.cs
+
+This script is responsible for managing the forced fight interactions
+It extends the triggerableObject class and overrides the onTriggerEnter method to handle interactions with the player. 
+When the player enters the trigger area, the script checks if a fight has already occurred. 
+If not, it initiates a fight by freezing the player, saving the player's position, and loading the fight scene. 
+If a fight has already occurred, it initiates a dialogue with the player. 
+The script also includes a coroutine to wait until the dialogue is finished before loading the fight scene.
+
+Sofia Moreno
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

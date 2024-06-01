@@ -1,3 +1,14 @@
+/*
+api_connect.cs
+
+This script is responsible for managing the API connections in the game. 
+It sends GET requests to the specified API endpoints to retrieve data for cards and villagers. 
+The data is processed by the api_processing class and stored in static variables for use in other parts of the game. 
+The script also manages the interactability of the start, login, and register buttons, 
+disabling them at the start of the game and enabling them once the data has been successfully retrieved.
+
+Sofia Moreno
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
