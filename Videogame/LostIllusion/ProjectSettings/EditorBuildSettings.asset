@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/map/Home.unity
     guid: 06f239aef7cf1db4e9a37b5d4e07f67f
   - enabled: 1
@@ -23,6 +23,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Register.unity
     guid: 438c7544e37ca134289a5aa8fcc9c35a
+  - enabled: 1
+    path: Assets/Scenes/cutscenes/cutscene2.unity
+    guid: a7eedb5f3b3964c4f9a5a28ca76314b9
+  - enabled: 1
+    path: Assets/Scenes/cutscenes/cutscene3.unity
+    guid: 7cbf25b6879134f4aa51bddbcf2aee8c
+  - enabled: 1
+    path: Assets/Scenes/cutscenes/cutscene4.unity
+    guid: b6333eae314a02242a59edd8e94731ce
+  - enabled: 1
+    path: Assets/Scenes/cutscenes/tutorial_map.unity
+    guid: 7a81ee1eb9af27945b2ba9ecf2f86f0f
   - enabled: 1
     path: Assets/Scenes/cutscenes/intro.unity
     guid: 5bb9a34c2c2d49e4bb82bda3841cbbe9
