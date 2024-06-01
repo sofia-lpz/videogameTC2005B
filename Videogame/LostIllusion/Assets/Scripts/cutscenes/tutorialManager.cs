@@ -46,6 +46,7 @@ public class tutorialManager : MonoBehaviour
     {
         GameObject fadeOutCanvas = Instantiate(fadeOutCanvasPrefab);
         yield return new WaitForSeconds(2.0f); // Wait for 1 second
+        
         SceneManager.LoadScene(sceneName);
     }
 }

@@ -57,7 +57,7 @@ public class dialogueData : stateNameController
 public static List<string> colometa_lines_1 = new List<string> {
     "3... 2... 1...",
     "ah!",
-    "Now Adria, tell me...",
+    "Now young boy, tell the audience...",
     "...Do you feel hypnotized?"
 };
 
@@ -65,36 +65,148 @@ public static List<string> colometa_lines_2 = new List<string> {
     "Ah... are you so sure?"
 };
 
+public static List<string> colometa_lines_3 = new List<string> {
+    stateNameController.player_username,
+    "if i asked you to open your eyes, you wouldn't be able to...",
+    "don't make the effort, it's not worth it",
+    "it's not worth it..."
+};
+
+public static List<string> colometa_lines_4 = new List<string> {
+    "How about you little girl?",
+    "I reckon you'll have much more fun.",
+    "Go on don't be shy, tell the audience!",
+    "Do you feel hypnotized?"
+};
+
+public static List<string> colometa_lines_5 = new List<string> {
+    "focus on an image now",
+    "a real or imagined one",
+    "focus on every single detail you hadn't noticed before",
+    "a safe place, a place you love, somwehere you want to be"
+};
+
+public static List<string> colometa_lines_6 = new List<string> {
+    "Do you see it?"
+};
+
+public static List<string> colometa_lines_7 = new List<string> {
+    "And sleep...",
+    "sleep..."
+};
+
+public static List<string> colometa_lines_8 = new List<string> {
+    "Do you not want an adventure?",
+    "is that not why you came?"
+};
+
+public static List<string> colometa_lines_9 = new List<string> {
+    "Is this not what we all want?!",
+    "to be taken away from this town for a while?!",
+    "Come on, last count!",
+    "3...!",
+    "2...!"
+};
+
 public static List<List<string>> colometa_lines = new List<List<string>> {
     colometa_lines_1,
-    colometa_lines_2
+    colometa_lines_2,
+    colometa_lines_3,
+    colometa_lines_4,
+    colometa_lines_5,
+    colometa_lines_6,
+    colometa_lines_7,
+    colometa_lines_8,
+    colometa_lines_9
 };
 /*COLMETA LINES END*/
 
 /*NARRATOR LINES*/
 public static List<string> narrator_lines_1 = new List<string> {
     "3... 2... 1...",
-    "and a million times more.",
-    "3... 2... 1..."
+    "and a hundred times more.",
+    "3... 2... 1...",
 };
 
 public static List<string> narrator_lines_2 = new List<string> {
-    "Your eyes open, you're awake suddenly",
-    "Don't magicians snap their fingers to wake people up?",
-    "won't you wake up?"
+    "You feel the clammy hand of the magician on your shoulder",
+    "the heat of the spotlight",
+    "you see nothing, your eyes still closed...",
+    "<<Not really>>, you say"
 };
 
 public static List<string> narrator_lines_3 = new List<string> {
-    "You feel the clammy hand of the magician on your shoulder",
-    "you feel the heat of the spotlight",
-    "not much more.",
-    "Not really, you say"
+    "Your eyes open suddenly",
+    "what a terrible show...",
+    "Don't magicians snap their fingers to wake people up?",
+    "Are you even awake?"
+};
+
+public static List<string> narrator_lines_4 = new List<string> {
+    "3... 2... 1...",
+    "and a thousand times more.",
+    "3... 2... 1...",
+};
+
+public static List<string> narrator_lines_5 = new List<string> {
+    "Breathe in...",
+    "and breathe out...",
+};
+
+public static List<string> narrator_lines_6 = new List<string> {
+    "the hand leaves your shoulder",
+    "You feel the magician walk to the girl sat beside you"
+};
+
+public static List<string> narrator_lines_7 = new List<string> {
+    "3... 2... 1...",
+    "and a million times more.",
+    "3... 2... 1...",
+};
+
+public static List<string> narrator_lines_8 = new List<string> {
+    "You think you'll imagine your mother's house... you miss it",
+    "Maybe some big city, like the ones you've always wanted to move to.",
+    "You don't.",
+    "you imagine yourself, right here"
+};
+
+public static List<string> narrator_lines_9 = new List<string> {
+    "3... 2... 1...",
+    "and a billion times more.",
+    "3... 2... 1...",
+    "I'ts almost over."
+}; 
+
+public static List<string> narrator_lines_10 = new List<string> {
+    "You don't want to.",
+    "You want to get off the stage, you want to go home",
+    "Colometa notices, leans in to whisper"
+};
+
+public static List<string> narrator_lines_11 = new List<string> {
+    "He turns back to the audience",
+    "they're flabbergasted",
+    "Something's happened"
+};
+
+public static List<string> narrator_lines_12 = new List<string> {
+    "1!"
 };
 
 public static List<List<string>> narrator_lines = new List<List<string>> {
     narrator_lines_1,
     narrator_lines_2,
-    narrator_lines_3
+    narrator_lines_3,
+    narrator_lines_4,
+    narrator_lines_5,
+    narrator_lines_6,
+    narrator_lines_7,
+    narrator_lines_8,
+    narrator_lines_9,
+    narrator_lines_10,
+    narrator_lines_11,
+    narrator_lines_12
 };
 /*NARRATOR LINES END*/
 
@@ -128,6 +240,9 @@ public static List<string> dev_bunny_lines_1 = new List<string> {
     tcgData.Cards.Count > 0 ? "The first card name is " + tcgData.Cards[0].name : "There are no cards available"
 };
 
+public static List<List<string>> cutsceneStart_lines = new List<List<string>> {
+    new List<string> { "A memory..." }
+};
 
 // to do, make a dictionary of dictionaries instead of dictionary of lists
 public static Dictionary<string, List<List<string>>> dialoguesDictionary = new Dictionary<string, List<List<string>>> {
@@ -137,12 +252,16 @@ public static Dictionary<string, List<List<string>>> dialoguesDictionary = new D
     {"COLOMETA", colometa_lines},
     {"dev_bunny", new List<List<string>> { dev_bunny_lines_1 }},
     {"NARRATOR", narrator_lines},
-    {"WOMAN", woman_lines}
+    {"WOMAN", woman_lines},
+     {"cutsceneStart", cutsceneStart_lines}
 
 };
 
 public static List<string> scaryLines = new List<string> {
-"won't you wake up?"
+"Are you even awake?",
+"Do you see it?",
+    "Do you not want an adventure?",
+    "is that not why you came?"
 };
 
 };

@@ -24,6 +24,17 @@ public class api_processing : MonoBehaviour
         tcgData.Villagers = villagerList.data;
     }
 
+    public static void PlayerProcessing(string result)
+    {
+        Debug.Log("api_processing got: " + result);
+        PlayerList playerList = JsonUtility.FromJson<PlayerList>(result);
+        
+        Debug.Log("player status: " + playerList.status);
+        stateNameController.playerStatus = playerList.status;
+
+        stateNameController.Players = playerList.data;
+    }
+
 
 
 }

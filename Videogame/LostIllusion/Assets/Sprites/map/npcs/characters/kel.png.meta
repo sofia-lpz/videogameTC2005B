@@ -1,0 +1,4989 @@
+fileFormatVersion: 2
+guid: af0de415e647e45838972347dd1c0b97
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kel_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 424
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc1f01298738d4c57b78ab6682ea2849
+      internalID: 1187123274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 424
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc2c6dfc5af1e4b0e8a6f0cef1791a09
+      internalID: 277559679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 424
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c867211f03942e1af13b12bf8664d6
+      internalID: 1933356370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_3
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 424
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81635dd1d4ee44c17ba460cb73e8961a
+      internalID: 987314489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_4
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 424
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a8d3cd3f5db04d5da46949146127ce1
+      internalID: 1418311157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_5
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 424
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e71652b225b454b6b9347ab276552730
+      internalID: -2095355692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_6
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 424
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54409ea8650bf4cb7866b9eeacd546e2
+      internalID: 1905375158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_7
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 424
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa68697a89634676a6fe8a5f2ef3ee9
+      internalID: -1150464486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_8
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 424
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa7dcef95a9641d3a09c14c7f6d338e
+      internalID: -1795841788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_9
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 424
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47bc05d3e080246468d9b83ebed7be89
+      internalID: 1350182399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_10
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 424
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac96a0afe76794a2c90da81e8f7cd0bc
+      internalID: 1407584168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_11
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 424
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a3c07662d4c4f29a0a0d82b6b204d2
+      internalID: 366343200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_12
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 424
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 674f0fe677f714901a0af4eb468ee3ad
+      internalID: 277180832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_13
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 424
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180f663fc7aae4427a0a32ed500022b0
+      internalID: 471241687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_14
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 424
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dfc2abe3ad3b45529bc305abf46e058
+      internalID: 1285172739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_15
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 424
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c88f61e84f74c6f82115de0ddeaa8f
+      internalID: 2050392409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_16
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 424
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125c159c63e7a4058bd14c989dd9d97d
+      internalID: 785449058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_17
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 391
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a862dbe06104f7a826a5a56a8caa86
+      internalID: 591764258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_18
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 391
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe3c0b2785eba4c2daac2e6cddfaf32c
+      internalID: 1746488247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_19
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 391
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aedb41124e1584fc2b570093050ac8a1
+      internalID: -26528612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_20
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 391
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1bd1e24af2e47e6ae4617ef464b6b5
+      internalID: -477989731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_21
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 391
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a4eb53061dfd4dd3af42c813d8fb246
+      internalID: 1465739510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_22
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 391
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a8a94d351a541658941de34c0b0e9e
+      internalID: -874750402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_23
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 391
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d50681e0f5774c11878e53802312312
+      internalID: -1877724083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_24
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 391
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9d85e65e4424b6791f39e7a4248470
+      internalID: -2113221872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_25
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 391
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04bd949535934f92a3927704428c4c8
+      internalID: -1385405553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_26
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 391
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c520616b45818425d88e522ebd22b608
+      internalID: -1330709942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_27
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 391
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26acda36e88294d9ebc35108c909ee3c
+      internalID: 979957518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_28
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 391
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f910b3a556a44ff8a4ad9f3252a87c
+      internalID: -1075445094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_29
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 391
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9694250a3b3d847558ba5869529caae9
+      internalID: -574724342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_30
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 391
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32890ece53799439eb1c138ad7ffcab1
+      internalID: -2104637287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_31
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 391
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f72b68a830a6408fb6442a1f7398a96
+      internalID: 1673846035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_32
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 391
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 657795b7b6ee54e57aa7093da3f19bf1
+      internalID: 466967972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_33
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 391
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7eb7e5330cf64c01bbe0bf07cb30b10
+      internalID: 1429511451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_34
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 358
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da67d1b95725649c196067957a8897a1
+      internalID: -217013538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_35
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 358
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451c1131972554323bdc4c45a011f41d
+      internalID: 422543912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_36
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 358
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a306c2af820c4440bb4e8d5057e6f5b4
+      internalID: -1969253536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_37
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 358
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1bbbcdb8d4e040c1b610d7db49b4f87
+      internalID: 2021359068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_38
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 358
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad8197f8171e4f0392876104091217e
+      internalID: 97148850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_39
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 358
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9144bae2e237c4e6289dce7c2edfd65a
+      internalID: 141384299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_40
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 358
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 221776ca7c860429cb04480edfcb94a3
+      internalID: 274011740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_41
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 358
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a7da94d9658e4331b3ce6244af74574
+      internalID: 597519391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_42
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 358
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2775fd5f0a847c39eb565cc4af3443
+      internalID: -233245223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_43
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 358
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c89aac5baed05434aa836a0b894552e9
+      internalID: -1874493348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_44
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 358
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5befc234619434d4dab3d4e09759a8e4
+      internalID: -356215257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_45
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 358
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9117b6e8df0148d9968b83e6dcfb5f7
+      internalID: 1456751880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_46
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 358
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f3d3c3dc75954e948e18a58f0640067
+      internalID: 1336971127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_47
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 358
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fdc2ce6c93774d72a1ca8a5831dedfe
+      internalID: 177173952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_48
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 358
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5fdc2508c5c483291ea24e58c8ce59
+      internalID: -1480052593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_49
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 358
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea65cbed61d464d30aad7b26a6b058cf
+      internalID: 1695315594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_50
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 358
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2fed13ee91294caeb9f445730b3374f
+      internalID: -1501933852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_51
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 325
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe3332ddf22547e7954d752dbff1c2c
+      internalID: -445687521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_52
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 325
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77874043de061481ca8a722952acc51c
+      internalID: -1448182337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_53
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 325
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a955e53c1b8a4bbbb5e3d5a65a1899d
+      internalID: 383220568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_54
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 325
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d9975b7258c8479c9f88daed5f77031
+      internalID: -418437298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_55
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 325
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecad4bd45f555448eb432218ab1a02c0
+      internalID: -731570689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_56
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 325
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 056d2bf3c11804ddcbc087f61cc4281b
+      internalID: 530056801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_57
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 325
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ef5b99ad29c4dd1a56bf97f35986c6
+      internalID: -1172554345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_58
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 325
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b70516216c1d9472c9b6dc442571f249
+      internalID: 727068215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_59
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 325
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c59846a99ca6438b98ecd885bc61c16
+      internalID: -961424200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_60
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 325
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf979fba8f654f719046f15f77abbf0
+      internalID: 1132212202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_61
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 325
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057a8eb0f7a7843c999ddba6ff1ec4c5
+      internalID: 1286430093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_62
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 325
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e7b0845312b447abd5150f90909eb6
+      internalID: -238866112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_63
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 325
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3796f74df93b4279a56c99e9acd71d6
+      internalID: -1700599989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_64
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 325
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1921686265068419b81cb9fd3fb66c0a
+      internalID: 744764871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_65
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 325
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d364852f6e0b483badff38ffa110d9a
+      internalID: -1513864954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_66
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 325
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d741bc9c7276b48e08c979a4873eecf8
+      internalID: -543485354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_67
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 325
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8230e8026dd8344a1aaaf59e045a3735
+      internalID: 221990267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_68
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 292
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 839a3cd113f77463e93c9f43645b6075
+      internalID: -1391942263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_69
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 292
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1521f729f038b45b3a2531ee29ffba9c
+      internalID: 303166503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_70
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 292
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc3f9f1920f745f6bb4195f7f835654
+      internalID: -1258172630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_71
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 292
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5af285ca36c54e5580aa79c577cbd12
+      internalID: -1375737024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_72
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 292
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a6a8dafd2954292a3af63a9bce058a
+      internalID: -1020934837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_73
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 292
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec452eaf79ba409ea43fac5f7ab1986
+      internalID: -291339155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_74
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 292
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632a009d3f76845b4a04520d91133d06
+      internalID: 1198535664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_75
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 292
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed611d7b44bbd45d8a574373119824c4
+      internalID: 475713563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_76
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 292
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 479bb259531d44705a2badf74717ccfb
+      internalID: -421683924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_77
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 292
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de3ec012b7dc417391f3b686e6aebe7
+      internalID: 400551881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_78
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 292
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ad6902d67f4456c91e057a3a62c88b
+      internalID: -2119280753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_79
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 292
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14208cd0de2e44ae09f3542bf8a3477d
+      internalID: -1355727105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_80
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 292
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc1a06c85367346beb9a6687db42f29e
+      internalID: 170648353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_81
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 292
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c8a3286dcc934224b6cdf3159936e7e
+      internalID: 1391378308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_82
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 292
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b627ac6de8e452a8c78ce4187ae341
+      internalID: -1910657224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_83
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 292
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19816604ee6774cc2a97044664d93d2e
+      internalID: -239887881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_84
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 292
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc58300f2db3413282d592f50d37c96
+      internalID: -1779470336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_85
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 259
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e27083104be463a9b6d6a710611968
+      internalID: 765841056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_86
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 259
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69ad63f7ee96b4e5f960641b47513d69
+      internalID: -231762025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_87
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 259
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406569c4a8ac34facab60af7a3b58773
+      internalID: 1452827064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_88
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 259
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1c3af15972e4e569581a25512212e8
+      internalID: 1877904795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_89
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 259
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bc84f721ce5245ccbd0a5c2eaf2464f
+      internalID: -1369748341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_90
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 259
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0dc50766ce304707992483f58b772da
+      internalID: -442682049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_91
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 259
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b268d7143674466aba9f2de0f77f53
+      internalID: 339299548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_92
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 259
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b311570d0e09441ba864a8cb7f568f3e
+      internalID: -485221582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_93
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 259
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c3081b2e1b94de985e72a9dd493279
+      internalID: -610815958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_94
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 259
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3156d9a3ad7457f980e1967ff1be08
+      internalID: -2006503388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_95
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 259
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d254acf86096748b480e6074b0e4d72f
+      internalID: 137333584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_96
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 259
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2172ae2877bf4747b23cd19cad83ebe
+      internalID: -755499648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_97
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 259
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c706cb42d692477897b40b6ab88f2c0
+      internalID: 255140655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_98
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 259
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91120ab1576474b6fb900bd479c3c68c
+      internalID: 1585069588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_99
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 259
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5998f292407794367920b99eff836eb9
+      internalID: -860370255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_100
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 259
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ab49fc0d32d40129b17838f5c584cd
+      internalID: -1061000613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_101
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 259
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7d00e9b4b394528b169fc9a876bd49
+      internalID: 397434964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_102
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 226
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ed00873a154c424195a31419db4950d
+      internalID: 1206456371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_103
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 226
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fadba5c11e5854cbda2da6a97024e983
+      internalID: -161982644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_104
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 226
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9a578eaebb8540c39e37a322211d64c
+      internalID: -1145222271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_105
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 226
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f76d56941826d437bad28fac4b52e5ec
+      internalID: 1589963481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_106
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 226
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155ffc8c45fcf4e4b99fb6dee0d41625
+      internalID: 433786200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_107
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 226
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef235e402cd224969b95390bbd68ea07
+      internalID: -1845142574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_108
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 226
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6bf1bc11a8c4d689eae63a3c10d364
+      internalID: -1924218808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_109
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 226
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abacef795f59e46eba30c6ca30555e0e
+      internalID: 1843728947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_110
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 226
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2028623b6a5b94f72a534d11089b029b
+      internalID: -154438442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_111
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 226
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e4f4deb9dac4e40b31f00964d885f3
+      internalID: -303558020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_112
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 226
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c04685f337146d388361bc52f321db
+      internalID: -2022561774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_113
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 226
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c43a99cc6ab4a4b8e936bc92fc8241
+      internalID: -1645342591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_114
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 226
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70e40031308364852bc32e49c97e7950
+      internalID: -2081807522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_115
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 226
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66388f4473e9742cdb899f393f2825c2
+      internalID: -1856114197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_116
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 226
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736e1ee89324a4f589be804404001283
+      internalID: -270852758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_117
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 226
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a941b4dbe41f04397a29de43b98b843b
+      internalID: -1945809196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_118
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 226
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4b70c63ab1644a72a8f67993476c624
+      internalID: -996422351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_119
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 193
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c291b74f37242988ed59b1241d87a9
+      internalID: -90229967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_120
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 193
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74bc7082c5f844dca5286d59fe4b433
+      internalID: -168587090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_121
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 193
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06705681f0fa94ab58a203cd90734aa4
+      internalID: -455784985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_122
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 193
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e59712cf5f6d4305babdcda118e341f
+      internalID: -2079043750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_123
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 193
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b9956283d2a54f61bcff99cfc8ad6f1
+      internalID: 699755404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_124
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 193
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da05f78e0933431f94cb29c0157b6d7
+      internalID: -1326241118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_125
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 193
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea634c76642041289be6a6df97830dd
+      internalID: -1917013853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_126
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 193
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf0096925bf14ddbbbd8cf846ea8c68
+      internalID: 134949191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_127
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 193
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aac285bd37e7431eb1b27df0b83336e
+      internalID: 191915840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_128
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 193
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cb5008e675c540439cea3a3c7b6aac4
+      internalID: -289061864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_129
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 193
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc999b6d4d7704d53af0306c3cd8ce89
+      internalID: -1996653845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_130
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 193
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e35d8c77db14690800adb578386788
+      internalID: -49075930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_131
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 193
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f95980d993f1431aadf92860b1cb069
+      internalID: 1221279689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_132
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 193
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d4e76268fb184f20baf713c490c858e
+      internalID: 1832883538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_133
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 193
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9bb4fb3aaae1441b8a808cf39a0e941
+      internalID: 1837169764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_134
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 193
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e63eacd4bbbe24803b261c23daaaa6b0
+      internalID: -1856912225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_135
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 193
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd0443e2713d24ddf977bc171ed527fe
+      internalID: -1580978674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_136
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 160
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc69fb41f8d5470e852bb8a1f67eead
+      internalID: 1194106055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_137
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 160
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c501a10a89f0439ba99dca9cf4c882d
+      internalID: -1079367768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_138
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 160
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898b5f96cf0764d03b402b41f04d1b8d
+      internalID: 1010449556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_139
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 160
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5693c7f78d8f48799276d6ff1bbceed
+      internalID: -402504410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_140
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 160
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84cc55501393e4eeb8074a48d76bd8da
+      internalID: 1529080843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_141
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 160
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69082a6606b5441cebbb4de2d8cbd5ae
+      internalID: -667493387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_142
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 160
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e63f35d7aaaf40e4be77fea0e424682
+      internalID: 1062159911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_143
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 160
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2947ae647b10c400f90a6c75d933f534
+      internalID: -388635533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_144
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 160
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb7f15804e1d434989e6980a66794c7
+      internalID: 1407881505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_145
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 160
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d703d102dc14e26bb0ce37ebcf94b0
+      internalID: -1980844896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_146
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 160
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd43fa15bc0f4e6f9e277b03172e30c
+      internalID: 544229012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_147
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 160
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f9c9c35ac5fe41c2906c22bfe916c3a
+      internalID: 2081197098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_148
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 160
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d920b53b629c4caeae14dff0dcd830f
+      internalID: -943745577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_149
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 160
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 796a113fc4cca4fb0b0d2d25bba64524
+      internalID: -1156742476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_150
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 160
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 815aa719d609648519b24b2ee02ac2b8
+      internalID: 1805141838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_151
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 160
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01869f13f01634a59b7528ce2bd039b3
+      internalID: -1460458288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_152
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 160
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c00e2ec1abbb349a395141df9e378a30
+      internalID: -1317470160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_153
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 127
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b62da12d5ae8488090719f945bf371b
+      internalID: 277204604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_154
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 127
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814fdae57495a4442ae51f720764f2cd
+      internalID: 812366317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_155
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 127
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc0cf789d0cb482394ca6be36f9388f
+      internalID: -1861570460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_156
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 127
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a934d74fb5643b7af42610f005243c
+      internalID: 683606064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_157
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 127
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a3183def7ed641ae9ef1f2ccd1e9eac
+      internalID: 398292496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_158
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 127
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1277459181e2f40fc92bbc2fa325ffbd
+      internalID: 1204653683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_159
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 127
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9414ccaa4d7149459dd70800256d2c8
+      internalID: 830976021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_160
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 127
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e74b8c3f9a9dc40c68854d32e361dde7
+      internalID: -939288705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_161
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 127
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5879b6b2de2a4d17838b97a42da8c4e
+      internalID: -1134470465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_162
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 127
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532e2bfad63e243dc9871e41ac5819c1
+      internalID: -159270214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_163
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 127
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05216c5e445f24142aecc2c5044018a3
+      internalID: 513551342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_164
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 127
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4705e190ede0f4526b793a107cda511e
+      internalID: -630515789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_165
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 127
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9cddedf022bd4f75bc8527487f31b4a
+      internalID: 200957064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_166
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 127
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4230832c591c74d06be197828c3c2b8d
+      internalID: -208449417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_167
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 127
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be07791c749c247db92ec3430411fc80
+      internalID: 218168759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_168
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 127
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0753e3047915141eca8b3388e580146b
+      internalID: 871194677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_169
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 127
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2b22fc7530f644ba805658ae16d49e6
+      internalID: -123302163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_170
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 94
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef5a0cce506094d969034319b788a683
+      internalID: -559393626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_171
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 94
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c0e95c63f6845dcb69c5845f799ef2
+      internalID: 1804983681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_172
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 94
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b20c6185bbf44a86a112b58cd366d3d
+      internalID: -862474262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_173
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 94
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a7b0a4b3f90434c9524f04db35f56d
+      internalID: -1949508292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_174
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 94
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1683664626a5e46dba2d0ad83f445ef6
+      internalID: 1832024123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_175
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 94
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c50bb96c55ec43439830b0e4c0f7f93
+      internalID: 1432906063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_176
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 94
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25106fa755f34ae68e345ce049b7ee8
+      internalID: -1776133696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_177
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 94
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411e36c0cb11e49319002fcc3612c947
+      internalID: 1984001238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_178
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 94
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e973627694924a4086da0504e2d60d8
+      internalID: -1996020222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_179
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 94
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f788b82e7e8d4a75b390ad3d7e4ae1c
+      internalID: 1844312669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_180
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 94
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52df7539cd88642ce866e21f6468a051
+      internalID: -1862942355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_181
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 94
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 718e906b7316846a1a15ba139e7fcc52
+      internalID: -957069696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_182
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 94
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 068548e6832e94ecd9a559af7808ef3a
+      internalID: -1053212122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_183
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 94
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddeceae2edf234571927f06d7928b230
+      internalID: -1958443083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_184
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 94
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608821099e34b49e18d181677082b751
+      internalID: 881340981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_185
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 94
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee261d3bc1f7b49d5a6e92f9ee948a76
+      internalID: 2142332053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_186
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 94
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2490f4cb83d74c2cb0e10693c235d20
+      internalID: -1873241205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_187
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 61
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36f3308b8605040bf8c9dc0588574af5
+      internalID: -226038860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_188
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 61
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2384e24ce3ba541e09b4107da6cfe21a
+      internalID: 1968064846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_189
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 61
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d02458ceb0e1f4713a3bb8cde7bea5af
+      internalID: 423099067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_190
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 61
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ba5b2aa55bd4137bd709f61fd65f8f
+      internalID: -530136170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_191
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 61
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50d6129747c640918f73d4b071a3b1d
+      internalID: 1664322353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_192
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 61
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2902296195ad34a7cba5d367ee73d193
+      internalID: 1749005761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_193
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 61
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10aa15df11144b0e96802c75187d55e
+      internalID: -1674032866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_194
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 61
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d14df1f9a8214a3ead7e69b14497e73
+      internalID: 1561101454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_195
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 61
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b368ba135bd4eb0addd2d8c8c6a6fe
+      internalID: 1431309620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_196
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 61
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9132e0d8b05e044b49c3e62b3715272e
+      internalID: -547132407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_197
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 61
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 381fb07ad66b14b83ab3aad2a296dab7
+      internalID: -1169279929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_198
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 61
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96d3b6ee29c6f4dd6bc0398e9d637b54
+      internalID: 1768483728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_199
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 61
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9866b17c49eb24bef91654b8013e1e66
+      internalID: 262653658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_200
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 61
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d5b6beb3abb74c929073110a49f6a52
+      internalID: 485168369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_201
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 61
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b707a1b70f5e487f900d0c40e0d0475
+      internalID: 671081810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_202
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 61
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b33a39f31b54812a0b38b87bd85c87
+      internalID: -1876167453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_203
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 61
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32854567fded04146871e0159dc0a7c9
+      internalID: 666333439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_204
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 28
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e2c25d4e3d94570a3befe8ee7b1c36
+      internalID: 1176418882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_205
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 28
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9adf0a4c79b94490b5374e52495b69e
+      internalID: 854884056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_206
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 28
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8206222fb02f45e4a86dfb17ad46565
+      internalID: -37741638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_207
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 28
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e2f01fe4d264c9e8c0a7fee355dc63
+      internalID: 1791375851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_208
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 28
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b6d278c826f48c7a549407d98b751c
+      internalID: 1515406947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_209
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 28
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c65e5eebd4643448f8ea4eefa7bc3246
+      internalID: -1855760208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_210
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 28
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47159ed050bdd4c9aae449e40ede2319
+      internalID: 99656443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_211
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 28
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873854c015f6f4ad39eadaf824d1ef5a
+      internalID: 706407212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_212
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 28
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21b7a06f89a5d48a0a4d2465319b9fdd
+      internalID: -2070576783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_213
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 28
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a03002c24e214d4bb060645aea25f3e
+      internalID: 760585167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_214
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 28
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6eba8fd652fe4ae0b56e3990232d1ea
+      internalID: -1527698652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_215
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 28
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9b93f0453834df7944449d5a351d02
+      internalID: -1889224352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_216
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 28
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc0f2c4e9b9740b8b40951422f47d66
+      internalID: -928971381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_217
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 28
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d0c8e4cb71574711924f7f3b1321e11
+      internalID: 734782757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_218
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 28
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dcab95d3154a4f0e8bc68b6235b69e2
+      internalID: 166723209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_219
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 28
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efcebbaa8439d426a98ed00eba3373f0
+      internalID: -1294012553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kel_220
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 28
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e528f7efa894c6b98e9539df96231c
+      internalID: -324481897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      kel_0: 1187123274
+      kel_1: 277559679
+      kel_10: 1407584168
+      kel_100: -1061000613
+      kel_101: 397434964
+      kel_102: 1206456371
+      kel_103: -161982644
+      kel_104: -1145222271
+      kel_105: 1589963481
+      kel_106: 433786200
+      kel_107: -1845142574
+      kel_108: -1924218808
+      kel_109: 1843728947
+      kel_11: 366343200
+      kel_110: -154438442
+      kel_111: -303558020
+      kel_112: -2022561774
+      kel_113: -1645342591
+      kel_114: -2081807522
+      kel_115: -1856114197
+      kel_116: -270852758
+      kel_117: -1945809196
+      kel_118: -996422351
+      kel_119: -90229967
+      kel_12: 277180832
+      kel_120: -168587090
+      kel_121: -455784985
+      kel_122: -2079043750
+      kel_123: 699755404
+      kel_124: -1326241118
+      kel_125: -1917013853
+      kel_126: 134949191
+      kel_127: 191915840
+      kel_128: -289061864
+      kel_129: -1996653845
+      kel_13: 471241687
+      kel_130: -49075930
+      kel_131: 1221279689
+      kel_132: 1832883538
+      kel_133: 1837169764
+      kel_134: -1856912225
+      kel_135: -1580978674
+      kel_136: 1194106055
+      kel_137: -1079367768
+      kel_138: 1010449556
+      kel_139: -402504410
+      kel_14: 1285172739
+      kel_140: 1529080843
+      kel_141: -667493387
+      kel_142: 1062159911
+      kel_143: -388635533
+      kel_144: 1407881505
+      kel_145: -1980844896
+      kel_146: 544229012
+      kel_147: 2081197098
+      kel_148: -943745577
+      kel_149: -1156742476
+      kel_15: 2050392409
+      kel_150: 1805141838
+      kel_151: -1460458288
+      kel_152: -1317470160
+      kel_153: 277204604
+      kel_154: 812366317
+      kel_155: -1861570460
+      kel_156: 683606064
+      kel_157: 398292496
+      kel_158: 1204653683
+      kel_159: 830976021
+      kel_16: 785449058
+      kel_160: -939288705
+      kel_161: -1134470465
+      kel_162: -159270214
+      kel_163: 513551342
+      kel_164: -630515789
+      kel_165: 200957064
+      kel_166: -208449417
+      kel_167: 218168759
+      kel_168: 871194677
+      kel_169: -123302163
+      kel_17: 591764258
+      kel_170: -559393626
+      kel_171: 1804983681
+      kel_172: -862474262
+      kel_173: -1949508292
+      kel_174: 1832024123
+      kel_175: 1432906063
+      kel_176: -1776133696
+      kel_177: 1984001238
+      kel_178: -1996020222
+      kel_179: 1844312669
+      kel_18: 1746488247
+      kel_180: -1862942355
+      kel_181: -957069696
+      kel_182: -1053212122
+      kel_183: -1958443083
+      kel_184: 881340981
+      kel_185: 2142332053
+      kel_186: -1873241205
+      kel_187: -226038860
+      kel_188: 1968064846
+      kel_189: 423099067
+      kel_19: -26528612
+      kel_190: -530136170
+      kel_191: 1664322353
+      kel_192: 1749005761
+      kel_193: -1674032866
+      kel_194: 1561101454
+      kel_195: 1431309620
+      kel_196: -547132407
+      kel_197: -1169279929
+      kel_198: 1768483728
+      kel_199: 262653658
+      kel_2: 1933356370
+      kel_20: -477989731
+      kel_200: 485168369
+      kel_201: 671081810
+      kel_202: -1876167453
+      kel_203: 666333439
+      kel_204: 1176418882
+      kel_205: 854884056
+      kel_206: -37741638
+      kel_207: 1791375851
+      kel_208: 1515406947
+      kel_209: -1855760208
+      kel_21: 1465739510
+      kel_210: 99656443
+      kel_211: 706407212
+      kel_212: -2070576783
+      kel_213: 760585167
+      kel_214: -1527698652
+      kel_215: -1889224352
+      kel_216: -928971381
+      kel_217: 734782757
+      kel_218: 166723209
+      kel_219: -1294012553
+      kel_22: -874750402
+      kel_220: -324481897
+      kel_23: -1877724083
+      kel_24: -2113221872
+      kel_25: -1385405553
+      kel_26: -1330709942
+      kel_27: 979957518
+      kel_28: -1075445094
+      kel_29: -574724342
+      kel_3: 987314489
+      kel_30: -2104637287
+      kel_31: 1673846035
+      kel_32: 466967972
+      kel_33: 1429511451
+      kel_34: -217013538
+      kel_35: 422543912
+      kel_36: -1969253536
+      kel_37: 2021359068
+      kel_38: 97148850
+      kel_39: 141384299
+      kel_4: 1418311157
+      kel_40: 274011740
+      kel_41: 597519391
+      kel_42: -233245223
+      kel_43: -1874493348
+      kel_44: -356215257
+      kel_45: 1456751880
+      kel_46: 1336971127
+      kel_47: 177173952
+      kel_48: -1480052593
+      kel_49: 1695315594
+      kel_5: -2095355692
+      kel_50: -1501933852
+      kel_51: -445687521
+      kel_52: -1448182337
+      kel_53: 383220568
+      kel_54: -418437298
+      kel_55: -731570689
+      kel_56: 530056801
+      kel_57: -1172554345
+      kel_58: 727068215
+      kel_59: -961424200
+      kel_6: 1905375158
+      kel_60: 1132212202
+      kel_61: 1286430093
+      kel_62: -238866112
+      kel_63: -1700599989
+      kel_64: 744764871
+      kel_65: -1513864954
+      kel_66: -543485354
+      kel_67: 221990267
+      kel_68: -1391942263
+      kel_69: 303166503
+      kel_7: -1150464486
+      kel_70: -1258172630
+      kel_71: -1375737024
+      kel_72: -1020934837
+      kel_73: -291339155
+      kel_74: 1198535664
+      kel_75: 475713563
+      kel_76: -421683924
+      kel_77: 400551881
+      kel_78: -2119280753
+      kel_79: -1355727105
+      kel_8: -1795841788
+      kel_80: 170648353
+      kel_81: 1391378308
+      kel_82: -1910657224
+      kel_83: -239887881
+      kel_84: -1779470336
+      kel_85: 765841056
+      kel_86: -231762025
+      kel_87: 1452827064
+      kel_88: 1877904795
+      kel_89: -1369748341
+      kel_9: 1350182399
+      kel_90: -442682049
+      kel_91: 339299548
+      kel_92: -485221582
+      kel_93: -610815958
+      kel_94: -2006503388
+      kel_95: 137333584
+      kel_96: -755499648
+      kel_97: 255140655
+      kel_98: 1585069588
+      kel_99: -860370255
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

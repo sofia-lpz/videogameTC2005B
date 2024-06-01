@@ -12,8 +12,13 @@ using UnityEngine;
 public class stateNameController : MonoBehaviour
 {
     /*PLAYER INFO*/
+    public static List<Player> Players = new List<Player>();
+    public static string playerStatus = "None";
+
     public static string player_username = "nombre de usuario";
-    public static int player_level = 0;
+    public static int player_level = 1;
+    public static int player_matches_won = 1;
+
     public static List<string> inventory = new List<string>();
 
     /*FOR GAMEPLAY*/
@@ -23,6 +28,8 @@ public class stateNameController : MonoBehaviour
     public static float playerXPosInScene = 0;
     public static float playerYPosInScene = 0;
     public static string playerPreviousScene;
+
+    public static HashSet<string> playedCutscenes = new HashSet<string>();
 
     /*FOR AUDIO*/
     public static float volume = 0.5f;

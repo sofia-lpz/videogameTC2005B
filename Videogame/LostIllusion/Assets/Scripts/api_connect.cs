@@ -3,14 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using System; // for Action<string>
+using UnityEngine.UI;
 
 public class api_connect : MonoBehaviour
 {
     public static string result;
     public static string cardResults;
     public string url = "http://localhost:3000/api";
+    [SerializeField] Button startButton;
+    [SerializeField] Button loginButton;
+    [SerializeField] Button registerButton;
 
     public void Start(){
+        startButton.interactable = false; // disable the button
+        loginButton.interactable = false; // disable the button
+        registerButton.interactable = false; // disable the button
         GetData("/cards", api_processing.CardProcessing);
         GetData("/villagers", api_processing.VillagerProcessing);
     }
@@ -35,6 +42,8 @@ public class api_connect : MonoBehaviour
                 result = www.downloadHandler.text;
                 Debug.Log("request successful: " + result);
                 callback(result);
+                startButton.interactable = true; // enable the button
+                loginButton.interactable = true; // enable the button
             }
         }
     }

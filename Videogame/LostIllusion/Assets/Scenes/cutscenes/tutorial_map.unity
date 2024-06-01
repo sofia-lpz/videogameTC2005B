@@ -388,6 +388,10 @@ PrefabInstance:
       value: FadeInCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 5947694056574833599, guid: 09561160a5edde4469be286490901dce, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947694056574833599, guid: 09561160a5edde4469be286490901dce, type: 3}
       propertyPath: m_SortingOrder
       value: 100
       objectReference: {fileID: 0}
@@ -1025,7 +1029,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: press I for inventory
+  m_text: press S to skip cutscenes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 817a791b8f28d7c4f815d7985ee13db5, type: 2}
   m_sharedMaterial: {fileID: 5337005374529218324, guid: 817a791b8f28d7c4f815d7985ee13db5, type: 2}
