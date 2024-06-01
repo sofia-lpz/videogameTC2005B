@@ -6,7 +6,7 @@ using TMPro;
 
 public class Card_Buttons : MonoBehaviour
 {
-    [SerializeField] TMP_Text card_name;
+    [SerializeField] public TMP_Text card_name;
     [SerializeField] TMP_Text card_description;
     [SerializeField] TMP_Text card_energyCost;
     public int card_heal;

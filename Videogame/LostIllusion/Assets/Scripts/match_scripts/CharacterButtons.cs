@@ -17,9 +17,11 @@ public class CharacterButtons : MonoBehaviour
     [SerializeField] TMP_Text characterDescription;
      [SerializeField] TMP_Text characterElement;
 
-    public int currentHealth = 5;
+    public int currentHealth ;
     public HealthBar healthBar;
     public bool active;
+    public int currentAttack ;
+    public int currentDefense ;
 
     public Villager character;
 
@@ -48,11 +50,13 @@ public class CharacterButtons : MonoBehaviour
         
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int amount)
     {
-        currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
+        currentHealth -= amount;
+        if (currentHealth < 0) currentHealth = 0; // Ensure health doesn't go negative
+        Debug.Log("Took damage: " + amount + ", Current Health: " + currentHealth);
     }
+
     public void Heal(int heal)
     {
         currentHealth += heal;
@@ -89,5 +93,31 @@ public class CharacterButtons : MonoBehaviour
             transform.position = new Vector3(transform.position.x, activePosE, transform.position.z);
             active = true;
         }
+    }
+
+    public void IncreaseDefense(int amount)
+    {
+        currentDefense += amount;
+        Debug.Log("Increased defense by " + amount);
+    }
+
+    public void IncreaseAttack(int amount)
+    {
+        currentAttack += amount;
+        Debug.Log("Increased attack by " + amount);
+    }
+
+    public void DecreaseDefense(int amount)
+    {
+        currentDefense -= amount;
+        if (currentDefense < 0) currentDefense = 0;
+        Debug.Log("Decreased defense by " + amount);
+    }
+
+    public void DecreaseAttack(int amount)
+    {
+        currentAttack -= amount;
+        if (currentAttack < 0) currentAttack = 0;
+        Debug.Log("Decreased attack by " + amount);
     }
 }

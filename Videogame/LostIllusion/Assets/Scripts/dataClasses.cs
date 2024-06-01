@@ -17,6 +17,7 @@ public class Card
     public int player_defense;
     public int player_support;
     public int enemy_defense;
+    public int enemy_attack;
 }
 
 [Serializable]
