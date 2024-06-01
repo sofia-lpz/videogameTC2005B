@@ -240,6 +240,9 @@ public static List<string> dev_bunny_lines_1 = new List<string> {
     tcgData.Cards.Count > 0 ? "The first card name is " + tcgData.Cards[0].name : "There are no cards available"
 };
 
+public static List<List<string>> cutsceneStart_lines = new List<List<string>> {
+    new List<string> { "A memory..." }
+};
 
 // to do, make a dictionary of dictionaries instead of dictionary of lists
 public static Dictionary<string, List<List<string>>> dialoguesDictionary = new Dictionary<string, List<List<string>>> {
@@ -249,7 +252,8 @@ public static Dictionary<string, List<List<string>>> dialoguesDictionary = new D
     {"COLOMETA", colometa_lines},
     {"dev_bunny", new List<List<string>> { dev_bunny_lines_1 }},
     {"NARRATOR", narrator_lines},
-    {"WOMAN", woman_lines}
+    {"WOMAN", woman_lines},
+     {"cutsceneStart", cutsceneStart_lines}
 
 };
 

@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Register.unity
     guid: 438c7544e37ca134289a5aa8fcc9c35a
   - enabled: 1
+    path: Assets/Scenes/map/finalHome.unity
+    guid: 1883bafe03dc62d49a9714a7860600cd
+  - enabled: 1
     path: Assets/Scenes/cutscenes/cutscene2.unity
     guid: a7eedb5f3b3964c4f9a5a28ca76314b9
   - enabled: 1

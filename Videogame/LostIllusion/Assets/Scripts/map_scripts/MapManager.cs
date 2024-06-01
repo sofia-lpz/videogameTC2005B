@@ -10,6 +10,7 @@ public class MapManager : MonoBehaviour
 
     void Start()
     {
+        /*
         GameObject player = GameObject.FindGameObjectWithTag("Player");
     if (player != null)
     {
@@ -19,6 +20,7 @@ public class MapManager : MonoBehaviour
     {
         Debug.Log("No GameObject found with the Player tag");
     }
+    */
     }
     void Update()
     {

@@ -101,6 +101,7 @@ public class cutscene4Manager : MonoBehaviour
 
         yield return new WaitForSeconds(1.0f); // Wait for 1 second
         cutsceneCanvas = Instantiate(fadeOutCanvasPrefab);
+        stateNameController.playedCutscenes.Add("cutscene4");
         SceneManager.LoadScene(nextScene);
     }
 

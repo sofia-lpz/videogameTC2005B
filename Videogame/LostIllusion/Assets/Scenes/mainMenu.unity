@@ -769,6 +769,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2903021227579976892, guid: c2e2f9d3f50b175408aeb94c45eff27a, type: 3}
+      propertyPath: nextSceneMenu
+      value: tutorial_map
+      objectReference: {fileID: 0}
     - target: {fileID: 2917925103464250545, guid: c2e2f9d3f50b175408aeb94c45eff27a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 465.3333
@@ -1405,6 +1409,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: ApiStart
       objectReference: {fileID: 0}
+    - target: {fileID: 5834423950452624133, guid: 5db684b511c93c543aaaa3cd963647d7, type: 3}
+      propertyPath: loginButton
+      value: 
+      objectReference: {fileID: 1010161155}
+    - target: {fileID: 5834423950452624133, guid: 5db684b511c93c543aaaa3cd963647d7, type: 3}
+      propertyPath: startButton
+      value: 
+      objectReference: {fileID: 691034034}
+    - target: {fileID: 5834423950452624133, guid: 5db684b511c93c543aaaa3cd963647d7, type: 3}
+      propertyPath: registerButton
+      value: 
+      objectReference: {fileID: 343659545}
     - target: {fileID: 9189214492662373505, guid: 5db684b511c93c543aaaa3cd963647d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -29,6 +29,8 @@ public class stateNameController : MonoBehaviour
     public static float playerYPosInScene = 0;
     public static string playerPreviousScene;
 
+    public static HashSet<string> playedCutscenes = new HashSet<string>();
+
     /*FOR AUDIO*/
     public static float volume = 0.5f;
     public static bool muted = false;
