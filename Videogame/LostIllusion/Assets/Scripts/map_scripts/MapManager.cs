@@ -11,16 +11,14 @@ public class MapManager : MonoBehaviour
     void Start()
     {
         /*
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-    if (player != null)
-    {
-        player.transform.position = new Vector3(stateNameController.playerXPosInScene, stateNameController.playerYPosInScene, 0);
-    }
-    else
-    {
-        Debug.Log("No GameObject found with the Player tag");
-    }
-    */
+        if (stateNameController.playerPreviousScene != "")
+        {
+            //find player by tag and change position
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            
+            player.transform.position = new Vector3(stateNameController.playerXPosInScene, stateNameController.playerYPosInScene, 0);
+        }
+        */
     }
     void Update()
     {

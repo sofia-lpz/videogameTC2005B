@@ -26,6 +26,8 @@ public class cutscene3Manager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.S))
         {
+            cutsceneCanvas = Instantiate(fadeOutCanvasPrefab);
+        stateNameController.playedCutscenes.Add("cutscene3");
             SceneManager.LoadScene(nextScene);
         }
 

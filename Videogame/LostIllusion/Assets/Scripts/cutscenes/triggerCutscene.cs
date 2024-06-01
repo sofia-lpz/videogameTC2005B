@@ -25,6 +25,7 @@ if (stateNameController.playedCutscenes.Contains(cutsceneName)){
 
         stateNameController.playerXPosInScene = other.transform.position.x;
         stateNameController.playerYPosInScene = other.transform.position.y;
+        stateNameController.playerPreviousScene = SceneManager.GetActiveScene().name;
 
         if (other.tag == "Player" && !interacted){
             StartCoroutine(StartCutscene());

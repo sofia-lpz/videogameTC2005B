@@ -15,6 +15,7 @@ public class cutscene2Manager : MonoBehaviour
     void Start()
     {
         StartCoroutine(scene());
+        
     }
 
     // Update is called once per frame
@@ -26,6 +27,8 @@ public class cutscene2Manager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.S))
         {
+            cutsceneCanvas = Instantiate(fadeOutCanvasPrefab);
+        stateNameController.playedCutscenes.Add("cutscene2");
             SceneManager.LoadScene(nextScene);
         }
 

@@ -26,6 +26,10 @@ public class introManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.S))
         {
+            StopAllCoroutines();
+            cutsceneCanvas = Instantiate(fadeOutCanvasPrefab);
+            stateNameController.freezePlayer = false;
+            stateNameController.playedCutscenes.Add("intro");
             SceneManager.LoadScene(nextScene);
         }
 
