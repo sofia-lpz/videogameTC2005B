@@ -1,0 +1,5350 @@
+fileFormatVersion: 2
+guid: 7950155cec7994cf29216250d41b8e09
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: aubrey_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 454
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcbcd2f1c794c40879d536b2baa7e27b
+      internalID: 1765565887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 454
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bb3132d6729546118c3c3bc385409a0
+      internalID: 1460751741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 454
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a08be3149172946cd8cdf5f0e966c562
+      internalID: 1040721716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_3
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 454
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb07e36387d74a9eaef337284964b94
+      internalID: -1244549490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_4
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 454
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9557d3835b8704de9b9c24992521e54e
+      internalID: 1276396903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_5
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 454
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 082d0d359700e4898b5e585d0c8e8466
+      internalID: 276870841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_6
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 454
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e04cff9dfa04df4a86cd90c7f95763
+      internalID: 358430710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_7
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 454
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89445265415c43299015505e8ed5b4d
+      internalID: -1459449071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_8
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 454
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e41aefa3d5c654cf6844b0e8ef0fb48a
+      internalID: -1753364245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_9
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 454
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9f0b71c321c4fb2a2f81a317da0e83
+      internalID: 354815217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_10
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 454
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b4bc1fb558b64cd795fb046c6e35096
+      internalID: 452919217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_11
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 454
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001de6b4447174fefbfd72e952cf7eae
+      internalID: -1957485846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_12
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 454
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6513f67d4344bb2af2414d2cbef8b2
+      internalID: -1144908833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_13
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 454
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1180f9d64839f4f088d27a5b1ba212f5
+      internalID: -247218536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_14
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 454
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70fc6c9db605d439292df381e717349d
+      internalID: -1506310268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_15
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 454
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15958b94049da4d56bdb62edf48d077e
+      internalID: 248964876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_16
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 454
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632b465b165b6479da565b4398344441
+      internalID: -60263185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_17
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 421
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc79957be9384b329b3ee69585c4759
+      internalID: -1654851929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_18
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 421
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e09bc0e63f014620b21e8aa3e7d8aaf
+      internalID: -1286040260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_19
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 421
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b67543f3968489194888ac0a553792
+      internalID: -121159217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_20
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 421
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 145f8081895734e1abecb0ce3d732bbc
+      internalID: 2045516092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_21
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 421
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb469df70c3c4f89955b446429e120c
+      internalID: -1385190603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_22
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 421
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0fb9a2ac2df5412ca8f1e04f751fc67
+      internalID: -1685730349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_23
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 421
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f7b29d07bbf434a8b3487059de992b
+      internalID: -2145627285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_24
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 421
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6715cd9be451b4371b4b8d1f0ef4d802
+      internalID: 1884735789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_25
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 421
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10f27037e61c4cdda2913d8b7f9d955
+      internalID: 861709268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_26
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 421
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a6e4fc5824fd4212ad5388be196c951
+      internalID: -1978973860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_27
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 421
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af9e48597ae24123873f4b0fe9a7f9d
+      internalID: 1648159132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_28
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 421
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd08f3191f474e2993211a1b19c6160
+      internalID: 1513077263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_29
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 421
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89b1f8a916f534125adc8c2b3212d714
+      internalID: 2004208771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_30
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 421
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4124a6a020dd4b8a9f796d75e60c827
+      internalID: -1436078372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_31
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 421
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c106d20dbb084441a92f6220328e196c
+      internalID: 1500849054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_32
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 421
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4cf8e544b2a240eb95fc44b1edbe89d
+      internalID: 599004017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_33
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 421
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 287fafe89fcbc44e89ae2e8ec6cc8d15
+      internalID: 353497983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_34
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 388
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1179efdcb919d497cb34569185f64960
+      internalID: 562517842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_35
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 388
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818edfe20f9cc48299498201df483be0
+      internalID: 679255168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_36
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 388
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d9371c1ac1b4a78ba0f6476e90f29e
+      internalID: 831351871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_37
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 388
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3bd80d7b2309433d905289604e07ac6
+      internalID: -992945682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_38
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 388
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a96b74df1c54ae49a47ad9b1a8e439
+      internalID: 2144688375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_39
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 388
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b78094bade244beb1e822b8b27e6b6
+      internalID: 1746883748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_40
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 388
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e745922a778452392cc6872bf7639a
+      internalID: -459578922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_41
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 388
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad4f50ccec98a46028c630490349bf7f
+      internalID: -848448026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_42
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 388
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8991a84a9c4242b1941e790e8353190
+      internalID: -1327216101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_43
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 388
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00c124b821324521b69cd7fbe751191
+      internalID: -1073228057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_44
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 388
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b12188a35ed943f980907dd94c85154
+      internalID: 380902535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_45
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 388
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e281f558f2240ba8afb68167e30837
+      internalID: -1012261628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_46
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 388
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d798ec4cc4fdb49299a4d531efd03b75
+      internalID: -55452394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_47
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 388
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f662b510f247e4fc88214c809c599820
+      internalID: -1252096819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_48
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 388
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c3c785b01cc04205936ba3bebc39e8c
+      internalID: 1554073946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_49
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 388
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c68f71cef69ca4e3e845e2efca33904c
+      internalID: 1871361673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_50
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 388
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dbfe140fc6ce45f9a90d555151a8b19
+      internalID: 1612770610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_51
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 355
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41df58e8be70943868af7cdbb21d8efe
+      internalID: 1055595850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_52
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 355
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d276392e60d794785a4881e19a619dd1
+      internalID: -964030009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_53
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 355
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eff466e605a364d6693a8f925a67218f
+      internalID: 1867887917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_54
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 355
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78dc1c64058e5443480fc1099aaa76e1
+      internalID: -1778971610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_55
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 355
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40055245643eb4dd984d76dec563e614
+      internalID: -1126109509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_56
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 355
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f955ced5e66514e04ae5b20f21d35c41
+      internalID: -1756087733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_57
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 355
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a05290656c3d457cae945624f60096d
+      internalID: -1320357955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_58
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 355
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cceabdfb17d864468ad68866c18bb14c
+      internalID: -1915945103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_59
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 355
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b907fc302ff4a8ab01fe85882538f5
+      internalID: 749267296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_60
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 355
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faf619fed17d84fe1bcadad076723573
+      internalID: -1735142900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_61
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 355
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ba287af19774182b87ebd2d1463213
+      internalID: -72056561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_62
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 355
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87af73b3958fe4a0c9152ae16254d6c9
+      internalID: 574760891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_63
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 355
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e0d27968c74c45cea43040c37e92720
+      internalID: 155387928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_64
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 355
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17db15f781504a449168b45200d6d31
+      internalID: 1567340360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_65
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 355
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e665ee391c84852951b8af2ada140e
+      internalID: -660462276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_66
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 355
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01843e23c9bff44f5aa7c59528726d1c
+      internalID: -1944136153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_67
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 355
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a607f7039b0b4a16b9edd2f85bcaf13
+      internalID: 1243936397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_68
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 322
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1627340fb01914ebeaabfd8be6a3e5f3
+      internalID: -1418753554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_69
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 322
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d5343d25bdbf41a28a84c82e7072574
+      internalID: 122524998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_70
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 322
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8efbf0029537542bb9ae58a37126b7dd
+      internalID: -1946722919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_71
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 322
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852bfa66db5654fe49704e2ae91ae4a8
+      internalID: 1832861199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_72
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 322
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7642d7cca2a42529c2752ceba128fd
+      internalID: -419174811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_73
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 322
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c2cd8c4ddc0d482aa7a208c81dc02f4
+      internalID: -874802773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_74
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 322
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c72ef0bbe33d34ff6bb5c844e3042fee
+      internalID: -1597782414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_75
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 322
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b85296df9584e4789b36241b81184f
+      internalID: -1620223154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_76
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 322
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be19d67cf8b94654bd744f8fdc46a06
+      internalID: -568973632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_77
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 322
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19aec9ad48d1141b7ba1ee2e8610b72f
+      internalID: 947269218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_78
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 322
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0baf2793abd514a9388bfd96108a0ce6
+      internalID: -2105092660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_79
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 322
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d86abb5b66aa460cb8c7d9b9fc2f9ad
+      internalID: -1448355211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_80
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 322
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b085a38ea2874bb1bfde6a934c58889
+      internalID: -1528452211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_81
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 322
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec2ac43398ab4b7780fb1d86b5c96c1
+      internalID: 642267367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_82
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 322
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c648d82e360948a4bb331bc921f2d09
+      internalID: 1630700765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_83
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 322
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c5ca8b539264424ebb71a40a2dfd665
+      internalID: 986847988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_84
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 322
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9d9b18e802a6427b88c527462bc3827
+      internalID: -196426042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_85
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 289
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12be394e5a1df4062b43ff2acd5dc4a1
+      internalID: 1571901774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_86
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 289
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd9fe6a29d2d40e8b1556a540f88cad
+      internalID: -23843627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_87
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 289
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f82485d4698e47199971029a469bf99
+      internalID: -357317243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_88
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 289
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 560d0a23fd05d4aa48d038346bc77a14
+      internalID: -1439759156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_89
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 289
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca4becdf6fae486f980bca378b23b6c
+      internalID: 1003568715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_90
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 289
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1fcb4488127a49f1944181205ff08eb
+      internalID: 642411297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_91
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 289
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a554af001876471381aa8f9b4dfa630
+      internalID: -979056623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_92
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 289
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d9b1a4d716e94d4d912e888c3a4eaa6
+      internalID: -1851781841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_93
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 289
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6547273b573a04f7b881c9bd57069b57
+      internalID: -807386207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_94
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 289
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105dec0851deb402b8f5c97bffb060f9
+      internalID: 1681856488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_95
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 289
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3955c849a2f8d40d291d184d34410a65
+      internalID: -1581620500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_96
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 289
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aee65db6acfd4491875db1bfe097968
+      internalID: 127049689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_97
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 289
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196ef15cc693744dca0c8a7b82c85358
+      internalID: -1612926667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_98
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 289
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f0fc64ed1c140fa9aceed69b0eafab
+      internalID: 516250163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_99
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 289
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20950bfef71234fae9b35bf26e0106e9
+      internalID: -826281131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_100
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 289
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b2b5f9746b04cb0aed63a22c470606
+      internalID: 1051827754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_101
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 289
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ed56a9a3fbb043de83f69ac010ea0c3
+      internalID: -5936016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_102
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 256
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22abe964691754b4b9540c4016ab82ea
+      internalID: -884515174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_103
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 256
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021cb64dfb17343dcb071b9a1743108a
+      internalID: -212893166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_104
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 256
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0809a2e39261a4d7cb432a8cd2194b5e
+      internalID: -588709576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_105
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 256
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d2cbac30a464992aa76bc50364d5b9
+      internalID: -1690875271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_106
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 256
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e7e548a448648689dd26347e48450b
+      internalID: 754766398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_107
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 256
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a31bd3f59942e43c9af78c0067d11463
+      internalID: 531538424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_108
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 256
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a74aec58fc00746a4b9c48bdc50f715a
+      internalID: 258300885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_109
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 256
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f639231ac2f949e7ab430c2267477a5
+      internalID: -1696694946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_110
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 256
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a34534b3d084d4ed89a05f657d50d9b7
+      internalID: -273526856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_111
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 256
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbbd0074f8170499bb71655cb901c862
+      internalID: -480230448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_112
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 256
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d826a4702caf4f3a8ddb857ff7da51a
+      internalID: 1507302416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_113
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 256
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b9f5321b586483a993f2ba1f67803d
+      internalID: 310045780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_114
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 256
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5593a338bf11c4a81a8f6417081737ee
+      internalID: -538926937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_115
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 256
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84db845094d574a01a91cade63b18ae8
+      internalID: -743669014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_116
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 256
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1cfb1751009459cb7e65e84fab0109
+      internalID: -139071488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_117
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 256
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb862b4587fb04c5c9e75e15556c50dd
+      internalID: 1141045858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_118
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 256
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4888a411cd604a6b81862a92564ca3f
+      internalID: -1755116977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_119
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 223
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2727d4ed0bc4abaa8f02cb9d1ea273
+      internalID: -1007918488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_120
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 223
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09052f2c7a60488aa1e651f2667c275
+      internalID: 221891239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_121
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 223
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f957c87777b4ad6baa334c58c5626f
+      internalID: 274405825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_122
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 223
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c87e35a5a8ff41a59ae18934158c0bc
+      internalID: 1622136727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_123
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 223
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51d2e096980ae4da79d0465350932d9c
+      internalID: 868729702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_124
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 223
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f081c78dd38244c03a1b25a3ac148551
+      internalID: -1120832181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_125
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 223
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bef81c5249f440088f84356814b76f7
+      internalID: 1325438730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_126
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 223
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eae36142ec0b4014aff7fe013814540
+      internalID: -346301161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_127
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 223
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea1e4a3bfdd94de1bf35ead02ebfdbd
+      internalID: 2137064778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_128
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 223
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d6b2e58ae53b4b34b017888ab118cf9
+      internalID: 1307093897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_129
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 223
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 954cde188a5b843049f89f9050c19a50
+      internalID: 1454999228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_130
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 223
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e09c9442a4152428fa5acf2cea0ef7ef
+      internalID: -165856983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_131
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 223
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e156fde5c01ac44bf9393a13ba073d10
+      internalID: 268048082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_132
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 223
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f50dc19ef3524fc9b4660bee84492e0
+      internalID: 1428851553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_133
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 223
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033fac55d1e1e48858ca2321afcc1b52
+      internalID: 827573734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_134
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 223
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 154da4b32d2724877ba44aae630d9897
+      internalID: 1836728210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_135
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 223
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfdfa8cc583db42c098c68784284295c
+      internalID: 932300997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_136
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 190
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d7c8914623c4a44b8e0e0ae8752d75
+      internalID: 765557741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_137
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 190
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9570aa99f30d64d8ba97e8123190844a
+      internalID: -850860010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_138
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 190
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc764bbcf41840fdb5e95580e90494d
+      internalID: -1424294245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_139
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 190
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e1d44a6aec024c2789ae1c538bf1ad4
+      internalID: 1051672401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_140
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 190
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0afac785c85f4d43bcf068d930254a4
+      internalID: 1310604295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_141
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 190
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb1f22e11f793438ba1a65731d7f02ed
+      internalID: -262879855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_142
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 190
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b31245a4b93466cbe77182575768de
+      internalID: 1234610769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_143
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 190
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c7197aab8f074d2aa4245eaee5da584
+      internalID: -948748358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_144
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 190
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71fa144122c05438ba6329c00bc88d85
+      internalID: 1493775606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_145
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 190
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89728ec41061c4409a14a5acb57d6d7d
+      internalID: 152432519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_146
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 190
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e3d63df52b54fe58db1d929cab0d3a
+      internalID: -1682207349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_147
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 190
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76de0cacf292a40d9bfbb5ac8bf6b7f0
+      internalID: 370812961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_148
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 190
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a76c9a73ad74173b44e15be1e34412
+      internalID: 1660318800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_149
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 190
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 192ba57edba2747058ef04ab75a45120
+      internalID: -639208202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_150
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 190
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ca3ef28cef94cb19ea61925ea6dde0
+      internalID: 580291994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_151
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 190
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007d2679143d343d0b6a0c05e362224f
+      internalID: -1356581401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_152
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 190
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30fff5dbe6c0d418e81c16c43784742f
+      internalID: 998764044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_153
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 157
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b49b5eda688c74443b75f245006b35ea
+      internalID: 679626318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_154
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 157
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee4cdd561be340a4ba0adffc6de2353
+      internalID: -214055145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_155
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 157
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a1fab847f3e54c4dab3b2447438e286
+      internalID: -369880322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_156
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 157
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3962849ca050c496f937926db50c38ab
+      internalID: -1969936811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_157
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 157
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e149b4256d544149e9c344fda2a03f
+      internalID: -1759761970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_158
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 157
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dc5b151230b64f00905774a0a2daac2
+      internalID: 1388328450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_159
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 157
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c3fb25e382114bb599ea44cb9c7d6df
+      internalID: 1601901912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_160
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 157
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a09283141b42544d1a553643365d4fa0
+      internalID: 1225931101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_161
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 157
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d24076ceb2734ef398234433e59f533
+      internalID: -529844382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_162
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 157
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cbee0a6586db46a6959d838d6ebdc13
+      internalID: -1281691578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_163
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 157
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 913d8d0002953484fb850d402a314328
+      internalID: 442297252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_164
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 157
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd6d962b8d4643439378072779467f7
+      internalID: -798174286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_165
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 157
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d2ef2a0785d466cba44496cb7cf8f8
+      internalID: 615537765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_166
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 157
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1260a634877104e01b61c13c197070a9
+      internalID: 1913575537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_167
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 157
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b8a61dc854f4660b56b4983845f001
+      internalID: -985002362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_168
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 157
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4fbc58140de144fd99b80273b39a668
+      internalID: 1488201917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_169
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 157
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c767a4417f63b4df6863a7ce1a480175
+      internalID: -1826166268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_170
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 124
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffcdfbd39d220472c938b6423c991ba1
+      internalID: 1306470117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_171
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 124
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29a9464d802f74764a3438fc35a63066
+      internalID: 1100731797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_172
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 124
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f39609ca3a44958a37b796b667a7e7
+      internalID: 602414064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_173
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 124
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76dd640425bf24586a0f3b370ab2e08f
+      internalID: 1944261495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_174
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 124
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23900403ca5884372bee3328540d68c0
+      internalID: -1772102167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_175
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 124
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6faa530fc4b14c049dafa25bfefa6db
+      internalID: -516891041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_176
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 124
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaf0f1e18f9334f53ace12260c6f8dc8
+      internalID: 1533933373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_177
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 124
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3a49e1621c7d4d1580daebadd20fb5e
+      internalID: -385686079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_178
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 124
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be8c35f7775e540f49cd51af91117b2a
+      internalID: -197025371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_179
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 124
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eb2dc466de9d45d484bfed190624ce9
+      internalID: -2040325357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_180
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 124
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2ec7f37324040938c22c4cad618d81
+      internalID: 1625580718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_181
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 124
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af7a94301bb02423d82364d97952d686
+      internalID: 1284864437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_182
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 124
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f2965ff7cf9f45d1b24eb5278c316ea
+      internalID: 1685884612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_183
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 124
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5f8673755d08441ebc741bf85d9f764
+      internalID: -1732548295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_184
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 124
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36fa62d431da442da891e9bb99763c04
+      internalID: -1215687889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_185
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 124
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe38c0a7a6aa41e4b829c211527ea8a
+      internalID: 547384525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_186
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 124
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f54fdd68e7664a7dbc1ba98578fd5f8
+      internalID: -2042177700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_187
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 91
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9bf6777514f48b5898e9bceafbcf76
+      internalID: 691503024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_188
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 91
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b49bbb8f3e264bab8739b1c73ff6b12
+      internalID: -1630870459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_189
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 91
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f42a1f70a869473d86fdca97148962a
+      internalID: -1020129832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_190
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 91
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c039a82a20b64742a0840e037c8615a
+      internalID: 392376252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_191
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 91
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b558064199c4c788e56342d2c1992a
+      internalID: -876574091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_192
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 91
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baaf8c7d88b76440e9a28a25472b4124
+      internalID: -1515661611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_193
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 91
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa3b092b181f4034bb8581586f336b8
+      internalID: 1941789904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_194
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 91
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da86762727f9e437985dd0c65908da02
+      internalID: -871206677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_195
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 91
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4febf9457b3bd4f4581c36f7955506a5
+      internalID: -1595092397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_196
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 91
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14dc5736cb8c345be80bc152ba040a8e
+      internalID: 1273107772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_197
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 91
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970d60e68fb6844e8964827bea98668b
+      internalID: -164856317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_198
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 91
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0583908b953341babafa72172f8a3d0
+      internalID: 1024840404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_199
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 91
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20cae63bbf63f4db98ae41997891fb19
+      internalID: 191300499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_200
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 91
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03fe76d024f2449a49cc23e953d55c2f
+      internalID: 236568755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_201
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 91
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e08c00acfc840c2be672966906b89f
+      internalID: -1884911416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_202
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 91
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8907a1064b634ce2a1fd81db72fe895
+      internalID: 1438629622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_203
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 91
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b5339c3f3fb43e98b767af406944fa
+      internalID: 1504346514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_204
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 58
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5afcde67207784f00b2b3c704bb96271
+      internalID: -184141441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_205
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 58
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8254fc8e3c7141bcb170d5fd11fccdc
+      internalID: 613026896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_206
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 58
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad651f6a90712401987830a1a51b0e13
+      internalID: 18152708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_207
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 58
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6b0f594b80c43ca916e8d77cf082b1
+      internalID: -1334476906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_208
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 58
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d4b406ea3a224fc38158a72045c8900
+      internalID: -155153860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_209
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 58
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64c410576e3047be8aa9cbf8c723af0
+      internalID: -1506448821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_210
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 58
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db0565f712f02413c93eb4d581a6377d
+      internalID: -339807636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_211
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 58
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd714f1d79514fda83a73a65c8cda62
+      internalID: -1748969558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_212
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 58
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27558067907284514873e39fc7107691
+      internalID: 137727611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_213
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 58
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3010733b3fd804396aed7cb8303cf957
+      internalID: 1137970553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_214
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 58
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102f607e3793e4ed18bdbb4387b70b0f
+      internalID: -617218877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_215
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 58
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc303aa5dde24c0da85ab500a4d95fd
+      internalID: 1188936424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_216
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 58
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c0ee895a6884dd287abb987a8193fa
+      internalID: -429365029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_217
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 58
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f812c93728d2d47789fda01de53c3ce5
+      internalID: 1581269135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_218
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 58
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac771f38b33f40c7a944771826b3fd0
+      internalID: 1625573242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_219
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 58
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d76fbacae3684f9cb47d9ee10a3b75e
+      internalID: -1315628061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_220
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 58
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52bc5652b573f4860a1dc4f3cc134adc
+      internalID: -146011674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_221
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 25
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e7ab87ff2e644ffa7e75e844cbf813
+      internalID: 2121835542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_222
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 25
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fcfe7bfb71bf426b8351ca174761a94
+      internalID: 1744151481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_223
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 25
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788e6911ced954735b7142988fbbbdcc
+      internalID: -217022306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_224
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 25
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c01c6121daf426981b68da0eabbac7
+      internalID: -1985765857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_225
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 25
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ee88cdcc8264a6692c593903f9e2f4
+      internalID: -1483725579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_226
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 25
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96dc3a8af0f07406482a0b0f817e40d6
+      internalID: 1622399878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_227
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 25
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f98a074956c4548a0fa05499e1f361
+      internalID: 454174616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_228
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 25
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3265aa2d93ca4b9fb2eb3c6bee4aa73
+      internalID: -2119026425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_229
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 25
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9dd8cd9a7910469e81a67582097384a
+      internalID: -11640500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_230
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 25
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2683ed060d93e4541baafe5d0467db7d
+      internalID: -1514708297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_231
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 25
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcfd7a984efec4b76ae8ad448352df94
+      internalID: -1407911941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_232
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 25
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4307d543929c9483ca26acf97e7ac559
+      internalID: 1077884710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_233
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 25
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e8bb68449794f9dbba503b6e004348
+      internalID: -767135825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_234
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 25
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a944f2a7e0e3e41b69ecb0bf581a7bbd
+      internalID: 838435575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_235
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 25
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4701abbbacba441199707ee792ad4531
+      internalID: 1703555882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_236
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 25
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d1946ad23f94a0e9b5c9754f5ad635
+      internalID: -857490956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aubrey_237
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 25
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a669fb3328aec4eed8fcff32e534b430
+      internalID: 409790679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      aubrey_0: 1765565887
+      aubrey_1: 1460751741
+      aubrey_10: 452919217
+      aubrey_100: 1051827754
+      aubrey_101: -5936016
+      aubrey_102: -884515174
+      aubrey_103: -212893166
+      aubrey_104: -588709576
+      aubrey_105: -1690875271
+      aubrey_106: 754766398
+      aubrey_107: 531538424
+      aubrey_108: 258300885
+      aubrey_109: -1696694946
+      aubrey_11: -1957485846
+      aubrey_110: -273526856
+      aubrey_111: -480230448
+      aubrey_112: 1507302416
+      aubrey_113: 310045780
+      aubrey_114: -538926937
+      aubrey_115: -743669014
+      aubrey_116: -139071488
+      aubrey_117: 1141045858
+      aubrey_118: -1755116977
+      aubrey_119: -1007918488
+      aubrey_12: -1144908833
+      aubrey_120: 221891239
+      aubrey_121: 274405825
+      aubrey_122: 1622136727
+      aubrey_123: 868729702
+      aubrey_124: -1120832181
+      aubrey_125: 1325438730
+      aubrey_126: -346301161
+      aubrey_127: 2137064778
+      aubrey_128: 1307093897
+      aubrey_129: 1454999228
+      aubrey_13: -247218536
+      aubrey_130: -165856983
+      aubrey_131: 268048082
+      aubrey_132: 1428851553
+      aubrey_133: 827573734
+      aubrey_134: 1836728210
+      aubrey_135: 932300997
+      aubrey_136: 765557741
+      aubrey_137: -850860010
+      aubrey_138: -1424294245
+      aubrey_139: 1051672401
+      aubrey_14: -1506310268
+      aubrey_140: 1310604295
+      aubrey_141: -262879855
+      aubrey_142: 1234610769
+      aubrey_143: -948748358
+      aubrey_144: 1493775606
+      aubrey_145: 152432519
+      aubrey_146: -1682207349
+      aubrey_147: 370812961
+      aubrey_148: 1660318800
+      aubrey_149: -639208202
+      aubrey_15: 248964876
+      aubrey_150: 580291994
+      aubrey_151: -1356581401
+      aubrey_152: 998764044
+      aubrey_153: 679626318
+      aubrey_154: -214055145
+      aubrey_155: -369880322
+      aubrey_156: -1969936811
+      aubrey_157: -1759761970
+      aubrey_158: 1388328450
+      aubrey_159: 1601901912
+      aubrey_16: -60263185
+      aubrey_160: 1225931101
+      aubrey_161: -529844382
+      aubrey_162: -1281691578
+      aubrey_163: 442297252
+      aubrey_164: -798174286
+      aubrey_165: 615537765
+      aubrey_166: 1913575537
+      aubrey_167: -985002362
+      aubrey_168: 1488201917
+      aubrey_169: -1826166268
+      aubrey_17: -1654851929
+      aubrey_170: 1306470117
+      aubrey_171: 1100731797
+      aubrey_172: 602414064
+      aubrey_173: 1944261495
+      aubrey_174: -1772102167
+      aubrey_175: -516891041
+      aubrey_176: 1533933373
+      aubrey_177: -385686079
+      aubrey_178: -197025371
+      aubrey_179: -2040325357
+      aubrey_18: -1286040260
+      aubrey_180: 1625580718
+      aubrey_181: 1284864437
+      aubrey_182: 1685884612
+      aubrey_183: -1732548295
+      aubrey_184: -1215687889
+      aubrey_185: 547384525
+      aubrey_186: -2042177700
+      aubrey_187: 691503024
+      aubrey_188: -1630870459
+      aubrey_189: -1020129832
+      aubrey_19: -121159217
+      aubrey_190: 392376252
+      aubrey_191: -876574091
+      aubrey_192: -1515661611
+      aubrey_193: 1941789904
+      aubrey_194: -871206677
+      aubrey_195: -1595092397
+      aubrey_196: 1273107772
+      aubrey_197: -164856317
+      aubrey_198: 1024840404
+      aubrey_199: 191300499
+      aubrey_2: 1040721716
+      aubrey_20: 2045516092
+      aubrey_200: 236568755
+      aubrey_201: -1884911416
+      aubrey_202: 1438629622
+      aubrey_203: 1504346514
+      aubrey_204: -184141441
+      aubrey_205: 613026896
+      aubrey_206: 18152708
+      aubrey_207: -1334476906
+      aubrey_208: -155153860
+      aubrey_209: -1506448821
+      aubrey_21: -1385190603
+      aubrey_210: -339807636
+      aubrey_211: -1748969558
+      aubrey_212: 137727611
+      aubrey_213: 1137970553
+      aubrey_214: -617218877
+      aubrey_215: 1188936424
+      aubrey_216: -429365029
+      aubrey_217: 1581269135
+      aubrey_218: 1625573242
+      aubrey_219: -1315628061
+      aubrey_22: -1685730349
+      aubrey_220: -146011674
+      aubrey_221: 2121835542
+      aubrey_222: 1744151481
+      aubrey_223: -217022306
+      aubrey_224: -1985765857
+      aubrey_225: -1483725579
+      aubrey_226: 1622399878
+      aubrey_227: 454174616
+      aubrey_228: -2119026425
+      aubrey_229: -11640500
+      aubrey_23: -2145627285
+      aubrey_230: -1514708297
+      aubrey_231: -1407911941
+      aubrey_232: 1077884710
+      aubrey_233: -767135825
+      aubrey_234: 838435575
+      aubrey_235: 1703555882
+      aubrey_236: -857490956
+      aubrey_237: 409790679
+      aubrey_24: 1884735789
+      aubrey_25: 861709268
+      aubrey_26: -1978973860
+      aubrey_27: 1648159132
+      aubrey_28: 1513077263
+      aubrey_29: 2004208771
+      aubrey_3: -1244549490
+      aubrey_30: -1436078372
+      aubrey_31: 1500849054
+      aubrey_32: 599004017
+      aubrey_33: 353497983
+      aubrey_34: 562517842
+      aubrey_35: 679255168
+      aubrey_36: 831351871
+      aubrey_37: -992945682
+      aubrey_38: 2144688375
+      aubrey_39: 1746883748
+      aubrey_4: 1276396903
+      aubrey_40: -459578922
+      aubrey_41: -848448026
+      aubrey_42: -1327216101
+      aubrey_43: -1073228057
+      aubrey_44: 380902535
+      aubrey_45: -1012261628
+      aubrey_46: -55452394
+      aubrey_47: -1252096819
+      aubrey_48: 1554073946
+      aubrey_49: 1871361673
+      aubrey_5: 276870841
+      aubrey_50: 1612770610
+      aubrey_51: 1055595850
+      aubrey_52: -964030009
+      aubrey_53: 1867887917
+      aubrey_54: -1778971610
+      aubrey_55: -1126109509
+      aubrey_56: -1756087733
+      aubrey_57: -1320357955
+      aubrey_58: -1915945103
+      aubrey_59: 749267296
+      aubrey_6: 358430710
+      aubrey_60: -1735142900
+      aubrey_61: -72056561
+      aubrey_62: 574760891
+      aubrey_63: 155387928
+      aubrey_64: 1567340360
+      aubrey_65: -660462276
+      aubrey_66: -1944136153
+      aubrey_67: 1243936397
+      aubrey_68: -1418753554
+      aubrey_69: 122524998
+      aubrey_7: -1459449071
+      aubrey_70: -1946722919
+      aubrey_71: 1832861199
+      aubrey_72: -419174811
+      aubrey_73: -874802773
+      aubrey_74: -1597782414
+      aubrey_75: -1620223154
+      aubrey_76: -568973632
+      aubrey_77: 947269218
+      aubrey_78: -2105092660
+      aubrey_79: -1448355211
+      aubrey_8: -1753364245
+      aubrey_80: -1528452211
+      aubrey_81: 642267367
+      aubrey_82: 1630700765
+      aubrey_83: 986847988
+      aubrey_84: -196426042
+      aubrey_85: 1571901774
+      aubrey_86: -23843627
+      aubrey_87: -357317243
+      aubrey_88: -1439759156
+      aubrey_89: 1003568715
+      aubrey_9: 354815217
+      aubrey_90: 642411297
+      aubrey_91: -979056623
+      aubrey_92: -1851781841
+      aubrey_93: -807386207
+      aubrey_94: 1681856488
+      aubrey_95: -1581620500
+      aubrey_96: 127049689
+      aubrey_97: -1612926667
+      aubrey_98: 516250163
+      aubrey_99: -826281131
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
