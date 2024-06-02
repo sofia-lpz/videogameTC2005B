@@ -207,6 +207,24 @@ async function getAuth(username, password) {
   }
 }
 
+async function createPlayer(username, password) {
+  let connection = null;
+  let query = `INSERT INTO player (username, password) VALUES (?, ?)`;
+  try {
+    connection = await connectToDB();
+    const [results, _] = await connection.query(query, [username, password]);
+    console.log(`${results.affectedRows} rows affected`);
+    return results;
+  } catch (error) {
+    console.log(error);
+  } finally {
+    if (connection !== null) {
+      connection.end();
+      console.log('Connection closed successfully');
+    }
+  }
+}
+
 export {
   getCards,
   getPlayer,
@@ -218,5 +236,6 @@ export {
   getPlayerDeck,
   getPlayerMatches,
   getPlayerStats,
-  getAuth
+  getAuth,
+  createPlayer
 };

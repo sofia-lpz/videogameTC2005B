@@ -164,6 +164,24 @@ const getAuth = async (req, res) => {
   }
 }
 
+const createPlayer = async (req, res) => {
+  const {
+    params: { username, password },
+  } = req;
+  if (!username || !password) {
+    return;
+  }
+
+  try {
+    const player = await colometaService.createPlayer(username, password);
+    res.send({ status: "OK", data: player });
+  }
+  catch (error) {
+    console.error(error);
+    res.status(500).send({ status: "Error", data: error.message });
+  }
+}
+
 export {
   getCards,
   getPlayer,
@@ -175,5 +193,6 @@ export {
   getPlayerDeck,
   getPlayerMatches,
   getPlayerStats,
-  getAuth
+  getAuth,
+  createPlayer
 };
