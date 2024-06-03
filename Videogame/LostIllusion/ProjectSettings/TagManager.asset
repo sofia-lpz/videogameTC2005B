@@ -46,14 +46,26 @@ TagManager:
   - name: Ground
     uniqueID: 2820228153
     locked: 0
-  - name: Foreground1
+  - name: GroundDecor
     uniqueID: 3757099683
     locked: 0
-  - name: Foreground2
+  - name: GroundDecor2
     uniqueID: 2327740941
     locked: 0
-  - name: Foreground3
+  - name: Foreground1
+    uniqueID: 1753885831
+    locked: 0
+  - name: Foreground2
+    uniqueID: 3025307123
+    locked: 0
+  - name: BorderDecor
+    uniqueID: 3418036217
+    locked: 0
+  - name: Border
     uniqueID: 2805291339
+    locked: 0
+  - name: BorderDecorInside
+    uniqueID: 940997869
     locked: 0
   - name: Interactables
     uniqueID: 721222773
