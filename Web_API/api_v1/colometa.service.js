@@ -6,6 +6,7 @@ const getCards = async () => {
     return cards;
   } catch (err) {
     console.error(err);
+    return { error: err.message };
   }
 }
 
@@ -16,6 +17,7 @@ const getPlayer = async (username) => {
   }
   catch (err) {
     console.error(err);
+    return { error: err.message };
   }
 }
 
@@ -25,6 +27,7 @@ const getDialogues = async () => {
     return dialogues;
   } catch (err) {
     console.error(err);
+    return { error: err.message };
   }
 }
 
@@ -34,6 +37,7 @@ const getStats = async () => {
     return stats;
   } catch (err) {
     console.error(err);
+    return { error: err.message };
   }
 }
 
@@ -43,6 +47,7 @@ const getMatches = async () => {
     return matches;
   } catch (err) {
     console.error(err);
+    return { error: err.message };
   }
 }
 
@@ -52,6 +57,7 @@ const getVillagers = async () => {
     return villagers;
   } catch (err) {
     console.error(err);
+    return { error: err.message };
   }
 }
 
@@ -61,6 +67,7 @@ const getPlayerTeam = async (username) => {
     return playerTeam;
   } catch (err) {
     console.error(err);
+    return { error: err.message };
   }
 }
 
@@ -70,6 +77,7 @@ const getPlayerDeck = async (username) => {
     return playerDeck;
   } catch (err) {
     console.error(err);
+    return { error: err.message };
   }
 }
 
@@ -79,6 +87,7 @@ const getPlayerMatches = async (username) => {
     return playerMatches;
   } catch (err) {
     console.error(err);
+    return { error: err.message };
   }
 }
 
@@ -88,6 +97,7 @@ const getPlayerStats = async (username) => {
     return playerStats;
   } catch (err) {
     console.error(err);
+    return { error: err.message };
   }
 }
 
@@ -97,6 +107,7 @@ const getAuth = async (username, password) => {
     return auth;
   } catch (err) {
     console.error(err);
+    return { error: err.message };
   }
 }
 
@@ -106,6 +117,8 @@ const createPlayer = async (username, password) => {
     return player;
   } catch (err) {
     console.error(err);
+    return { error: err.message };
+    
   }
 }
 

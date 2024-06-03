@@ -173,8 +173,15 @@ const createPlayer = async (req, res) => {
   }
 
   try {
-    const player = await colometaService.createPlayer(username, password);
-    res.send({ status: "OK", data: player });
+    const result = await colometaService.createPlayer(username, password);
+    
+    // Check if an error was returned
+    if (result.error) {
+      res.status(500).send({ status: "Error", data: result.error });
+      return;
+    }
+
+    res.send({ status: "OK", data: result });
   }
   catch (error) {
     console.error(error);
