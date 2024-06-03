@@ -24,27 +24,35 @@ public class CharacterButtons : MonoBehaviour
     [SerializeField] float activePos;
     [SerializeField] float activePosE;
     [SerializeField] int maxHealth = 10;
+    [SerializeField] int maxDefense = 5;
     [SerializeField] TMP_Text characterName;
     [SerializeField] TMP_Text characterDescription;
-     [SerializeField] TMP_Text characterElement;
+    [SerializeField] TMP_Text characterElement;
 
-    public int currentHealth ;
+    public int currentHealth;
+    public int currentDefense;
+    
     public HealthBar healthBar;
+    public DefenseBar defenseBar;
     public bool active;
-    public int currentAttack ;
-    public int currentDefense ;
+    public int currentAttack;
+    
 
     public Villager character;
 
     // Start is called before the first frame update
      public void Start()
     {
-        healthBar = GetComponent<HealthBar>();
+        healthBar = GetComponentInChildren<HealthBar>();
+        defenseBar = GetComponentInChildren<DefenseBar>();
         initialPos = transform.position.y;
         activePos = initialPos + 15f;
         activePosE = initialPos - 15f;
         normalColor = GetComponent<Image>().color;
         currentHealth = maxHealth;
+        currentDefense = 0;
+        defenseBar.SetMaxDefense(maxDefense);
+        defenseBar.SetDefense(currentDefense);
         healthBar.SetMaxHealth(maxHealth);  
     }
 
@@ -65,13 +73,15 @@ public class CharacterButtons : MonoBehaviour
     {
         currentHealth -= amount;
         if (currentHealth < 0) currentHealth = 0; // Ensure health doesn't go negative
+        healthBar.SetHealth(currentHealth);
         Debug.Log("Took damage: " + amount + ", Current Health: " + currentHealth);
     }
 
     public void Heal(int heal)
     {
         currentHealth += heal;
-        healthBar.SetHealth(currentHealth);
+        if (currentHealth > maxHealth) currentHealth = maxHealth; // Ensure health doesn't exceed max health
+        healthBar.SetHealth(currentHealth); // Actualiza la barra de salud
     }
 
     public void Highlight()
@@ -109,6 +119,8 @@ public class CharacterButtons : MonoBehaviour
     public void IncreaseDefense(int amount)
     {
         currentDefense += amount;
+        if (currentDefense > maxDefense) currentDefense = maxDefense;
+        defenseBar.SetDefense(currentDefense);
         Debug.Log("Increased defense by " + amount);
     }
 
@@ -122,6 +134,7 @@ public class CharacterButtons : MonoBehaviour
     {
         currentDefense -= amount;
         if (currentDefense < 0) currentDefense = 0;
+        defenseBar.SetDefense(currentDefense);
         Debug.Log("Decreased defense by " + amount);
     }
 

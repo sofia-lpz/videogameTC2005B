@@ -75,7 +75,6 @@ public class TCG_Controller : MonoBehaviour
     // Coroutine that prepares the cards
     IEnumerator PrepareCards()
     {
-        
         int cardsToCreate = (turnCount == 0) ? numInitialCards: cardsPerTurn;
         cardsToCreate = Mathf.Min(cardsToCreate, maxCards - cards.Count);
         for (int i = 0; i < cardsToCreate; i++)
@@ -429,6 +428,7 @@ public class TCG_Controller : MonoBehaviour
 
         yield return new WaitForSeconds(1);  // Optional: Add delay before switching turn back to player
         Debug.Log("Enemy Turn Ended");
+        PrepareEnemyCards();
         StartPlayerTurn();
     }
 
@@ -512,5 +512,3 @@ public class TCG_Controller : MonoBehaviour
     }
 
 }
-
-
