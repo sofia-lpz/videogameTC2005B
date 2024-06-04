@@ -52,11 +52,11 @@ TagManager:
   - name: GroundDecor2
     uniqueID: 2327740941
     locked: 0
-  - name: Foreground1
-    uniqueID: 1753885831
-    locked: 0
   - name: Foreground2
     uniqueID: 3025307123
+    locked: 0
+  - name: Foreground1
+    uniqueID: 1753885831
     locked: 0
   - name: BorderDecor
     uniqueID: 3418036217
