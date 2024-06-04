@@ -23,9 +23,10 @@ public class forceTalk : triggerableObject
         
         base.onTriggerEnter(other);
 
-        if (other.tag == "Player" && !interacted){
+        if (other.tag == "Player" && !interacted && !stateNameController.triggeredCharacters.Contains(gameObject.name)){
                 onTalk();
                 interacted = true;
+                stateNameController.triggeredCharacters.Add(gameObject.name);
         }
     }
 

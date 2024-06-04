@@ -23,7 +23,6 @@ public class dialogue : MonoBehaviour
     float elipsisSpeed = 0.3f;
     int index;
     AudioSource audioSource;
-    private int charIndex = 0;
     private string speaker_name;
     private Color originalColor;
 

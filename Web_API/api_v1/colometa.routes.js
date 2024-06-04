@@ -19,6 +19,11 @@ router.get("/player/:username/stats", colometaController.getPlayerStats);
 router.get("/player/:username/deck", colometaController.getPlayerDeck);
 
 
+//Posters
+
+router.post("/register/:username/:password", colometaController.createPlayer);
+
+
 // // get specific, might be useful for unity optimising?
 // router.get("/card/:id", colometaController.getCard);
 // router.get("/villager/:id", colometaController.getVillager);

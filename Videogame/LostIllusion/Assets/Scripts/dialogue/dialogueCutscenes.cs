@@ -27,7 +27,6 @@ public class dialogueCutscenes : MonoBehaviour
     float elipsisSpeed = 0.3f;
     int index;
     AudioSource audioSource;
-    private int charIndex = 0;
     string cutsceneName;
 
     // Start is called before the first frame update

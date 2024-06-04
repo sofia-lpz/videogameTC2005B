@@ -30,6 +30,7 @@ public class stateNameController : MonoBehaviour
     public static string playerPreviousScene = "";
 
     public static HashSet<string> playedCutscenes = new HashSet<string>();
+    public static HashSet<string> triggeredCharacters = new HashSet<string>();
 
     /*FOR AUDIO*/
     public static float volume = 0.5f;

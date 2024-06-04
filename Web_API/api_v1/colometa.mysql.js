@@ -19,6 +19,7 @@ async function getCards() {
     return results;
   } catch (error) {
     console.log(error);
+    return { error: error.message };
   } finally {
     if (connection !== null) {
       connection.end();
@@ -37,6 +38,7 @@ async function getPlayer(username, password) {
     return results;
   } catch (error) {
     console.log(error);
+    return { error: error.message };
   } finally {
     if (connection !== null) {
       connection.end();
@@ -55,6 +57,7 @@ async function getDialogues() {
     return results;
   } catch (error) {
     console.log(error);
+    return { error: error.message };
   } finally {
     if (connection !== null) {
       connection.end();
@@ -73,6 +76,7 @@ async function getStats() {
     return results;
   } catch (error) {
     console.log(error);
+    return { error: error.message };
   } finally {
     if (connection !== null) {
       connection.end();
@@ -91,6 +95,7 @@ async function getMatches() {
     return results;
   } catch (error) {
     console.log(error);
+    return { error: error.message };
   } finally {
     if (connection !== null) {
       connection.end();
@@ -109,6 +114,7 @@ async function getVillagers() {
     return results;
   } catch (error) {
     console.log(error);
+    return { error: error.message };
   } finally {
     if (connection !== null) {
       connection.end();
@@ -127,6 +133,7 @@ async function getPlayerTeam(username) {
     return results;
   } catch (error) {
     console.log(error);
+    return { error: error.message };
   } finally {
     if (connection !== null) {
       connection.end();
@@ -145,6 +152,7 @@ async function getPlayerDeck(username) {
     return results;
   } catch (error) {
     console.log(error);
+    return { error: error.message };
   } finally {
     if (connection !== null) {
       connection.end();
@@ -163,6 +171,7 @@ async function getPlayerMatches(username) {
     return results;
   } catch (error) {
     console.log(error);
+    return { error: error.message };
   } finally {
     if (connection !== null) {
       connection.end();
@@ -181,6 +190,7 @@ async function getPlayerStats(username) {
     return results;
   } catch (error) {
     console.log(error);
+    return { error: error.message };
   } finally {
     if (connection !== null) {
       connection.end();
@@ -199,6 +209,26 @@ async function getAuth(username, password) {
     return results;
   } catch (error) {
     console.log(error);
+    return { error: error.message };
+  } finally {
+    if (connection !== null) {
+      connection.end();
+      console.log('Connection closed successfully');
+    }
+  }
+}
+
+async function createPlayer(username, password) {
+  let connection = null;
+  let query = `INSERT INTO player (username, password) VALUES (?, ?)`;
+  try {
+    connection = await connectToDB();
+    const [results, _] = await connection.query(query, [username, password]);
+    console.log(`${results.affectedRows} rows affected`);
+    return results;
+  } catch (error) {
+    console.log(error);
+    return { error: error.message };
   } finally {
     if (connection !== null) {
       connection.end();
@@ -218,5 +248,6 @@ export {
   getPlayerDeck,
   getPlayerMatches,
   getPlayerStats,
-  getAuth
+  getAuth,
+  createPlayer
 };
