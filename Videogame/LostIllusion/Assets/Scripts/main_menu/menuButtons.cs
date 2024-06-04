@@ -59,6 +59,12 @@ public class menuButtons : MonoBehaviour
         SceneManager.LoadScene(nextSceneMenu, LoadSceneMode.Single);
     }
 
+    public void startDEV()
+    {
+        audioSource.Play();
+        SceneManager.LoadScene("match_tv", LoadSceneMode.Single);
+    }
+
     public void resume()
     {
         audioSource.Play();
