@@ -267,7 +267,16 @@ public class TCG_Controller : MonoBehaviour
         }
 
         // Apply defense reduction
-        damage -= defendingCharacter.currentDefense;
+        if (defendingCharacter.currentDefense > 0)
+        {
+            damage /= 2;
+            defendingCharacter.DecreaseDefense(1);
+        }
+        else
+        {
+            damage -= defendingCharacter.currentDefense;
+        }
+        
         if (damage < 0) damage = 0;
 
         defendingCharacter.TakeDamage(damage);
@@ -444,7 +453,7 @@ public class TCG_Controller : MonoBehaviour
 
         affordableCards.Sort((card1, card2) => card1.card.energy_cost.CompareTo(card2.card.energy_cost));
 
-        float errorMargin = 0.25f;
+        float errorMargin = 0.50f;
         int maxIndex = Mathf.CeilToInt(affordableCards.Count * errorMargin);
         EnemyCard selectedCard = affordableCards[Random.Range(0, maxIndex)];
         Debug.Log("Selected Card for AI: " + selectedCard.card.name);
