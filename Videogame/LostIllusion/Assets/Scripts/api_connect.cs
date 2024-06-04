@@ -24,11 +24,9 @@ public class api_connect : MonoBehaviour
     [SerializeField] Button startButton;
     [SerializeField] Button loginButton;
     [SerializeField] Button registerButton;
+    public static bool apiConnected = false;
 
     public void Start(){
-        startButton.interactable = false; // disable the button
-        loginButton.interactable = false; // disable the button
-        registerButton.interactable = false; // disable the button
         GetData("/cards", api_processing.CardProcessing);
         GetData("/villagers", api_processing.VillagerProcessing);
     }
@@ -53,8 +51,7 @@ public class api_connect : MonoBehaviour
                 result = www.downloadHandler.text;
                 Debug.Log("request successful: " + result);
                 callback(result);
-                startButton.interactable = true; // enable the button
-                loginButton.interactable = true; // enable the button
+                apiConnected = true;
             }
         }
     }

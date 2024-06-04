@@ -28,11 +28,17 @@ public class login : MonoBehaviour
     private string password;
     private string result;
 
-    private bool loginSuccess = false;
+    public static bool loginSuccess = false;
 
     void Start()
     {
         loginButton.onClick.AddListener(onLoginButtonClicked);
+    }
+
+    void Update(){
+        if (Input.GetKeyDown(KeyCode.Return)){
+            onLoginButtonClicked();
+        }
     }
 
     void onLoginButtonClicked()
@@ -57,6 +63,7 @@ public class login : MonoBehaviour
             if (authentification()) // authentification success
             {
                 loginMessageText.text = "Login exitoso";
+                loginSuccess = true;
                 yield return new WaitForSeconds(1);
                 SceneManager.LoadScene("mainMenu");
             }
