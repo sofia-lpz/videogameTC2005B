@@ -224,7 +224,7 @@ public class TCG_Controller : MonoBehaviour
     {
         int damage = card.player_attack + attackingCharacter.currentAttack;
 
-        // Elemental advantage/disadvantage adjustments
+        /* Elemental advantage/disadvantage adjustments
         if (attackingCharacter.character.element == "Reason" && (defendingCharacter.character.element == "Terror" || defendingCharacter.character.element == "Spirit"))
         {
             damage += 1;
@@ -262,6 +262,31 @@ public class TCG_Controller : MonoBehaviour
             damage += 1;
         }
         else if (attackingCharacter.character.element == "Dream" && (defendingCharacter.character.element == "Spirit" || defendingCharacter.character.element == "Terror"))
+        {
+            damage -= 1;
+        } */
+
+        if (attackingCharacter.character.element == "Reason" && defendingCharacter.character.element == "Terror")
+        {
+            damage += 1;
+        }
+        else if (attackingCharacter.character.element == "Reason" && defendingCharacter.character.element == "Dream")
+        {
+            damage -= 1;
+        }
+        else if (attackingCharacter.character.element == "Terror" && defendingCharacter.character.element == "Dream")
+        {
+            damage += 1;
+        }
+        else if (attackingCharacter.character.element == "Terror" && defendingCharacter.character.element == "Reason")
+        {
+            damage -= 1;
+        }
+        else if (attackingCharacter.character.element == "Dream" && defendingCharacter.character.element == "Reason")
+        {
+            damage += 1;
+        }
+        else if (attackingCharacter.character.element == "Dream" && defendingCharacter.character.element == "Terror")
         {
             damage -= 1;
         }
