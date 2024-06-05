@@ -9,7 +9,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
-using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine.SceneManagement;
 
 public class TCG_Controller : MonoBehaviour
