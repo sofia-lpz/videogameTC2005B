@@ -5,16 +5,10 @@ using UnityEngine;
 public class tcgFeedback : MonoBehaviour
 {
     [SerializeField] GameObject tcgFeedbackPrefab;
-    public static GameObject StaticTcgFeedbackPrefab;
 
-    void Start()
+    public void ShowFeedback(string feedbackText)
     {
-        StaticTcgFeedbackPrefab = tcgFeedbackPrefab;
-    }
-    
-    public static void ShowFeedback(string feedbackText)
-    {
-        GameObject feedback = Instantiate(StaticTcgFeedbackPrefab);
+        GameObject feedback = Instantiate(tcgFeedbackPrefab);
         feedback.GetComponent<dialogue>().InitializeWithDialogue(feedbackText);
     }
 
