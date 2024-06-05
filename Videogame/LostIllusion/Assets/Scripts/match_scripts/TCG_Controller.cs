@@ -41,20 +41,29 @@ public class TCG_Controller : MonoBehaviour
     private string sceneName = stateNameController.playerPreviousScene;
     private bool gameOver = false; 
 
+    private tcgFeedback feedbackscript;
+
+
     [SerializeField] int limit = 1;    
 
 
     // to add pause, check stateNameController gamePaused; True menas paused, false means not paused
 
     // Start is called before the first frame update
-    void Start()
-    {
-
+    void Start(){
+        feedbackscript = GetComponent<tcgFeedback>();
+        
         currentTurn = (Turn)Random.Range(0, 2);
         if (currentTurn == Turn.Enemy)
         {
             StartCoroutine(EnemyTurn());
+            feedbackscript.ShowFeedback("The enemy has the first turn!");
         }
+        else
+        {
+            feedbackscript.ShowFeedback("You have the first turn!");
+        }
+
         Debug.Log("Current turn: " + currentTurn);
         energy = Random.Range(4, 10);
         EnergyText.text = "Energy: " + energy.ToString();  
@@ -67,15 +76,13 @@ public class TCG_Controller : MonoBehaviour
         Invoke("SelectCharacter", 0.5f);
     }
 
-    void SelectCharacter()
-    {
+    void SelectCharacter(){
         characterButtons[0].Highlight();
         enemyCharacterButtons[0].HighlightEnemy();
     }
 
     // Coroutine that prepares the cards
-    IEnumerator PrepareCards()
-    {
+    IEnumerator PrepareCards(){
         int cardsToCreate = (turnCount == 0) ? numInitialCards: cardsPerTurn;
         cardsToCreate = Mathf.Min(cardsToCreate, maxCards - cards.Count);
         for (int i = 0; i < cardsToCreate; i++)
@@ -89,11 +96,9 @@ public class TCG_Controller : MonoBehaviour
             yield return new WaitForSeconds(delay);
         }
         turnCount++;
-         Debug.Log("Cards: " + cards[1].card_name);
     }
 
-    public void PrepareEnemyCards()
-    {
+    public void PrepareEnemyCards(){
         int cardsToCreate = (turnCount == 0) ? numInitialCards: cardsPerTurn;
         cardsToCreate = Mathf.Min(cardsToCreate, maxCards - enemyCards.Count);
         for (int i = 0; i < cardsToCreate; i++)
@@ -104,8 +109,7 @@ public class TCG_Controller : MonoBehaviour
         }
     }
 
-     CharacterButtons GetActiveEnemy()
-    {
+     CharacterButtons GetActiveEnemy(){
         foreach (CharacterButtons enemyCharacter in enemyCharacterButtons)
         {
             if (enemyCharacter.active)
@@ -116,8 +120,7 @@ public class TCG_Controller : MonoBehaviour
         return null;
     }
 
-    CharacterButtons GetActiveCharacter()
-    {
+    CharacterButtons GetActiveCharacter(){
         foreach (CharacterButtons character in characterButtons)
         {
             if (character.active)
@@ -128,8 +131,7 @@ public class TCG_Controller : MonoBehaviour
         return null;
     }
 
-    CharacterButtons GetInactiveEnemy()
-    {
+    CharacterButtons GetInactiveEnemy(){
         foreach (CharacterButtons enemyCharacter in enemyCharacterButtons)
         {
             if (!enemyCharacter.active)
@@ -140,8 +142,7 @@ public class TCG_Controller : MonoBehaviour
         return null;
     }
 
-    CharacterButtons GetInactiveCharacter()
-    {
+    CharacterButtons GetInactiveCharacter(){
         foreach (CharacterButtons character in characterButtons)
         {
             if (!character.active)
@@ -153,8 +154,7 @@ public class TCG_Controller : MonoBehaviour
     }
 
     // Function that is called when a card is pressed
-    public void ButtonPressed(Card_Buttons cardButton)
-    {
+    public void ButtonPressed(Card_Buttons cardButton){
         if (currentTurn == Turn.Enemy || gameOver)
         {
             return;
@@ -221,8 +221,7 @@ public class TCG_Controller : MonoBehaviour
         }
     }
 
-    public void ApplyCardAttack(Card card, CharacterButtons attackingCharacter, CharacterButtons defendingCharacter)
-    {
+    public void ApplyCardAttack(Card card, CharacterButtons attackingCharacter, CharacterButtons defendingCharacter){
         int damage = card.player_attack + attackingCharacter.currentAttack;
 
         /* Elemental advantage/disadvantage adjustments
@@ -308,8 +307,7 @@ public class TCG_Controller : MonoBehaviour
         defendingCharacter.TakeDamage(damage);
     }
 
-    private void ApplySupportEffect(Card card, CharacterButtons activeCharacter, CharacterButtons activeEnemy)
-    {
+    private void ApplySupportEffect(Card card, CharacterButtons activeCharacter, CharacterButtons activeEnemy){
         if (card.player_defense > 0)
         {
             activeCharacter.IncreaseDefense(card.player_defense);
@@ -332,8 +330,7 @@ public class TCG_Controller : MonoBehaviour
         Debug.Log("Applied support effect: " + card.description);
     }
 
-    private void ApplyDefenseEffect(Card card, CharacterButtons activeCharacter, CharacterButtons activeEnemy)
-    {
+    private void ApplyDefenseEffect(Card card, CharacterButtons activeCharacter, CharacterButtons activeEnemy){
         if (card.enemy_attack > 0)
         {
             activeEnemy.DecreaseAttack(card.player_attack);
@@ -347,8 +344,8 @@ public class TCG_Controller : MonoBehaviour
     }
 
     // Function that prepares the characters
-    public void PrepareCharacters()
-    {
+    // agregar condicion para que no se repitan los personajes
+    public void PrepareCharacters(){
         for (int i = 0; i < numCharacters; i++)
             {
                 int charID = Random.Range(0, tcgData.Villagers.Count);
@@ -361,8 +358,7 @@ public class TCG_Controller : MonoBehaviour
             }
     }
 
-    public void PrepareEnemyCharacters()
-    {
+    public void PrepareEnemyCharacters(){
         for (int i = 0; i < numCharacters; i++)
         {
             int charID = Random.Range(0, tcgData.Villagers.Count);
@@ -375,8 +371,7 @@ public class TCG_Controller : MonoBehaviour
 
 
     // Function that ends the turn
-    public void EndTurn()
-    {
+    public void EndTurn(){
         currentTurn = Turn.Enemy;
         endTurnButton.interactable = false;
         StartCoroutine(EnemyTurn());
@@ -384,12 +379,12 @@ public class TCG_Controller : MonoBehaviour
     }
 
     // Coroutine that simulates the enemy turn
-    public IEnumerator EnemyTurn()
-    {
-        Debug.Log("Enemy Turn Started");
+    public IEnumerator EnemyTurn(){
+        feedbackscript.ShowFeedback("Enemy's turn!");
         yield return new WaitForSeconds(3);
         enemyEnergy = Random.Range(4, 10);
-        Debug.Log("Enemy Energy: " + enemyEnergy);
+        feedbackscript.ShowFeedback("Enemy got " + enemyEnergy + " energy!");
+        yield return new WaitForSeconds(4);
 
         while (enemyEnergy > 0 && enemyCards.Count > 0)
         {
@@ -408,6 +403,7 @@ public class TCG_Controller : MonoBehaviour
                         ApplyCardAttack(selectedCard.card, activeEnemyCharacter, activePlayerCharacter);
                         Instantiate(attackAnimationPrefab);
                         Debug.Log("Enemy attacks");
+                        feedbackscript.ShowFeedback("Enemy attacks!");
                         break;
 
                     case "support":
@@ -467,8 +463,7 @@ public class TCG_Controller : MonoBehaviour
         StartPlayerTurn();
     }
 
-    public EnemyCard SelectEnemyCard()
-    {
+    public EnemyCard SelectEnemyCard(){
         List<EnemyCard> affordableCards = enemyCards.FindAll(card => card.card.energy_cost <= enemyEnergy);
 
         if (affordableCards.Count == 0)
@@ -486,9 +481,9 @@ public class TCG_Controller : MonoBehaviour
         return selectedCard;
     }
 
-    public void StartPlayerTurn()
-    {
+    public void StartPlayerTurn(){
         Debug.Log("Player Turn Started");
+        feedbackscript.ShowFeedback("Your turn!");
         energy = Random.Range(4, 10);
         limit = 1;
         EnergyText.text = "Energy: " + energy.ToString();
@@ -533,6 +528,7 @@ public class TCG_Controller : MonoBehaviour
     public void PlayerWins()
     {
         Debug.Log("Player wins");
+        feedbackscript.ShowFeedback("You win!");
         gameOver = true;
         resultHandler.match_won();
         Invoke("LoadScene", 5);
@@ -541,6 +537,7 @@ public class TCG_Controller : MonoBehaviour
     public void EnemyWins()
     {
         Debug.Log("Enemy wins");
+        feedbackscript.ShowFeedback("You lose!");
         gameOver = true;
         resultHandler.match_lost();
         Invoke("LoadScene", 5);
