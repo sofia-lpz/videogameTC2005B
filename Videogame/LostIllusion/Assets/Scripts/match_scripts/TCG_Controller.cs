@@ -409,21 +409,25 @@ public class TCG_Controller : MonoBehaviour
                     case "support":
                         ApplySupportEffect(selectedCard.card, activeEnemyCharacter, activePlayerCharacter);
                         Debug.Log("Enemy supports");
+                        feedbackscript.ShowFeedback("Enemy supports!");
                         break;
 
                     case "defense":
                         ApplyDefenseEffect(selectedCard.card, activeEnemyCharacter, activePlayerCharacter);
                         Debug.Log("Enemy defends");
+                        feedbackscript.ShowFeedback("Enemy defends!");
                         break;
 
                     case "healing":
-                        if (selectedCard.card_name == "Bandage")
+                        if (selectedCard.card_name == "bandage")
                         {
                             activeEnemyCharacter.Heal(selectedCard.card_heal);
                             inactiveEnemyCharacter.Heal(selectedCard.card_heal);
                             Debug.Log("Both characters healed by " + selectedCard.card_heal);
+                            feedbackscript.ShowFeedback("Both characters healed by " + selectedCard.card_heal);
                         }else {
                             activeEnemyCharacter.Heal(selectedCard.card.player_health);
+                            feedbackscript.ShowFeedback("Enemy heals!");
                             Debug.Log("Enemy heals");
                         }
                         break;
@@ -459,6 +463,7 @@ public class TCG_Controller : MonoBehaviour
 
         yield return new WaitForSeconds(1);  // Optional: Add delay before switching turn back to player
         Debug.Log("Enemy Turn Ended");
+        feedbackscript.ShowFeedback("Your turn!");
         PrepareEnemyCards();
         StartPlayerTurn();
     }
