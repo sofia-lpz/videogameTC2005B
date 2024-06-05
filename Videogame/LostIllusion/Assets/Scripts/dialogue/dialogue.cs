@@ -52,6 +52,14 @@ public class dialogue : MonoBehaviour
         StartDialogue();
     }
 
+    public void InitializeWithDialogue(string dialogueline){
+        lines = new List<string>() {dialogueline};
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = Resources.Load<AudioClip>("Audio/soundEffects/text");
+        dialogueBox.text = "";
+        StartDialogue();
+    }
+
     // Update is called once per frame
     public virtual void Update()
     {

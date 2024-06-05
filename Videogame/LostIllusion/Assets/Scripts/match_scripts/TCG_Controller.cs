@@ -49,6 +49,7 @@ public class TCG_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         currentTurn = (Turn)Random.Range(0, 2);
         if (currentTurn == Turn.Enemy)
         {

@@ -21,10 +21,10 @@ EditorBuildSettings:
     path: Assets/Scenes/matches/match_tv.unity
     guid: a1554ca02be61d64baa3acafb3cc85b2
   - enabled: 1
-    path: Assets/Scenes/login.unity
+    path: Assets/Scenes/Menu/login.unity
     guid: 573aea066b3238143b93e277a30db9fa
   - enabled: 1
-    path: Assets/Scenes/Register.unity
+    path: Assets/Scenes/Menu/Register.unity
     guid: 438c7544e37ca134289a5aa8fcc9c35a
   - enabled: 1
     path: Assets/Scenes/map/finalHome.unity
@@ -45,6 +45,6 @@ EditorBuildSettings:
     path: Assets/Scenes/cutscenes/intro.unity
     guid: 5bb9a34c2c2d49e4bb82bda3841cbbe9
   - enabled: 1
-    path: Assets/Scenes/mainMenu.unity
+    path: Assets/Scenes/Menu/mainMenu.unity
     guid: 992fde3c92af34c788622d25fd0cd2ba
   m_configObjects: {}
