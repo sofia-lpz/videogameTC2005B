@@ -24,7 +24,7 @@ insert into card (cardId, name, energy_cost, effect, type, description, player_h
 ('1', 'plum juice', 3, 'healing', 'snack', 'drinking this grants 3 hp', 3, 0, 0, 0, 0, 0),
 ('2', 'plum jam', 1, 'healing', 'snack', 'eating this grants 1 hp', 1, 0, 0, 0, 0, 0),
 ('3', 'candy', 2, 'healing', 'snack', 'this candy grants 2 hp', 2, 0, 0, 0, 0, 0),
-('4', 'bandage', 3, 'healing', 'skill', 'heal 3 hp', 2, 0, 0, 0, 0, 0),
+('4', 'bandage', 3, 'healing', 'skill', 'heal 3 hp', 3, 0, 0, 0, 0, 0),
 ('5', 'glove', 3, 'attack', 'skill', 'delas 3  damage points', 0, 3, 0, 0, 0, 0),
 ('6', '4 leaf clover', 1, 'support', 'skill', 'increases attack by 1 point', 0, 0, 0, 1, 0, 0),
 ('7', 'friendship bracelet', 1, 'support', 'skill', 'increases defense by 1 point', 0, 0, 1, 0, 0, 0),
