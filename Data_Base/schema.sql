@@ -29,7 +29,7 @@ create table card(
     cardId SMALLINT NOT NULL AUTO_INCREMENT,
     name varchar(50) NOT NULL,
     energy_cost SMALLINT NOT NULL,
-    effect enum ('healing', 'attack', 'defense', 'support') NOT NULL,
+    effect enum ('healing', 'attack', 'defense', 'support', 'special') NOT NULL,
     type enum ('creature', 'hypnosis', 'snack', 'weapon', 'skill') NOT NULL,
     description varchar(100) NOT NULL,
 

@@ -7,10 +7,11 @@ insert into player (username, password, matches_won, level) values
 
 insert into villager (name, description, element) values
 ("Cat", "Its your cat!", "Reason"),
-("Doll", "Possesed doll", "Spirit"),
-('Terror', 'Terror', 'Terror'),
-('Sheep', 'A random sheep that escaped from a farm. Not very interested in going back', 'Ennui'),
-('Dream', 'Dream', 'Dream');
+("Doll", "Possesed doll", "Terror"),
+('Sheep', 'A random sheep that escaped from a farm. Not very interested in going back', 'Dream'),
+('Bird', 'A bird that is always chirping', 'Reason'),
+('Ghost', 'A ghost that haunts the house', 'Terror'),
+('Bluejay', 'A bluejay that is always flying', 'Dream');
 
 insert into stats (username, most_used_card, most_used_villager, least_used_card, least_used_villager, found_objects) values
 ('player', '9', 'Cat', '17', 'Cat', 0);
@@ -23,17 +24,17 @@ insert into card (cardId, name, energy_cost, effect, type, description, player_h
 ('1', 'plum juice', 3, 'healing', 'snack', 'drinking this grants 3 hp', 3, 0, 0, 0, 0, 0),
 ('2', 'plum jam', 1, 'healing', 'snack', 'eating this grants 1 hp', 1, 0, 0, 0, 0, 0),
 ('3', 'candy', 2, 'healing', 'snack', 'this candy grants 2 hp', 2, 0, 0, 0, 0, 0),
-('4', 'bandage', 3, 'healing', 'skill', 'heal 3 hp', 2, 0, 0, 0, 0, 0),
-('5', 'glove', 3, 'support', 'skill', 'increases defense by 3 points', 0, 0, 3, 0, 0, 0),
+('4', 'bandage', 3, 'healing', 'skill', 'heal 3 hp', 3, 0, 0, 0, 0, 0),
+('5', 'glove', 3, 'attack', 'skill', 'delas 3  damage points', 0, 3, 0, 0, 0, 0),
 ('6', '4 leaf clover', 1, 'support', 'skill', 'increases attack by 1 point', 0, 0, 0, 1, 0, 0),
 ('7', 'friendship bracelet', 1, 'support', 'skill', 'increases defense by 1 point', 0, 0, 1, 0, 0, 0),
 ('8', 'horse shoe', 2, 'support', 'skill', 'increases attack by 2 points', 0, 0, 0, 2, 0, 0),
 ('9', 'chocolate', 3, 'support', 'snack', 'lowers enemy defense by 1 point', 0, 0, 0, 0, 1, 0),
 ('10', 'dog', 2, 'support', 'creature', 'lowers enemy defense by 2 points', 0, 0, 0, 0, 2, 0),
 ('11', 'sword', 2, 'attack', 'weapon', 'deals 2 damage to your opponent', 0, 2, 0, 0, 0, 0),
-('12', 'fear', 1, 'attack', 'hypnosis', 'deals 1 damage to the opponent', 0, 1, 0, 0, 0, 0),
+('12', 'fear', 2, 'attack', 'hypnosis', 'deals 2 damage to the opponent', 0, 1, 0, 0, 0, 0),
 ('13', 'sharp stick', 1, 'attack', 'weapon', 'deals 1 damage to your opponent', 0, 1, 0, 0, 0, 0),
-('14', 'sleep', 2, 'attack', 'hypnosis', 'deals 2 damage to your opponent', 0, 0, 0, 0, 0, 0),
+('14', 'sleep', 3, 'special', 'hypnosis', 'skips enemy turn', 0, 0, 0, 0, 0, 0),
 ('15', 'confusion', 2, 'attack', 'skill', 'deals 2 damage to your opponent', 0, 2, 0, 0, 0, 0),
 ('16', 'mock', 3, 'attack', 'skill', 'decreases the enemy attack by 2 points', 0, 0, 0, 0, 0, 2),
 ('17', 'hide', 1, 'defense', 'skill', 'increases defense by 1 point', 0, 0, 1, 0, 0, 0),
@@ -41,8 +42,8 @@ insert into card (cardId, name, energy_cost, effect, type, description, player_h
 ('19', 'block', 2, 'defense', 'skill', 'decreases the enemy attack by 2 points', 0, 0, 0, 0, 0, 2),
 ('20', 'dandelion', 3, 'attack', 'skill', 'deals 3 damage points to opponent', 0, 3, 0, 0, 0, 0),
 ('21', 'seashell', 1, 'attack', 'skill', 'deals 1 damage to opponent', 0, 1, 0, 0, 0, 0),
-('22', 'rabbit foot', 1, 'healing', 'skill', 'heals 1 health point', 1, 0, 0, 0, 0, 0),
-('23', 'wedding ring', 3, 'healing', 'skill', 'heals 2 health points', 2, 0, 0, 0, 0, 0),
+('22', 'rabbit foot', 1, 'attack', 'skill', 'deals 2 damage points', 1, 0, 0, 0, 0, 0),
+('23', 'wedding ring', 3, 'attack', 'skill', 'heals 3 damage points', 2, 0, 0, 0, 0, 0),
 ('24', 'wishbone', 2, 'attack', 'skill', 'deals 3 damage', 0, 3, 0, 0, 0, 0);
 
 

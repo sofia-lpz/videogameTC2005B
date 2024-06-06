@@ -41,6 +41,8 @@ public class TCG_Controller : MonoBehaviour
     private bool gameOver = false; 
 
     private tcgFeedback feedbackscript;
+    private List<int> usedCharacters = new List<int>();
+    private List<int> usedEnemyCharacters = new List<int>();
 
 
     [SerializeField] int limit = 1;    
@@ -223,48 +225,7 @@ public class TCG_Controller : MonoBehaviour
     public void ApplyCardAttack(Card card, CharacterButtons attackingCharacter, CharacterButtons defendingCharacter){
         int damage = card.player_attack + attackingCharacter.currentAttack;
 
-        /* Elemental advantage/disadvantage adjustments
-        if (attackingCharacter.character.element == "Reason" && (defendingCharacter.character.element == "Terror" || defendingCharacter.character.element == "Spirit"))
-        {
-            damage += 1;
-        }
-        else if (attackingCharacter.character.element == "Reason" && (defendingCharacter.character.element == "Dream" || defendingCharacter.character.element == "Ennui"))
-        {
-            damage -= 1;
-        }
-        else if (attackingCharacter.character.element == "Terror" && (defendingCharacter.character.element == "Ennui" || defendingCharacter.character.element == "Dream"))
-        {
-            damage += 1;
-        }
-        else if (attackingCharacter.character.element == "Terror" && (defendingCharacter.character.element == "Reason" || defendingCharacter.character.element == "Spirit"))
-        {
-            damage -= 1;
-        }
-        else if (attackingCharacter.character.element == "Ennui" && (defendingCharacter.character.element == "Spirit" || defendingCharacter.character.element == "Reason"))
-        {
-            damage += 1;
-        }
-        else if (attackingCharacter.character.element == "Ennui" && (defendingCharacter.character.element == "Terror" || defendingCharacter.character.element == "Dream"))
-        {
-            damage -= 1;
-        }
-        else if (attackingCharacter.character.element == "Spirit" && (defendingCharacter.character.element == "Dream" || defendingCharacter.character.element == "Terror"))
-        {
-            damage += 1;
-        }
-        else if (attackingCharacter.character.element == "Spirit" && (defendingCharacter.character.element == "Ennui" || defendingCharacter.character.element == "Reason"))
-        {
-            damage -= 1;
-        }
-        else if (attackingCharacter.character.element == "Dream" && (defendingCharacter.character.element == "Reason" || defendingCharacter.character.element == "Ennui"))
-        {
-            damage += 1;
-        }
-        else if (attackingCharacter.character.element == "Dream" && (defendingCharacter.character.element == "Spirit" || defendingCharacter.character.element == "Terror"))
-        {
-            damage -= 1;
-        } */
-
+        // Apply elemental advantage/disadvantage
         if (attackingCharacter.character.element == "Reason" && defendingCharacter.character.element == "Terror")
         {
             damage += 1;
@@ -301,7 +262,7 @@ public class TCG_Controller : MonoBehaviour
             damage -= defendingCharacter.currentDefense;
         }
         
-        if (damage < 0) damage = 0;
+        if (damage < 0) damage = 1;
 
         defendingCharacter.TakeDamage(damage);
     }
@@ -347,7 +308,11 @@ public class TCG_Controller : MonoBehaviour
     public void PrepareCharacters(){
         for (int i = 0; i < numCharacters; i++)
             {
-                int charID = Random.Range(0, tcgData.Villagers.Count);
+                int charID;
+
+                do {charID = Random.Range(0, tcgData.Villagers.Count);} while (usedCharacters.Contains(charID));
+                usedCharacters.Add(charID);
+                
                 GameObject newCharacter = Instantiate(characterPrefab, characterParent);
                 CharacterButtons charButton = newCharacter.GetComponent<CharacterButtons>();
                 characterButtons.Add(charButton);
@@ -360,7 +325,11 @@ public class TCG_Controller : MonoBehaviour
     public void PrepareEnemyCharacters(){
         for (int i = 0; i < numCharacters; i++)
         {
-            int charID = Random.Range(0, tcgData.Villagers.Count);
+            int charID;
+
+            do {charID = Random.Range(0, tcgData.Villagers.Count);} while (usedEnemyCharacters.Contains(charID));
+            usedEnemyCharacters.Add(charID);
+
             GameObject newCharacter = Instantiate(characterPrefab, enemyCharacterParent);
             CharacterButtons charEnemyButton = newCharacter.GetComponent<CharacterButtons>();
             enemyCharacterButtons.Add(charEnemyButton);
@@ -381,11 +350,11 @@ public class TCG_Controller : MonoBehaviour
     public IEnumerator EnemyTurn(){
         feedbackscript.ShowFeedback("Enemy's turn!");
         yield return new WaitForSeconds(3);
-        enemyEnergy = Random.Range(4, 10);
+        enemyEnergy = Random.Range(0, 6);
         feedbackscript.ShowFeedback("Enemy got " + enemyEnergy + " energy!");
         yield return new WaitForSeconds(4);
 
-        while (enemyEnergy > 0 && enemyCards.Count > 0)
+        while (enemyEnergy >= 0 && enemyCards.Count >= 0)
         {
             EnemyCard selectedCard = SelectEnemyCard();
             if (selectedCard != null && enemyEnergy >= selectedCard.card.energy_cost)
@@ -418,17 +387,9 @@ public class TCG_Controller : MonoBehaviour
                         break;
 
                     case "healing":
-                        if (selectedCard.card_name == "bandage")
-                        {
-                            activeEnemyCharacter.Heal(selectedCard.card_heal);
-                            inactiveEnemyCharacter.Heal(selectedCard.card_heal);
-                            Debug.Log("Both characters healed by " + selectedCard.card_heal);
-                            feedbackscript.ShowFeedback("Both characters healed by " + selectedCard.card_heal);
-                        }else {
-                            activeEnemyCharacter.Heal(selectedCard.card.player_health);
-                            feedbackscript.ShowFeedback("Enemy heals!");
-                            Debug.Log("Enemy heals");
-                        }
+                        activeEnemyCharacter.Heal(selectedCard.card.player_health);
+                        feedbackscript.ShowFeedback("Enemy heals!");
+                        Debug.Log("Enemy heals");
                         break;
 
                     default:
@@ -456,6 +417,7 @@ public class TCG_Controller : MonoBehaviour
         }
         else if (activeCharacter.currentHealth <= 0)
         {
+            activeCharacter.GetComponent<Button>().interactable = false;   
             activeCharacter.Highlight();
             inactiveCharacter.Highlight();
         }
@@ -478,7 +440,7 @@ public class TCG_Controller : MonoBehaviour
 
         affordableCards.Sort((card1, card2) => card1.card.energy_cost.CompareTo(card2.card.energy_cost));
 
-        float errorMargin = 0.50f;
+        float errorMargin = 0.9f;
         int maxIndex = Mathf.CeilToInt(affordableCards.Count * errorMargin);
         EnemyCard selectedCard = affordableCards[Random.Range(0, maxIndex)];
         Debug.Log("Selected Card for AI: " + selectedCard.card.name);
