@@ -41,7 +41,7 @@ public class resultHandler : MonoBehaviour
         if (fieldInfo != null)
         {
             fieldInfo.SetValue(null, 1);
-            Debug.Log(stateNameController.match_tv);
+            Debug.Log(stateNameController.match_CENTIPEDE);
             Debug.Log("Match won and logged");
         }
         else

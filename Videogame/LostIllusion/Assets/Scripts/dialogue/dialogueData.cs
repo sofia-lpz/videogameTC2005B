@@ -256,7 +256,7 @@ public static List<List<string>> centipede_lines = new List<List<string>> {
 
 // to do, make a dictionary of dictionaries instead of dictionary of lists
 public static Dictionary<string, List<List<string>>> dialoguesDictionary = new Dictionary<string, List<List<string>>> {
-    {"tv", centipede_lines},
+    {"CENTIPEDE", centipede_lines},
     {"talk2tv", new List<List<string>> { tv2talk_lines }},
     {"book", new List<List<string>> { bookDescription }},
     {"COLOMETA", colometa_lines},

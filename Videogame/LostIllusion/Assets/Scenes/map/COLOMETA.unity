@@ -24769,7 +24769,7 @@ GameObject:
   - component: {fileID: 3623503478940411012}
   - component: {fileID: 9200426158599596404}
   m_Layer: 0
-  m_Name: tv
+  m_Name: CENTIPEDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
