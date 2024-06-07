@@ -29,6 +29,7 @@ public class stateNameController : MonoBehaviour
     public static float playerYPosInScene = 0;
     public static string playerPreviousScene = "";
 
+    public static HashSet<string> triggeredEvents = new HashSet<string>();
     public static HashSet<string> playedCutscenes = new HashSet<string>();
     public static HashSet<string> triggeredCharacters = new HashSet<string>();
 

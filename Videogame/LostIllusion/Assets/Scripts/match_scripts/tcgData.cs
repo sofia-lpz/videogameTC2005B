@@ -16,4 +16,7 @@ public class tcgData
    public static List<Card> Cards = new List<Card>();
 
    public static List<Villager> Villagers = new List<Villager>();
+
+   public static List<int> pickedCharacters = new List<int>() {0,4};
+
 }

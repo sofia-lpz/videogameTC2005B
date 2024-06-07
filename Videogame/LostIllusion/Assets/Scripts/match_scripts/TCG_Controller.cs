@@ -309,8 +309,9 @@ public class TCG_Controller : MonoBehaviour
         for (int i = 0; i < numCharacters; i++)
             {
                 int charID;
+                
 
-                do {charID = Random.Range(0, tcgData.Villagers.Count);} while (usedCharacters.Contains(charID));
+                do {charID = tcgData.pickedCharacters[i];} while (usedCharacters.Contains(charID));
                 usedCharacters.Add(charID);
                 
                 GameObject newCharacter = Instantiate(characterPrefab, characterParent);
