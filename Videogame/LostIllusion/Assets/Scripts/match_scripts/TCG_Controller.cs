@@ -306,9 +306,11 @@ public class TCG_Controller : MonoBehaviour
     // Function that prepares the characters
     // agregar condicion para que no se repitan los personajes
     public void PrepareCharacters(){
+        Debug.Log("data in pickedCharacters: " + tcgData.pickedCharacters[0] + " " + tcgData.pickedCharacters[1]);
+        Debug.Log("names of the picked characters: " + tcgData.Villagers[tcgData.pickedCharacters[0]-1].name + " " + tcgData.Villagers[tcgData.pickedCharacters[1]-1].name);
         for (int i = 0; i < numCharacters; i++)
             {
-                int charID = tcgData.pickedCharacters[i];
+                int charID = tcgData.pickedCharacters[i] - 1;
             
                 GameObject newCharacter = Instantiate(characterPrefab, characterParent);
                 CharacterButtons charButton = newCharacter.GetComponent<CharacterButtons>();

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2eb8d6cd36db0449bb307f1ee4e090d7
+guid: c5dd1592b4990c541a141aba5811ee49
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 8
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -98,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kingCrawler_0
+      name: gimpcentipede_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 31
-        height: 123
+        x: 2
+        y: 2
+        width: 32
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06a03f1a54d834815a8fa4bf3fa5288d
-      internalID: 1204194695
+      spriteID: 46dda4f0160989641a285ca26f741d92
+      internalID: 353023590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kingCrawler_1
+      name: gimpcentipede_1
       rect:
         serializedVersion: 2
-        x: 33
-        y: 0
-        width: 31
-        height: 123
+        x: 35
+        y: 2
+        width: 32
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2414a9e14412451db6b06e0c2def5b8
-      internalID: -1117490691
+      spriteID: 4051715de082966459bc76f66cfa4c6a
+      internalID: -68479619
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kingCrawler_2
+      name: gimpcentipede_2
       rect:
         serializedVersion: 2
-        x: 66
-        y: 0
-        width: 31
-        height: 123
+        x: 68
+        y: 2
+        width: 32
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 835ba19d3762341bfbf294ede2ec3620
-      internalID: 2063297150
+      spriteID: 59049ee9d55b61a43bdab37e36bf17c5
+      internalID: 1046908224
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kingCrawler_3
+      name: gimpcentipede_3
       rect:
         serializedVersion: 2
-        x: 99
-        y: 0
-        width: 31
-        height: 123
+        x: 101
+        y: 2
+        width: 32
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de3ab7b02194a42c8b714a6aea04e56b
-      internalID: 2013366933
+      spriteID: cf1b96f02358bcd4d8e662cadcf56123
+      internalID: 112481570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kingCrawler_4
+      name: gimpcentipede_4
       rect:
         serializedVersion: 2
-        x: 132
-        y: 0
-        width: 31
-        height: 123
+        x: 134
+        y: 2
+        width: 32
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa48b294c37ec41259dc180e28f94d4e
-      internalID: 1195985548
+      spriteID: cc06254c0c7da4144a8c60314c5d371d
+      internalID: -185073044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kingCrawler_5
+      name: gimpcentipede_5
       rect:
         serializedVersion: 2
-        x: 165
-        y: 0
-        width: 31
-        height: 123
+        x: 167
+        y: 2
+        width: 32
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a58b6f2a54f9407fa3348594486b8aa
-      internalID: -892556155
+      spriteID: a4ede04247856394f90e7cce9de7e59e
+      internalID: 915977588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kingCrawler_6
+      name: gimpcentipede_6
       rect:
         serializedVersion: 2
-        x: 198
-        y: 0
-        width: 31
-        height: 123
+        x: 200
+        y: 2
+        width: 32
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3925fa3718ffc4855a4d2cfc22f80b47
-      internalID: 968810045
+      spriteID: 248982429233c054694816b1849056ed
+      internalID: 131766021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kingCrawler_7
+      name: gimpcentipede_7
       rect:
         serializedVersion: 2
-        x: 231
-        y: 0
-        width: 31
-        height: 123
+        x: 233
+        y: 2
+        width: 32
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c274312793b1453d842722177a8aae1
-      internalID: -870031132
+      spriteID: fc68909823cc6d944b8ea5dc9912efb5
+      internalID: -954326356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kingCrawler_8
+      name: gimpcentipede_8
       rect:
         serializedVersion: 2
-        x: 264
-        y: 0
-        width: 31
-        height: 123
+        x: 266
+        y: 2
+        width: 32
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee73a49de789e48e69293688d1970fab
-      internalID: -1935087013
+      spriteID: d2bdd313896a6ce4685cd70efc0ec5d5
+      internalID: 374469392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kingCrawler_9
+      name: gimpcentipede_9
       rect:
         serializedVersion: 2
-        x: 297
-        y: 0
-        width: 31
-        height: 123
+        x: 299
+        y: 2
+        width: 32
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,20 +313,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d780dca875486466d967e5b188f39f34
-      internalID: 1706164135
+      spriteID: 60da1497898ce0544b835811fe075d6c
+      internalID: -564824691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: kingCrawler_10
+      name: gimpcentipede_10
       rect:
         serializedVersion: 2
-        x: 330
-        y: 0
-        width: 31
-        height: 123
+        x: 332
+        y: 2
+        width: 32
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,8 +334,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86a88c0353c7d4ed58fba9eff99b61dc
-      internalID: -81492941
+      spriteID: 45831021f081b22498263d845296fb1f
+      internalID: 1455588907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gimpcentipede_11
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 2
+        width: 32
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6dc630f6181f394fbc687a3088d3cd5
+      internalID: 2088070713
       vertices: []
       indices: 
       edges: []
@@ -351,17 +372,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      kingCrawler_0: 1204194695
-      kingCrawler_1: -1117490691
-      kingCrawler_10: -81492941
-      kingCrawler_2: 2063297150
-      kingCrawler_3: 2013366933
-      kingCrawler_4: 1195985548
-      kingCrawler_5: -892556155
-      kingCrawler_6: 968810045
-      kingCrawler_7: -870031132
-      kingCrawler_8: -1935087013
-      kingCrawler_9: 1706164135
+      gimpcentipede_0: 353023590
+      gimpcentipede_1: -68479619
+      gimpcentipede_10: 1455588907
+      gimpcentipede_11: 2088070713
+      gimpcentipede_2: 1046908224
+      gimpcentipede_3: 112481570
+      gimpcentipede_4: -185073044
+      gimpcentipede_5: 915977588
+      gimpcentipede_6: 131766021
+      gimpcentipede_7: -954326356
+      gimpcentipede_8: 374469392
+      gimpcentipede_9: -564824691
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

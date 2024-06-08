@@ -13,8 +13,6 @@ insert into villager (name, description, element) values
 ('Ghost', 'A ghost that haunts the house', 'Terror'),
 ('Bluejay', 'A bluejay that is always flying', 'Dream');
 
-insert into stats (username, most_used_card, most_used_villager, least_used_card, least_used_villager, found_objects) values
-('player', '9', 'Cat', '17', 'Cat', 0);
 
 insert into deck (username, cardId) values
 ('player', '3');
@@ -45,15 +43,6 @@ insert into card (cardId, name, energy_cost, effect, type, description, player_h
 ('22', 'rabbit foot', 1, 'attack', 'skill', 'deals 2 damage points', 1, 0, 0, 0, 0, 0),
 ('23', 'wedding ring', 3, 'attack', 'skill', 'heals 3 damage points', 2, 0, 0, 0, 0, 0),
 ('24', 'wishbone', 2, 'attack', 'skill', 'deals 3 damage', 0, 3, 0, 0, 0, 0);
-
-
-insert into team (username, villager) values
-('player', 'Cat');
-
-
-insert into tcg_match (matchId, timestamp, username, won) values
-(1, '2024-05-22 11:34:00', 'player', TRUE);
-
 
 
 

@@ -53,10 +53,10 @@ public class characterSelection : MonoBehaviour
     {
         if (selectedCount < 2)
         {
-            tcgData.pickedCharacters.Add(selectedCharacter.character.villagerID);
+            tcgData.pickedCharacters.Add(selectedCharacter.character.villager_id);
             selectedCharacter.GetComponent<Button>().interactable = false;
             selectedCount++;
-            Debug.Log(selectedCharacter.character.villagerID);
+            Debug.Log(selectedCharacter.character.villager_id);
             Debug.Log(tcgData.pickedCharacters.Count);
             if(selectedCount == 2)
             {

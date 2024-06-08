@@ -11,18 +11,19 @@ create table player(
 ) engine=InnoDB DEFAULT CHARSET=utf8mb4;
 
 create table villager(
+    villager_id SMALLINT NOT NULL AUTO_INCREMENT,
     name varchar(50) NOT NULL,
     description varchar(100) NOT NULL,
     element enum('Reason', 'Dream', 'Terror', 'Ennui', 'Spirit') NOT NULL,
-    primary key (name)
+    primary key (villager_id)
 ) engine=InnoDB DEFAULT CHARSET=utf8mb4;
 
 create table team(
     username varchar(50) NOT NULL,
-    villager varchar(50) NOT NULL,
-    primary key (username, villager),
+    villager_id SMALLINT NOT NULL,
+    primary key (username, villager_id),
     constraint fk_team_username foreign key (username) references player(username),
-    constraint fk_team_villager foreign key (villager) references villager(name)
+    constraint fk_team_villager foreign key (villager_id) references villager(villager_id)
 ) engine=InnoDB DEFAULT CHARSET=utf8mb4;
 
 create table card(
@@ -61,18 +62,28 @@ create table tcg_match(
 
 create table stats(
     username varchar(50) NOT NULL,
-    most_used_card varchar(50) NOT NULL,
-    most_used_villager varchar(50) NOT NULL,
-    least_used_card varchar(50) NOT NULL,
-    least_used_villager varchar(50) NOT NULL,
+    most_used_card SMALLINT NOT NULL,
+    most_used_villager SMALLINT NOT NULL,
+    least_used_card SMALLINT NOT NULL,
+    least_used_villager SMALLINT NOT NULL,
     found_objects SMALLINT NOT NULL DEFAULT 0,
 
     primary key (username),
     constraint stats_player foreign key (username) references player(username) on delete restrict on update cascade,
     constraint stats_MU_card foreign key (most_used_card) references card(cardId) on delete restrict on update cascade,
-    constraint stats_MU_villager foreign key (most_used_villager) references villager(name) on delete restrict on update cascade,
+    constraint stats_MU_villager foreign key (most_used_villager) references villager(villager_id) on delete restrict on update cascade,
     constraint stats_LU_card foreign key (least_used_card) references card(cardId) on delete restrict on update cascade,
-    constraint stats_LU_villager foreign key (least_used_villager) references villager(name) on delete restrict on update cascade
+    constraint stats_LU_villager foreign key (least_used_villager) references villager(villager_id) on delete restrict on update cascade
+) engine=myisam DEFAULT CHARSET=utf8mb4;
+
+create table global_stats(
+    global_stats_id SMALLINT NOT NULL AUTO_INCREMENT,
+    most_used_card SMALLINT NOT NULL,
+    most_used_villager SMALLINT NOT NULL,
+    least_used_card SMALLINT NOT NULL,
+    least_used_villager SMALLINT NOT NULL,
+    found_objects SMALLINT NOT NULL DEFAULT 0,
+    primary key (global_stats_id)
 ) engine=myisam DEFAULT CHARSET=utf8mb4;
 
 create table deck(

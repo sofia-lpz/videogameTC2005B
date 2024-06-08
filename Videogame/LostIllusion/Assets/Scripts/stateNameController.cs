@@ -44,6 +44,11 @@ public class stateNameController : MonoBehaviour
         "intro",
         "Outside"
         };
+
+    /*LIST OF SCARY SCENES*/
+    public static HashSet<string> scaryScenes = new HashSet<string> {
+        "COLOMETA"
+        };
     
     /*MATCH RESULTS*/
     public static int match_CENTIPEDE = 0; //set to 1 if the tv match has been won, -1 if lost, 0 if never played
