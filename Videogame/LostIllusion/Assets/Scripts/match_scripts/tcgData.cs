@@ -9,6 +9,7 @@ Sofia Moreno
 */
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 [System.Serializable]
 public class tcgData
@@ -19,4 +20,10 @@ public class tcgData
 
    public static List<int> pickedCharacters = new List<int>();
 
+   public static Dictionary<string, Sprite> elementSprites = new Dictionary<string, Sprite>
+   {
+      {"Reason", Resources.Load<Sprite>("emotion_ui/reasonsprite")},
+      {"Dream", Resources.Load<Sprite>("emotion_ui/dreamsprite")},
+      {"Terror", Resources.Load<Sprite>("emotion_ui/terrorsprite")},
+   };
 }
