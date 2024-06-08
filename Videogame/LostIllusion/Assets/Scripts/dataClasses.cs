@@ -70,7 +70,7 @@ public class Team{
 
 [Serializable]
 public class Villager{
-    public int villagerID;
+    public int villager_id;
     public string name;
     public string description;
     public string element;

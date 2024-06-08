@@ -49,7 +49,7 @@ public class api_connect : MonoBehaviour
             else
             {
                 result = www.downloadHandler.text;
-                Debug.Log("request successful: " + result);
+                Debug.Log("request successful");
                 callback(result);
                 apiConnected = true;
             }
