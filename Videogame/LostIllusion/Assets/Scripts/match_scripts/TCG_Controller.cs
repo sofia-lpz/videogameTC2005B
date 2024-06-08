@@ -308,12 +308,8 @@ public class TCG_Controller : MonoBehaviour
     public void PrepareCharacters(){
         for (int i = 0; i < numCharacters; i++)
             {
-                int charID;
-                
-
-                do {charID = tcgData.pickedCharacters[i];} while (usedCharacters.Contains(charID));
-                usedCharacters.Add(charID);
-                
+                int charID = tcgData.pickedCharacters[i];
+            
                 GameObject newCharacter = Instantiate(characterPrefab, characterParent);
                 CharacterButtons charButton = newCharacter.GetComponent<CharacterButtons>();
                 characterButtons.Add(charButton);

@@ -65,6 +65,12 @@ public class menuButtons : MonoBehaviour
         SceneManager.LoadScene("match_CENTIPEDE", LoadSceneMode.Single);
     }
 
+    public void startDEV1()
+    {
+        audioSource.Play();
+        SceneManager.LoadScene("characterSelection", LoadSceneMode.Single);
+    }
+
     public void resume()
     {
         audioSource.Play();
