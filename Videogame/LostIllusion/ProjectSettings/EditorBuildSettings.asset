@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu/Register.unity
     guid: 438c7544e37ca134289a5aa8fcc9c35a
   - enabled: 1
+    path: Assets/Scenes/matches/characterSelection.unity
+    guid: 1652e19088aecfa42abcfe33118bbc33
+  - enabled: 1
     path: Assets/Scenes/map/finalHome.unity
     guid: 1883bafe03dc62d49a9714a7860600cd
   - enabled: 1
