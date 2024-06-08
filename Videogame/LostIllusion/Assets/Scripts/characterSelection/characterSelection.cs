@@ -12,6 +12,7 @@ public class characterSelection : MonoBehaviour
     [SerializeField] List<CharacterButtons> characterButtons;
     public Villager character;
     private int selectedCount;
+    [SerializeField] Button startGameButton;
 
     // Start is called before the first frame update
     void Start()
@@ -57,8 +58,11 @@ public class characterSelection : MonoBehaviour
             selectedCount++;
             Debug.Log(selectedCharacter.character.villagerID);
             Debug.Log(tcgData.pickedCharacters.Count);
+            if(selectedCount == 2)
+            {
+                startGameButton.interactable = true;
+            }
         } 
-
     }
 
     public void CharacterReset()
@@ -69,5 +73,6 @@ public class characterSelection : MonoBehaviour
         }
         tcgData.pickedCharacters.Clear();
         selectedCount = 0;
+        startGameButton.interactable = false;
     }
 }
