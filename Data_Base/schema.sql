@@ -75,6 +75,16 @@ create table stats(
     constraint stats_LU_villager foreign key (least_used_villager) references villager(name) on delete restrict on update cascade
 ) engine=myisam DEFAULT CHARSET=utf8mb4;
 
+create table global_stats(
+    global_stats_id SMALLINT NOT NULL AUTO_INCREMENT,
+    most_used_card varchar(50) NOT NULL,
+    most_used_villager varchar(50) NOT NULL,
+    least_used_card varchar(50) NOT NULL,
+    least_used_villager varchar(50) NOT NULL,
+    found_objects SMALLINT NOT NULL DEFAULT 0,
+    primary key (global_stats_id),
+) engine=myisam DEFAULT CHARSET=utf8mb4;
+
 create table deck(
     username varchar(50) NOT NULL,
     cardId varchar(15) NOT NULL,

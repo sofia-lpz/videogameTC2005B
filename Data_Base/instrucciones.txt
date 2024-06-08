@@ -1,0 +1,5 @@
+
+        Implementen diez vistas (Views).
+        Implementen tres procedimientos almacenados (Stored procedures).
+        Implementen tres disparadores (Triggers).
+        Implementen dos eventos (Events).
