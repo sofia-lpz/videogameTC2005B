@@ -16,10 +16,15 @@ public class MapManager : MonoBehaviour
 {
     [SerializeField] GameObject PauseCanvasPrefab;
     [SerializeField] GameObject InventoryCanvasPrefab;
-    [SerializeField] GameObject playerPrefab;
 
     void Start()
     {
+        
+    // Desoy all picked up items
+    foreach (string pickedUpItem in stateNameController.inventory)
+    {
+        Destroy(GameObject.Find(pickedUpItem));
+    }
         /*
         if (stateNameController.playerPreviousScene != "")
         {

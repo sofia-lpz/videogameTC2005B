@@ -14,25 +14,33 @@ using UnityEngine;
 
 public class Character_Movement : MonoBehaviour
 {
-    [SerializeField] float speed;
+    [SerializeField] protected float speed;
 
-    private Rigidbody2D rb;
-    private Vector2 movement;
-    private Animator animator;
+    protected Rigidbody2D rb;
+    protected Vector2 movement;
+    protected Animator animator;
 
-    [SerializeField] KeyCode up;
-    [SerializeField] KeyCode down;
-    [SerializeField] KeyCode left;
-    [SerializeField] KeyCode right;
-    [SerializeField] GameObject DialogueCanvas;
+    
+    [SerializeField] protected KeyCode up;
+    [SerializeField] protected KeyCode down;
+    [SerializeField] protected KeyCode left;
+    [SerializeField] protected KeyCode right;
+    [SerializeField] protected GameObject DialogueCanvas;
+    protected string sceneName;
 
-    void Start()
+    public virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+
+        if (stateNameController.scaryScenes.Contains(sceneName))
+        {
+            StartCoroutine(tremble());
+        }
     }
 
-    void Update()
+    public virtual void Update()
     {
         if (stateNameController.gamePaused || stateNameController.freezePlayer)
         {
@@ -83,7 +91,7 @@ public class Character_Movement : MonoBehaviour
         }
     }
 
-    IEnumerator tremble()
+    public virtual IEnumerator tremble()
     {
         float trembleAmount = 0.05f; // Adjust this value to change the intensity of the tremble
         float trembleSpeed = 60f; // Adjust this value to change the speed of the tremble
