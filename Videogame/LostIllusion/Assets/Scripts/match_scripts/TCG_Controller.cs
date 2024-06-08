@@ -43,7 +43,7 @@ public class TCG_Controller : MonoBehaviour
     private tcgFeedback feedbackscript;
     private List<int> usedCharacters = new List<int>();
     private List<int> usedEnemyCharacters = new List<int>();
-
+    public bool skipEnemyTurn = false;
 
     [SerializeField] int limit = 1;    
 
@@ -193,7 +193,11 @@ public class TCG_Controller : MonoBehaviour
                         case "healing":
                             activeCharacter.Heal(cardButton.card.player_health);
                             break;
-                        
+
+                        case "special":    
+                            skipEnemyTurn = true;
+                            break;
+
                         default:
                             Debug.LogWarning("Unknown card effect: " + cardButton.card.effect);
                             break;
@@ -341,7 +345,18 @@ public class TCG_Controller : MonoBehaviour
     public void EndTurn(){
         currentTurn = Turn.Enemy;
         endTurnButton.interactable = false;
-        StartCoroutine(EnemyTurn());
+
+        if (skipEnemyTurn)
+        {
+            skipEnemyTurn = false;
+            StartPlayerTurn();
+            return;
+        } 
+        else 
+        {
+             StartCoroutine(EnemyTurn());
+        }
+       
         notEnoughEnergyText.text = "";
     }
 
