@@ -3,8 +3,6 @@ use colometa;
 insert into player (username, password, matches_won, level) values
 ('player', 'admin', 0, 0);
 
-
-
 insert into villager (name, description, element) values
 ("Cat", "Its your cat!", "Reason"),
 ("Doll", "Possesed doll", "Terror"),
@@ -12,11 +10,6 @@ insert into villager (name, description, element) values
 ('Bird', 'A bird that is always chirping', 'Reason'),
 ('Ghost', 'A ghost that haunts the house', 'Terror'),
 ('Bluejay', 'A bluejay that is always flying', 'Dream');
-
-
-insert into deck (username, cardId) values
-('player', '3');
-
 
 insert into card (cardId, name, energy_cost, effect, type, description, player_health, player_attack, player_defense, player_support, enemy_defense, enemy_attack) values
 ('1', 'plum juice', 3, 'healing', 'snack', 'drinking this grants 3 hp', 3, 0, 0, 0, 0, 0),

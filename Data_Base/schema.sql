@@ -66,7 +66,7 @@ create table stats(
     most_used_villager SMALLINT NOT NULL,
     least_used_card SMALLINT NOT NULL,
     least_used_villager SMALLINT NOT NULL,
-    found_objects SMALLINT NOT NULL DEFAULT 0,
+    memories_found SMALLINT NOT NULL,
 
     primary key (username),
     constraint stats_player foreign key (username) references player(username) on delete restrict on update cascade,
@@ -82,14 +82,14 @@ create table global_stats(
     most_used_villager SMALLINT NOT NULL,
     least_used_card SMALLINT NOT NULL,
     least_used_villager SMALLINT NOT NULL,
-    found_objects SMALLINT NOT NULL DEFAULT 0,
+    memories_found_avg SMALLINT NOT NULL,
     primary key (global_stats_id)
 ) engine=myisam DEFAULT CHARSET=utf8mb4;
 
-create table deck(
-    username varchar(50) NOT NULL,
-    cardId varchar(15) NOT NULL,
-    primary key (username,cardId),
-    constraint deck_player foreign key (username) references player(username) on delete restrict on update cascade,
-    constraint deck_card foreign key (cardId) references card(cardId) on delete restrict on update cascade
-) engine=myisam DEFAULT CHARSET=utf8mb4;
+-- create table deck(
+--     username varchar(50) NOT NULL,
+--     cardId varchar(15) NOT NULL,
+--     primary key (username,cardId),
+--     constraint deck_player foreign key (username) references player(username) on delete restrict on update cascade,
+--     constraint deck_card foreign key (cardId) references card(cardId) on delete restrict on update cascade
+-- ) engine=myisam DEFAULT CHARSET=utf8mb4;
