@@ -340,6 +340,19 @@ public class TCG_Controller : MonoBehaviour
         }
     }
 
+    public bool HasAdvantage(CharacterButtons attacker, CharacterButtons defender)
+    {
+        string attackerElement = attacker.character.element;
+        string defenderElement = defender.character.element;
+
+        if ((attackerElement == "Reason" && defenderElement == "Terror") || (attackerElement == "Terror" && defenderElement == "Dream") || (attackerElement == "Dream" && defenderElement == "Reason"))
+        {
+            return true;
+        }
+
+        return false;
+    }
+
 
     // Function that ends the turn
     public void EndTurn(){
@@ -364,9 +377,30 @@ public class TCG_Controller : MonoBehaviour
     public IEnumerator EnemyTurn(){
         feedbackscript.ShowFeedback("Enemy's turn!");
         yield return new WaitForSeconds(3);
-        enemyEnergy = Random.Range(0, 6);
+        enemyEnergy = Random.Range(3, 7);
         feedbackscript.ShowFeedback("Enemy got " + enemyEnergy + " energy!");
         yield return new WaitForSeconds(4);
+
+        CharacterButtons activePlayerCharacter = GetActiveCharacter();
+        CharacterButtons activeEnemyCharacter = GetActiveEnemy();
+        CharacterButtons inactiveEnemyCharacter = GetInactiveEnemy();
+        
+        float changeCharacterProb = 0.5f;
+
+        if (!HasAdvantage(activeEnemyCharacter, activePlayerCharacter))
+        {
+            // Decidir si cambiar de personaje basado en la probabilidad fija
+            if (Random.value < changeCharacterProb)
+            {
+                Debug.Log("Enemy decides to switch character");
+                feedbackscript.ShowFeedback("Enemy switches character!");
+                activeEnemyCharacter.HighlightEnemy();
+                inactiveEnemyCharacter.HighlightEnemy();
+                yield return new WaitForSeconds(2); // Pausa después del cambio de personaje
+            }
+        }
+
+        float endTurnProb = 0f;
 
         while (enemyEnergy >= 0 && enemyCards.Count >= 0)
         {
@@ -375,34 +409,33 @@ public class TCG_Controller : MonoBehaviour
             {
                 Debug.Log("Selected Card: " + selectedCard.card.name + " with cost: " + selectedCard.card.energy_cost);
                 enemyEnergy -= selectedCard.card.energy_cost;
-                CharacterButtons activePlayerCharacter = GetActiveCharacter();
-                CharacterButtons inactiveEnemyCharacter = GetInactiveEnemy();
-                CharacterButtons activeEnemyCharacter = GetActiveEnemy();
+                CharacterButtons activePlayerCharacter1 = GetActiveCharacter();
+                CharacterButtons activeEnemyCharacter1 = GetActiveEnemy();
 
                 switch (selectedCard.card.effect)
                 {
                     case "attack":
-                        ApplyCardAttack(selectedCard.card, activeEnemyCharacter, activePlayerCharacter);
+                        ApplyCardAttack(selectedCard.card, activeEnemyCharacter1, activePlayerCharacter1);
                         Instantiate(attackAnimationPrefab);
                         Debug.Log("Enemy attacks");
-                        feedbackscript.ShowFeedback("Enemy attacks!");
+                        feedbackscript.ShowFeedback("Enemy uses " + selectedCard.card_name + " and attacks!");
                         break;
 
                     case "support":
-                        ApplySupportEffect(selectedCard.card, activeEnemyCharacter, activePlayerCharacter);
+                        ApplySupportEffect(selectedCard.card, activeEnemyCharacter1, activePlayerCharacter1);
                         Debug.Log("Enemy supports");
-                        feedbackscript.ShowFeedback("Enemy supports!");
+                        feedbackscript.ShowFeedback("Enemy uses " + selectedCard.card_name + " and supports!");
                         break;
 
                     case "defense":
-                        ApplyDefenseEffect(selectedCard.card, activeEnemyCharacter, activePlayerCharacter);
+                        ApplyDefenseEffect(selectedCard.card, activeEnemyCharacter1, activePlayerCharacter1);
                         Debug.Log("Enemy defends");
-                        feedbackscript.ShowFeedback("Enemy defends!");
+                        feedbackscript.ShowFeedback("Enemy uses " + selectedCard.card_name + " and defends!");
                         break;
 
                     case "healing":
                         activeEnemyCharacter.Heal(selectedCard.card.player_health);
-                        feedbackscript.ShowFeedback("Enemy heals!");
+                        feedbackscript.ShowFeedback("Enemy uses " + selectedCard.card_name + " and heals!");
                         Debug.Log("Enemy heals");
                         break;
 
@@ -412,10 +445,20 @@ public class TCG_Controller : MonoBehaviour
                 }
 
                 enemyCards.Remove(selectedCard);
-                yield return new WaitForSeconds(3);  // Optional: Add delay between plays
+                yield return new WaitForSeconds(3);
+
+                if (Random.value < endTurnProb)
+                {
+                    feedbackscript.ShowFeedback("Enemy ends turn!");
+                    Debug.Log("Enemy ends turn");
+                    break;
+                }
+
+                endTurnProb += 0.25f;
             }
             else
             {
+                feedbackscript.ShowFeedback("Enemy ends turn!");
                 Debug.Log("Enemy couldn't play any card due to insufficient energy or other constraints");
                 break;
             }
@@ -436,7 +479,7 @@ public class TCG_Controller : MonoBehaviour
             inactiveCharacter.Highlight();
         }
 
-        yield return new WaitForSeconds(1);  // Optional: Add delay before switching turn back to player
+        yield return new WaitForSeconds(2);
         Debug.Log("Enemy Turn Ended");
         feedbackscript.ShowFeedback("Your turn!");
         PrepareEnemyCards();
