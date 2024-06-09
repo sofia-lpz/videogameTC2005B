@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Illusion</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/scroll.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <span class="site-title">Lost Illusion</span>
+        </div>
+        <ul class="nav-right">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#stats">Stats</a></li>
+            <li><a href="#code">Code</a></li>
+            <li><a href="#credits">Credits</a></li>
+        </ul>
+    </nav>
+    <div class="content" id="home">
+        <h1>Lost Illusion</h1>
+        <p>Welcome to Lost Illusion, interact with the box down below to start playing!</p>
+        <div id="unityContainer"></div>
+        <div class="wave"></div>
+    </div>
+    <div class="section about-section" id="about">
+        <h2>About</h2>
+        <div class="about-content">
+            <h3>About the game</h3>
+            <p>Is a strategic card-based adventure game in a visually distorted cityscape, where the player navigate an hypnotized protagonist on a quest to confront the magician responsible for their altered state of consciousness. Throughout the players journey, he will encounter various opponents that will join its team if he defeats them also he will discover new places and new cards to use in combat. The game combines exploration of a pixel art map with engaging card battles, unfolding the story through vividly illustrated cutscenes and giving more reasons to why he was hypnotized be the magician.</p>
+            <h3>Gameplay</h3>
+            <p>The game integrates exploration with card-based combat. Each level on the 2D pixel art map represents a card battle that progressively reveals the storyline through both victories and defeats. Players encounter a variety of enemies transformed by the protagonist's distorted perception into fantastical beings. The primary objective is to reach the magician, overcoming obstacles such as complex cards and deceptive environments that tweak gameplay mechanics.</p>
+            <h3>Controls</h3>
+            <p>Use W, A, S, D to move player and ENTER to interact with other characters.</p>
+            <h3>How to play</h3>
+            <p>Queda pendiente...</p>
+            <a href="#home" class="button">Jugar Ahora</a>
+        </div>
+        <div class="wave"></div>
+    </div>
+    <div class="section stats-section" id="stats">
+        <h2 style="color: white;">Stats</h2>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-content">
+                    <h3>Stat 1</h3>
+                    <p>stat</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Stat 2</h3>
+                    <p>Stat</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Stat 3</h3>
+                    <p>Stat</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Stat 4</h3>
+                    <p>Stat</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Stat 5</h3>
+                    <p>Stat</p>
+                </div>
+            </div>
+        </div>
+        <div class="wave"></div>
+    </div>
+    <div class="section code-section" id="code">
+        <h2>Code</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="unitylogo.png" alt="Unity Image" class="card-image">
+                <div class="card-content">
+                    <h3>Unity</h3>
+                    <p>Game development using Unity, a platform for creating 2D and 3D video games.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="weblogo.jpg" alt="Web Development Image" class="card-image">
+                <div class="card-content">
+                    <h3>Desarrollo Web</h3>
+                    <p>Use of HTML, CSS and JavaScript to create the game's web interface, including technologies such as Node.js and Express for the backend.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="sqllogo.png" alt="Database Image" class="card-image">
+                <div class="card-content">
+                    <h3>Bases de Datos</h3>
+                    <p>Using MySQL for database management, ensuring efficient storage and retrieval of game and user data.</p>
+                </div>
+            </div>
+        </div>
+        <div class="wave"></div>
+    </div>
+    <div class="section credits-section" id="credits">
+        <h2 style="color: white;">Credits</h2>
+        <div class="credits-content">
+            <p><strong>Equipo de Desarrollo:</strong></p>
+            <ul>
+                <li>Luis Da</li>
+                <li>Sofia Lopez</li>
+                <li>Diego Valencia</li>
+                <li>Javier Montero</li>
+            </ul>
+            <p>Developed during TC2005B course.</p>
+        </div>
+        <div class="wave"></div>
+    </div>
+    <footer>
+        &copy; 2024 Lost Illusion.
+    </footer>
+
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+        var unityInstance = UnityLoader.instantiate("unityContainer", "Build/myGame.json", {
+            onProgress: function (unityInstance, progress) {
+                console.log(progress * 100 + "%");
+            }
+        });
+    </script>
+</body>
+</html>
