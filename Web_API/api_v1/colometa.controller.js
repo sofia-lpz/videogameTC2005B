@@ -217,7 +217,7 @@ const createPlayerMatch = async (req, res) => {
 
 const createPlayerStats = async (req, res) => {
   const {
-    params: { username, mostUsedCard, mostUsedVillager, leastUsedCard, leastUsedVillager, memoriesFound },
+    body: { username, mostUsedCard, mostUsedVillager, leastUsedCard, leastUsedVillager, memoriesFound },
   } = req;
 
   if (!username || !mostUsedCard || !mostUsedVillager || !leastUsedCard || !leastUsedVillager || memoriesFound === undefined) {
