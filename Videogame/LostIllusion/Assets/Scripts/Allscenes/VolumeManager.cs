@@ -27,10 +27,10 @@ public class VolumeManager : MonoBehaviour
         slider.value = stateNameController.volume;
         volumeText.text = (int)(stateNameController.volume * 100) + "%";
         if (stateNameController.muted){
-            muteButtonText.text = "Unmute";
+            muteButtonText.text = "unmute";
         }
         else{
-            muteButtonText.text = "Mute";
+            muteButtonText.text = "mute";
         }
     }
 
@@ -48,7 +48,7 @@ public class VolumeManager : MonoBehaviour
             stateNameController.volume = stateNameController.storedVolume;
             slider.value = stateNameController.storedVolume;
             volumeText.text = (int)(stateNameController.volume * 100) + "%";
-            muteButtonText.text = "Mute";
+            muteButtonText.text = "mute";
         }
         else{
             stateNameController.storedVolume = stateNameController.volume;
@@ -56,7 +56,7 @@ public class VolumeManager : MonoBehaviour
             stateNameController.muted = true;
             slider.value = 0;
             volumeText.text = "0%";
-            muteButtonText.text = "Unmute";
+            muteButtonText.text = "unmute";
         }
     }
 

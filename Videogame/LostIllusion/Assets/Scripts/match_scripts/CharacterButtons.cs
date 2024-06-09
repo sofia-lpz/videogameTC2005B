@@ -62,6 +62,19 @@ public class CharacterButtons : MonoBehaviour
         characterName.text = character.name;
         characterDescription.text = character.description;
         characterElement.text = character.element;
+    
+        if (tcgData.elementSprites.TryGetValue(character.element, out Sprite elementSprite))
+        {
+            Transform childTransform = transform.Find("backgroundColor");
+            if (childTransform != null)
+            {
+                Image imageComponent = childTransform.GetComponent<Image>();
+                if (imageComponent != null)
+                {
+                    imageComponent.sprite = elementSprite;
+                }
+            }
+        }
     }
 
     void Update()

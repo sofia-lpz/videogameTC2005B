@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ae6edb88fad13dc45a63b385dd3d93d4
+guid: 40c6594bcd921d34f88d9382bcf07c95
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,22 +110,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: panelCards_0
+      name: character_portrait
       rect:
         serializedVersion: 2
-        x: 25
-        y: 366
-        width: 452
-        height: 112
+        x: 22
+        y: 472
+        width: 114
+        height: 165
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fc8323035d9dc6499220d5abe41d1f5
-      internalID: 236246056
+      spriteID: cd8c230dc7c988a49b8b8680e10f6e23
+      internalID: 1477563147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 451
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d57a4e1bb48137646b503521ce1fb44a
+      internalID: 1356925856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 357
+        width: 123
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8acf75bf0d7cd9043b596f63cba8da72
+      internalID: -1403903373
       vertices: []
       indices: 
       edges: []
@@ -141,7 +183,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      panelCards_0: 236246056
+      battle_ui_0: -968826419
+      character_portrait: 1477563147
+      energy: -1403903373
+      heart: 1356925856
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
