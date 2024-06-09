@@ -5,7 +5,6 @@ use colometa;
 create table player(
     username varchar(50) NOT NULL DEFAULT 'name',
     password varchar(50) NOT NULL DEFAULT 'password',
-    matches_won SMALLINT NOT NULL DEFAULT 0,
     level SMALLINT NOT NULL DEFAULT 0,
     primary key (username)
 ) engine=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -62,11 +61,12 @@ create table tcg_match(
 
 create table stats(
     username varchar(50) NOT NULL,
-    most_used_card VARCHAR(50) NOT NULL,
-    most_used_villager VARCHAR(50) NOT NULL,
-    least_used_card VARCHAR(50) NOT NULL,
-    least_used_villager VARCHAR(50) NOT NULL,
-    memories_found SMALLINT NOT NULL,
+    most_used_card VARCHAR(50) NOT NULL DEFAULT 'none',
+    most_used_villager VARCHAR(50) NOT NULL DEFAULT 'none',
+    least_used_card VARCHAR(50) NOT NULL DEFAULT 'none',
+    least_used_villager VARCHAR(50) NOT NULL DEFAULT 'none',
+    memories_found SMALLINT NOT NULL DEFAULT 0,
+    matches_won SMALLINT NOT NULL DEFAULT 0,
 
     primary key (username),
     constraint stats_player foreign key (username) references player(username) on delete restrict on update cascade,
