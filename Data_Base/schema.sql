@@ -62,10 +62,10 @@ create table tcg_match(
 
 create table stats(
     username varchar(50) NOT NULL,
-    most_used_card SMALLINT NOT NULL,
-    most_used_villager SMALLINT NOT NULL,
-    least_used_card SMALLINT NOT NULL,
-    least_used_villager SMALLINT NOT NULL,
+    most_used_card VARCHAR(50) NOT NULL,
+    most_used_villager VARCHAR(50) NOT NULL,
+    least_used_card VARCHAR(50) NOT NULL,
+    least_used_villager VARCHAR(50) NOT NULL,
     memories_found SMALLINT NOT NULL,
 
     primary key (username),

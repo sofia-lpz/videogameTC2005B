@@ -189,7 +189,61 @@ const createPlayer = async (req, res) => {
   }
 }
 
+const createPlayerMatch = async (req, res) => {
+  const {
+    params: { username, won },
+  } = req;
+
+  if (!username || won === undefined) {
+    res.status(400).send({ status: "Error", data: "Username and match result are required." });
+    return;
+  }
+
+  try {
+    const result = await colometaService.createPlayerMatch(username, won === 'true');
+    
+    if (result.error) {
+      res.status(500).send({ status: "Error", data: result.error });
+      return;
+    }
+
+    res.send({ status: "OK", data: result });
+  }
+  catch (error) {
+    console.error(error);
+    res.status(500).send({ status: "Error", data: error.message });
+  }
+}
+
+const createPlayerStats = async (req, res) => {
+  const {
+    params: { username, mostUsedCard, mostUsedVillager, leastUsedCard, leastUsedVillager, memoriesFound },
+  } = req;
+
+  if (!username || !mostUsedCard || !mostUsedVillager || !leastUsedCard || !leastUsedVillager || memoriesFound === undefined) {
+    res.status(400).send({ status: "Error", data: "All fields are required." });
+    return;
+  }
+
+  try {
+    const result = await colometaService.createPlayerStats(username, mostUsedCard, mostUsedVillager, leastUsedCard, leastUsedVillager, memoriesFound);
+    
+    if (result.error) {
+      res.status(500).send({ status: "Error", data: result.error });
+      return;
+    }
+
+    res.send({ status: "OK", data: result });
+  }
+  catch (error) {
+    console.error(error);
+    res.status(500).send({ status: "Error", data: error.message });
+  }
+}
+
 export {
+  createPlayerStats,
+  createPlayerMatch,
   getCards,
   getPlayer,
   getDialogues,
