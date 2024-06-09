@@ -7,19 +7,19 @@ public class api_post : MonoBehaviour
 {
 
 //para llamarlo cuando se acabe la match de acuerdo al tcg_controller
-    public static void postData(string mostUsedCard, string mostUsedVillager, string leastUsedCard, string leastUsedVillager, int memoriesFound)
+    public void postData(string mostUsedCard, string mostUsedVillager, string leastUsedCard, string leastUsedVillager, int memoriesFound)
     {
         StartCoroutine(PostStatsData(stateNameController.Players[0].username, mostUsedCard, mostUsedVillager, leastUsedCard, leastUsedVillager, memoriesFound));
     }
 
-    public static void postMatchData(bool won)
+    public void postMatchData(bool won)
     {
         StartCoroutine(PostMatchesData(stateNameController.Players[0].username, won));
     }
 
 
 //post de ejemplo, es para hacer registro
-IEnumerator PostStatsData(string username, string mostUsedCard, string mostUsedVillager, string leastUsedCard, string leastUsedVillager, int memoriesFound)
+public IEnumerator PostStatsData(string username, string mostUsedCard, string mostUsedVillager, string leastUsedCard, string leastUsedVillager, int memoriesFound)
 {
     WWWForm form = new WWWForm();
     form.AddField("username", username);
@@ -45,7 +45,7 @@ IEnumerator PostStatsData(string username, string mostUsedCard, string mostUsedV
     }
 }
 
-IEnumerator PostMatchesData(string username, bool won)
+public IEnumerator PostMatchesData(string username, bool won)
 {
     string wonstring = won ? "true" : "false";
 
