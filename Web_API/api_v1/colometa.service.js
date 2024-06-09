@@ -122,8 +122,29 @@ const createPlayer = async (username, password) => {
   }
 }
 
+const createPlayerMatch = async (username, won) => {
+  try {
+    const playerMatch = await colometaMysql.createPlayerMatch(username, won);
+    return playerMatch;
+  } catch (err) {
+    console.error(err);
+    return { error: err.message };
+  }
+}
+
+const createPlayerStats = async (username, mostUsedCard, mostUsedVillager, leastUsedCard, leastUsedVillager, memoriesFound) => {
+  try {
+    const playerStats = await colometaMysql.createPlayerStats(username, mostUsedCard, mostUsedVillager, leastUsedCard, leastUsedVillager, memoriesFound);
+    return playerStats;
+  } catch (err) {
+    console.error(err);
+    return { error: err.message };
+  }
+}
 
 export {
+  createPlayerStats,
+  createPlayerMatch,
   getCards,
   getPlayer,
   getDialogues,

@@ -237,7 +237,47 @@ async function createPlayer(username, password) {
   }
 }
 
+async function createPlayerMatch(username, won) {
+  let connection = null;
+  let query = `INSERT INTO tcg_match (username, won) VALUES (?, ?)`;
+  try {
+    connection = await connectToDB();
+    const [results, _] = await connection.query(query, [username, won]);
+    console.log(`${results.affectedRows} rows affected`);
+    return results;
+  } catch (error) {
+    console.log(error);
+    return { error: error.message };
+  } finally {
+    if (connection !== null) {
+      connection.end();
+      console.log('Connection closed successfully');
+    }
+  }
+}
+
+async function createPlayerStats(username, mostUsedCard, mostUsedVillager, leastUsedCard, leastUsedVillager, memoriesFound) {
+  let connection = null;
+  let query = `INSERT INTO stats (username, most_used_card, most_used_villager, least_used_card, least_used_villager, memories_found) VALUES (?, ?, ?, ?, ?, ?)`;
+  try {
+    connection = await connectToDB();
+    const [results, _] = await connection.query(query, [username, mostUsedCard, mostUsedVillager, leastUsedCard, leastUsedVillager, memoriesFound]);
+    console.log(`${results.affectedRows} rows affected`);
+    return results;
+  } catch (error) {
+    console.log(error);
+    return { error: error.message };
+  } finally {
+    if (connection !== null) {
+      connection.end();
+      console.log('Connection closed successfully');
+    }
+  }
+}
+
 export {
+  createPlayerStats,
+  createPlayerMatch,
   getCards,
   getPlayer,
   getDialogues,
