@@ -53,12 +53,12 @@ public class TCG_Controller : MonoBehaviour
 
     // Start is called before the first frame update
     void Start(){
-    //     Apipost = GetComponent<api_post>();
-    //     if (Apipost != null) {
-    //     Apipost.postMatchData(true);
-    // } else {
-    //     Debug.Log("Apipost is null");
-    // }
+         Apipost = GetComponent<api_post>();
+        if (Apipost != null) {
+        Apipost.postMatchData(true);
+     } else {
+         Debug.Log("Apipost is null");
+     }
         feedbackscript = GetComponent<tcgFeedback>();
         
         currentTurn = (Turn)Random.Range(0, 2);

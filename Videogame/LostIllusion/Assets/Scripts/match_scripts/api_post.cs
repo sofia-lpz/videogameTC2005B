@@ -14,7 +14,7 @@ public class api_post : MonoBehaviour
 
     public void postMatchData(bool won)
     {
-        StartCoroutine(PostMatchesData(stateNameController.Players[0].username, won));
+        StartCoroutine(PostMatchesData("sofia", won));
     }
 
 
@@ -49,12 +49,13 @@ public IEnumerator PostMatchesData(string username, bool won)
 {
     string wonstring = won ? "true" : "false";
 
-    WWWForm form = new WWWForm();
-    form.AddField("username", username);
-    form.AddField("won", wonstring);
+    string body = "{\"username\":\"" + username + "\",\"won\":\"" + wonstring + "\"}";
+    Debug.Log(body);
 
-    using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:3000/api/create/match", form))
+    using (UnityWebRequest www = UnityWebRequest.Put("http://localhost:3000/api/create/match", body))
     {
+        www.method = "POST";
+        www.SetRequestHeader("Content-Type", "application/json");
         yield return www.SendWebRequest();
 
         if (www.result != UnityWebRequest.Result.Success)
