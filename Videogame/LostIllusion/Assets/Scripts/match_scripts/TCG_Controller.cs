@@ -44,6 +44,7 @@ public class TCG_Controller : MonoBehaviour
     private List<int> usedCharacters = new List<int>();
     private List<int> usedEnemyCharacters = new List<int>();
     public bool skipEnemyTurn = false;
+    private api_post Apipost;
 
     [SerializeField] int limit = 1;    
 
@@ -52,6 +53,12 @@ public class TCG_Controller : MonoBehaviour
 
     // Start is called before the first frame update
     void Start(){
+    //     Apipost = GetComponent<api_post>();
+    //     if (Apipost != null) {
+    //     Apipost.postMatchData(true);
+    // } else {
+    //     Debug.Log("Apipost is null");
+    // }
         feedbackscript = GetComponent<tcgFeedback>();
         
         currentTurn = (Turn)Random.Range(0, 2);
@@ -62,6 +69,7 @@ public class TCG_Controller : MonoBehaviour
         }
         else
         {
+            
             feedbackscript.ShowFeedback("You have the first turn!");
         }
 
