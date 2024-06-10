@@ -6,6 +6,17 @@ CREATE TRIGGER update_player_stats
 AFTER INSERT ON tcg_match
 FOR EACH ROW
 BEGIN
-    UPDATE player SET matches_won = matches_won + 1 WHERE username = NEW.username;
+    UPDATE stats SET matches_won = matches_won + 1 WHERE username = NEW.username;
+END //
+DELIMITER ;
+
+-- Create an empty stats table for each player
+
+DELIMITER //
+CREATE TRIGGER create_stats
+AFTER INSERT ON player
+FOR EACH ROW
+BEGIN
+    INSERT INTO stats (username) VALUES (NEW.username);
 END //
 DELIMITER ;

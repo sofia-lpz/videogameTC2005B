@@ -42,7 +42,6 @@ public class CardList
 public class Player{
     public string username;
     public string password;
-    public int matches_won;
     public int level;
 }
 
