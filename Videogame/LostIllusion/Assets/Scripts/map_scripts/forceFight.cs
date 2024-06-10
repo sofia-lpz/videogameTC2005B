@@ -64,7 +64,7 @@ void onFight(GameObject other)
         
         dialogueCanvas.GetComponent<dialogue>().Initialize(gameObject.name, dialogueIndex);
 
-        StartCoroutine(WaitAndLoadScene(sceneNameFight, dialogueCanvas));
+        StartCoroutine(WaitAndLoadScene("characterSelection", dialogueCanvas));
     }
 }
 

@@ -17,7 +17,7 @@ router.get("/player/:username/matches", colometaController.getPlayerMatches);
 
 
 //Posters
-router.post("/create/match/:username/:won", colometaController.createPlayerMatch);
+router.post("/create/match", colometaController.createPlayerMatch);
 router.post("/create/stats", colometaController.createPlayerStats);
 
 //for stats

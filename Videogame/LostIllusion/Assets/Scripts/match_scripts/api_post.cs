@@ -35,12 +35,12 @@ public IEnumerator PostStatsData(string username, string mostUsedCard, string mo
 
         if (www.result != UnityWebRequest.Result.Success)
         {
-            Debug.Log("Request failed: " + www.error);
+            Debug.Log("Post failed: " + www.error);
         }
         else
         {
             string result = www.downloadHandler.text;
-            Debug.Log("Request successful: " + result);
+            Debug.Log("Post successful: " + result);
         }
     }
 }
@@ -53,18 +53,18 @@ public IEnumerator PostMatchesData(string username, bool won)
     form.AddField("username", username);
     form.AddField("won", wonstring);
 
-    using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:3000/api/create/matches", form))
+    using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:3000/api/create/match", form))
     {
         yield return www.SendWebRequest();
 
         if (www.result != UnityWebRequest.Result.Success)
         {
-            Debug.Log("Request failed: " + www.error);
+            Debug.Log("Post failed: " + www.error);
         }
         else
         {
             string result = www.downloadHandler.text;
-            Debug.Log("Request successful: " + result);
+            Debug.Log("Post successful: " + result);
         }
     }
 }

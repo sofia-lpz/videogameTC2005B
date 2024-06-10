@@ -191,7 +191,7 @@ const createPlayer = async (req, res) => {
 
 const createPlayerMatch = async (req, res) => {
   const {
-    params: { username, won },
+    body: { username, won },
   } = req;
 
   if (!username || won === undefined) {
