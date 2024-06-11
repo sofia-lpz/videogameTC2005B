@@ -13,6 +13,7 @@ router.post("/register/:username/:password", colometaController.createPlayer);
 //Posters
 router.post("/create/match", colometaController.createPlayerMatch);
 router.post("/create/stats", colometaController.createPlayerStats);
+//router.post("/create/carduse", colometaController.createCardUse);
 
 //for stats
 router.get("/stats", colometaController.getStats);

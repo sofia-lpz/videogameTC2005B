@@ -17,7 +17,7 @@ using System;
 [Serializable]
 public class Card
 {
-    public int cardID;
+    public int cardId;
     public string name;
     public int energy_cost;
     public string effect;

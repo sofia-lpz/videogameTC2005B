@@ -168,11 +168,10 @@ public class TCG_Controller : MonoBehaviour
             if (energy >= cardButton.card.energy_cost)
             {
 
-                // if (tcgData.cardUsesCount.ContainsKey(cardButton.card.cardID))
-                // {
-                //     tcgData.cardUsesCount[cardButton.card.cardID] += 1;
-                // }
-                // Debug.Log("Card uses count: " + tcgData.cardUsesCount[cardButton.card.cardID]);
+                if (tcgData.cardUsesCount.ContainsKey(cardButton.card.cardId))
+                {
+                    tcgData.cardUsesCount[cardButton.card.cardId] += 1;
+                }
 
                 energy -= cardButton.card.energy_cost;
                 EnergyText.text = "Energy: " + energy.ToString();

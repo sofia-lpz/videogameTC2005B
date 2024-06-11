@@ -22,6 +22,11 @@ public class api_processing : MonoBehaviour
         CardList cardList = JsonUtility.FromJson<CardList>(result);
         Debug.Log("cardList status: " + cardList.status);
         tcgData.Cards = cardList.data;
+
+        for (int i = 0; i < tcgData.Cards.Count; i++)
+        {
+            tcgData.cardUsesCount.Add(tcgData.Cards[i].cardId, 0);
+        }
     }
 
     public static void VillagerProcessing(string result)
