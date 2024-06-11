@@ -19,6 +19,7 @@ public class Card_Buttons : MonoBehaviour
     [SerializeField] public TMP_Text card_name;
     [SerializeField] TMP_Text card_description;
     [SerializeField] TMP_Text card_energyCost;
+    [SerializeField] Image cardImage;
     public int card_heal;
     public int card_damage;
 
@@ -34,6 +35,22 @@ public class Card_Buttons : MonoBehaviour
         card_energyCost.text = card.energy_cost.ToString();
         card_damage = card.player_attack;
         card_heal = card.player_health;
+    
+        Sprite cardSprite;
+        if (!tcgData.cardSprites.TryGetValue(card.name, out cardSprite))
+        {
+            tcgData.cardSprites.TryGetValue("None", out cardSprite);
+        }
+    
+        Transform childTransform = transform.Find("CardImage");
+        if (childTransform != null)
+        {
+            Image imageComponent = childTransform.GetComponent<Image>();
+            if (imageComponent != null)
+            {
+                imageComponent.sprite = cardSprite;
+            }
+        }
     }
 
     // Update is called once per frame
