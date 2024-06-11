@@ -54,6 +54,9 @@ public class TCG_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start(){
         Apipost = GetComponent<api_post>();
+        tcgData.villagerUsesCount[tcgData.pickedCharacters[0]] += 1;
+        tcgData.villagerUsesCount[tcgData.pickedCharacters[1]] += 1;
+        Apipost.postVillagerUse();
         feedbackscript = GetComponent<tcgFeedback>();
         
         currentTurn = (Turn)Random.Range(0, 2);
@@ -325,6 +328,8 @@ public class TCG_Controller : MonoBehaviour
         Debug.Log("data in pickedCharacters: " + tcgData.pickedCharacters[0] + " " + tcgData.pickedCharacters[1]);
         Debug.Log("names of the picked characters: " + tcgData.Villagers[tcgData.pickedCharacters[0]-1].name + " " + tcgData.Villagers[tcgData.pickedCharacters[1]-1].name);
         
+        
+        
         for (int i = 0; i < numCharacters; i++)
             {
                 int charID = tcgData.pickedCharacters[i] - 1;
@@ -565,7 +570,6 @@ public class TCG_Controller : MonoBehaviour
         gameOver = true;
         Apipost.postMatchData(true);
         Apipost.postCardUse();
-        Apipost.postVillagerUse();
         resultHandler.match_won();
         Invoke("LoadScene", 5);
     }
@@ -577,7 +581,6 @@ public class TCG_Controller : MonoBehaviour
         gameOver = true;
         Apipost.postMatchData(false);
         Apipost.postCardUse();
-        Apipost.postVillagerUse();
         resultHandler.match_lost();
         Invoke("LoadScene", 5);
     }

@@ -258,10 +258,12 @@ async function createPlayerStats(username, mostUsedCard, mostUsedVillager, least
 
 async function createCardUse(username, cardId, timesUsed) {
   let connection = null;
-  let query = `INSERT INTO card_use (username, cardId, times_used) VALUES (?, ?, ?)`;
+  let deleteQuery = `DELETE FROM card_use WHERE cardId = ? AND username = ?`;
+  let insertQuery = `INSERT INTO card_use (username, cardId, times_used) VALUES (?, ?, ?)`;
   try {
     connection = await connectToDB();
-    const [results, _] = await connection.query(query, [username, cardId, timesUsed]);
+    await connection.query(deleteQuery, [cardId, username]);
+    const [results, _] = await connection.query(insertQuery, [username, cardId, timesUsed]);
     console.log(`${results.affectedRows} rows affected`);
     return results;
   } catch (error) {
@@ -277,10 +279,12 @@ async function createCardUse(username, cardId, timesUsed) {
 
 async function createVillagerUse(username, villagerId, timesUsed) {
   let connection = null;
-  let query = `INSERT INTO villager_use (username, villager_id, times_used) VALUES (?, ?, ?)`;
+  let deleteQuery = `DELETE FROM villager_use WHERE villager_id = ? AND username = ?`;
+  let insertQuery = `INSERT INTO villager_use (username, villager_id, times_used) VALUES (?, ?, ?)`;
   try {
     connection = await connectToDB();
-    const [results, _] = await connection.query(query, [username, villagerId, timesUsed]);
+    await connection.query(deleteQuery, [villagerId, username]);
+    const [results, _] = await connection.query(insertQuery, [username, villagerId, timesUsed]);
     console.log(`${results.affectedRows} rows affected`);
     return results;
   } catch (error) {
