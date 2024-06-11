@@ -34,9 +34,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -16.7, y: -77.2}
-  m_SizeDelta: {x: 49.285, y: 99.33}
-  m_Pivot: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -16.3885, y: 14.880663}
+  m_SizeDelta: {x: 49.908, y: 18.5543}
+  m_Pivot: {x: 0.5, y: 0.60929024}
 --- !u!222 &2641468208115570412
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -408,10 +408,11 @@ MonoBehaviour:
   card_name: {fileID: 2751917144717210973}
   card_description: {fileID: 2679711411119294758}
   card_energyCost: {fileID: 3891055409376456813}
+  cardImage: {fileID: 0}
   card_heal: 0
   card_damage: 0
   card:
-    cardID: 0
+    cardId: 0
     name: 
     energy_cost: 0
     effect: 
@@ -435,7 +436,7 @@ GameObject:
   - component: {fileID: 4552806170038430121}
   - component: {fileID: 2097462055724117758}
   m_Layer: 5
-  m_Name: Card
+  m_Name: CardImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -481,15 +482,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.35785374, g: 0.12437701, b: 0.6132076, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 153755460, guid: ab9effe3d5e655944ae4c8dbfb477577, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

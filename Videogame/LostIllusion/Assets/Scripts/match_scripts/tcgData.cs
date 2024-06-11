@@ -27,6 +27,38 @@ public class tcgData
       {"Terror", Resources.Load<Sprite>("emotion_ui/terrorsprite")},
    };
 
+   public static Sprite[] Charms = Resources.LoadAll<Sprite>("cardSprites/charms");
+
+
+   public static Dictionary<string, Sprite> cardSprites = new Dictionary<string, Sprite>
+   {
+      {"WISHBONE", Charms[20]}, // 1
+      {"FLOWER", Charms[1]}, // 2
+      {"HAT", Charms[2]}, // 3
+      {"TOUCH", Charms[3]}, // 4
+      {"TASTE", Charms[4]}, // 5
+      {"SMELL", Charms[5]}, // 6
+      {"DREAM", Charms[6]}, // 7
+      {"NIGHTMARE", Charms[7]}, // 8
+      {"SLEEP", Charms[8]}, // 9
+      {"WAKE", Charms[9]}, // 10
+      {"FORGET", Charms[10]}, // 11
+      {"REMEMBER", Charms[11]}, // 12
+      {"FEAR", Charms[12]}, // 13
+      {"ANGER", Charms[13]}, // 14
+      {"SADNESS", Charms[14]}, // 15
+      {"JOY", Charms[15]}, // 16
+      {"LOVE", Charms[16]}, // 17
+      {"HATE", Charms[17]}, // 18
+      {"HOPE", Charms[18]}, // 19
+      {"DESPAIR1", Charms[19]}, // 20
+      {"DESPAIR2", Charms[21]}, // 21
+      {"DESPAIR3", Charms[22]}, // 22
+      {"DESPAIR4", Charms[23]}, // 23
+      {"DESPAIR5", Charms[24]}, // 24
+      {"None", Charms[25]}, // 25
+   };
+
    public static Dictionary<int, int> cardUsesCount = new Dictionary<int, int>();
    public static Dictionary<int, int> villagerUsesCount = new Dictionary<int, int>();
 
