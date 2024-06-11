@@ -15,9 +15,12 @@ router.post("/create/match", colometaController.createPlayerMatch);
 router.post("/update/carduse", colometaController.createCardUse);
 router.post("/update/villageruse", colometaController.createVillagerUse);
 
+router.get("/global/matchresults", colometaController.getMatchResults);
+router.get("/global/carduse", colometaController.getCardUse);
+router.get("/global/villageruse", colometaController.getVillagerUse);
+
+
 //for stats
-router.get("/stats", colometaController.getStats);
-router.get("/matches", colometaController.getMatches);
 
 // router.get("/timesplayer/cards", colometaController.getCardstats);
 // router.get("/timesplayer/villagers", colometaController.getVillagerstats);

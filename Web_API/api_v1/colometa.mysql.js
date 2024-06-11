@@ -298,7 +298,68 @@ async function createVillagerUse(username, villagerId, timesUsed) {
   }
 }
 
+async function getMatchResults() {
+  let connection = null;
+  let query = `SELECT SUM(won) as total_won, SUM(!won) as total_lost FROM tcg_match`;
+  try {
+    connection = await connectToDB();
+    const [results, _] = await connection.query(query);
+    console.log(`${results.length} rows returned`);
+    return results;
+  } catch (error) {
+    console.log(error);
+    return { error: error.message };
+  } finally {
+    if (connection !== null) {
+      connection.end();
+      console.log('Connection closed successfully');
+    }
+  }
+}
+
+async function getCardUse() {
+  let connection = null;
+  let query = `SELECT cardId, SUM(times_used) as total_used FROM card_use GROUP BY cardId`;
+  try {
+    connection = await connectToDB();
+    const [results, _] = await connection.query(query);
+    console.log(`${results.length} rows returned`);
+    return results;
+  } catch (error) {
+    console.log(error);
+    return { error: error.message };
+  } finally {
+    if (connection !== null) {
+      connection.end();
+      console.log('Connection closed successfully');
+    }
+  }
+}
+
+async function getVillagerUse() {
+  let connection = null;
+  let query = `SELECT villager_id, SUM(times_used) as total_used FROM villager_use GROUP BY villager_id`;
+  try {
+    connection = await connectToDB();
+    const [results, _] = await connection.query(query);
+    console.log(`${results.length} rows returned`);
+    return results;
+  } catch (error) {
+    console.log(error);
+    return { error: error.message };
+  } finally {
+    if (connection !== null) {
+      connection.end();
+      console.log('Connection closed successfully');
+    }
+  }
+}
+
 export {
+  getMatchResults,  
+  getCardUse,
+  getVillagerUse,
+
   createVillagerUse,
   createCardUse,
   createPlayerStats,

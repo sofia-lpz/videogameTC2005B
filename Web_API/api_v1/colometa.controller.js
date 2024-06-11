@@ -293,7 +293,40 @@ const createVillagerUse = async (req, res) => {
   }
 }
 
+const getMatchResults = async (req, res) => {
+  try {
+    const matchResults = await colometaService.getMatchResults();
+    res.send({ status: "OK", data: matchResults });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send({ status: "Error", data: error.message });
+  }
+}
+
+const getCardUse = async (req, res) => {
+  try {
+    const cardUse = await colometaService.getCardUse();
+    res.send({ status: "OK", data: cardUse });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send({ status: "Error", data: error.message });
+  }
+}
+
+const getVillagerUse = async (req, res) => {
+  try {
+    const villagerUse = await colometaService.getVillagerUse();
+    res.send({ status: "OK", data: villagerUse });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send({ status: "Error", data: error.message });
+  }
+}
+
 export {
+  getVillagerUse,
+  getCardUse,
+  getMatchResults,
   createVillagerUse,
   createCardUse,
   createPlayerStats,

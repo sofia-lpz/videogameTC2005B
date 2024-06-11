@@ -151,7 +151,41 @@ const createVillagerUse = async (username, villagerId, timesUsed) => {
   }
 }
 
+const getMatchResults = async () => {
+  try {
+    const matchResults = await colometaMysql.getMatchResults();
+    return matchResults;
+  } catch (err) {
+    console.error(err);
+    return { error: err.message };
+  }
+}
+
+const getCardUse = async () => {
+  try {
+    const cardUse = await colometaMysql.getCardUse();
+    return cardUse;
+  } catch (err) {
+    console.error(err);
+    return { error: err.message };
+  }
+}
+
+const getVillagerUse = async () => {
+  try {
+    const villagerUse = await colometaMysql.getVillagerUse();
+    return villagerUse;
+  } catch (err) {
+    console.error(err);
+    return { error: err.message };
+  }
+}
+
+
 export {
+  getVillagerUse,
+  getCardUse,
+  getMatchResults,
   createVillagerUse,
   createCardUse,
   createPlayerStats,
