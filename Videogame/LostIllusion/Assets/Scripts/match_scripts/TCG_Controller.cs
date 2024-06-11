@@ -53,12 +53,7 @@ public class TCG_Controller : MonoBehaviour
 
     // Start is called before the first frame update
     void Start(){
-         Apipost = GetComponent<api_post>();
-        if (Apipost != null) {
-        Apipost.postMatchData(true);
-     } else {
-         Debug.Log("Apipost is null");
-     }
+        Apipost = GetComponent<api_post>();
         feedbackscript = GetComponent<tcgFeedback>();
         
         currentTurn = (Turn)Random.Range(0, 2);
@@ -172,6 +167,13 @@ public class TCG_Controller : MonoBehaviour
         {
             if (energy >= cardButton.card.energy_cost)
             {
+
+                // if (tcgData.cardUsesCount.ContainsKey(cardButton.card.cardID))
+                // {
+                //     tcgData.cardUsesCount[cardButton.card.cardID] += 1;
+                // }
+                // Debug.Log("Card uses count: " + tcgData.cardUsesCount[cardButton.card.cardID]);
+
                 energy -= cardButton.card.energy_cost;
                 EnergyText.text = "Energy: " + energy.ToString();
                 cardButton.gameObject.GetComponent<Button>().interactable = false;
@@ -320,6 +322,7 @@ public class TCG_Controller : MonoBehaviour
     public void PrepareCharacters(){
         Debug.Log("data in pickedCharacters: " + tcgData.pickedCharacters[0] + " " + tcgData.pickedCharacters[1]);
         Debug.Log("names of the picked characters: " + tcgData.Villagers[tcgData.pickedCharacters[0]-1].name + " " + tcgData.Villagers[tcgData.pickedCharacters[1]-1].name);
+        
         for (int i = 0; i < numCharacters; i++)
             {
                 int charID = tcgData.pickedCharacters[i] - 1;
@@ -348,8 +351,7 @@ public class TCG_Controller : MonoBehaviour
         }
     }
 
-    public bool HasAdvantage(CharacterButtons attacker, CharacterButtons defender)
-    {
+    public bool HasAdvantage(CharacterButtons attacker, CharacterButtons defender){
         string attackerElement = attacker.character.element;
         string defenderElement = defender.character.element;
 
@@ -548,12 +550,10 @@ public class TCG_Controller : MonoBehaviour
         }
     }
 
-    public void LoadScene()
-    {
+    public void LoadScene(){
         Debug.Log("Loading scene: " + sceneName);
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         Instantiate(fadeOutPrefab);
-
     }
 
     public void PlayerWins()
@@ -561,6 +561,7 @@ public class TCG_Controller : MonoBehaviour
         Debug.Log("Player wins");
         feedbackscript.ShowFeedback("You win!");
         gameOver = true;
+        Apipost.postMatchData(true);
         resultHandler.match_won();
         Invoke("LoadScene", 5);
     }
@@ -570,6 +571,7 @@ public class TCG_Controller : MonoBehaviour
         Debug.Log("Enemy wins");
         feedbackscript.ShowFeedback("You lose!");
         gameOver = true;
+        Apipost.postMatchData(false);
         resultHandler.match_lost();
         Invoke("LoadScene", 5);
     }

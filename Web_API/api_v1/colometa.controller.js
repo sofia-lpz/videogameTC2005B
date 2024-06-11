@@ -11,22 +11,6 @@ const getCards = async (req, res) => {
   }
 }
 
-const getPlayer = async (req, res) => {
-  const {
-    params: { username },
-  } = req;
-  if (!username) {
-    return;
-  }
-
-  try {
-    const player = await colometaService.getPlayer(username);
-    res.send({ status: "OK", data: player });
-  } catch (error) {
-    console.error(error);
-    res.status(500).send({ status: "Error", data: error.message });
-  }
-}
 
 const getDialogues = async (req, res) => {
   try {
@@ -245,7 +229,6 @@ export {
   createPlayerStats,
   createPlayerMatch,
   getCards,
-  getPlayer,
   getDialogues,
   getStats,
   getMatches,
