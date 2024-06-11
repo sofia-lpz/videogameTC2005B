@@ -12,11 +12,8 @@ router.post("/register/:username/:password", colometaController.createPlayer);
 //get all, necesary and working
 //Posters
 router.post("/create/match", colometaController.createPlayerMatch);
-router.post("/create/stats", colometaController.createPlayerStats);
-
-// router.post("/update/carduse", colometaController.createCardUse);
-// router.post("/update/villageruse", colometaController.createVillagerUse);
-// router.post("/update/memoriesfound", colometaController.createMemoriesFound);
+router.post("/update/carduse", colometaController.createCardUse);
+router.post("/update/villageruse", colometaController.createVillagerUse);
 
 //for stats
 router.get("/stats", colometaController.getStats);

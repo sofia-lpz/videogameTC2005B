@@ -15,6 +15,30 @@ using UnityEngine;
 using System;
 
 [Serializable]
+public class carduse{
+    public string cardId;
+    public int timesUsed;
+}
+
+[Serializable]
+public class carduseList{
+    public string username;
+    public List<carduse> cards;
+}
+
+[Serializable]
+public class villageruse{
+    public string villagerId;
+    public int timesUsed;
+}
+
+[Serializable]
+public class villageruseList{
+    public string username;
+    public List<villageruse> villagers;
+}
+
+[Serializable]
 public class Card
 {
     public int cardId;

@@ -45,7 +45,6 @@ public class TCG_Controller : MonoBehaviour
     private List<int> usedEnemyCharacters = new List<int>();
     public bool skipEnemyTurn = false;
     private api_post Apipost;
-    int memoriesFound = 0;
 
     [SerializeField] int limit = 1;    
 
@@ -562,6 +561,8 @@ public class TCG_Controller : MonoBehaviour
         feedbackscript.ShowFeedback("You win!");
         gameOver = true;
         Apipost.postMatchData(true);
+        Apipost.postCardUse();
+        Apipost.postVillagerUse();
         resultHandler.match_won();
         Invoke("LoadScene", 5);
     }
@@ -572,6 +573,8 @@ public class TCG_Controller : MonoBehaviour
         feedbackscript.ShowFeedback("You lose!");
         gameOver = true;
         Apipost.postMatchData(false);
+        Apipost.postCardUse();
+        Apipost.postVillagerUse();
         resultHandler.match_lost();
         Invoke("LoadScene", 5);
     }

@@ -256,7 +256,47 @@ async function createPlayerStats(username, mostUsedCard, mostUsedVillager, least
   }
 }
 
+async function createCardUse(username, cardId, timesUsed) {
+  let connection = null;
+  let query = `INSERT INTO card_use (username, cardId, times_used) VALUES (?, ?, ?)`;
+  try {
+    connection = await connectToDB();
+    const [results, _] = await connection.query(query, [username, cardId, timesUsed]);
+    console.log(`${results.affectedRows} rows affected`);
+    return results;
+  } catch (error) {
+    console.log(error);
+    return { error: error.message };
+  } finally {
+    if (connection !== null) {
+      connection.end();
+      console.log('Connection closed successfully');
+    }
+  }
+}
+
+async function createVillagerUse(username, villagerId, timesUsed) {
+  let connection = null;
+  let query = `INSERT INTO villager_use (username, villager_id, times_used) VALUES (?, ?, ?)`;
+  try {
+    connection = await connectToDB();
+    const [results, _] = await connection.query(query, [username, villagerId, timesUsed]);
+    console.log(`${results.affectedRows} rows affected`);
+    return results;
+  } catch (error) {
+    console.log(error);
+    return { error: error.message };
+  } finally {
+    if (connection !== null) {
+      connection.end();
+      console.log('Connection closed successfully');
+    }
+  }
+}
+
 export {
+  createVillagerUse,
+  createCardUse,
   createPlayerStats,
   createPlayerMatch,
   getCards,

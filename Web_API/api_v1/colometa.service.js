@@ -131,7 +131,29 @@ const createPlayerStats = async (username, mostUsedCard, mostUsedVillager, least
   }
 }
 
+const createCardUse = async (username, cardId, timesUsed) => {
+  try {
+    const cardUse = await colometaMysql.createCardUse(username, cardId, timesUsed);
+    return cardUse;
+  } catch (err) {
+    console.error(err);
+    return { error: err.message };
+  }
+}
+
+const createVillagerUse = async (username, villagerId, timesUsed) => {
+  try {
+    const villagerUse = await colometaMysql.createVillagerUse(username, villagerId, timesUsed);
+    return villagerUse;
+  } catch (err) {
+    console.error(err);
+    return { error: err.message };
+  }
+}
+
 export {
+  createVillagerUse,
+  createCardUse,
   createPlayerStats,
   createPlayerMatch,
   getCards,

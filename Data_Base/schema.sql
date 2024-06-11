@@ -52,13 +52,22 @@ create table tcg_match(
 ) engine= InnoDB DEFAULT CHARSET=utf8mb4;
 
 
-create table cardUse(
+create table card_use(
     cardId SMALLINT NOT NULL,
     username varchar(50) NOT NULL,
-    timesUsed SMALLINT NOT NULL DEFAULT 0,
+    times_used SMALLINT NOT NULL DEFAULT 0,
     primary key (cardId, username),
     constraint cardUse_card foreign key (cardId) references card(cardId) on delete restrict on update cascade,
     constraint cardUse_player foreign key (username) references player(username) on delete restrict on update cascade
+) engine=myisam DEFAULT CHARSET=utf8mb4;
+
+create table villager_use(
+    villager_id SMALLINT NOT NULL,
+    username varchar(50) NOT NULL,
+    times_used SMALLINT NOT NULL DEFAULT 0,
+    primary key (villager_id, username),
+    constraint villagerUse_villager foreign key (villager_id) references villager(villager_id) on delete restrict on update cascade,
+    constraint villagerUse_player foreign key (username) references player(username) on delete restrict on update cascade
 ) engine=myisam DEFAULT CHARSET=utf8mb4;
 
 create table stats(

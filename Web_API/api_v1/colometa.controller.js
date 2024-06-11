@@ -226,24 +226,66 @@ const createPlayerStats = async (req, res) => {
 }
 
 const createCardUse = async (req, res) => {
-  const {
-    body: { username, cardId },
-  } = req;
+  const { body: { username, cards } } = req;
 
-  if (!username || !cardId) {
-    res.status(400).send({ status: "Error", data: "All fields are required." });
+  if (!username || !cards || !Array.isArray(cards)) {
+    res.status(400).send({ status: "Error", data: "Username and cards are required." });
     return;
   }
 
   try {
-    const result = await colometaService.createCardUse(username, cardId);
-    
-    if (result.error) {
-      res.status(500).send({ status: "Error", data: result.error });
-      return;
+    const results = [];
+    for (const card of cards) {
+      const { cardId, timesUsed } = card;
+      if (!cardId || timesUsed === undefined) {
+        res.status(400).send({ status: "Error", data: "Each card must have a cardId and timesUsed." });
+        return;
+      }
+
+      const result = await colometaService.createCardUse(username, cardId, timesUsed);
+      if (result.error) {
+        res.status(500).send({ status: "Error", data: result.error });
+        return;
+      }
+
+      results.push(result);
     }
 
-    res.send({ status: "OK", data: result });
+    res.send({ status: "OK", data: results });
+  }
+  catch (error) {
+    console.error(error);
+    res.status(500).send({ status: "Error", data: error.message });
+  }
+}
+
+const createVillagerUse = async (req, res) => {
+  const { body: { username, villagers } } = req;
+
+  if (!username || !villagers || !Array.isArray(villagers)) {
+    res.status(400).send({ status: "Error", data: "Username and villagers are required." });
+    return;
+  }
+
+  try {
+    const results = [];
+    for (const villager of villagers) {
+      const { villagerId, timesUsed } = villager;
+      if (!villagerId || timesUsed === undefined) {
+        res.status(400).send({ status: "Error", data: "Each villager must have a villagerId and timesUsed." });
+        return;
+      }
+
+      const result = await colometaService.createVillagerUse(username, villagerId, timesUsed);
+      if (result.error) {
+        res.status(500).send({ status: "Error", data: result.error });
+        return;
+      }
+
+      results.push(result);
+    }
+
+    res.send({ status: "OK", data: results });
   }
   catch (error) {
     console.error(error);
@@ -252,6 +294,8 @@ const createCardUse = async (req, res) => {
 }
 
 export {
+  createVillagerUse,
+  createCardUse,
   createPlayerStats,
   createPlayerMatch,
   getCards,

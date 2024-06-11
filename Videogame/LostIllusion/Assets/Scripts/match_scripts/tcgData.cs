@@ -27,7 +27,8 @@ public class tcgData
       {"Terror", Resources.Load<Sprite>("emotion_ui/terrorsprite")},
    };
 
-    public static Dictionary<int, int> cardUsesCount = new Dictionary<int, int>();
+   public static Dictionary<int, int> cardUsesCount = new Dictionary<int, int>();
+   public static Dictionary<int, int> villagerUsesCount = new Dictionary<int, int>();
 
 
 }
