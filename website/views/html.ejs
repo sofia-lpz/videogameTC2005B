@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="game/TemplateData/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/scroll.js"></script>
 </head>
 <body>
@@ -153,42 +154,20 @@
         </div>
         <div class="wave"></div>
     </div>
+
     <div class="section stats-section" id="stats">
         <h2 style="color: white;">Stats</h2>
-        <div class="card-container">
-            <div class="card">
-                <div class="card-content">
-                    <h3>Stat 1</h3>
-                    <p>stat</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <h3>Stat 2</h3>
-                    <p>Stat</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <h3>Stat 3</h3>
-                    <p>Stat</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <h3>Stat 4</h3>
-                    <p>Stat</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <h3>Stat 5</h3>
-                    <p>Stat</p>
-                </div>
+        <div class="chart-container">
+            <canvas id="matchResultsChart" width="300" height="300"></canvas>
+            <div class="barCharts">
+                <canvas id="cardUseChart" width="300" height="300"></canvas>
+                <canvas id="villagerUseChart" width="300" height="300"></canvas>
             </div>
         </div>
         <div class="wave"></div>
     </div>
+    
+      
     <div class="section code-section" id="code">
         <h2>Code</h2>
         <div class="card-container">
@@ -234,5 +213,83 @@
         &copy; 2024 Colometa.
     </footer>
     
+    <script>
+        // Fetch and display match results as a pie chart
+        fetch('http://localhost:3000/api/global/matchresults')
+          .then(response => response.json())
+          .then(data => {
+            const ctx1 = document.getElementById('matchResultsChart').getContext('2d');
+            const matchResults = data.data[0];
+            new Chart(ctx1, {
+              type: 'pie',
+              data: {
+                labels: ['Total Won', 'Total Lost'],
+                datasets: [{
+                  label: 'Match Results',
+                  data: [matchResults.total_won, matchResults.total_lost],
+                  backgroundColor: ['#4caf50', '#f44336']
+                }]
+              },
+              options: {
+                responsive: true
+              }
+            });
+          });
+    
+        // Fetch and display card use
+        fetch('http://localhost:3000/api/global/carduse')
+          .then(response => response.json())
+          .then(data => {
+            const ctx2 = document.getElementById('cardUseChart').getContext('2d');
+            const cardData = data.data.map(card => ({
+              id: card.cardId,
+              used: card.total_used
+            }));
+            new Chart(ctx2, {
+              type: 'bar',
+              data: {
+                labels: cardData.map(card => `Card ${card.id}`),
+                datasets: [{
+                  label: 'Card Use',
+                  data: cardData.map(card => card.used),
+                  backgroundColor: '#3f51b5'
+                }]
+              }
+            });
+          });
+    
+        // Fetch and display villager use
+        fetch('http://localhost:3000/api/global/villageruse')
+          .then(response => response.json())
+          .then(data => {
+            const ctx3 = document.getElementById('villagerUseChart').getContext('2d');
+            const villagerData = data.data.map(villager => ({
+              id: villager.villager_id,
+              used: villager.total_used
+            }));
+            new Chart(ctx3, {
+              type: 'bar',
+              data: {
+                labels: villagerData.map(villager => `Villager ${villager.id}`),
+                datasets: [{
+                  label: 'Villager Use',
+                  data: villagerData.map(villager => villager.used),
+                  backgroundColor: '#ff9800'
+                }]
+              },
+              options: {
+                responsive: true,
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+          });
+    </script>
+    
+      
+
 </body>
 </html>
