@@ -6,11 +6,10 @@ public class npcMovement : Character_Movement
 {
     [SerializeField] private Transform[] points;
     private int pointsIndex = 0;
-    private float moveSpeed = 5f;
 
     public override void Update()
     {
-        if (stateNameController.gamePaused)
+        if (stateNameController.gamePaused || stateNameController.freezePlayer)
         {
             animator.SetBool("Moving", false);
             return;
@@ -19,22 +18,14 @@ public class npcMovement : Character_Movement
         if (pointsIndex < points.Length)
         {
             Vector2 targetPosition = points[pointsIndex].position;
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
             if (Vector2.Distance(transform.position, targetPosition) < 0.001f)
             {
                 pointsIndex++;
             }
-            animator.SetBool("Moving", true);
-        }
-        else
-        {
-            animator.SetBool("Moving", false);
-        }
-
-        if (movement.x != 0 || movement.y != 0)
-        {
-            animator.SetFloat("X", movement.x);
-            animator.SetFloat("Y", movement.y);
+            Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
+            animator.SetFloat("X", direction.x);
+            animator.SetFloat("Y", direction.y);
             animator.SetBool("Moving", true);
         }
         else
@@ -42,4 +33,5 @@ public class npcMovement : Character_Movement
             animator.SetBool("Moving", false);
         }
     }
-}
+    }
+

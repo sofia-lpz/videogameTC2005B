@@ -131,7 +131,63 @@ const createPlayerStats = async (username, mostUsedCard, mostUsedVillager, least
   }
 }
 
+const createCardUse = async (username, cardId, timesUsed) => {
+  try {
+    const cardUse = await colometaMysql.createCardUse(username, cardId, timesUsed);
+    return cardUse;
+  } catch (err) {
+    console.error(err);
+    return { error: err.message };
+  }
+}
+
+const createVillagerUse = async (username, villagerId, timesUsed) => {
+  try {
+    const villagerUse = await colometaMysql.createVillagerUse(username, villagerId, timesUsed);
+    return villagerUse;
+  } catch (err) {
+    console.error(err);
+    return { error: err.message };
+  }
+}
+
+const getMatchResults = async () => {
+  try {
+    const matchResults = await colometaMysql.getMatchResults();
+    return matchResults;
+  } catch (err) {
+    console.error(err);
+    return { error: err.message };
+  }
+}
+
+const getCardUse = async () => {
+  try {
+    const cardUse = await colometaMysql.getCardUse();
+    return cardUse;
+  } catch (err) {
+    console.error(err);
+    return { error: err.message };
+  }
+}
+
+const getVillagerUse = async () => {
+  try {
+    const villagerUse = await colometaMysql.getVillagerUse();
+    return villagerUse;
+  } catch (err) {
+    console.error(err);
+    return { error: err.message };
+  }
+}
+
+
 export {
+  getVillagerUse,
+  getCardUse,
+  getMatchResults,
+  createVillagerUse,
+  createCardUse,
   createPlayerStats,
   createPlayerMatch,
   getCards,

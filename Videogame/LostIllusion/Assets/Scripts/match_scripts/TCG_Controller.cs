@@ -54,6 +54,9 @@ public class TCG_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start(){
         Apipost = GetComponent<api_post>();
+        tcgData.villagerUsesCount[tcgData.pickedCharacters[0]] += 1;
+        tcgData.villagerUsesCount[tcgData.pickedCharacters[1]] += 1;
+        Apipost.postVillagerUse();
         feedbackscript = GetComponent<tcgFeedback>();
         
         currentTurn = (Turn)Random.Range(0, 2);
@@ -168,11 +171,10 @@ public class TCG_Controller : MonoBehaviour
             if (energy >= cardButton.card.energy_cost)
             {
 
-                // if (tcgData.cardUsesCount.ContainsKey(cardButton.card.cardID))
-                // {
-                //     tcgData.cardUsesCount[cardButton.card.cardID] += 1;
-                // }
-                // Debug.Log("Card uses count: " + tcgData.cardUsesCount[cardButton.card.cardID]);
+                if (tcgData.cardUsesCount.ContainsKey(cardButton.card.cardId))
+                {
+                    tcgData.cardUsesCount[cardButton.card.cardId] += 1;
+                }
 
                 energy -= cardButton.card.energy_cost;
                 EnergyText.text = "Energy: " + energy.ToString();
@@ -325,6 +327,8 @@ public class TCG_Controller : MonoBehaviour
     public void PrepareCharacters(){
         Debug.Log("data in pickedCharacters: " + tcgData.pickedCharacters[0] + " " + tcgData.pickedCharacters[1]);
         Debug.Log("names of the picked characters: " + tcgData.Villagers[tcgData.pickedCharacters[0]-1].name + " " + tcgData.Villagers[tcgData.pickedCharacters[1]-1].name);
+        
+        
         
         for (int i = 0; i < numCharacters; i++)
             {
@@ -565,6 +569,7 @@ public class TCG_Controller : MonoBehaviour
         feedbackscript.ShowFeedback("You win!");
         gameOver = true;
         Apipost.postMatchData(true);
+        Apipost.postCardUse();
         resultHandler.match_won();
         Invoke("LoadScene", 5);
     }
@@ -575,6 +580,7 @@ public class TCG_Controller : MonoBehaviour
         feedbackscript.ShowFeedback("You lose!");
         gameOver = true;
         Apipost.postMatchData(false);
+        Apipost.postCardUse();
         resultHandler.match_lost();
         Invoke("LoadScene", 5);
     }

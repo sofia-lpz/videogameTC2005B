@@ -5,50 +5,23 @@ using UnityEngine.Networking;
 
 public class api_post : MonoBehaviour
 {
+    public void postCardUse()
+    {
+        StartCoroutine(PostCardUseData());
+    }
 
-//para llamarlo cuando se acabe la match de acuerdo al tcg_controller
-    // public void postData(string mostUsedCard, string mostUsedVillager, string leastUsedCard, string leastUsedVillager, int memoriesFound)
-    // {
-    //     StartCoroutine(PostStatsData(stateNameController.Players[0].username, mostUsedCard, mostUsedVillager, leastUsedCard, leastUsedVillager, memoriesFound));
-    // }
+    public void postVillagerUse()
+    {
+        StartCoroutine(PostVillagerUseData());
+    }   
 
     public void postMatchData(bool won)
     {
-        StartCoroutine(PostMatchesData("sofia", won));
+        StartCoroutine(PostMatchesData(stateNameController.Players[0].username, won));
     }
 
 
-//post de ejemplo, es para hacer registro
-// public IEnumerator PostStatsData(string username, string mostUsedCard, string mostUsedVillager, string leastUsedCard, string leastUsedVillager, int memoriesFound)
-// {
-//     WWWForm form = new WWWForm();
-//     form.AddField("username", username);
-//     form.AddField("mostUsedCard", mostUsedCard);
-//     form.AddField("mostUsedVillager", mostUsedVillager);
-//     form.AddField("leastUsedCard", leastUsedCard);
-//     form.AddField("leastUsedVillager", leastUsedVillager);
-//     form.AddField("memoriesFound", memoriesFound);
-
-//     using (UnityWebRequest www = UnityWebRequest.Put("http://localhost:3000/api/create/stats", form))
-//     {
-//         www.method = "POST";
-
-//         yield return www.SendWebRequest();
-
-//         if (www.result != UnityWebRequest.Result.Success)
-//         {
-//             Debug.Log("Post failed: " + www.error);
-//         }
-//         else
-//         {
-//             string result = www.downloadHandler.text;
-//             Debug.Log("Post successful: " + result);
-//         }
-//     }
-// }
-
-public IEnumerator PostMatchesData(string username, bool won)
-{
+public IEnumerator PostMatchesData(string username, bool won){
     string wonstring = won ? "true" : "false";
 
     string body = "{\"username\":\"" + username + "\",\"won\":\"" + wonstring + "\"}";
@@ -70,6 +43,76 @@ public IEnumerator PostMatchesData(string username, bool won)
             Debug.Log("Post successful: " + result);
         }
     }
+}
+
+public IEnumerator PostCardUseData(){
+    carduseList carduseList = new carduseList();
+    carduseList.username = stateNameController.Players[0].username;
+    carduseList.cards = new List<carduse>();
+
+    foreach (KeyValuePair<int, int> entry in tcgData.cardUsesCount)
+    {
+        carduse carduse = new carduse();
+        carduse.cardId = entry.Key.ToString();
+        carduse.timesUsed = entry.Value;
+        carduseList.cards.Add(carduse);
+    }
+
+    string body = JsonUtility.ToJson(carduseList);
+    Debug.Log("body for card use" + body);
+
+    using (UnityWebRequest www = UnityWebRequest.Put("http://localhost:3000/api/update/carduse", body))
+    {
+        www.method = "POST";
+        www.SetRequestHeader("Content-Type", "application/json");
+        yield return www.SendWebRequest();
+
+        if (www.result != UnityWebRequest.Result.Success)
+        {
+            Debug.Log("Post failed: " + www.error);
+        }
+        else
+        {
+            string result = www.downloadHandler.text;
+            Debug.Log("Post successful: " + result);
+        }
+    }
+
+}
+
+public IEnumerator PostVillagerUseData(){
+    villageruseList villageruseList = new villageruseList();
+    villageruseList.username = stateNameController.Players[0].username;
+    villageruseList.villagers = new List<villageruse>();
+
+    foreach (KeyValuePair<int, int> entry in tcgData.villagerUsesCount)
+    {
+        villageruse villageruse = new villageruse();
+        villageruse.villagerId = entry.Key.ToString();
+        villageruse.timesUsed = entry.Value;
+        villageruseList.villagers.Add(villageruse);
+    }
+
+    string body = JsonUtility.ToJson(villageruseList);
+    Debug.Log(body);
+
+    using (UnityWebRequest www = UnityWebRequest.Put("http://localhost:3000/api/update/villageruse", body))
+    {
+        www.method = "POST";
+        www.SetRequestHeader("Content-Type", "application/json");
+        yield return www.SendWebRequest();
+
+        if (www.result != UnityWebRequest.Result.Success)
+        {
+            Debug.Log("Post failed: " + www.error);
+        }
+        else
+        {
+            string result = www.downloadHandler.text;
+            Debug.Log("Post successful: " + result);
+        }
+    }
+
 }
 
 }

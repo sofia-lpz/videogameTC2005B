@@ -225,7 +225,110 @@ const createPlayerStats = async (req, res) => {
   }
 }
 
+const createCardUse = async (req, res) => {
+  const { body: { username, cards } } = req;
+
+  if (!username || !cards || !Array.isArray(cards)) {
+    res.status(400).send({ status: "Error", data: "Username and cards are required." });
+    return;
+  }
+
+  try {
+    const results = [];
+    for (const card of cards) {
+      const { cardId, timesUsed } = card;
+      if (!cardId || timesUsed === undefined) {
+        res.status(400).send({ status: "Error", data: "Each card must have a cardId and timesUsed." });
+        return;
+      }
+
+      const result = await colometaService.createCardUse(username, cardId, timesUsed);
+      if (result.error) {
+        res.status(500).send({ status: "Error", data: result.error });
+        return;
+      }
+
+      results.push(result);
+    }
+
+    res.send({ status: "OK", data: results });
+  }
+  catch (error) {
+    console.error(error);
+    res.status(500).send({ status: "Error", data: error.message });
+  }
+}
+
+const createVillagerUse = async (req, res) => {
+  const { body: { username, villagers } } = req;
+
+  if (!username || !villagers || !Array.isArray(villagers)) {
+    res.status(400).send({ status: "Error", data: "Username and villagers are required." });
+    return;
+  }
+
+  try {
+    const results = [];
+    for (const villager of villagers) {
+      const { villagerId, timesUsed } = villager;
+      if (!villagerId || timesUsed === undefined) {
+        res.status(400).send({ status: "Error", data: "Each villager must have a villagerId and timesUsed." });
+        return;
+      }
+
+      const result = await colometaService.createVillagerUse(username, villagerId, timesUsed);
+      if (result.error) {
+        res.status(500).send({ status: "Error", data: result.error });
+        return;
+      }
+
+      results.push(result);
+    }
+
+    res.send({ status: "OK", data: results });
+  }
+  catch (error) {
+    console.error(error);
+    res.status(500).send({ status: "Error", data: error.message });
+  }
+}
+
+const getMatchResults = async (req, res) => {
+  try {
+    const matchResults = await colometaService.getMatchResults();
+    res.send({ status: "OK", data: matchResults });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send({ status: "Error", data: error.message });
+  }
+}
+
+const getCardUse = async (req, res) => {
+  try {
+    const cardUse = await colometaService.getCardUse();
+    res.send({ status: "OK", data: cardUse });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send({ status: "Error", data: error.message });
+  }
+}
+
+const getVillagerUse = async (req, res) => {
+  try {
+    const villagerUse = await colometaService.getVillagerUse();
+    res.send({ status: "OK", data: villagerUse });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send({ status: "Error", data: error.message });
+  }
+}
+
 export {
+  getVillagerUse,
+  getCardUse,
+  getMatchResults,
+  createVillagerUse,
+  createCardUse,
   createPlayerStats,
   createPlayerMatch,
   getCards,

@@ -22,6 +22,14 @@ public class api_processing : MonoBehaviour
         CardList cardList = JsonUtility.FromJson<CardList>(result);
         Debug.Log("cardList status: " + cardList.status);
         tcgData.Cards = cardList.data;
+
+        if (tcgData.cardUsesCount.Count == 0)
+        {
+            for (int i = 0; i < tcgData.Cards.Count; i++)
+            {
+                tcgData.cardUsesCount.Add(tcgData.Cards[i].cardId, 0);
+            }
+        }
     }
 
     public static void VillagerProcessing(string result)
@@ -29,6 +37,13 @@ public class api_processing : MonoBehaviour
         VillagerList villagerList = JsonUtility.FromJson<VillagerList>(result);
         Debug.Log("villagerList status: " + villagerList.status);
         tcgData.Villagers = villagerList.data;
+        if (tcgData.villagerUsesCount.Count == 0)
+        {
+            for (int i = 0; i < tcgData.Villagers.Count; i++)
+            {
+                tcgData.villagerUsesCount.Add(tcgData.Villagers[i].villager_id, 0);
+            }
+        }
     }
 
     public static void PlayerProcessing(string result)

@@ -27,31 +27,8 @@ public class tcgData
       {"Terror", Resources.Load<Sprite>("emotion_ui/terrorsprite")},
    };
 
-   //    public static Dictionary<int, int> cardUsesCount = new Dictionary<int, int>(){
-   //    {Cards[0].cardID, 0},
-   //    {Cards[1].cardID, 0},
-   //    {Cards[2].cardID, 0},
-   //    {Cards[3].cardID, 0},
-   //    {Cards[4].cardID, 0},
-   //    {Cards[5].cardID, 0},
-   //    {Cards[6].cardID, 0},
-   //    {Cards[7].cardID, 0},
-   //    {Cards[8].cardID, 0},
-   //    {Cards[9].cardID, 0},
-   //    {Cards[10].cardID, 0},
-   //    {Cards[11].cardID, 0},
-   //    {Cards[12].cardID, 0},
-   //    {Cards[13].cardID, 0},
-   //    {Cards[14].cardID, 0},
-   //    {Cards[15].cardID, 0},
-   //    {Cards[16].cardID, 0},
-   //    {Cards[17].cardID, 0},
-   //    {Cards[18].cardID, 0},
-   //    {Cards[19].cardID, 0},
-   //    {Cards[20].cardID, 0},
-   //    {Cards[21].cardID, 0},
-   //    {Cards[22].cardID, 0},
-   //    {Cards[23].cardID, 0}
-   // };
+   public static Dictionary<int, int> cardUsesCount = new Dictionary<int, int>();
+   public static Dictionary<int, int> villagerUsesCount = new Dictionary<int, int>();
+
 
 }

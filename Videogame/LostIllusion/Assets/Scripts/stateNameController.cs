@@ -30,7 +30,7 @@ public class stateNameController : MonoBehaviour
     public static string playerPreviousScene = "";
 
     public static HashSet<string> triggeredEvents = new HashSet<string>();
-    public static HashSet<string> playedCutscenes = new HashSet<string>();
+    public static HashSet<string> playedCutscenes = new HashSet<string>(); //also works as memories found if -2
     public static HashSet<string> triggeredCharacters = new HashSet<string>();
 
     /*FOR AUDIO*/
