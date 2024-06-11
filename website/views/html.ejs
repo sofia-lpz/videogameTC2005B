@@ -158,10 +158,10 @@
     <div class="section stats-section" id="stats">
         <h2 style="color: white;">Stats</h2>
         <div class="chart-container">
-            <canvas id="matchResultsChart" width="300" height="300"></canvas>
+            <canvas id="matchResultsChart"></canvas>
             <div class="barCharts">
-                <canvas id="cardUseChart" width="300" height="300"></canvas>
-                <canvas id="villagerUseChart" width="300" height="300"></canvas>
+                <canvas id="cardUseChart"></canvas>
+                <canvas id="villagerUseChart"></canvas>
             </div>
         </div>
         <div class="wave"></div>
@@ -231,63 +231,72 @@
                 }]
               },
               options: {
-                responsive: true
+                responsive: false // Desactivar la capacidad de respuesta
               }
             });
           });
     
         // Fetch and display card use
         fetch('http://localhost:3000/api/global/carduse')
-          .then(response => response.json())
-          .then(data => {
-            const ctx2 = document.getElementById('cardUseChart').getContext('2d');
-            const cardData = data.data.map(card => ({
-              id: card.cardId,
-              used: card.total_used
-            }));
-            new Chart(ctx2, {
-              type: 'bar',
-              data: {
-                labels: cardData.map(card => `Card ${card.id}`),
-                datasets: [{
-                  label: 'Card Use',
-                  data: cardData.map(card => card.used),
-                  backgroundColor: '#3f51b5'
-                }]
-              }
-            });
-          });
+      .then(response => response.json())
+      .then(data => {
+        const ctx2 = document.getElementById('cardUseChart').getContext('2d');
+        const cardData = data.data.map(card => ({
+          id: card.name,
+          used: parseInt(card.total_used) // Convertir a entero
+        }));
+        new Chart(ctx2, {
+          type: 'bar',
+          data: {
+            labels: cardData.map(card => `Card ${card.id}`),
+            datasets: [{
+              label: 'Card Use',
+              data: cardData.map(card => card.used),
+              backgroundColor: '#3f51b5'
+            }]
+          },
+          options: {
+            responsive: false // Desactivar la capacidad de respuesta
+          }
+        });
+      });
     
         // Fetch and display villager use
         fetch('http://localhost:3000/api/global/villageruse')
-          .then(response => response.json())
-          .then(data => {
-            const ctx3 = document.getElementById('villagerUseChart').getContext('2d');
-            const villagerData = data.data.map(villager => ({
-              id: villager.villager_id,
-              used: villager.total_used
-            }));
-            new Chart(ctx3, {
-              type: 'bar',
-              data: {
-                labels: villagerData.map(villager => `Villager ${villager.id}`),
-                datasets: [{
-                  label: 'Villager Use',
-                  data: villagerData.map(villager => villager.used),
-                  backgroundColor: '#ff9800'
-                }]
-              },
-              options: {
-                responsive: true,
-                scales: {
-                  y: {
-                    beginAtZero: true
-                  }
-                }
-              }
-            });
-          });
+  .then(response => response.json())
+  .then(data => {
+    const ctx3 = document.getElementById('villagerUseChart').getContext('2d');
+    const villagerData = data.data.map(villager => ({
+      name: villager.name,
+      used: parseInt(villager.total_used)
+    }));
+
+    new Chart(ctx3, {
+      type: 'bar',
+      data: {
+        labels: villagerData.map(villager => villager.name),
+        datasets: [{
+          label: 'Villager Use',
+          data: villagerData.map(villager => villager.used),
+          backgroundColor: '#ff9800'
+        }]
+      },
+      options: {
+        responsive: false, // Desactivar la capacidad de respuesta
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
+
     </script>
+    
     
       
 
