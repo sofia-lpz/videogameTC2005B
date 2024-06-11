@@ -313,6 +313,7 @@ public class TCG_Controller : MonoBehaviour
         if (damage == 0) feedbackscript.ShowFeedback("Attack was not effective!");
 
         defendingCharacter.TakeDamage(damage);
+        Debug.Log("Dealt " + damage + " damage");
         return damage;
     }
 
