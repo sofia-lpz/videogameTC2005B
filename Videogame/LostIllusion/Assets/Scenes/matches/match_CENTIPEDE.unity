@@ -541,6 +541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tcgFeedbackPrefab: {fileID: 1815199825794686244, guid: 464d263dff77db14ba79ffbc8eb6d1c5, type: 3}
+  pauseCanvas: {fileID: 1751940820017322284, guid: e74808ed5c2b9224fa7cc7b675c7731f, type: 3}
 --- !u!114 &566437068
 MonoBehaviour:
   m_ObjectHideFlags: 0

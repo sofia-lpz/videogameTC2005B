@@ -28,25 +28,6 @@ async function getCards() {
   }
 }
 
-async function getPlayer(username, password) {
-  let connection = null;
-  let query = `SELECT * FROM player WHERE username = ?`;
-  try {
-    connection = await connectToDB();
-    const [results, _] = await connection.query(query, [username]);
-    console.log(`${results.length} rows returned`);
-    return results;
-  } catch (error) {
-    console.log(error);
-    return { error: error.message };
-  } finally {
-    if (connection !== null) {
-      connection.end();
-      console.log('Connection closed successfully');
-    }
-  }
-}
-
 async function getDialogues() {
   let connection = null;
   let query = `SELECT * FROM dialogue`;
@@ -279,7 +260,6 @@ export {
   createPlayerStats,
   createPlayerMatch,
   getCards,
-  getPlayer,
   getDialogues,
   getStats,
   getMatches,

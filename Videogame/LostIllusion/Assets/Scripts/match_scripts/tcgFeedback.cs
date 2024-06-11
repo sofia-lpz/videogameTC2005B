@@ -8,6 +8,9 @@ public class tcgFeedback : MonoBehaviour
 
     public void ShowFeedback(string feedbackText)
     {
+        if (stateNameController.gamePaused)
+            return;
+
         GameObject feedback = Instantiate(tcgFeedbackPrefab);
         feedback.GetComponent<dialogue>().InitializeWithDialogue(feedbackText);
     }

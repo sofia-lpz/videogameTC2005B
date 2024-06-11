@@ -10,17 +10,6 @@ const getCards = async () => {
   }
 }
 
-const getPlayer = async (username) => {
-  try {
-    const player = await colometaMysql.getPlayer(username);
-    return player;
-  }
-  catch (err) {
-    console.error(err);
-    return { error: err.message };
-  }
-}
-
 const getDialogues = async () => {
   try {
     const dialogues = await colometaMysql.getDialogues();
@@ -146,7 +135,6 @@ export {
   createPlayerStats,
   createPlayerMatch,
   getCards,
-  getPlayer,
   getDialogues,
   getStats,
   getMatches,
