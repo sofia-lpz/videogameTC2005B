@@ -13,7 +13,11 @@ using UnityEngine.SceneManagement;
 
 public class TCG_Controller : MonoBehaviour
 {
+    [SerializeField] public GameObject supportAnimationPrefab;
+    [SerializeField] public GameObject defenseAnimationPrefab;
     [SerializeField] public GameObject attackAnimationPrefab;
+    [SerializeField] public GameObject healingAnimationPrefab;
+    [SerializeField] public GameObject specialAnimationPrefab;
     [SerializeField] public GameObject fadeOutPrefab;
     [SerializeField] List<Card_Buttons> cards;
     [SerializeField] List<EnemyCard> enemyCards = new List<EnemyCard>();
@@ -190,24 +194,49 @@ public class TCG_Controller : MonoBehaviour
                     switch (cardButton.card.effect)
                     {
                         case "attack":
+                            feedbackscript.ShowFeedback("You used " + cardButton.card.name + " attacked and dealt " + ApplyCardAttack(cardButton.card, activeCharacter, activeEnemy) + " damage!");
                             ApplyCardAttack(cardButton.card, activeCharacter, activeEnemy);
                             Instantiate(attackAnimationPrefab);
                             break;
                         
                         case "support":
+                            if (cardButton.card.enemy_attack > 0)
+                            {
+                                feedbackscript.ShowFeedback("You used " + cardButton.card.name + " and decreased enemy's attack by " + ApplySupportEffect(cardButton.card, activeCharacter, activeEnemy) + "!");
+                            }
+                            else if (cardButton.card.player_support > 0)
+                            {
+                                feedbackscript.ShowFeedback("You used " + cardButton.card.name + " and increased your attack by " + ApplySupportEffect(cardButton.card, activeCharacter, activeEnemy) + "!");
+                            }
+
                             ApplySupportEffect(cardButton.card, activeCharacter, activeEnemy);
+                            Instantiate(supportAnimationPrefab);
                             break;
                         
                         case "defense":
+                            if (cardButton.card.enemy_defense > 0)
+                            {
+                                feedbackscript.ShowFeedback("You used " + cardButton.card.name + " and decreased enemy's defense by " + ApplyDefenseEffect(cardButton.card, activeCharacter, activeEnemy) + "!");
+                            }
+                            else if (cardButton.card.player_defense > 0)
+                            {
+                                feedbackscript.ShowFeedback("You used " + cardButton.card.name + " and increased your defense by " + ApplyDefenseEffect(cardButton.card, activeCharacter, activeEnemy) + "!");
+                            }
+
                             ApplyDefenseEffect(cardButton.card, activeCharacter, activeEnemy);
+                            Instantiate(defenseAnimationPrefab);
                             break;
                         
                         case "healing":
+                            feedbackscript.ShowFeedback("You used " + cardButton.card.name + " and healed " + cardButton.card.player_health + " health!");
                             activeCharacter.Heal(cardButton.card.player_health);
+                            Instantiate(healingAnimationPrefab);
                             break;
 
                         case "special":    
                             skipEnemyTurn = true;
+                            Instantiate(specialAnimationPrefab);
+                            feedbackscript.ShowFeedback("You used " + cardButton.card.name + " and skiped enemy's turn!");
                             break;
 
                         default:
@@ -238,7 +267,7 @@ public class TCG_Controller : MonoBehaviour
         }
     }
 
-    public void ApplyCardAttack(Card card, CharacterButtons attackingCharacter, CharacterButtons defendingCharacter){
+    public int ApplyCardAttack(Card card, CharacterButtons attackingCharacter, CharacterButtons defendingCharacter){
         int damage = card.player_attack + attackingCharacter.currentAttack;
 
         // Apply elemental advantage/disadvantage
@@ -284,42 +313,35 @@ public class TCG_Controller : MonoBehaviour
         if (damage == 0) feedbackscript.ShowFeedback("Attack was not effective!");
 
         defendingCharacter.TakeDamage(damage);
+        return damage;
     }
 
-    private void ApplySupportEffect(Card card, CharacterButtons activeCharacter, CharacterButtons activeEnemy){
-        if (card.player_defense > 0)
-        {
-            activeCharacter.IncreaseDefense(card.player_defense);
-        }
-
+    private int ApplySupportEffect(Card card, CharacterButtons activeCharacter, CharacterButtons activeEnemy){
         if (card.player_support > 0)
         {
             activeCharacter.IncreaseAttack(card.player_support);
-        }
-
-        if (card.enemy_defense > 0)
-        {
-            activeEnemy.DecreaseDefense(card.enemy_defense);
+            return card.player_support;
         }
         if (card.enemy_attack > 0)
         {
             activeEnemy.DecreaseAttack(card.enemy_attack);
+            return card.enemy_attack;           
         }
-
-        Debug.Log("Applied support effect: " + card.description);
+        return 0;
     }
 
-    private void ApplyDefenseEffect(Card card, CharacterButtons activeCharacter, CharacterButtons activeEnemy){
-        if (card.enemy_attack > 0)
+    private int ApplyDefenseEffect(Card card, CharacterButtons activeCharacter, CharacterButtons activeEnemy){
+        if (card.enemy_defense > 0)
         {
-            activeEnemy.DecreaseAttack(card.player_attack);
+            activeEnemy.DecreaseDefense(card.enemy_defense);
+            return card.enemy_defense;
         }
         if (card.player_defense > 0)
         {
             activeCharacter.IncreaseDefense(card.player_defense);
+            return card.player_defense;
         }
-
-        Debug.Log("Applied defense effect: " + card.description);
+        return 0;
     }
 
     // Function that prepares the characters
@@ -407,7 +429,7 @@ public class TCG_Controller : MonoBehaviour
         if (!HasAdvantage(activeEnemyCharacter, activePlayerCharacter))
         {
             // Decidir si cambiar de personaje basado en la probabilidad fija
-            if (Random.value < changeCharacterProb)
+            if (Random.value < changeCharacterProb && inactiveEnemyCharacter.currentHealth > 0)
             {
                 Debug.Log("Enemy decides to switch character");
                 feedbackscript.ShowFeedback("Enemy switches character!");
@@ -435,25 +457,41 @@ public class TCG_Controller : MonoBehaviour
                         ApplyCardAttack(selectedCard.card, activeEnemyCharacter1, activePlayerCharacter1);
                         Instantiate(attackAnimationPrefab);
                         Debug.Log("Enemy attacks");
-                        feedbackscript.ShowFeedback("Enemy uses " + selectedCard.card_name + " and attacks!");
+                        feedbackscript.ShowFeedback("Enemy uses " + selectedCard.card_name + " attacks and deals " + ApplyCardAttack(selectedCard.card, activeEnemyCharacter1, activePlayerCharacter1) + " damage!");
                         break;
 
                     case "support":
                         ApplySupportEffect(selectedCard.card, activeEnemyCharacter1, activePlayerCharacter1);
-                        Debug.Log("Enemy supports");
-                        feedbackscript.ShowFeedback("Enemy uses " + selectedCard.card_name + " and supports!");
+                        Instantiate(supportAnimationPrefab);
+
+                        if (selectedCard.card.enemy_attack > 0)
+                        {
+                            feedbackscript.ShowFeedback("Enemy used " + selectedCard.card.name + " and decreased your attack by " + ApplySupportEffect(selectedCard.card, activeEnemyCharacter1, activePlayerCharacter1) + "!");
+                        }
+                        else if (selectedCard.card.player_support > 0)
+                        {
+                            feedbackscript.ShowFeedback("Enemy used " + selectedCard.card.name + " and increased his attack by " + ApplySupportEffect(selectedCard.card, activeEnemyCharacter1, activePlayerCharacter1) + "!");
+                        }
                         break;
 
                     case "defense":
                         ApplyDefenseEffect(selectedCard.card, activeEnemyCharacter1, activePlayerCharacter1);
-                        Debug.Log("Enemy defends");
-                        feedbackscript.ShowFeedback("Enemy uses " + selectedCard.card_name + " and defends!");
+                        Instantiate(defenseAnimationPrefab);
+                        if (selectedCard.card.enemy_defense > 0)
+                        {
+                            feedbackscript.ShowFeedback("Enemy uses " + selectedCard.card_name + " and decreases your defense by " + selectedCard.card.enemy_defense +"!");
+                        }
+                        else if (selectedCard.card.player_defense > 0)
+                        {
+                            feedbackscript.ShowFeedback("Enemy uses " + selectedCard.card_name + " and increases his defense by " + selectedCard.card.player_defense + "!");
+                        }
+                        
                         break;
 
                     case "healing":
                         activeEnemyCharacter.Heal(selectedCard.card.player_health);
-                        feedbackscript.ShowFeedback("Enemy uses " + selectedCard.card_name + " and heals!");
-                        Debug.Log("Enemy heals");
+                        Instantiate(healingAnimationPrefab);
+                        feedbackscript.ShowFeedback("Enemy uses " + selectedCard.card_name + " and heals " + selectedCard.card.player_health + "!");
                         break;
 
                     default:
@@ -476,7 +514,6 @@ public class TCG_Controller : MonoBehaviour
             else
             {
                 feedbackscript.ShowFeedback("Enemy ends turn!");
-                Debug.Log("Enemy couldn't play any card due to insufficient energy or other constraints");
                 break;
             }
         }
@@ -497,7 +534,6 @@ public class TCG_Controller : MonoBehaviour
         }
 
         yield return new WaitForSeconds(2);
-        Debug.Log("Enemy Turn Ended");
         feedbackscript.ShowFeedback("Your turn!");
         PrepareEnemyCards();
         StartPlayerTurn();
