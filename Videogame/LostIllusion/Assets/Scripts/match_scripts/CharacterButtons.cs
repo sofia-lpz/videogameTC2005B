@@ -28,6 +28,8 @@ public class CharacterButtons : MonoBehaviour
     [SerializeField] TMP_Text characterName;
     [SerializeField] TMP_Text characterDescription;
     [SerializeField] TMP_Text characterElement;
+    [SerializeField] TMP_Text healthText;
+    [SerializeField] public TMP_Text defenseText;
 
     public int currentHealth;
     public int currentDefense;
@@ -50,9 +52,11 @@ public class CharacterButtons : MonoBehaviour
         activePosE = initialPos - 15f;
         normalColor = GetComponent<Image>().color;
         currentHealth = maxHealth;
-        currentDefense = 0;
+        healthText.text = currentHealth.ToString();
+        currentDefense = 3;
         defenseBar.SetMaxDefense(maxDefense);
         defenseBar.SetDefense(currentDefense);
+        defenseText.text = currentDefense.ToString();
         healthBar.SetMaxHealth(maxHealth);  
     }
 
@@ -87,6 +91,7 @@ public class CharacterButtons : MonoBehaviour
         currentHealth -= amount;
         if (currentHealth < 0) currentHealth = 0; // Ensure health doesn't go negative
         healthBar.SetHealth(currentHealth);
+        healthText.text = currentHealth.ToString();
         Debug.Log("Took damage: " + amount + ", Current Health: " + currentHealth);
     }
 
@@ -94,7 +99,8 @@ public class CharacterButtons : MonoBehaviour
     {
         currentHealth += heal;
         if (currentHealth > maxHealth) currentHealth = maxHealth; // Ensure health doesn't exceed max health
-        healthBar.SetHealth(currentHealth); // Actualiza la barra de salud
+        healthBar.SetHealth(currentHealth); 
+        healthText.text = currentHealth.ToString();
     }
 
     public void Highlight()
@@ -134,12 +140,14 @@ public class CharacterButtons : MonoBehaviour
         currentDefense += amount;
         if (currentDefense > maxDefense) currentDefense = maxDefense;
         defenseBar.SetDefense(currentDefense);
+        defenseText.text = currentDefense.ToString();
         Debug.Log("Increased defense by " + amount);
     }
 
     public void IncreaseAttack(int amount)
     {
         currentAttack += amount;
+        if (currentAttack > 4) currentAttack = 4;
         Debug.Log("Increased attack by " + amount);
     }
 
@@ -148,6 +156,7 @@ public class CharacterButtons : MonoBehaviour
         currentDefense -= amount;
         if (currentDefense < 0) currentDefense = 0;
         defenseBar.SetDefense(currentDefense);
+        defenseText.text = currentDefense.ToString();
         Debug.Log("Decreased defense by " + amount);
     }
 

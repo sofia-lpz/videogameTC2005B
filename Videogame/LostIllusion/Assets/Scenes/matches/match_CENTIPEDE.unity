@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -9, y: -92}
+  m_AnchoredPosition: {x: -9, y: -60.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &58132786
@@ -541,7 +541,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tcgFeedbackPrefab: {fileID: 1815199825794686244, guid: 464d263dff77db14ba79ffbc8eb6d1c5, type: 3}
-  pauseCanvas: {fileID: 1751940820017322284, guid: e74808ed5c2b9224fa7cc7b675c7731f, type: 3}
 --- !u!114 &566437068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1412,7 +1411,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 540.3, y: 116.1}
+  m_SizeDelta: {x: 545.13, y: 156.92}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1747708707
 MonoBehaviour:
@@ -1472,8 +1471,8 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 76.8, y: 99.33}
-  m_Spacing: {x: 10.1, y: 0}
+  m_CellSize: {x: 96.3, y: 126.4}
+  m_Spacing: {x: 12.6, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!114 &1747708710

@@ -270,13 +270,16 @@ public class TCG_Controller : MonoBehaviour
         {
             damage /= 2;
             defendingCharacter.DecreaseDefense(1);
+            defendingCharacter.defenseText.text = defendingCharacter.currentDefense.ToString();
         }
         else
         {
             damage -= defendingCharacter.currentDefense;
         }
         
-        if (damage < 0) damage = 1;
+        if (damage < 0) damage = 0;
+
+        if (damage == 0) feedbackscript.ShowFeedback("Attack was not effective!");
 
         defendingCharacter.TakeDamage(damage);
     }
