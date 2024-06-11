@@ -491,7 +491,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c34c6ba568c7ae4f88a488a16d421ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  supportAnimationPrefab: {fileID: 1334427001094844635, guid: 1a2c5c57d809fe64791f642f3c8718a6, type: 3}
+  defenseAnimationPrefab: {fileID: 4739263565009904733, guid: 60df83430dfb1ff46ab164316a10b2b4, type: 3}
   attackAnimationPrefab: {fileID: 8587733260135734319, guid: 7fbade6b4f9bbe64b90f61d818a64c36, type: 3}
+  healingAnimationPrefab: {fileID: 1723355942337331081, guid: 34e6110b557eddc48b8c97e78d433c31, type: 3}
+  specialAnimationPrefab: {fileID: 1677380261418510551, guid: 3bcb5302a300eeb4a9032e8456645e8b, type: 3}
   fadeOutPrefab: {fileID: 6254759040623284243, guid: 8eb75fbc4a498054cb0d80a0070dce23, type: 3}
   cards: []
   enemyCards: []
