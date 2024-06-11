@@ -225,6 +225,32 @@ const createPlayerStats = async (req, res) => {
   }
 }
 
+const createCardUse = async (req, res) => {
+  const {
+    body: { username, cardId },
+  } = req;
+
+  if (!username || !cardId) {
+    res.status(400).send({ status: "Error", data: "All fields are required." });
+    return;
+  }
+
+  try {
+    const result = await colometaService.createCardUse(username, cardId);
+    
+    if (result.error) {
+      res.status(500).send({ status: "Error", data: result.error });
+      return;
+    }
+
+    res.send({ status: "OK", data: result });
+  }
+  catch (error) {
+    console.error(error);
+    res.status(500).send({ status: "Error", data: error.message });
+  }
+}
+
 export {
   createPlayerStats,
   createPlayerMatch,

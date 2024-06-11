@@ -25,7 +25,6 @@ public class Character_Movement : MonoBehaviour
     [SerializeField] protected KeyCode down;
     [SerializeField] protected KeyCode left;
     [SerializeField] protected KeyCode right;
-    [SerializeField] protected GameObject DialogueCanvas;
     protected string sceneName;
 
     public virtual void Start()

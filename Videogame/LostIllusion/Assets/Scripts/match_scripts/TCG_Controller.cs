@@ -45,6 +45,7 @@ public class TCG_Controller : MonoBehaviour
     private List<int> usedEnemyCharacters = new List<int>();
     public bool skipEnemyTurn = false;
     private api_post Apipost;
+    int memoriesFound = 0;
 
     [SerializeField] int limit = 1;    
 

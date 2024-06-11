@@ -17,14 +17,6 @@ create table villager(
     primary key (villager_id)
 ) engine=InnoDB DEFAULT CHARSET=utf8mb4;
 
-create table team(
-    username varchar(50) NOT NULL,
-    villager_id SMALLINT NOT NULL,
-    primary key (username, villager_id),
-    constraint fk_team_username foreign key (username) references player(username),
-    constraint fk_team_villager foreign key (villager_id) references villager(villager_id)
-) engine=InnoDB DEFAULT CHARSET=utf8mb4;
-
 create table card(
     cardId SMALLINT NOT NULL AUTO_INCREMENT,
     name varchar(50) NOT NULL,
@@ -58,6 +50,16 @@ create table tcg_match(
     primary key (matchId, username),
     constraint fk_match_player foreign key (username) references player(username) on delete restrict on update cascade
 ) engine= InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+create table cardUse(
+    cardId SMALLINT NOT NULL,
+    username varchar(50) NOT NULL,
+    timesUsed SMALLINT NOT NULL DEFAULT 0,
+    primary key (cardId, username),
+    constraint cardUse_card foreign key (cardId) references card(cardId) on delete restrict on update cascade,
+    constraint cardUse_player foreign key (username) references player(username) on delete restrict on update cascade
+) engine=myisam DEFAULT CHARSET=utf8mb4;
 
 create table stats(
     username varchar(50) NOT NULL,
