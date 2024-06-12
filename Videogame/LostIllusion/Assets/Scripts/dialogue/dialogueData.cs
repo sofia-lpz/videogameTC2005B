@@ -256,12 +256,31 @@ public static List<List<string>> centipede_lines = new List<List<string>> {
 
 /*Adrian lines*/
 public static List<string> adrian_lines_1 = new List<string> {
-    "hsssss!",
-    "hss! hsssss!"
+    "Ah!" + player_username,
+    "Theres a...! We have to go!",
+    "What?",
+    "Im not hallucinating," + player_username + "!",
+    "This is not a game!",
+    "Fine, do whatever you like! I'm leaving!"
 };
 
 public static List<List<string>> adrian_lines = new List<List<string>> {
     adrian_lines_1
+};
+
+/*girl lines*/
+public static List<string> girl_lines_1 = new List<string> {
+    "Do you...?",
+    "Can you see me now?",
+    "...",
+    "Don't worry, I'm not hurt",
+    "I'm just...",
+    "I sort of liked it",
+    "being a monster",
+};
+
+public static List<List<string>> girl_lines = new List<List<string>> {
+    girl_lines_1
 };
 
 
@@ -276,7 +295,8 @@ public static Dictionary<string, List<List<string>>> dialoguesDictionary = new D
     {"WOMAN", woman_lines},
     {"cutsceneStart", cutsceneStart_lines},
     {"centipede", centipede_lines},
-    {"ADRIAN", adrian_lines}
+    {"ADRIAN", adrian_lines},
+    {"GIRL", girl_lines}
 };
 
 public static List<string> scaryLines = new List<string> {

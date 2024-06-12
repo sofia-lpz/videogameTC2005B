@@ -32,11 +32,6 @@ public class Character_Movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-
-        if (stateNameController.scaryScenes.Contains(sceneName))
-        {
-            StartCoroutine(tremble());
-        }
     }
 
     public virtual void Update()

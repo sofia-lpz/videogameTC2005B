@@ -5,6 +5,8 @@ using UnityEngine;
 public class colometaSceneManager : MonoBehaviour
 {
     [SerializeField] public GameObject girlPrefab;
+    private npcMovement npcMovement;
+    [SerializeField] public Transform[] points;
 
     void Start()
     {
@@ -15,6 +17,14 @@ public class colometaSceneManager : MonoBehaviour
             GameObject player = GameObject.FindWithTag("Player");
 
             player.transform.position = new Vector3(0, 14, 0);
+
+            GameObject girl = Object.Instantiate(girlPrefab);
+            girl.name = "GIRL";
+
+            npcMovement = girl.GetComponent<npcMovement>();
+            npcMovement.points = points;
+
+            
 
         }
     }

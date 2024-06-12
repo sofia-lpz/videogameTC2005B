@@ -74,6 +74,7 @@ public class menuButtons : MonoBehaviour
     public void quit()
     {
         audioSource.Play();
+        stateNameController.resetAllValues();
         SceneManager.LoadScene("mainMenu", LoadSceneMode.Single);
     }
 

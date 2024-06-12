@@ -870,8 +870,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: mute
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 817a791b8f28d7c4f815d7985ee13db5, type: 2}
+  m_sharedMaterial: {fileID: 5337005374529218324, guid: 817a791b8f28d7c4f815d7985ee13db5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1077,6 +1077,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e30b409b3f784d41be31dcefcadb5c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickSound: {fileID: 0}
+  nextSceneMenu: 
 --- !u!82 &3781797804021664048
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1220,7 +1222,6 @@ MonoBehaviour:
   slider: {fileID: 5760721041078175748}
   volumeText: {fileID: 873051456116727677}
   muteButtonText: {fileID: 3081168910645824903}
-  storedVolume: 0
 --- !u!1 &9132207638427669723
 GameObject:
   m_ObjectHideFlags: 0
