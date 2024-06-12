@@ -1,7 +1,7 @@
 use colometa;
 
-insert into player (username, password, level) values
-('player', 'admin', 0);
+insert into player (username, password) values
+('player', 'admin');
 
 insert into villager (name, description, element) values
 ("Cat", "Its your cat!", "Reason"),
