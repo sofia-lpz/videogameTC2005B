@@ -14,15 +14,20 @@ using UnityEngine;
 
 public class cardAnimationManager : MonoBehaviour
 {
+    private AudioSource audioSource;
+    [SerializeField] AudioClip effectSound;
     [SerializeField] public float cardAnimationTime = 1.0f;
 
     void Start()
     {
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = effectSound;
         StartCoroutine(playAndDestroy());
     }
 
     IEnumerator playAndDestroy()
     {
+        audioSource.Play();
         yield return new WaitForSeconds(cardAnimationTime);
         Destroy(gameObject);
     }

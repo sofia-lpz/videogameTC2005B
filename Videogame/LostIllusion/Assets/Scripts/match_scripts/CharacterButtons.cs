@@ -145,7 +145,7 @@ public class CharacterButtons : MonoBehaviour
     public void IncreaseAttack(int amount)
     {
         currentAttack += amount;
-        if (currentAttack > 4) currentAttack = 4;
+        if (currentAttack > 3) currentAttack = 3;
         Debug.Log("Increased attack by " + amount);
     }
 
