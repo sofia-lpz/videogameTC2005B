@@ -481,7 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectCollider: {fileID: 345566709}
-  eventName: 
+  descriptionCanvasPrefab: {fileID: 6286755694444886453, guid: 3eda015329492b64893a9a3251d98229, type: 3}
   WOMANprefab: {fileID: 3211781681135713012, guid: d1ace6369606be143b83fdfd0a974ecc, type: 3}
   WOMANpoints:
   - {fileID: 2640728386780153227}
@@ -115472,6 +115472,7 @@ MonoBehaviour:
   points:
   - {fileID: 898335587}
   pointsIndex: 0
+  routineDone: 0
 --- !u!114 &1673895019
 MonoBehaviour:
   m_ObjectHideFlags: 0

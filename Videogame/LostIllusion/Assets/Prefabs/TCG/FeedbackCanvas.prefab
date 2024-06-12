@@ -248,7 +248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: -51}
+  m_AnchoredPosition: {x: 350, y: -52}
   m_SizeDelta: {x: 663.3231, y: 86.4411}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4235796898962395039
@@ -279,7 +279,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CENTIPEDE attacked! you took damage
+  m_text: CENTIPEDE attacked! you took damage AND THIS IS VERY LONG TEXT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a636331ea4b27248a8d16465656e5a9, type: 2}
   m_sharedMaterial: {fileID: -9026728364233177817, guid: 8a636331ea4b27248a8d16465656e5a9, type: 2}
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 147.81473, w: 0}
+  m_margin: {x: 0, y: 0, z: 63.463455, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -384,8 +384,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -146.3462, y: 186.53194}
-  m_SizeDelta: {x: 478.2077, y: 47.9359}
+  m_AnchoredPosition: {x: -131.39244, y: 187.03186}
+  m_SizeDelta: {x: 508.1152, y: 46.936}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1065275381828947082
 CanvasRenderer:
