@@ -55,16 +55,16 @@ void onFight(GameObject other)
         stateNameController.playerYPosInScene = other.transform.position.y;
         stateNameController.playerPreviousScene = SceneManager.GetActiveScene().name;
         
-        GameObject dialogueCanvas = Object.Instantiate(prefabDialogueCanvas);
+        //GameObject dialogueCanvas = Object.Instantiate(prefabDialogueCanvas);
         
         var fieldInfo = typeof(stateNameController).GetField(sceneNameFight);
         
         int fieldValue = (int)fieldInfo.GetValue(null);
         dialogueIndex = fieldValue;
         
-        dialogueCanvas.GetComponent<dialogue>().Initialize(gameObject.name, dialogueIndex);
+        //dialogueCanvas.GetComponent<dialogue>().Initialize(gameObject.name, dialogueIndex);
 
-        StartCoroutine(WaitAndLoadScene("characterSelection", dialogueCanvas));
+        UnityEngine.SceneManagement.SceneManager.LoadScene("characterSelection");
     }
 }
 
@@ -81,18 +81,4 @@ void onTalkAfter(int fieldValue)
             dialogueCanvas.GetComponent<dialogue>().Initialize(gameObject.name, 2);
         }
     }
-
-IEnumerator WaitAndLoadScene(string sceneName, GameObject dialogueCanvas)
-{
-    // Wait until the dialogue canvas is destroyed
-    while (dialogueCanvas != null)
-    {
-        yield return null; // Wait for next frame
-    }
-
-    yield return new WaitForSeconds(1.0f); // Wait for 1 second
-
-    // Load the scene
-    UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
-}
 }

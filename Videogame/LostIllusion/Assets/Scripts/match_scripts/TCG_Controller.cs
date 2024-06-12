@@ -41,7 +41,7 @@ public class TCG_Controller : MonoBehaviour
     public enum Turn {Player, Enemy};
     public Turn currentTurn;
     public static int turnCount;
-    private string sceneName = stateNameController.playerPreviousScene;
+    //private string sceneName = COLOMETA;
     private bool gameOver = false; 
 
     private tcgFeedback feedbackscript;
@@ -593,7 +593,8 @@ public class TCG_Controller : MonoBehaviour
         }
     }
 
-    public void LoadScene(){
+    public IEnumerator LoadScene(string sceneName){
+        yield return new WaitForSeconds(5);
         Debug.Log("Loading scene: " + sceneName);
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         Instantiate(fadeOutPrefab);
@@ -607,7 +608,7 @@ public class TCG_Controller : MonoBehaviour
         Apipost.postMatchData(true);
         Apipost.postCardUse();
         resultHandler.match_won();
-        Invoke("LoadScene", 5);
+        StartCoroutine(LoadScene("COLOMETA"));
     }
 
     public void EnemyWins()
@@ -618,7 +619,7 @@ public class TCG_Controller : MonoBehaviour
         Apipost.postMatchData(false);
         Apipost.postCardUse();
         resultHandler.match_lost();
-        Invoke("LoadScene", 5);
+        StartCoroutine(LoadScene("GameOver"));
     }
 
 }
