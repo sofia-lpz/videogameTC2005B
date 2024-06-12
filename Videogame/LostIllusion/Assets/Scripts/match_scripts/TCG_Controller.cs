@@ -619,7 +619,7 @@ public class TCG_Controller : MonoBehaviour
         Apipost.postMatchData(false);
         Apipost.postCardUse();
         resultHandler.match_lost();
-        StartCoroutine(LoadScene("GameOver"));
+        StartCoroutine(LoadScene("gameOver"));
     }
 
 }

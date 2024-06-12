@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class colometaSceneManager : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class colometaSceneManager : MonoBehaviour
 
     void Start()
     {
-        if (true)
+        if (stateNameController.match_CENTIPEDE == 1)
         {
             Debug.Log("Centipede match won");
             GameObject.Find("CENTIPEDE").SetActive(false);
@@ -23,9 +24,7 @@ public class colometaSceneManager : MonoBehaviour
 
             npcMovement = girl.GetComponent<npcMovement>();
             npcMovement.points = points;
-
-            
-
+            StartCoroutine(WaitForRoute());
         }
     }
 
@@ -33,5 +32,12 @@ public class colometaSceneManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private IEnumerator WaitForRoute()
+    {
+        yield return new WaitUntil(() => npcMovement.routineDone);
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("youWon", LoadSceneMode.Single);
     }
 }

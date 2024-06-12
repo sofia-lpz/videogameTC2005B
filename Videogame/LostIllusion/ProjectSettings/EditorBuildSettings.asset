@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/map/COLOMETA.unity
     guid: 473938fe2df35314d878f899d0b081be
   - enabled: 1
+    path: Assets/Scenes/matches/gameOver.unity
+    guid: 7fd3ee04da768244791b8507090a6f0e
+  - enabled: 1
     path: Assets/Scenes/matches/match_CENTIPEDE.unity
     guid: a1554ca02be61d64baa3acafb3cc85b2
   - enabled: 1

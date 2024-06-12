@@ -78,6 +78,12 @@ public class menuButtons : MonoBehaviour
         SceneManager.LoadScene("mainMenu", LoadSceneMode.Single);
     }
 
+    public void tryagain()
+    {
+        audioSource.Play();
+        SceneManager.LoadScene("characterSelection", LoadSceneMode.Single);
+    }
+
     public void quitInventory()
     {
         stateNameController.gamePaused = false;
