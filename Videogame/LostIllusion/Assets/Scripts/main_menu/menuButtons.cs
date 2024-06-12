@@ -46,13 +46,6 @@ public class menuButtons : MonoBehaviour
         SceneManager.LoadScene("register", LoadSceneMode.Single);
     }  
 
-    public void startGame()
-    {
-        audioSource.Play();
-        string sceneName = stateNameController.scenes[stateNameController.player_level];
-        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
-    }
-
     public void startGameNOAUTH()
     {
         audioSource.Play();
@@ -81,7 +74,14 @@ public class menuButtons : MonoBehaviour
     public void quit()
     {
         audioSource.Play();
+        stateNameController.resetAllValues();
         SceneManager.LoadScene("mainMenu", LoadSceneMode.Single);
+    }
+
+    public void tryagain()
+    {
+        audioSource.Play();
+        SceneManager.LoadScene("characterSelection", LoadSceneMode.Single);
     }
 
     public void quitInventory()

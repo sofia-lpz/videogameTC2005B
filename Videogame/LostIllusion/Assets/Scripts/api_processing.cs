@@ -54,6 +54,8 @@ public class api_processing : MonoBehaviour
         stateNameController.playerStatus = playerList.status;
 
         stateNameController.Players = playerList.data;
+        stateNameController.player_username = stateNameController.Players[0].username;
+
     }
 
 
