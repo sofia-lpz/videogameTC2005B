@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 40c6594bcd921d34f88d9382bcf07c95
+guid: c8d6eb2aa8babc24bac8217f8f67508d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,64 +110,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: character_portrait
+      name: card_frame_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 491
-        width: 114
-        height: 146
+        x: 173
+        y: 173
+        width: 415
+        height: 625
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd8c230dc7c988a49b8b8680e10f6e23
-      internalID: 1477563147
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heart
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 451
-        width: 16
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d57a4e1bb48137646b503521ce1fb44a
-      internalID: 1356925856
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: energy
-      rect:
-        serializedVersion: 2
-        x: 744
-        y: 357
-        width: 123
-        height: 97
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8acf75bf0d7cd9043b596f63cba8da72
-      internalID: -1403903373
+      spriteID: 30f552e1f380fd74994ab8c2bcb64338
+      internalID: -1054642458
       vertices: []
       indices: 
       edges: []
@@ -183,10 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      battle_ui_0: -968826419
-      character_portrait: 1477563147
-      energy: -1403903373
-      heart: 1356925856
+      card_frame_0: -1054642458
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
