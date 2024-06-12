@@ -16,8 +16,6 @@ public class stateNameController : MonoBehaviour
     public static string playerStatus = "None";
 
     public static string player_username = "nombre de usuario";
-    public static int player_level = 1;
-    public static int player_matches_won = 1;
 
     public static List<string> inventory = new List<string>();
 

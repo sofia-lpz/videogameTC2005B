@@ -46,13 +46,6 @@ public class menuButtons : MonoBehaviour
         SceneManager.LoadScene("register", LoadSceneMode.Single);
     }  
 
-    public void startGame()
-    {
-        audioSource.Play();
-        string sceneName = stateNameController.scenes[stateNameController.player_level];
-        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
-    }
-
     public void startGameNOAUTH()
     {
         audioSource.Play();

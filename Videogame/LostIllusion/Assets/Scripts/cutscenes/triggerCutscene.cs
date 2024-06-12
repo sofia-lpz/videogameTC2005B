@@ -17,35 +17,32 @@ using UnityEngine.SceneManagement;
 
 public class triggerCutscene : pickMeUp
 {
-    [SerializeField] public GameObject CutsceneCanvasPrefab;
+//     [SerializeField] public GameObject CutsceneCanvasPrefab;
 
-    public override void Start()
-    {
-        base.Start();
-        if (stateNameController.playedCutscenes.Contains(cutsceneName)){
-            Destroy(gameObject);
-        }
-    }
+//     public override void Start()
+//     {
+//         base.Start();
+//     }
 
-    public override void onPickUp()
-    {
-        base.onPickUp();
-        GameObject other = GameObject.FindWithTag("Player");
+//     public override void onPickUp()
+//     {
+//         base.onPickUp();
+//         GameObject other = GameObject.FindWithTag("Player");
 
-        stateNameController.playerXPosInScene = other.transform.position.x;
-        stateNameController.playerYPosInScene = other.transform.position.y;
-        stateNameController.playerPreviousScene = SceneManager.GetActiveScene().name;
+//         stateNameController.playerXPosInScene = other.transform.position.x;
+//         stateNameController.playerYPosInScene = other.transform.position.y;
+//         stateNameController.playerPreviousScene = SceneManager.GetActiveScene().name;
 
-Debug.Log("Starting cutscene: " + cutsceneName);
-        StartCoroutine(StartCutscene());
-    }
+// Debug.Log("Starting cutscene: " + cutsceneName);
+//         StartCoroutine(StartCutscene());
+//     }
 
-    IEnumerator StartCutscene()
-    {
-        GameObject cutsceneCanvas = Object.Instantiate(CutsceneCanvasPrefab);
-        cutsceneCanvas.GetComponent<dialogue>().Initialize(gameObject.name, 0);
-        yield return new WaitForSeconds(3);
-        Destroy(cutsceneCanvas);
-        SceneManager.LoadScene(cutsceneName); 
-    }
+//     IEnumerator StartCutscene()
+//     {
+//         GameObject cutsceneCanvas = Object.Instantiate(CutsceneCanvasPrefab);
+//         cutsceneCanvas.GetComponent<dialogue>().Initialize(gameObject.name, 0);
+//         yield return new WaitForSeconds(3);
+//         Destroy(cutsceneCanvas);
+//         SceneManager.LoadScene(cutsceneName); 
+//     }
 }

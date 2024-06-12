@@ -108,6 +108,6 @@ public class Character_Movement : MonoBehaviour
         }
 
         // Reset position
-        transform.position = originalPosition;
+        //transform.position = originalPosition;
     }
 }
