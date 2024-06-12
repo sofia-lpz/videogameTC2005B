@@ -5,7 +5,6 @@ use colometa;
 create table player(
     username varchar(50) NOT NULL DEFAULT 'name',
     password varchar(50) NOT NULL DEFAULT 'password',
-    level SMALLINT NOT NULL DEFAULT 0,
     primary key (username)
 ) engine=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -96,11 +95,3 @@ create table global_stats(
     memories_found_avg SMALLINT NOT NULL,
     primary key (global_stats_id)
 ) engine=myisam DEFAULT CHARSET=utf8mb4;
-
--- create table deck(
---     username varchar(50) NOT NULL,
---     cardId varchar(15) NOT NULL,
---     primary key (username,cardId),
---     constraint deck_player foreign key (username) references player(username) on delete restrict on update cascade,
---     constraint deck_card foreign key (cardId) references card(cardId) on delete restrict on update cascade
--- ) engine=myisam DEFAULT CHARSET=utf8mb4;

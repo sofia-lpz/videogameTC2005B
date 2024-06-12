@@ -66,7 +66,6 @@ public class CardList
 public class Player{
     public string username;
     public string password;
-    public int level;
 }
 
 [Serializable]
