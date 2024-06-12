@@ -67,6 +67,9 @@ TagManager:
   - name: BorderDecorInside
     uniqueID: 940997869
     locked: 0
+  - name: finalBorderDecor
+    uniqueID: 2746787455
+    locked: 0
   - name: Interactables
     uniqueID: 721222773
     locked: 0

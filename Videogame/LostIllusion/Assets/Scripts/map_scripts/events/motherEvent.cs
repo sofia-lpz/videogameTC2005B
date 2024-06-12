@@ -4,19 +4,28 @@ using UnityEngine;
 
 public class motherEvent : eventManager
 {
-    [SerializeField] public GameObject WOMANprefab;
-    [SerializeField] public Transform[] WOMANpoints;
-
     private npcMovement npcMovement; // Add this line
 
     public override void onEvent()
     {
         eventName = "motherEvent";
-        GameObject Woman = Object.Instantiate(WOMANprefab);
-        Woman.name = "WOMAN";
-
-        npcMovement = Woman.GetComponent<npcMovement>();
-        npcMovement.points = WOMANpoints;
+        GameObject Woman = GameObject.Find("WOMAN");
+        if (Woman != null)
+        {
+            npcMovement = Woman.GetComponent<npcMovement>();
+            if (npcMovement != null)
+            {
+                npcMovement.enabled = true;
+            }
+            else
+            {
+                Debug.LogError("npcMovement component not found on WOMAN GameObject");
+            }
+        }
+        else
+        {
+            Debug.LogError("WOMAN GameObject not found");
+        }
 
         StartCoroutine(WaitForDialogues());
     }

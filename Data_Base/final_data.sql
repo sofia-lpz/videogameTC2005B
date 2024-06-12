@@ -4,12 +4,12 @@ insert into player (username, password) values
 ('player', 'admin');
 
 insert into villager (name, description, element) values
-("Cat", "Its your cat!", "Reason"),
-("Doll", "Possesed doll", "Terror"),
-('Sheep', 'A random sheep that escaped from a farm. Not very interested in going back', 'Dream'),
-('Bird', 'A bird that is always chirping', 'Reason'),
-('Ghost', 'A ghost that haunts the house', 'Terror'),
-('Bluejay', 'A bluejay that is always flying', 'Dream');
+("DOG", "Its your cat!", "Reason"),
+("FISH", "Possesed doll", "Terror"),
+('ANGEL', 'A random sheep that escaped from a farm. Not very interested in going back', 'Dream'),
+('FRUIT', 'A bird that is always chirping', 'Reason'),
+('CROW', 'A ghost that haunts the house', 'Terror'),
+('BUNNY', 'A bluejay that is always flying', 'Dream');
 
 insert into card (cardId, name, energy_cost, effect, type, description, player_health, player_attack, player_defense, player_support, enemy_defense, enemy_attack) values
 ('1', 'BANDAGE', 3, 'healing', 'snack', 'drinking this grants 3 hp', 3, 0, 0, 0, 0, 0),

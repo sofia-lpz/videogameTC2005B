@@ -29,9 +29,13 @@ public class tcgData
 
    public static Dictionary<string, Sprite> characterPortraits = new Dictionary<string, Sprite>
    {
-      {"Cat", Resources.Load<Sprite>("character_portraits/reasonportrait")},
-      {"Dream", Resources.Load<Sprite>("character_portraits/dreamportrait")},
-      {"Terror", Resources.Load<Sprite>("character_portraits/terrorportrait")},
+      {"FISH", Resources.Load<Sprite>("character_portraits/fish")},
+      {"CROW", Resources.Load<Sprite>("character_portraits/crow")},
+      {"DOG", Resources.Load<Sprite>("character_portraits/dog")},
+      {"BUNNY", Resources.Load<Sprite>("character_portraits/bunny")},
+      {"ANGEL", Resources.Load<Sprite>("character_portraits/angel")},
+      {"FRUIT", Resources.Load<Sprite>("character_portraits/watermelon")},
+      {"None", Resources.Load<Sprite>("character_portraits/watermelon")},
    };
 
 
