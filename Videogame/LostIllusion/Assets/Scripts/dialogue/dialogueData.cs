@@ -254,6 +254,17 @@ public static List<List<string>> centipede_lines = new List<List<string>> {
     centipede_lines_1
 };
 
+/*Adrian lines*/
+public static List<string> adrian_lines_1 = new List<string> {
+    "hsssss!",
+    "hss! hsssss!"
+};
+
+public static List<List<string>> adrian_lines = new List<List<string>> {
+    adrian_lines_1
+};
+
+
 // to do, make a dictionary of dictionaries instead of dictionary of lists
 public static Dictionary<string, List<List<string>>> dialoguesDictionary = new Dictionary<string, List<List<string>>> {
     {"CENTIPEDE", centipede_lines},
@@ -263,10 +274,9 @@ public static Dictionary<string, List<List<string>>> dialoguesDictionary = new D
     {"dev_bunny", new List<List<string>> { dev_bunny_lines_1 }},
     {"NARRATOR", narrator_lines},
     {"WOMAN", woman_lines},
-     {"cutsceneStart", cutsceneStart_lines},
-    {"centipede", centipede_lines}
-    
-
+    {"cutsceneStart", cutsceneStart_lines},
+    {"centipede", centipede_lines},
+    {"ADRIAN", adrian_lines}
 };
 
 public static List<string> scaryLines = new List<string> {
