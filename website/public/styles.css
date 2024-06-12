@@ -60,7 +60,7 @@ nav ul li a:hover {
     text-align: center;
     padding: 80px 20px;
     width: 100%;
-    margin-top: 60px; 
+    margin-top: 45px; 
     background-color: #1e1e1e;
 }
 
@@ -100,7 +100,6 @@ p {
     background-color: #f5f5f5;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -141,15 +140,15 @@ p {
 
 /* Pagina .stats */
 .stats-section {
-    padding: 8vh 2vw;
+    padding: 2em 2em;
     background-color: #1e1e1e;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+
 }
 
 .stats-section h2 {
@@ -176,6 +175,22 @@ p {
 
 .stats-section .card-content h3 {
     color: #333;
+}
+
+.chart-container{
+    display: flex;
+}
+
+#matchResultsChart{
+    width: 500px;
+    height: 500px;
+    margin-right: 4em;
+}
+
+.barCharts canvas{
+    width: 500px;
+    height: 250px;
+    margin-left: 4em;
 }
 
 /* Pagina .code */
