@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class runningEvent : eventManager
 {
-    [SerializeField] public GameObject FRIENDprefab;
-    [SerializeField] public Transform[] FRIENDpoints;
-
     private npcMovement npcMovement; // Add this line
+    GameObject Adrian;
 
     public override void onEvent()
     {
         eventName = "runningEvent";
-        GameObject Kel = Object.Instantiate(FRIENDprefab);
-        Kel.name = "ADRIAN";
 
-        npcMovement = Kel.GetComponent<npcMovement>();
-        npcMovement.points = FRIENDpoints;
+        if (stateNameController.triggeredEvents.Contains(eventName))
+        {
+            Adrian = GameObject.Find("ADRIAN");
+            Destroy(Adrian);
+            return;
+        }
+
+        stateNameController.triggeredEvents.Add(eventName);
+        Adrian = GameObject.Find("ADRIAN");
+        npcMovement = Adrian.GetComponent<npcMovement>();
+        npcMovement.enabled = true;
 
         StartCoroutine(WaitForDialogues());
     }
@@ -29,3 +34,4 @@ public class runningEvent : eventManager
         narratorCanvas.GetComponent<dialogue>().Initialize("COLOMETA", 1);
     }
 }
+

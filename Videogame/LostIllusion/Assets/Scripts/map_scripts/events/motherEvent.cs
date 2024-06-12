@@ -5,34 +5,31 @@ using UnityEngine;
 public class motherEvent : eventManager
 {
     private npcMovement npcMovement; // Add this line
+    private npcFollowPlayerAndBack npcFollowPlayerAndBack; // Add this line
 
+    
     public override void onEvent()
     {
         eventName = "motherEvent";
+
+        if (stateNameController.triggeredEvents.Contains(eventName))
+        {
+            return;
+        }
+
+        stateNameController.triggeredEvents.Add(eventName);
         GameObject Woman = GameObject.Find("WOMAN");
-        if (Woman != null)
-        {
-            npcMovement = Woman.GetComponent<npcMovement>();
-            if (npcMovement != null)
-            {
-                npcMovement.enabled = true;
-            }
-            else
-            {
-                Debug.LogError("npcMovement component not found on WOMAN GameObject");
-            }
-        }
-        else
-        {
-            Debug.LogError("WOMAN GameObject not found");
-        }
+        npcFollowPlayerAndBack = Woman.GetComponent<npcFollowPlayerAndBack>();
+
+        stateNameController.triggeredEvents.Add(eventName);
+        npcFollowPlayerAndBack.enabled = true;
 
         StartCoroutine(WaitForDialogues());
     }
 
     private IEnumerator WaitForDialogues()
     {
-        yield return new WaitUntil(() => npcMovement.routineDone);
+        yield return new WaitUntil(() => npcFollowPlayerAndBack.routineDone);
 
         narratorCanvas = Object.Instantiate(descriptionCanvasPrefab);
         narratorCanvas.GetComponent<dialogue>().Initialize("COLOMETA", 1);

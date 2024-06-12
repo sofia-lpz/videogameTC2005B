@@ -17,6 +17,7 @@ public class forceTalk : triggerableObject
 {
     [SerializeField] public bool interacted = false;
     [SerializeField] public GameObject prefabDialogueCanvas;
+    public bool talkedTo = false;
     
     public override void onTriggerEnter(GameObject other)
     {
@@ -32,6 +33,7 @@ public class forceTalk : triggerableObject
 
     void onTalk()
     {
+        talkedTo = true;
         GameObject dialogueCanvas = Object.Instantiate(prefabDialogueCanvas);
         dialogueCanvas.GetComponent<dialogue>().Initialize(gameObject.name, 0);
     }
