@@ -21,6 +21,7 @@ public class cardAnimationManager : MonoBehaviour
     void Start()
     {
         audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.volume = stateNameController.volume;
         audioSource.clip = effectSound;
         StartCoroutine(playAndDestroy());
     }

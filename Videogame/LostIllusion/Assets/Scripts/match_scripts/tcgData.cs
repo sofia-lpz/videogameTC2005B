@@ -34,7 +34,7 @@ public class tcgData
       {"DOG", Resources.Load<Sprite>("character_portraits/dog")},
       {"BUNNY", Resources.Load<Sprite>("character_portraits/bunny")},
       {"ANGEL", Resources.Load<Sprite>("character_portraits/angel")},
-      {"WATERMELON", Resources.Load<Sprite>("character_portraits/watermelon")},
+      {"FRUIT", Resources.Load<Sprite>("character_portraits/watermelon")},
       {"None", Resources.Load<Sprite>("character_portraits/watermelon")},
    };
 

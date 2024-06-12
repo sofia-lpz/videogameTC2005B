@@ -77,6 +77,19 @@ public class CharacterButtons : MonoBehaviour
                 }
             }
         }
+
+        if (tcgData.characterPortraits.TryGetValue(character.name, out Sprite characterSprite))
+        {
+            Transform childTransform = transform.Find("characterPortrait");
+            if (childTransform != null)
+            {
+                Image imageComponent = childTransform.GetComponent<Image>();
+                if (imageComponent != null)
+                {
+                    imageComponent.sprite = characterSprite;
+                }
+            }
+        }
     }
 
     void Update()
