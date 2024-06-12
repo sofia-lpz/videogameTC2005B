@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class npcMovement : Character_Movement
 {
-    [SerializeField] private Transform[] points;
-    private int pointsIndex = 0;
+    [SerializeField] public Transform[] points;
+    public int pointsIndex = 0;
+    public bool routineDone = false;
 
     public override void Update()
     {
@@ -31,6 +32,7 @@ public class npcMovement : Character_Movement
         else
         {
             animator.SetBool("Moving", false);
+            routineDone = true;
         }
     }
     }
