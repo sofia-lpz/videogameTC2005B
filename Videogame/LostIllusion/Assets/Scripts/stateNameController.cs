@@ -34,7 +34,7 @@ public class stateNameController : MonoBehaviour
     public static HashSet<string> triggeredCharacters = new HashSet<string>();
 
     /*FOR AUDIO*/
-    public static float volume = 0.5f;
+    public static float volume = 0;
     public static bool muted = false;
     public static float storedVolume = 0;
 
