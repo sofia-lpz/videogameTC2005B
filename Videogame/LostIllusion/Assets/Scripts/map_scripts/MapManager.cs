@@ -11,44 +11,48 @@ Sofia Moreno
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MapManager : MonoBehaviour
 {
     [SerializeField] GameObject PauseCanvasPrefab;
-    [SerializeField] GameObject InventoryCanvasPrefab;
+    [SerializeField] GameObject CutsceneCanvasPrefab;
 
     void Start()
     {
         
-    // Desoy all picked up items
-    foreach (string pickedUpItem in stateNameController.inventory)
+    if (stateNameController.playerPreviousScene != "")
     {
-        Destroy(GameObject.Find(pickedUpItem));
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.transform.position = new Vector3(stateNameController.playerXPosInScene, stateNameController.playerYPosInScene, 0);
     }
-        /*
-        if (stateNameController.playerPreviousScene != "")
-        {
-            //find player by tag and change position
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            
-            player.transform.position = new Vector3(stateNameController.playerXPosInScene, stateNameController.playerYPosInScene, 0);
-        }
-        */
+
     }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.P) && !stateNameController.gamePaused)
         {
             GameObject pauseCanvas = Object.Instantiate(PauseCanvasPrefab);
             stateNameController.gamePaused = true;
-        
         }
-
-        if (Input.GetKeyDown(KeyCode.I) && !stateNameController.gamePaused)
-        {
-            GameObject inventoryCanvas = Object.Instantiate(InventoryCanvasPrefab);
-            stateNameController.gamePaused = true;
-        }
-
     }
+
+    public void StartCutscene(string cutsceneName)
+    {
+        StartCoroutine(StartCutsceneAndWait(cutsceneName));
+    }
+
+    public IEnumerator StartCutsceneAndWait(string cutsceneName)
+    {
+        Debug.Log("MapManager started coruitine");
+        GameObject cutsceneCanvas = Object.Instantiate(CutsceneCanvasPrefab);
+        cutsceneCanvas.GetComponent<dialogue>().Initialize("cutsceneStart", 0);
+        yield return new WaitForSeconds(2);
+        Destroy(cutsceneCanvas);
+        Debug.Log("Starting cutscene: " + cutsceneName);
+        SceneManager.LoadScene(cutsceneName); 
+    }
+
+
 }

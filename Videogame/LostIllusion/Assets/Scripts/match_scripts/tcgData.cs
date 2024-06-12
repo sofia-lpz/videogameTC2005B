@@ -38,30 +38,6 @@ public class tcgData
    public static Dictionary<string, Sprite> cardSprites = new Dictionary<string, Sprite>
    {
       {"WISHBONE", Resources.Load<Sprite>("cardSprites/WISHBONE")}, // 1
-      // {"FLOWER", Resources.Load<Sprite>("cardSprites/FLOWER")}, // 2
-      // {"HAT", Resources.Load<Sprite>("cardSprites/HAT")}, // 3
-      // {"TOUCH", Resources.Load<Sprite>("cardSprites/TOUCH")}, // 4
-      // {"TASTE", Resources.Load<Sprite>("cardSprites/TASTE")}, // 5
-      // {"SMELL", Resources.Load<Sprite>("cardSprites/SMELL")}, // 6
-      // {"DREAM", Resources.Load<Sprite>("cardSprites/DREAM")}, // 7
-      // {"NIGHTMARE", Resources.Load<Sprite>("cardSprites/NIGHTMARE")}, // 8
-      // {"SLEEP", Resources.Load<Sprite>("cardSprites/SLEEP")}, // 9
-      // {"WAKE", Resources.Load<Sprite>("cardSprites/WAKE")}, // 10
-      // {"FORGET", Resources.Load<Sprite>("cardSprites/FORGET")}, // 11
-      // {"REMEMBER", Resources.Load<Sprite>("cardSprites/REMEMBER")}, // 12
-      // {"FEAR", Resources.Load<Sprite>("cardSprites/FEAR")}, // 13
-      // {"ANGER", Resources.Load<Sprite>("cardSprites/ANGER")}, // 14
-      // {"SADNESS", Resources.Load<Sprite>("cardSprites/SADNESS")}, // 15
-      // {"JOY", Resources.Load<Sprite>("cardSprites/JOY")}, // 16
-      // {"LOVE", Resources.Load<Sprite>("cardSprites/LOVE")}, // 17
-      // {"HATE", Resources.Load<Sprite>("cardSprites/HATE")}, // 18
-      // {"HOPE", Resources.Load<Sprite>("cardSprites/HOPE")}, // 19
-      // {"DESPAIR1", Resources.Load<Sprite>("cardSprites/DESPAIR1")}, // 20
-      // {"DESPAIR2", Resources.Load<Sprite>("cardSprites/DESPAIR2")}, // 21
-      // {"DESPAIR3", Resources.Load<Sprite>("cardSprites/DESPAIR3")}, // 22
-      // {"DESPAIR4", Resources.Load<Sprite>("cardSprites/DESPAIR4")}, // 23
-      // {"DESPAIR5", Resources.Load<Sprite>("cardSprites/DESPAIR5")}, // 24
-      // {"None", Resources.Load<Sprite>("cardSprites/None")}, // 25
       {"3 LEAF CLOVER", Resources.Load<Sprite>("cardSprites/3_LEAF_CLOVER")},
       {"4 LEAF CLOVER", Resources.Load<Sprite>("cardSprites/4_LEAF_CLOVER")},
       {"5 LEAF CLOVER", Resources.Load<Sprite>("cardSprites/5_LEAF_CLOVER")},
@@ -88,6 +64,7 @@ public class tcgData
       {"SNOT", Resources.Load<Sprite>("cardSprites/SNOT")},
       {"TEAPOT", Resources.Load<Sprite>("cardSprites/TEAPOT")},
       {"SHARP TULIP", Resources.Load<Sprite>("cardSprites/TULIP_HAIRSTICK")},
+      {"None", Resources.Load<Sprite>("cardSprites/JACK")},
 
    };
 
