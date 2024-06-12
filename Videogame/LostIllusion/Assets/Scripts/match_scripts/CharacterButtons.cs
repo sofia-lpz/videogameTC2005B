@@ -26,7 +26,6 @@ public class CharacterButtons : MonoBehaviour
     [SerializeField] int maxHealth = 10;
     [SerializeField] int maxDefense = 5;
     [SerializeField] TMP_Text characterName;
-    [SerializeField] TMP_Text characterDescription;
     [SerializeField] TMP_Text characterElement;
     [SerializeField] TMP_Text healthText;
     [SerializeField] public TMP_Text defenseText;
@@ -64,7 +63,6 @@ public class CharacterButtons : MonoBehaviour
     {
         character = data;
         characterName.text = character.name;
-        characterDescription.text = character.description;
         characterElement.text = character.element;
     
         if (tcgData.elementSprites.TryGetValue(character.element, out Sprite elementSprite))
