@@ -14,6 +14,7 @@ public class pickMeUp : collideableObject
     public bool interacted = false;
     [SerializeField] public GameObject prefabDescriptionCanvas;
     [SerializeField] public GameObject prefabPickedObject;
+    [SerializeField] public string cutsceneName;
     
     public override void onCollision(GameObject other)
     {
@@ -25,19 +26,18 @@ public class pickMeUp : collideableObject
         }
     }
 
-    void onPickUp()
+    public virtual void onPickUp()
     {
         if (!interacted){
         interacted = true;
         GameObject pickedObject = Object.Instantiate(prefabPickedObject, transform.position, Quaternion.identity);
-        GameObject descriptionCanvas = Object.Instantiate(prefabDescriptionCanvas);
-        descriptionCanvas.GetComponent<dialogue>().Initialize(gameObject.name, 0);
 
         stateNameController.inventory.Add(gameObject.name);
         Debug.Log("Picked up: " + stateNameController.inventory[stateNameController.inventory.Count - 1]);
 
         
-        Destroy(gameObject);
+        
         }
     }
+
 }

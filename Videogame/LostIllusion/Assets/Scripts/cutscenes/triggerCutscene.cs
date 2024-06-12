@@ -15,11 +15,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class triggerCutscene : triggerableObject
+public class triggerCutscene : pickMeUp
 {
-    [SerializeField] public bool interacted = false;
     [SerializeField] public GameObject CutsceneCanvasPrefab;
-    [SerializeField] public string cutsceneName;
 
     public override void Start()
     {
@@ -29,18 +27,17 @@ public class triggerCutscene : triggerableObject
         }
     }
 
-    public override void onTriggerEnter(GameObject other)
+    public override void onPickUp()
     {
-        base.onTriggerEnter(other);
+        base.onPickUp();
+        GameObject other = GameObject.FindWithTag("Player");
 
         stateNameController.playerXPosInScene = other.transform.position.x;
         stateNameController.playerYPosInScene = other.transform.position.y;
         stateNameController.playerPreviousScene = SceneManager.GetActiveScene().name;
 
-        if (other.tag == "Player" && !interacted){
-            StartCoroutine(StartCutscene());
-            interacted = true;
-        }
+Debug.Log("Starting cutscene: " + cutsceneName);
+        StartCoroutine(StartCutscene());
     }
 
     IEnumerator StartCutscene()
