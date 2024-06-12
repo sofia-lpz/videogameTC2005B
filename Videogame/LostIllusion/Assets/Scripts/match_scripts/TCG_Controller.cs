@@ -75,7 +75,6 @@ public class TCG_Controller : MonoBehaviour
             feedbackscript.ShowFeedback("You have the first turn!");
         }
 
-        Debug.Log("Current turn: " + currentTurn);
         energy = Random.Range(4, 10);
         EnergyText.text = "Energy: " + energy.ToString();  
         endTurnButton.onClick.AddListener(EndTurn);
@@ -195,7 +194,6 @@ public class TCG_Controller : MonoBehaviour
                     {
                         case "attack":
                             feedbackscript.ShowFeedback("You used " + cardButton.card.name + " attacked and dealt " + ApplyCardAttack(cardButton.card, activeCharacter, activeEnemy) + " damage!");
-                            ApplyCardAttack(cardButton.card, activeCharacter, activeEnemy);
                             Instantiate(attackAnimationPrefab);
                             break;
                         
@@ -209,7 +207,6 @@ public class TCG_Controller : MonoBehaviour
                                 feedbackscript.ShowFeedback("You used " + cardButton.card.name + " and increased your attack by " + ApplySupportEffect(cardButton.card, activeCharacter, activeEnemy) + "!");
                             }
 
-                            ApplySupportEffect(cardButton.card, activeCharacter, activeEnemy);
                             Instantiate(supportAnimationPrefab);
                             break;
                         
@@ -223,7 +220,6 @@ public class TCG_Controller : MonoBehaviour
                                 feedbackscript.ShowFeedback("You used " + cardButton.card.name + " and increased your defense by " + ApplyDefenseEffect(cardButton.card, activeCharacter, activeEnemy) + "!");
                             }
 
-                            ApplyDefenseEffect(cardButton.card, activeCharacter, activeEnemy);
                             Instantiate(defenseAnimationPrefab);
                             break;
                         
@@ -240,7 +236,6 @@ public class TCG_Controller : MonoBehaviour
                             break;
 
                         default:
-                            Debug.LogWarning("Unknown card effect: " + cardButton.card.effect);
                             break;
                     }
 
@@ -261,7 +256,6 @@ public class TCG_Controller : MonoBehaviour
                 if (Turn.Player == currentTurn)
                 {
                     notEnoughEnergyText.text = "Not enough energy";
-                    Debug.Log("Not enough energy");
                 }
             }
         }
@@ -313,7 +307,6 @@ public class TCG_Controller : MonoBehaviour
         if (damage == 0) feedbackscript.ShowFeedback("Attack was not effective!");
 
         defendingCharacter.TakeDamage(damage);
-        Debug.Log("Dealt " + damage + " damage");
         return damage;
     }
 
@@ -347,23 +340,18 @@ public class TCG_Controller : MonoBehaviour
 
     // Function that prepares the characters
     // agregar condicion para que no se repitan los personajes
-    public void PrepareCharacters(){
-        Debug.Log("data in pickedCharacters: " + tcgData.pickedCharacters[0] + " " + tcgData.pickedCharacters[1]);
-        Debug.Log("names of the picked characters: " + tcgData.Villagers[tcgData.pickedCharacters[0]-1].name + " " + tcgData.Villagers[tcgData.pickedCharacters[1]-1].name);
-        
-        
-        
+    public void PrepareCharacters(){ 
         for (int i = 0; i < numCharacters; i++)
-            {
-                int charID = tcgData.pickedCharacters[i] - 1;
-            
-                GameObject newCharacter = Instantiate(characterPrefab, characterParent);
-                CharacterButtons charButton = newCharacter.GetComponent<CharacterButtons>();
-                characterButtons.Add(charButton);
-                charButton.Init(tcgData.Villagers[charID]);
-                Button buttonComponent = newCharacter.GetComponent<Button>();
-                buttonComponent.onClick.AddListener(() => OnCharacterPressed(charButton));
-            }
+        {
+            int charID = tcgData.pickedCharacters[i] - 1;
+        
+            GameObject newCharacter = Instantiate(characterPrefab, characterParent);
+            CharacterButtons charButton = newCharacter.GetComponent<CharacterButtons>();
+            characterButtons.Add(charButton);
+            charButton.Init(tcgData.Villagers[charID]);
+            Button buttonComponent = newCharacter.GetComponent<Button>();
+            buttonComponent.onClick.AddListener(() => OnCharacterPressed(charButton));
+        }
     }
 
     public void PrepareEnemyCharacters(){
@@ -432,11 +420,10 @@ public class TCG_Controller : MonoBehaviour
             // Decidir si cambiar de personaje basado en la probabilidad fija
             if (Random.value < changeCharacterProb && inactiveEnemyCharacter.currentHealth > 0)
             {
-                Debug.Log("Enemy decides to switch character");
                 feedbackscript.ShowFeedback("Enemy switches character!");
                 activeEnemyCharacter.HighlightEnemy();
                 inactiveEnemyCharacter.HighlightEnemy();
-                yield return new WaitForSeconds(2); // Pausa después del cambio de personaje
+                yield return new WaitForSeconds(2);
             }
         }
 
@@ -447,7 +434,6 @@ public class TCG_Controller : MonoBehaviour
             EnemyCard selectedCard = SelectEnemyCard();
             if (selectedCard != null && enemyEnergy >= selectedCard.card.energy_cost)
             {
-                Debug.Log("Selected Card: " + selectedCard.card.name + " with cost: " + selectedCard.card.energy_cost);
                 enemyEnergy -= selectedCard.card.energy_cost;
                 CharacterButtons activePlayerCharacter1 = GetActiveCharacter();
                 CharacterButtons activeEnemyCharacter1 = GetActiveEnemy();
@@ -455,14 +441,11 @@ public class TCG_Controller : MonoBehaviour
                 switch (selectedCard.card.effect)
                 {
                     case "attack":
-                        ApplyCardAttack(selectedCard.card, activeEnemyCharacter1, activePlayerCharacter1);
                         Instantiate(attackAnimationPrefab);
-                        Debug.Log("Enemy attacks");
                         feedbackscript.ShowFeedback("Enemy uses " + selectedCard.card_name + " attacks and deals " + ApplyCardAttack(selectedCard.card, activeEnemyCharacter1, activePlayerCharacter1) + " damage!");
                         break;
 
                     case "support":
-                        ApplySupportEffect(selectedCard.card, activeEnemyCharacter1, activePlayerCharacter1);
                         Instantiate(supportAnimationPrefab);
 
                         if (selectedCard.card.enemy_attack > 0)
@@ -476,7 +459,6 @@ public class TCG_Controller : MonoBehaviour
                         break;
 
                     case "defense":
-                        ApplyDefenseEffect(selectedCard.card, activeEnemyCharacter1, activePlayerCharacter1);
                         Instantiate(defenseAnimationPrefab);
                         if (selectedCard.card.enemy_defense > 0)
                         {
@@ -496,7 +478,6 @@ public class TCG_Controller : MonoBehaviour
                         break;
 
                     default:
-                        Debug.LogWarning("Unknown card effect: " + selectedCard.card.effect);
                         break;
                 }
 
@@ -506,7 +487,6 @@ public class TCG_Controller : MonoBehaviour
                 if (Random.value < endTurnProb)
                 {
                     feedbackscript.ShowFeedback("Enemy ends turn!");
-                    Debug.Log("Enemy ends turn");
                     break;
                 }
 
@@ -545,7 +525,6 @@ public class TCG_Controller : MonoBehaviour
 
         if (affordableCards.Count == 0)
         {
-            Debug.Log("No affordable cards");
             return null;
         }
 
@@ -554,12 +533,10 @@ public class TCG_Controller : MonoBehaviour
         float errorMargin = 0.9f;
         int maxIndex = Mathf.CeilToInt(affordableCards.Count * errorMargin);
         EnemyCard selectedCard = affordableCards[Random.Range(0, maxIndex)];
-        Debug.Log("Selected Card for AI: " + selectedCard.card.name);
         return selectedCard;
     }
 
     public void StartPlayerTurn(){
-        Debug.Log("Player Turn Started");
         feedbackscript.ShowFeedback("Your turn!");
         energy = Random.Range(4, 10);
         limit = 1;
@@ -603,7 +580,6 @@ public class TCG_Controller : MonoBehaviour
 
     public void PlayerWins()
     {
-        Debug.Log("Player wins");
         feedbackscript.ShowFeedback("You win!");
         gameOver = true;
         Apipost.postMatchData(true);
@@ -614,7 +590,6 @@ public class TCG_Controller : MonoBehaviour
 
     public void EnemyWins()
     {
-        Debug.Log("Enemy wins");
         feedbackscript.ShowFeedback("You lose!");
         gameOver = true;
         Apipost.postMatchData(false);
