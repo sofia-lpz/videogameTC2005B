@@ -30,7 +30,7 @@ public class TCG_Controller : MonoBehaviour
     [SerializeField] GameObject characterPrefab;
     [SerializeField] Transform enemyCharacterParent;
     [SerializeField] Transform buttonParentCards;
-    [SerializeField] Transform characterParent;	
+    [SerializeField] Transform characterParent; 
     [SerializeField] float delay;
     public TMP_Text EnergyText;
     public int energy;
