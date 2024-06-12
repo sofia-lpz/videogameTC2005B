@@ -2,7 +2,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Georgia', serif;
+    font-family: "Pixelify Sans", sans-serif;
     background-color: #d9d9d9;
     color: #333;
     min-height: 100%;
@@ -75,14 +75,14 @@ nav ul li a:hover {
 }
 
 h1 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Pixelify Sans", sans-serif;
     font-size: 2.5em;
     color: #ffffff;
     margin-bottom: 20px;
 }
 
 h2 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Pixelify Sans", sans-serif;
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #333;
