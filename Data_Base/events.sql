@@ -1,26 +1,77 @@
 USE colometa;
 DROP EVENT IF EXISTS update_global_stats;
+DROP EVENT IF EXISTS update_player_stats;
 
+-- Create an event that will update player stats when a match ends
+DELIMITER //
+
+CREATE EVENT IF NOT EXISTS update_player_stats
+ON SCHEDULE EVERY 1 MINUTE
+DO
+BEGIN
+    UPDATE stats s
+    JOIN tcg_match m ON s.username = m.username
+    SET s.matches_won = s.matches_won + 1
+    WHERE m.won = 1
+    AND m.timestamp >= NOW() - INTERVAL 1 MINUTE;
+END //
+
+DELIMITER ;
 
 
 -- Create event that will update global stats everyday
 DELIMITER //
+
 CREATE EVENT IF NOT EXISTS update_global_stats
 ON SCHEDULE EVERY 1 DAY
-STARTS CURRENT_DATE + INTERVAL 1 DAY;
 DO
 BEGIN
+    DECLARE most_used_card_id SMALLINT;
+    DECLARE least_used_card_id SMALLINT;
+    DECLARE most_used_villager_id SMALLINT;
+    DECLARE least_used_villager_id SMALLINT;
     DECLARE avg_memories_found SMALLINT;
 
-    --Calculate average memories found
-    SELECT AVG(memories_found) INTO avg_memories_found FROM stats;
+    -- Find most used card
+    SELECT cardId INTO most_used_card_id
+    FROM card_use
+    GROUP BY cardId
+    ORDER BY SUM(times_used) DESC
+    LIMIT 1;
 
-    --Update global stats
+    -- Find least used card
+    SELECT cardId INTO least_used_card_id
+    FROM card_use
+    GROUP BY cardId
+    ORDER BY SUM(times_used) ASC
+    LIMIT 1;
+
+    -- Find most used villager
+    SELECT villager_id INTO most_used_villager_id
+    FROM villager_use
+    GROUP BY villager_id
+    ORDER BY SUM(times_used) DESC
+    LIMIT 1;
+
+    -- Find least used villager
+    SELECT villager_id INTO least_used_villager_id
+    FROM villager_use
+    GROUP BY villager_id
+    ORDER BY SUM(times_used) ASC
+    LIMIT 1;
+
+    -- Calculate average memories found
+    SELECT AVG(memories_found) INTO avg_memories_found
+    FROM stats;
+
+    -- Update global stats
     UPDATE global_stats
-    SET
-        most_used_card = (SELECT most_used_card FROM stats GROUP BY most_used_card ORDER BY COUNT(*) DESC LIMIT 1),
-        most_used_villager = (SELECT most_used_villager FROM stats GROUP BY most_used_villager ORDER BY COUNT(*) DESC LIMIT 1),
-        least_used_card = (SELECT least_used_card FROM stats GROUP BY least_used_card ORDER BY COUNT(*) ASC LIMIT 1),
-        least_used_villager = (SELECT least_used_villager FROM stats GROUP BY least_used_villager ORDER BY COUNT(*) ASC LIMIT 1),
-        memories_found_avg = avg_memories_found;
+    SET most_used_card = most_used_card_id,
+        least_used_card = least_used_card_id,
+        most_used_villager = most_used_villager_id,
+        least_used_villager = least_used_villager_id,
+        memories_found_avg = avg_memories_found
+    WHERE global_stats_id = 1;
 END //
+
+DELIMITER ;
