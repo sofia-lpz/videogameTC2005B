@@ -67,6 +67,8 @@ public class stateNameController : MonoBehaviour
         muted = false;
         storedVolume = 0;
         match_CENTIPEDE = 0;
+        login.loginSuccess = false;
+        api_connect.apiConnected = false;
     }
 }
 
