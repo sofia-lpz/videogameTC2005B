@@ -14,12 +14,12 @@ using UnityEngine;
 
 public class BgSoundManager : MonoBehaviour
 {
-    private AudioSource audioSource1;
-    private AudioSource audioSource2;
-    [SerializeField] AudioClip bgMusic;
+    public AudioSource audioSource1;
+    public AudioSource audioSource2;
+    [SerializeField] public AudioClip bgMusic;
     [SerializeField] AudioClip ambSound;
 
-    void Start()
+    public void Start()
     {
         // Create two audio sources
         audioSource1 = gameObject.AddComponent<AudioSource>();
@@ -37,7 +37,7 @@ public class BgSoundManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         // Update the volume of both audio sources
         audioSource1.volume = stateNameController.volume;
