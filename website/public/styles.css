@@ -109,6 +109,14 @@ p {
 .about-content {
     max-width: 80vw;
     text-align: center;
+    align-items: center;
+}
+
+.howToPlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:2em 0;
 }
 
 .about-content h3 {
