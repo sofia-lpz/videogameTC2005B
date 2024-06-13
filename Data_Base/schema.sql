@@ -77,6 +77,7 @@ create table stats(
     least_used_villager VARCHAR(50) NOT NULL DEFAULT 'none',
     memories_found SMALLINT NOT NULL DEFAULT 0,
     matches_won SMALLINT NOT NULL DEFAULT 0,
+    total_matches_played SMALLINT NOT NULL DEFAULT 0,
 
     primary key (username),
     constraint stats_player foreign key (username) references player(username) on delete restrict on update cascade,
@@ -95,15 +96,3 @@ create table global_stats(
     memories_found_avg SMALLINT NOT NULL,
     primary key (global_stats_id)
 ) engine=myisam DEFAULT CHARSET=utf8mb4;
-
-create view villager_use_view
-SELECT villager.name, SUM(villager_use.times_used) as total_used 
-FROM villager_use 
-INNER JOIN villager ON villager_use.villager_id = villager.villager_id 
-GROUP BY villager.name;
-
-create view card_use_view
-SELECT card.name, SUM(card_use.times_used) as total_used 
-FROM card_use 
-INNER JOIN card ON card_use.cardId = card.cardId 
-GROUP BY card.name;

@@ -1,4 +1,4 @@
-use colometa;
+use colometa
 
 insert into player (username, password) values
 ('player', 'admin');
