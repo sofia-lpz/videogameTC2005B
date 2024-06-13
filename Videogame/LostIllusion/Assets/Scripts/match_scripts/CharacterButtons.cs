@@ -48,8 +48,9 @@ public class CharacterButtons : MonoBehaviour
         healthBar = GetComponentInChildren<HealthBar>();
         defenseBar = GetComponentInChildren<DefenseBar>();
         initialPos = transform.position.y;
-        activePos = initialPos + 18f;
-        activePosE = initialPos - 18f;
+        Debug.Log("Initial Pos: " + initialPos);
+        activePos = initialPos + 18.0f;
+        activePosE = initialPos - 18.0f;
         normalColor = GetComponent<Image>().color;
         currentHealth = maxHealth;
         healthText.text = currentHealth.ToString();

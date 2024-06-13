@@ -83,7 +83,7 @@ public class TCG_Controller : MonoBehaviour
         PrepareEnemyCharacters();
         PrepareEnemyCards();
         endTurnButton.interactable = currentTurn == Turn.Player;
-        Invoke("SelectCharacter", 0.5f);
+        Invoke("SelectCharacter", 2.0f);
     }
 
     void SelectCharacter(){
@@ -346,6 +346,9 @@ public class TCG_Controller : MonoBehaviour
             int charID = tcgData.pickedCharacters[i] - 1;
         
             GameObject newCharacter = Instantiate(characterPrefab, characterParent);
+            Vector3 pos = newCharacter.transform.position;
+            pos.x = pos.x + i * 300 - 150; 
+            newCharacter.transform.position = pos;
             CharacterButtons charButton = newCharacter.GetComponent<CharacterButtons>();
             characterButtons.Add(charButton);
             charButton.Init(tcgData.Villagers[charID]);
@@ -363,6 +366,9 @@ public class TCG_Controller : MonoBehaviour
             usedEnemyCharacters.Add(charID);
 
             GameObject newCharacter = Instantiate(characterPrefab, enemyCharacterParent);
+            Vector3 pos = newCharacter.transform.position;
+            pos.x = pos.x + i * 300 - 150;
+            newCharacter.transform.position = pos;
             CharacterButtons charEnemyButton = newCharacter.GetComponent<CharacterButtons>();
             enemyCharacterButtons.Add(charEnemyButton);
             charEnemyButton.Init(tcgData.Villagers[charID]);
