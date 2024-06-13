@@ -5,9 +5,8 @@
 ---
 
 **Developers:**  
-Diego Valencia  
-Javier Montero  
-Daniel Filorio  
+Diego Valencia    
+Luis Daniel Filorio  
 Sofia Moreno
 
 ## _Index_
@@ -87,21 +86,48 @@ The player will navigate a 2D pixel art map of the town from a top-down angle us
 
 When the player encounters a character, a 1v1 card match begins. There are two types of cards: character cards and action cards.
 
-- Players choose 3 character cards from their inventory.
-- The deck is made up of collected and predetermined action cards.
-- Each character card has 10 health points.
-
-#### Elements and Synergy
-
 1. Reason beats Terror
 2. Terror beats Dream
 3. Dream beats Reason
 
-#### Turn Mechanics
+There are 3 elements that the characters cards will have, Terror, Dream, and Reason. If the element is countered, the winning element will make more damage and receive less damage. The elements synergy is the following:
+1. Terror beats Dream
+2. Dream beats Reason
+3. Reason beats Terror
+   
+<p align="center">
+  <img src="/Videogame/LostIllusion/Assets/Sprites/ElementSynergy.png" width="500" height="300">
+</p>
 
-#### Action Cards
+After selecting the 2 character cards, there will be a coin toss to decide which player starts their turn first, after this both players will have the energy that they will have that turn randomized, the energy will be used to use action cards, this will have an energy cost, the player can play all the cards they want, it is limited by the energy. The active character will be the first character that they choose. The player can choose the active character when it is their turn but it will have energy cost of 1 to switch active characters and will  only be able to do it once per turn.
 
-**Winning Condition:** The player who first defeats the opponent's 3 character cards wins.
+<p align="center">
+  <img src="/Videogame/LostIllusion/Assets/Sprites/Dado.png" width="300" height="300">
+</p>
+
+Each character card will have a role, depending on their element, the roles will be: dps, tank, support. This goes like this:
+1. DPS characters will be the element Terror characters that will have 2 initial attack points but no initial defense points.
+2. Tank character will be the element Dream characters that will have 3 initial defense points but no initial attack points.
+3. Support character will be the element Reason characters that will have 1 initial attack point and 1 initial defense point. 
+
+<p align="center">
+  <img src="/Videogame/LostIllusion/Assets/Sprites/Cartasmesa2.PNG" width="500" height="300">
+</p>
+
+The action cards will help to do the actions the character will do, within the action cards there are many actions that can be made, there are cards to attack the active character card of the opponent, other to heal your current active character, other to increase the attack points of the active character, other to decrease the attack points of the active enemy character, other to decrease the defense points of the active enemy character, other to apply defense to your current active character, and other to skip the enemy turn.
+
+<p align="center">
+  <img src="/Videogame/LostIllusion/Assets/Sprites/Poderes2.PNG" width="500" height="300">
+</p>
+
+ If the player has not enough energy points to use a card or doesn't want to use his energy points, he can end his turn. Every turn, both players will draw 3 cards from their deck, the cards will be random, also each round the energy points will be restarted and randomized once again. When a player is defeated, automatically it will change to the other character if this has not been defeated. The player that first defeats the 2 character cards of the other player, will win.
+
+
+## _Level Design_
+
+---
+
+_(Note : These sections can safely be skipped if they&#39;re not relevant, or you&#39;d rather go about it another way. For most games, at least one of them should be useful. But I&#39;ll understand if you don&#39;t want to use them. It&#39;ll only hurt my feelings a little bit.)_
 
 ### **Themes**
 
