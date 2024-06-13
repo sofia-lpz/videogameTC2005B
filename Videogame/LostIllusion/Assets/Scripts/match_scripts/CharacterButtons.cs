@@ -29,6 +29,7 @@ public class CharacterButtons : MonoBehaviour
     [SerializeField] TMP_Text characterElement;
     [SerializeField] TMP_Text healthText;
     [SerializeField] public TMP_Text defenseText;
+    [SerializeField] TMP_Text attackText;
 
     public int currentHealth;
     public int currentDefense;
@@ -36,7 +37,7 @@ public class CharacterButtons : MonoBehaviour
     public HealthBar healthBar;
     public DefenseBar defenseBar;
     public bool active;
-    public int currentAttack;
+    public int currentAttack = 0;
     
 
     public Villager character;
@@ -56,7 +57,8 @@ public class CharacterButtons : MonoBehaviour
         defenseBar.SetMaxDefense(maxDefense);
         defenseBar.SetDefense(currentDefense);
         defenseText.text = currentDefense.ToString();
-        healthBar.SetMaxHealth(maxHealth);  
+        healthBar.SetMaxHealth(maxHealth);
+        attackText.text = "ATK: " + currentAttack;  
     }
 
     public void Init(Villager data)
@@ -152,14 +154,13 @@ public class CharacterButtons : MonoBehaviour
         if (currentDefense > maxDefense) currentDefense = maxDefense;
         defenseBar.SetDefense(currentDefense);
         defenseText.text = currentDefense.ToString();
-        Debug.Log("Increased defense by " + amount);
     }
 
     public void IncreaseAttack(int amount)
     {
         currentAttack += amount;
         if (currentAttack > 3) currentAttack = 3;
-        Debug.Log("Increased attack by " + amount);
+        attackText.text = "ATK: " + currentAttack;
     }
 
     public void DecreaseDefense(int amount)
@@ -168,13 +169,13 @@ public class CharacterButtons : MonoBehaviour
         if (currentDefense < 0) currentDefense = 0;
         defenseBar.SetDefense(currentDefense);
         defenseText.text = currentDefense.ToString();
-        Debug.Log("Decreased defense by " + amount);
     }
 
     public void DecreaseAttack(int amount)
     {
         currentAttack -= amount;
         if (currentAttack < 0) currentAttack = 0;
-        Debug.Log("Decreased attack by " + amount);
+        attackText.text = "ATK: " + currentAttack;
+
     }
 }
