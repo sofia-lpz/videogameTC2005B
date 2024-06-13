@@ -92,13 +92,13 @@ There are 3 elements that the characters cards will have, Terror, Dream, and Rea
 3. Reason beats Terror
    
 <p align="center">
-  <img src="/Videogame/LostIllusion/Assets/Sprites/ElementSynergy.png" width="500" height="300">
+  <img src="/website/public/chart.png" width="400" height="400">
 </p>
 
 After selecting the 2 character cards, there will be a coin toss to decide which player starts their turn first, after this both players will have the energy that they will have that turn randomized, the energy will be used to use action cards, this will have an energy cost, the player can play all the cards they want, it is limited by the energy. The active character will be the first character that they choose. The player can choose the active character when it is their turn but it will have energy cost of 1 to switch active characters and will  only be able to do it once per turn.
 
 <p align="center">
-  <img src="/Videogame/LostIllusion/Assets/Sprites/Dado.png" width="300" height="300">
+  <img src="/website/public/match.png" width="500" height="300">
 </p>
 
 Each character card will have a role, depending on their element, the roles will be: dps, tank, support. This goes like this:
@@ -107,13 +107,13 @@ Each character card will have a role, depending on their element, the roles will
 3. Support character will be the element Reason characters that will have 1 initial attack point and 1 initial defense point. 
 
 <p align="center">
-  <img src="/Videogame/LostIllusion/Assets/Sprites/Cartasmesa2.PNG" width="500" height="300">
+  <img src="/website/public/characters.png" width="500" height="300">
 </p>
 
 The action cards will help to do the actions the character will do, within the action cards there are many actions that can be made, there are cards to attack the active character card of the opponent, other to heal your current active character, other to increase the attack points of the active character, other to decrease the attack points of the active enemy character, other to decrease the defense points of the active enemy character, other to apply defense to your current active character, and other to skip the enemy turn.
 
 <p align="center">
-  <img src="/Videogame/LostIllusion/Assets/Sprites/Poderes2.PNG" width="500" height="300">
+  <img src="/website/public/card.png" width="200" height="300">
 </p>
 
  If the player has not enough energy points to use a card or doesn't want to use his energy points, he can end his turn. Every turn, both players will draw 3 cards from their deck, the cards will be random, also each round the energy points will be restarted and randomized once again. When a player is defeated, automatically it will change to the other character if this has not been defeated. The player that first defeats the 2 character cards of the other player, will win.
