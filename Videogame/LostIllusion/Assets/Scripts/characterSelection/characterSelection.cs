@@ -44,9 +44,11 @@ public class characterSelection : MonoBehaviour
     {
         Transform healthBar = characterInstance.transform.Find("HealthBar");
         Transform defenseBar = characterInstance.transform.Find("DefenseBar");
+        Transform atkText = characterInstance.transform.Find("ATK");
 
         healthBar.gameObject.SetActive(false);
         defenseBar.gameObject.SetActive(false);
+        atkText.gameObject.SetActive(false);
     }
 
     void OnCharacterSelected(CharacterButtons selectedCharacter)
