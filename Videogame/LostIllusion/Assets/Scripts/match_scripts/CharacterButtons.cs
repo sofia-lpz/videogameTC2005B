@@ -54,12 +54,13 @@ public class CharacterButtons : MonoBehaviour
         normalColor = GetComponent<Image>().color;
         currentHealth = maxHealth;
         healthText.text = currentHealth.ToString();
-        currentDefense = 3;
         defenseBar.SetMaxDefense(maxDefense);
         defenseBar.SetDefense(currentDefense);
         defenseText.text = currentDefense.ToString();
         healthBar.SetMaxHealth(maxHealth);
-        attackText.text = "ATK: " + currentAttack;  
+        attackText.text = "ATK: " + currentAttack;
+        ApplyElements();
+
     }
 
     public void Init(Villager data)
@@ -95,9 +96,27 @@ public class CharacterButtons : MonoBehaviour
         }
     }
 
-    void Update()
+    void ApplyElements()
     {
-        
+        if(character.element == "Terror")
+        {
+            currentAttack += 2;
+            attackText.text = "ATK: " + currentAttack;
+        }
+        else if(character.element == "Dream")
+        {
+            currentDefense += 3;
+            defenseBar.SetDefense(currentDefense);
+            defenseText.text = currentDefense.ToString();
+        }
+        else if(character.element == "Reason")
+        {
+            currentAttack += 1;
+            attackText.text = "ATK: " + currentAttack;
+            currentDefense += 1;
+            defenseBar.SetDefense(currentDefense);
+            defenseText.text = currentDefense.ToString();
+        }
     }
 
     public void TakeDamage(int amount)
