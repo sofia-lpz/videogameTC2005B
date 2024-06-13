@@ -1,15 +1,16 @@
-# **Lost illusion**
+# **Chasing Colometa**
 
 ## _Game Design Document_
 
 ---
 
-##### **Copyright notice / author information / boring legal stuff nobody likes**
+**Developers:**  
+Diego Valencia  
+Javier Montero  
+Daniel Filorio  
+Sofia Moreno
 
-##
 ## _Index_
-
----
 
 1. [Index](#index)
 2. [Game Design](#game-design)
@@ -34,7 +35,7 @@
 6. [Graphics](#graphics)
     1. [Style Attributes](#style-attributes)
     2. [Graphics Needed](#graphics-needed)
-7. [Sounds/Music](#soundsmusic)
+7. [Sounds/Music](#sounds-music)
     1. [Style Attributes](#style-attributes-1)
     2. [Sounds Needed](#sounds-needed)
     3. [Music Needed](#music-needed)
@@ -46,137 +47,85 @@
 
 ### **Summary**
 
-Is a strategic card-based adventure game in a visually distorted cityscape, where the player navigate an hypnotized protagonist on a quest to confront the magician responsible for their altered state of consciousness. Throughout the players journey, he will encounter various opponents that will join its team if he defeats them also he will discover new places and new cards to use in combat. The game combines exploration of a pixel art map with engaging card battles, unfolding the story through vividly illustrated cutscenes and giving more reasons to why he was hypnotized be the magician.
+"Chasing Colometa" is a strategic card-based RPG set in a lonely village. The player must navigate the village to uncover the mystery behind a magic show gone awry. Throughout the journey, the player encounters various memories and interacts with villagers affected by the incident. The game combines exploration of a pixel art map with card battles.
 
 ### **Gameplay**
 
-The game integrates exploration with card-based combat. Each level on the 2D pixel art map represents a card battle that progressively reveals the storyline through both victories and defeats. Players encounter a variety of enemies transformed by the protagonist's distorted perception into fantastical beings. The primary objective is to reach the magician, overcoming obstacles such as complex cards and deceptive environments that tweak gameplay mechanics. Success in battles depends on strategic deck management and the ability to adapt tactics to the shifting conditions influenced by the magician effects.
+The game integrates exploration with card-based combat. The storyline unfolds through the map and card matches. Players encounter enemies transformed by the protagonist's distorted perception into fantastical beings. The primary objective is to find a lost girl and uncover what happened to her.
+
+Success in battle depends on strategic deck management and the ability to adapt tactics to changing conditions.
 
 ### **Mindset**
 
-The game is designed to induce a sense of curiosity, encouraging players to continuously question the reality presented within the game. Exploration is meant to be adventurous, with card combat phases designed to be intense and strategic, creating an intellectually engaging atmosphere. This employs a unique blend of eerie, whimsical music and unsettling yet compelling cutscenes, utilizing images and dialogue boxes to enhance the narrative. This artistic approach supports the theme of fluctuating reality, aiming to disorient yet captivate players, making each session a uniquely challenging and immersive experience.
-
-## _Technical_
-
----
+The game is designed to induce a sense of curiosity, encouraging players to question the reality presented within the game. Exploration is meant to be adventurous, while the card combat phase is intense and strategic, creating an intellectually engaging atmosphere. The game employs eerie, whimsical music and unsettling yet compelling cutscenes, using dialogue boxes to enhance the narrative. This artistic approach supports the theme of fluctuating reality, aiming to disorient yet captivate players, making each session a uniquely challenging and immersive experience.
 
 ### **Screens**
 
-1. Title Screen
-    1. Options
-2. Level Select
-3. Game
-    1. Inventory
-    2. Assessment / Next Level
-4. End Credits
-
-_(example)_
+- Main Title Screen
+- Register Screen
+- Login Screen
+- Map in the Village
+- Map in a Forest Clearing
+- Character Selection Screen
+- Win Screen
+- Lose Screen
 
 ### **Controls**
 
-How will the player interact with the game? Will they be able to choose the controls? What kind of in-game events are they going to be able to trigger, and how? (e.g. pressing buttons, opening doors, etc.)
+- Move through the map using W, A, S, and D keys.
+- Interact with objects and people with the Enter key.
+- Pause with the P key.
+- Skip dialogues with the Space bar.
+- Skip scenes with the S key.
+- Interact with cards and characters with mouse clicks in the TCG.
 
 ### **Mechanics**
 
-- Map (might be scrapped due to time constraints)
+The player will navigate a 2D pixel art map of the town from a top-down angle using their arrow keys. They will find objects on the map to interact with, activating cutscenes and revealing more of the story. Characters encountered on the map will further the story through interactions.
 
-The player will be able to navigate a 2d pixel art map of the town in a top down angle using their arrow keys. They will be able to find objects in the map which can later be used in the card matches. They will also encounter characters as they progress through the map who they can interact with for the card matches. Because of the players distorted perception these characters might appear as fantastical beings, and act erratically because of their own distorted perceptions.
+**TCG Mechanics**
 
-- TCG
+When the player encounters a character, a 1v1 card match begins. There are two types of cards: character cards and action cards.
 
-When the player encounters a character a 1v1 card match will start. There are 2 types of cards, the character cards and the action cards.
+- Players choose 3 character cards from their inventory.
+- The deck is made up of collected and predetermined action cards.
+- Each character card has 10 health points.
 
-First, they will choose 3 characters cards from the characters cards they have in their inventory. Their deck will be made up of the action cards they've collected during the exploration part of the game and some will be predetermined. They are in the players inventory. Each character card has 10 health points.
+#### Elements and Synergy
 
-<p align="center">
-  <img src="/Videogame/LostIllusion/Assets/Sprites/Preview.PNG" width="500" height="300">
-</p>
+1. Reason beats Terror
+2. Terror beats Dream
+3. Dream beats Reason
 
-There are 4 elements that the characters cards will have, fire, water, snow, air. If the element is countered, the winning element will make more damage and receive less damage. The elements synergy is the following:
-1. Fire beats Snow
-2. Snow beats Water
-3. Water beats Fire
-4. Air doesn't have a counter nor can counter other element, this will be explained later.
-   
-<p align="center">
-  <img src="/Videogame/LostIllusion/Assets/Sprites/ElementSynergy.png" width="500" height="300">
-</p>
+#### Turn Mechanics
 
-After selecting the 3 character cards, there will be a coin toss to decide which player starts their turn first, after this both players will roll 2 dice to determine the energy that they will have that turn, the energy will be used to use action cards, this will have an energy cost, the player can play all the cards they want, it is limited by the energy. After rolling the dice, both players at the same time will choose their active character. The player can choose the active character at any time but it will have energy cost to switch active characters.
+#### Action Cards
 
-<p align="center">
-  <img src="/Videogame/LostIllusion/Assets/Sprites/Dado.png" width="300" height="300">
-</p>
-
-Each character card will have a passive ability, depending on their role, the roles will be: dps, tank, support. Some examples of the passive abilities are:
-1. DPS character that his passive ability is to deal more damage of its element
-2. Tank character that when its attacked provides a shield
-3. Support character that if a character receives a lethal strike, this means that his health points reach zero, the character revives with 3 health points.
-
-<p align="center">
-  <img src="/Videogame/LostIllusion/Assets/Sprites/Cartasmesa2.PNG" width="500" height="300">
-</p>
-
-The action cards will help to do the actions the character will do, within the action cards there are many actions that can be made, there are cards to attack the character card of the opponent, other to heal your current active character, other to buff the attack damage of the main character, and other to apply defense to your current active character. Also, some of the action cards will have an element, this will be for various purposes such as:
-1. For damage buffs, the card will only buff the damage of the element that the card has.
-2. For defense, the cards will apply defense against the element that the card has.
-3. For attack, the cards will attack causing damage of that element.
-
-<p align="center">
-  <img src="/Videogame/LostIllusion/Assets/Sprites/Poderes2.PNG" width="500" height="300">
-</p>
-
- If the player uses the action card that has the same element as the active character it will produce a succesful attack that will apply the element effect on the opponent, this will help for the wind element, when the wind element attacks a character card that has an element effect, it will produce damage of that element to the character cards. If a player uses attack action card that the element of the card does not match the element of the active character, the damage will be decreasen and the element effect won't be applied.
-
- If the player has not enough energy points to use a card or doesn't want to use his energy points, he can end his turn. Every turn, both players will draw 2 cards from their deck, the cards will be random, also each round the energy points will be restarted and the dice will be rolled once again. The player that first defeats the 3 character cards of the other player, will win.
-
-
-## _Level Design_
-
----
-
-_(Note : These sections can safely be skipped if they&#39;re not relevant, or you&#39;d rather go about it another way. For most games, at least one of them should be useful. But I&#39;ll understand if you don&#39;t want to use them. It&#39;ll only hurt my feelings a little bit.)_
+**Winning Condition:** The player who first defeats the opponent's 3 character cards wins.
 
 ### **Themes**
 
-1. Forest
-    1. Mood
-        1. Dark, calm, foreboding
-    2. Objects
-        1. _Ambient_
-            1. Fireflies
-            2. Beams of moonlight
-            3. Tall grass
-        2. _Interactive_
-            1. Wolves
-            2. Goblins
-            3. Rocks
-2. Castle
-    1. Mood
-        1. Dangerous, tense, active
-    2. Objects
-        1. _Ambient_
-            1. Rodents
-            2. Torches
-            3. Suits of armor
-        2. _Interactive_
-            1. Guards
-            2. Giant rats
-            3. Chests
+**Forest:**
+- Mood: Dark, calm, foreboding
 
-_(example)_
+**Village:**
+- Mood: Calm, strange, sleepy
 
 ### **Game Flow**
 
-1. Player starts in forest
-2. Pond to the left, must move right
-3. To the right is a hill, player jumps to traverse it (&quot;jump&quot; taught)
-4. Player encounters castle - door&#39;s shut and locked
-5. There&#39;s a window within jump height, and a rock on the ground
-6. Player picks up rock and throws at glass (&quot;throw&quot; taught)
-7. … etc.
-
-_(example)_
+1. Player starts with a cutscene describing the incident.
+2. Player starts in the village in front of a barn.
+3. Path to the left.
+4. Player encounters a woman asking about her missing daughter.
+5. Player activates a cutscene with a watermelon on the path.
+6. Player goes left of the trees, finds another watermelon near the pond, and activates a cutscene.
+7. Player encounters a friend who warns them about the forest.
+8. Player spots a watermelon on the other side of the pond.
+9. Player reaches the watermelon by returning to the start of the forest and activates a cutscene.
+10. Player is encouraged to enter the forest.
+11. Player is prompted to pick characters for the TCG match.
+12. Player encounters a huge centipede in the forest.
+13. TCG match starts.
 
 ## _Development_
 
@@ -184,159 +133,159 @@ _(example)_
 
 ### **Abstract Classes / Components**
 
-1. BasePhysics
-    1. BasePlayer
-    2. BaseEnemy
-    3. BaseObject
-2. BaseObstacle
-3. BaseInteractable
-
-_(example)_
+1. **BasePhysics**
+    - BasePlayer
+    - BaseEnemy
+    - BaseObject
+2. **BaseObstacle**
+3. **BaseInteractable**
 
 ### **Derived Classes / Component Compositions**
 
-1. BasePlayer
-    1. PlayerMain
-    2. PlayerUnlockable
-2. BaseEnemy
-    1. EnemyWolf
-    2. EnemyGoblin
-    3. EnemyGuard (may drop key)
-    4. EnemyGiantRat
-    5. EnemyPrisoner
-3. BaseObject
-    1. ObjectRock (pick-up-able, throwable)
-    2. ObjectChest (pick-up-able, throwable, spits gold coins with key)
-    3. ObjectGoldCoin (cha-ching!)
-    4. ObjectKey (pick-up-able, throwable)
-4. BaseObstacle
-    1. ObstacleWindow (destroyed with rock)
-    2. ObstacleWall
-    3. ObstacleGate (watches to see if certain buttons are pressed)
-5. BaseInteractable
-    1. InteractableButton
-
-_(example)_
+1. **Allscenes**
+    - Background sound manager
+    - Fade in
+    - Fade out
+    - Volume Manager
+2. **TCG match**
+    - Posts to the API of data
+    - Card buttons class
+    - Card animation manager
+    - Character card class
+    - Defense bar manager
+    - Enemy card class
+    - Health bar manager
+    - Pause Controller
+    - Pause animation class
+    - Result handler
+    - TCG controller
+    - Tcgdata (which contains player preferences and other data)
+    - Tcgfeedback
+3. **Map scripts**
+    - Mother event manager derived from eventManager class
+    - Running event manager derived from eventManager class
+    - Character movement
+    - NPC movement derived from character movement
+    - NPC specific movement derived from character movement
+    - Pick me up, derived from collideable object class
+    - Talk to me, derived from collideable object class
+    - Fight me derived from collideable object class
+    - Force fight derived from triggerable object class
+    - Force talk derived from triggerable object class
+    - Map manager class
+    - Next scene collider class
+    - Triggerable object
+    - Collideable object
+4. **Main menu**
+    - Login class
+    - Register class
+    - Menu buttons class
+    - Main menu manager class
+5. **Dialogue**
+    - Dialogue class
+    - Dialogue data class
 
 ## _Graphics_
 
----
+Graphics are primarily taken or adapted from the videogame "Omori."
 
 ### **Style Attributes**
 
-What kinds of colors will you be using? Do you have a limited palette to work with? A post-processed HSV map/image? Consistency is key for immersion.
-
-What kind of graphic style are you going for? Cartoony? Pixel-y? Cute? How, specifically? Solid, thick outlines with flat hues? Non-black outlines with limited tints/shades? Emphasize smooth curvatures over sharp angles? Describe a set of general rules depicting your style here.
-
-Well-designed feedback, both good (e.g. leveling up) and bad (e.g. being hit), are great for teaching the player how to play through trial and error, instead of scripting a lengthy tutorial. What kind of visual feedback are you going to use to let the player know they&#39;re interacting with something? That they \*can\* interact with something?
+- Colors: Pastels, blues, and purples.
+- Style: Pixelated, cute yet dark.
+- No outlines.
+- Hand-drawn style animations.
+- The art style is very similar to "Omori," focusing on a blend of charming and eerie elements. The use of soft pastel colors contrasts with the dark themes of the game, creating a unique visual experience that is both nostalgic and unsettling.
+- The characters and environments are drawn in a way that emphasizes simplicity and expressiveness. Characters have large, emotive eyes and simple yet distinctive features.
+- Backgrounds are richly detailed with a mix of natural and fantastical elements, designed to evoke a sense of mystery and curiosity.
+- Animations are smooth and hand-drawn, giving life to the pixel art and enhancing the overall immersive experience. Transitions between scenes and actions are fluid, maintaining the whimsical yet eerie atmosphere of the game.
 
 ### **Graphics Needed**
 
-1. Characters
-    1. Human-like
-        1. Goblin (idle, walking, throwing)
-        2. Guard (idle, walking, stabbing)
-        3. Prisoner (walking, running)
-    2. Other
-        1. Wolf (idle, walking, running)
-        2. Giant Rat (idle, scurrying)
-2. Blocks
-    1. Dirt
-    2. Dirt/Grass
-    3. Stone Block
-    4. Stone Bricks
-    5. Tiled Floor
-    6. Weathered Stone Block
-    7. Weathered Stone Bricks
-3. Ambient
-    1. Tall Grass
-    2. Rodent (idle, scurrying)
-    3. Torch
-    4. Armored Suit
-    5. Chains (matching Weathered Stone Bricks)
-    6. Blood stains (matching Weathered Stone Bricks)
-4. Other
-    1. Chest
-    2. Door (matching Stone Bricks)
-    3. Gate
-    4. Button (matching Weathered Stone Bricks)
+1. **Characters**
+    - Human
+        - Protagonist (idle, walking, running)
+        - Friend (idle, walking)
+        - Mother (idle, walking)
+        - Daughter (idle, walking)
+    - Other
+        - Centipede (attacking)
+    - **Character Cards backgrounds**
+        - Reason
+        - Terror
+        - Dream
+    - **Cards**
+        - Frames
 
-_(example)_
+2. **Tilemaps**
+    - Village
+    - Forest
+    - Barn
+    - Watermelon
+    - Centipede
 
+3. **Ambient**
+    - Trees
+    - Rocks
+    - Grass
+    - Water
+    - Flowers
+    - Bushes
+    - Signs
+    - Fences
+
+4. **Other**
+    - Buttons
 
 ## _Sounds/Music_
 
----
-
-### **Style Attributes**
-
-Again, consistency is key. Define that consistency here. What kind of instruments do you want to use in your music? Any particular tempo, key? Influences, genre? Mood?
-
-Stylistically, what kind of sound effects are you looking for? Do you want to exaggerate actions with lengthy, cartoony sounds (e.g. mario&#39;s jump), or use just enough to let the player know something happened (e.g. mega man&#39;s landing)? Going for realism? You can use the music style as a bit of a reference too.
-
- Remember, auditory feedback should stand out from the music and other sound effects so the player hears it well. Volume, panning, and frequency/pitch are all important aspects to consider in both music _and_ sounds - so plan accordingly!
+Music tracks taken from the "Omori" videogame soundtrack and sound effects from free resources.
 
 ### **Sounds Needed**
 
-1. Effects
-    1. Soft Footsteps (dirt floor)
-    2. Sharper Footsteps (stone floor)
-    3. Soft Landing (low vertical velocity)
-    4. Hard Landing (high vertical velocity)
-    5. Glass Breaking
-    6. Chest Opening
-    7. Door Opening
-2. Feedback
-    1. Relieved &quot;Ahhhh!&quot; (health)
-    2. Shocked &quot;Ooomph!&quot; (attacked)
-    3. Happy chime (extra life)
-    4. Sad chime (died)
-
-_(example)_
+1. Healing sound
+2. Attack sound
+3. Defense sound
+4. Support sound
+5. Dialogue sound
+6. Button sounds
 
 ### **Music Needed**
 
-1. Slow-paced, nerve-racking &quot;forest&quot; track
-2. Exciting &quot;castle&quot; track
-3. Creepy, slow &quot;dungeon&quot; track
-4. Happy ending credits track
-5. Rick Astley&#39;s hit #1 single &quot;Never Gonna Give You Up&quot;
+1. My Time
+2. By Your Side
+3. Let's Get Together Now
+4. You Were Wrong. Go Back.
+5. WHITE SPACE
+6. Lost At A Sleepover
+7. 100 Sunny
+8. Trees...
+9. Finding Shapes in the Clouds
+10. DUET
+11. Trouble Brewing
+12. A Home for Flowers (Dandelion)
+13. Sis
+14. Flouring the Fruits
+15. ...Where We Used to Play
+16. It's OK to Try Again
+17. EVERYONE
+18. My Time (Piano)
+19. See You Tomorrow
+20. The Windmill
+21. 3 o'clock, Let's Jam!
+22. Remembrance
+23. Snow Forest
+24. Overture
+25. I Prefer My Pizza (Mambo)
+26. Treehouse (Quiet)
 
-_(example)_
 
+
+27. Spaces In Between
+28. My Time (Violin)
 
 ## _Schedule_
 
 ---
 
-_(define the main activities and the expected dates when they should be finished. This is only a reference, and can change as the project is developed)_
-
-1. develop base classes
-    1. base entity
-        1. base player
-        2. base enemy
-        3. base block
-  2. base app state
-        1. game world
-        2. menu world
-2. develop player and basic block classes
-    1. physics / collisions
-3. find some smooth controls/physics
-4. develop other derived classes
-    1. blocks
-        1. moving
-        2. falling
-        3. breaking
-        4. cloud
-    2. enemies
-        1. soldier
-        2. rat
-        3. etc.
-5. design levels
-    1. introduce motion/jumping
-    2. introduce throwing
-    3. mind the pacing, let the player play between lessons
-6. design sounds
-7. design music
-
-_(example)_
+Expected completion date: June 12, 2024

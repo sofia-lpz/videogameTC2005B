@@ -51,12 +51,6 @@ The level of priority will be managed from 1 to 3, given 3 the highest level of 
    - Validation: Have card limitations, have more interactive and fun game.
    - Priority: 3.
    - Estimated time: 1-2 sprints.
-
-9. Different fights
-   - Description: As a player I want to be able to have fights with different opponents so that the game has more interactivity.
-   - Validation: Have different fights, have more interactive game, have different opponents with different character cards.
-   - Priority: 2.
-   - Estimated time: 4-5 sprints.
      
 ## Gameplay and Design
 
@@ -84,12 +78,6 @@ The level of priority will be managed from 1 to 3, given 3 the highest level of 
     - Priority: 1.
     - Estimated time: 2-3 sprints.
       
-14. Rewards
-    - Description: As a player, I want to have rewards when I win a battle so that keeps me more engaged.
-    - Validation: Have rewards, feel engaged.
-    - Priority: 2.
-    - Estimated time: 4-5 sprints.
-
 ## Interactivity
 
 15. Web Page
@@ -115,16 +103,3 @@ The level of priority will be managed from 1 to 3, given 3 the highest level of 
     - Validation: Have music and sound effects, Have game ambience.
     - Priority: 1.
     - Estimated time: 6-7 sprints.
-
-## Connectivity
-
-19. Progress saving
-    - Description: As a player, I want to have an account so I can save my progress.
-    - Validation: Have account, save progress.
-    - Priority: 2.
-    - Estimated time: 4-5 sprints.
-20. Devices
-    - Description: As a player, I want to have access to the game from various devices so I can play from any device I want.
-    - Validation: Have access from various devices.
-    - Priority: 2.
-    - Estimated time: 4-5 sprints.
