@@ -1,34 +1,97 @@
-# ENTITY RELATIONSHIP MODEL
+### Entity-Relationship Diagram
 
-![ER-Model Image](./retoUML.jpg)
+#### Entities and Attributes:
 
-## Proposed entity relation model for the TCG
+1. **Player**
+   - `username` (PK)
+   - `password`
 
-- **player**
+2. **Villager**
+   - `villager_id` (PK)
+   - `name`
+   - `description`
+   - `element`
 
- The players have usernames, level in which they are playing, a score, and a boolean npc indicator. This is so enemies of the player are stored in the same table. They can have multiple cards in their deck/inventory
+3. **Card**
+   - `cardId` (PK)
+   - `name`
+   - `energy_cost`
+   - `effect`
+   - `type`
+   - `description`
+   - `player_health`
+   - `player_attack`
+   - `player_defense`
+   - `player_support`
+   - `enemy_defense`
+   - `enemy_attack`
 
-- **playerCard**
+4. **TCG_Match**
+   - `matchId` (PK)
+   - `timestamp`
+   - `username` (FK to Player)
+   - `won`
 
-  Given the many-to-many relationship between cards and players, this intermediate table was created. It has a composite primary key consisting of the player ID and the card ID.
+5. **Card_Use**
+   - `cardId` (PK, FK to Card)
+   - `username` (PK, FK to Player)
+   - `times_used`
 
-- **card**
+6. **Villager_Use**
+   - `villager_id` (PK, FK to Villager)
+   - `username` (PK, FK to Player)
+   - `times_used`
 
-  Cards have names, element, description to display on the card, an energy cost, and an effect
+7. **Stats**
+   - `username` (PK, FK to Player)
+   - `most_used_card` (FK to Card)
+   - `most_used_villager` (FK to Villager)
+   - `least_used_card` (FK to Card)
+   - `least_used_villager` (FK to Villager)
+   - `memories_found`
+   - `matches_won`
+   - `total_matches_played`
 
-- **effect**
+8. **Global_Stats**
+   - `global_stats_id` (PK)
+   - `most_used_card` (FK to Card)
+   - `most_used_villager` (FK to Villager)
+   - `least_used_card` (FK to Card)
+   - `least_used_villager` (FK to Villager)
+   - `memories_found_avg`
 
-  These are types that appear in the game and are applicable to different cards, as previously mentioned. They have a duration and a description and are related to the cardID, since they have a one to one relationship
+#### Relationships:
 
-- **action**
+1. **Player - TCG_Match**: One-to-Many
+   - A player can have multiple matches.
+   - `username` in `TCG_Match` references `username` in `Player`.
 
-  These are things that cards can do in game, such as attack, heal, etc.
+2. **Player - Card_Use**: Many-to-Many
+   - A player can use multiple cards.
+   - A card can be used by multiple players.
+   - `username` and `cardId` in `Card_Use` reference `username` in `Player` and `cardId` in `Card`.
 
-- **actionCard**
+3. **Player - Villager_Use**: Many-to-Many
+   - A player can use multiple villagers.
+   - A villager can be used by multiple players.
+   - `username` and `villager_id` in `Villager_Use` reference `username` in `Player` and `villager_id` in `Villager`.
 
-  Given the many-to-many relationship between cards and attacks, since cards can have multiple attacks or share them with other cards, this intermediate table was created. Like playerCard, it has a composite primary key with the card ID and the action ID
+4. **Player - Stats**: One-to-One
+   - Each player has one set of stats.
+   - `username` in `Stats` references `username` in `Player`.
 
+5. **Card - Stats**: Many-to-One
+   - Many stats can refer to the same card as the most or least used.
+   - `most_used_card` and `least_used_card` in `Stats` reference `cardId` in `Card`.
 
-- **Match**
+6. **Villager - Stats**: Many-to-One
+   - Many stats can refer to the same villager as the most or least used.
+   - `most_used_villager` and `least_used_villager` in `Stats` reference `villager_id` in `Villager`.
 
-  This table is to keep score of matches played. it includes a date, a playerID and a result which can say if the non npc player won or not. This is for showing stats later.
+7. **Global_Stats - Card**: Many-to-One
+   - Many global stats can refer to the same card.
+   - `most_used_card` and `least_used_card` in `Global_Stats` reference `cardId` in `Card`.
+
+8. **Global_Stats - Villager**: Many-to-One
+   - Many global stats can refer to the same villager.
+   - `most_used_villager` and `least_used_villager` in `Global_Stats` reference `villager_id` in `Villager`.
