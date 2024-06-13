@@ -54,7 +54,7 @@ public class register : MonoBehaviour
             {
                 string result = www.downloadHandler.text;
                 Debug.Log("Request successful: " + result);
-                registerMessageText.text = "Registro exitoso";
+                registerMessageText.text = "Success! Redirecting to main menu...";
                 yield return new WaitForSeconds(1);
                 SceneManager.LoadScene("mainMenu");
             }

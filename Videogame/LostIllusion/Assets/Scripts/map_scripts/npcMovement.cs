@@ -12,7 +12,10 @@ public class npcMovement : Character_Movement
     {
         if (stateNameController.gamePaused || stateNameController.freezePlayer)
         {
-            animator.SetBool("Moving", false);
+            if (HasParameter("Moving"))
+            {
+                animator.SetBool("Moving", false);
+            }
             return;
         }
         
@@ -32,15 +35,36 @@ public class npcMovement : Character_Movement
                 pointsIndex++;
             }
             Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
-            animator.SetFloat("X", direction.x);
-            animator.SetFloat("Y", direction.y);
-            animator.SetBool("Moving", true);
+            if (HasParameter("X"))
+            {
+                animator.SetFloat("X", direction.x);
+            }
+            if (HasParameter("Y"))
+            {
+                animator.SetFloat("Y", direction.y);
+            }
+            if (HasParameter("Moving"))
+            {
+                animator.SetBool("Moving", true);
+            }
         }
         else
         {
-            animator.SetBool("Moving", false);
+            if (HasParameter("Moving"))
+            {
+                animator.SetBool("Moving", false);
+            }
             routineDone = true;
         }
+    }
+
+    private bool HasParameter(string paramName)
+    {
+        foreach (AnimatorControllerParameter param in animator.parameters)
+        {
+            if (param.name == paramName) return true;
+        }
+        return false;
     }
     }
 

@@ -58,18 +58,6 @@ public class menuButtons : MonoBehaviour
         SceneManager.LoadScene("COLOMETA", LoadSceneMode.Single);
     }
 
-    public void startDEV()
-    {
-        audioSource.Play();
-        SceneManager.LoadScene("match_CENTIPEDE", LoadSceneMode.Single);
-    }
-
-    public void startDEV1()
-    {
-        audioSource.Play();
-        SceneManager.LoadScene("characterSelection", LoadSceneMode.Single);
-    }
-
     public void resume()
     {
         audioSource.Play();
@@ -82,12 +70,6 @@ public class menuButtons : MonoBehaviour
         audioSource.Play();
         stateNameController.resetAllValues();
         SceneManager.LoadScene("mainMenu", LoadSceneMode.Single);
-    }
-
-    public void tryagain()
-    {
-        audioSource.Play();
-        SceneManager.LoadScene("characterSelection", LoadSceneMode.Single);
     }
 
     public void quitInventory()

@@ -62,14 +62,14 @@ public class login : MonoBehaviour
     
             if (authentification()) // authentification success
             {
-                loginMessageText.text = "Login exitoso";
+                loginMessageText.text = "Success! Redirecting to main menu...";
                 loginSuccess = true;
                 yield return new WaitForSeconds(1);
                 SceneManager.LoadScene("mainMenu");
             }
             else
             {
-                loginMessageText.text = "Usuario o contraseña inválidos";
+                loginMessageText.text = "User or password incorrect";
                 yield return null;
             }
         }
