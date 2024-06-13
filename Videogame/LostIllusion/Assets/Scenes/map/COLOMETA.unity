@@ -9032,7 +9032,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 199132280}
-  - component: {fileID: 199132279}
+  - component: {fileID: 199132281}
   m_Layer: 0
   m_Name: colometaSceneManager
   m_TagString: Untagged
@@ -9040,22 +9040,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &199132279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 199132278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28b94e7682920314fb0d90c13efec0af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  girlPrefab: {fileID: 8242407389689486884, guid: d798d04f91ab3294cb26239388529ab7, type: 3}
-  points:
-  - {fileID: 1542872514}
-  - {fileID: 1859656755}
 --- !u!4 &199132280
 Transform:
   m_ObjectHideFlags: 0
@@ -9071,6 +9055,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &199132281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199132278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23aefb43d9fdbb348b3e1ce7d9fbe631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  girlPrefab: {fileID: 8242407389689486884, guid: d798d04f91ab3294cb26239388529ab7, type: 3}
+  points: []
 --- !u!1 &339360881
 GameObject:
   m_ObjectHideFlags: 0
@@ -24473,7 +24471,7 @@ PrefabInstance:
     - target: {fileID: 5750158264389596182, guid: 953785e2d0656f848bbd5e24083beedb, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: fddaa9eaaac2d4c24a934aafcaaa06c5, type: 2}
+      objectReference: {fileID: 9100000, guid: 0bf90dd2fdc484c7bb5e554a34dd2fea, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

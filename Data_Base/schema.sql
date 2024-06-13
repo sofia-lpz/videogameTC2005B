@@ -77,6 +77,7 @@ create table stats(
     least_used_villager VARCHAR(50) NOT NULL DEFAULT 'none',
     memories_found SMALLINT NOT NULL DEFAULT 0,
     matches_won SMALLINT NOT NULL DEFAULT 0,
+    total_matches_played SMALLINT NOT NULL DEFAULT 0,
 
     primary key (username),
     constraint stats_player foreign key (username) references player(username) on delete restrict on update cascade,
