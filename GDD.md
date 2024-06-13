@@ -86,10 +86,6 @@ The player will navigate a 2D pixel art map of the town from a top-down angle us
 
 When the player encounters a character, a 1v1 card match begins. There are two types of cards: character cards and action cards.
 
-1. Reason beats Terror
-2. Terror beats Dream
-3. Dream beats Reason
-
 There are 3 elements that the characters cards will have, Terror, Dream, and Reason. If the element is countered, the winning element will make more damage and receive less damage. The elements synergy is the following:
 1. Terror beats Dream
 2. Dream beats Reason
