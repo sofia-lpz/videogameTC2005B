@@ -64,6 +64,17 @@ END //
 DELIMITER ;
 
 DELIMITER //
+CREATE TRIGGER update_total_cards_used
+AFTER INSERT ON card_use
+FOR EACH ROW
+BEGIN
+    UPDATE stats 
+    SET total_cards_used = total_cards_used + 1 
+    WHERE username = NEW.username;
+END //
+DELIMITER ;
+
+DELIMITER //
 CREATE TRIGGER create_stats
 AFTER INSERT ON player
 FOR EACH ROW
