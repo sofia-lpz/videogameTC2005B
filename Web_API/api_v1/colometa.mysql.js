@@ -319,10 +319,7 @@ async function getMatchResults() {
 
 async function getCardUse() {
   let connection = null;
-  let query = `SELECT card.name, SUM(card_use.times_used) as total_used 
-               FROM card_use 
-               INNER JOIN card ON card_use.cardId = card.cardId 
-               GROUP BY card.name`;
+  let query = `select * from card_use_view`;
   try {
     connection = await connectToDB();
     const [results, _] = await connection.query(query);
@@ -341,10 +338,7 @@ async function getCardUse() {
 
 async function getVillagerUse() {
   let connection = null;
-  let query = `SELECT villager.name, SUM(villager_use.times_used) as total_used 
-               FROM villager_use 
-               INNER JOIN villager ON villager_use.villager_id = villager.villager_id 
-               GROUP BY villager.name`;
+  let query = `SELECT * from villager_use_view`;
   try {
     connection = await connectToDB();
     const [results, _] = await connection.query(query);

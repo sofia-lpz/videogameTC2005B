@@ -95,3 +95,15 @@ create table global_stats(
     memories_found_avg SMALLINT NOT NULL,
     primary key (global_stats_id)
 ) engine=myisam DEFAULT CHARSET=utf8mb4;
+
+create view villager_use_view
+SELECT villager.name, SUM(villager_use.times_used) as total_used 
+FROM villager_use 
+INNER JOIN villager ON villager_use.villager_id = villager.villager_id 
+GROUP BY villager.name;
+
+create view card_use_view
+SELECT card.name, SUM(card_use.times_used) as total_used 
+FROM card_use 
+INNER JOIN card ON card_use.cardId = card.cardId 
+GROUP BY card.name;
