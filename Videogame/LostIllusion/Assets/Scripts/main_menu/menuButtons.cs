@@ -49,7 +49,13 @@ public class menuButtons : MonoBehaviour
     public void startGameNOAUTH()
     {
         audioSource.Play();
-        SceneManager.LoadScene(nextSceneMenu, LoadSceneMode.Single);
+        SceneManager.LoadScene("tutorial_map", LoadSceneMode.Single);
+    }
+
+    public void startMatch()
+    {
+        audioSource.Play();
+        SceneManager.LoadScene("COLOMETA", LoadSceneMode.Single);
     }
 
     public void startDEV()

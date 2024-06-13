@@ -54,7 +54,7 @@ public class tcgData
       {"GLASSES", Resources.Load<Sprite>("cardSprites/COOL_GLASSES")},
       {"FIRST AID KIT", Resources.Load<Sprite>("cardSprites/FIRST_AID_KIT")},
       {"FLASHLIGHT", Resources.Load<Sprite>("cardSprites/FLASHLIGHT")},
-      {"FRIENDSHIP BRACELET", Resources.Load<Sprite>("cardSprites/FRIENDSHIP_BRACELET")},
+      {"FRIEND BRACELET", Resources.Load<Sprite>("cardSprites/FRIENDSHIP_BRACELET")},
       {"FRYING PAN", Resources.Load<Sprite>("cardSprites/FRYING_PAN")},
       {"GARDEN SHEARS", Resources.Load<Sprite>("cardSprites/GARDEN_SHEARS")},
       {"GRAPE SODA", Resources.Load<Sprite>("cardSprites/GRAPE_SODA")},

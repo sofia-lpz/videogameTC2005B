@@ -22,6 +22,13 @@ public class npcMovement : Character_Movement
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
             if (Vector2.Distance(transform.position, targetPosition) < 0.001f)
             {
+                // If the point is named "destroy", destroy the GameObject
+                if (points[pointsIndex].name == "destroy")
+                {
+                    routineDone = true;
+                    Destroy(gameObject);
+                    return;
+                }
                 pointsIndex++;
             }
             Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;

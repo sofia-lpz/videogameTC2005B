@@ -30,7 +30,7 @@ insert into card (cardId, name, energy_cost, effect, type, description, player_h
 
 ('7', 'BRACELET', 1, 'defense', 'skill', 'increases defense by 1 point', 0, 0, 1, 0, 0, 0),
 ('17', 'GLASSES', 1, 'defense', 'skill', 'increases defense by 1 point', 0, 0, 1, 0, 0, 0),
-('18', 'FRIENDSHIP BRACELET', 1, 'defense', 'skill', 'decreases the enemy defense by 1 point', 0, 0, 0, 0, 1, 0),
+('18', 'FRIEND BRACELET', 1, 'defense', 'skill', 'decreases the enemy defense by 1 point', 0, 0, 0, 0, 1, 0),
 ('19', 'PRETTY BOW', 2, 'defense', 'skill', 'decreases the enemy defense by 2 points', 0, 0, 0, 0, 2, 0),
 
 ('6', 'RABBIT FOOT', 1, 'support', 'skill', 'increases attack by 1 point', 0, 0, 0, 1, 0, 0),

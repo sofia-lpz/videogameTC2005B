@@ -262,7 +262,7 @@ MonoBehaviour:
   dialogueCanvasPrefab: {fileID: 4481119704672500748, guid: 5fc3c12f47e90df49bfc97526a031b82, type: 3}
   CutsceneCanvasPrefab: {fileID: 7323745493855922601, guid: af9f06769d51559419ee30b3acdf340a, type: 3}
   fadeOutCanvasPrefab: {fileID: 6254759040623284243, guid: 8eb75fbc4a498054cb0d80a0070dce23, type: 3}
-  nextScene: COLOMETA
+  nextScene: Outside
 --- !u!1 &1035016093
 GameObject:
   m_ObjectHideFlags: 0
