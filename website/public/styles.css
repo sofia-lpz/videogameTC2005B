@@ -64,6 +64,13 @@ nav ul li a:hover {
     background-color: #1e1e1e;
 }
 
+.block-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 40px;
+  }
+  
 /* Contenedor Unity */
 #unityContainer {
     width: 100%;
