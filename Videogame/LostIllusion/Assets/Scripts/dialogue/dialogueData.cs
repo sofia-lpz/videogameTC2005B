@@ -213,7 +213,7 @@ public static List<List<string>> narrator_lines = new List<List<string>> {
 /*WOMAN LINES START*/
 
 public static List<string> woman_lines_1 = new List<string> {
-    player_username.ToUpper() + "!",
+    player_username + "!",
     "HAVE YOU SEEN MY DAUGHTER?",
     "She never came back from the magic show",
     "You-You were there, have you seen her?!",
@@ -256,10 +256,10 @@ public static List<List<string>> centipede_lines = new List<List<string>> {
 
 /*Adrian lines*/
 public static List<string> adrian_lines_1 = new List<string> {
-    "Ah!" + player_username,
+    "Ah! " + player_username,
     "Theres a...! We have to go!",
     "What?",
-    "Im not hallucinating," + player_username + "!",
+    "Im not hallucinating!",
     "This is not a game!",
     "Fine, do whatever you like! I'm leaving!"
 };
@@ -283,6 +283,36 @@ public static List<List<string>> girl_lines = new List<List<string>> {
     girl_lines_1
 };
 
+/*motherEvent comment lines*/
+public static List<string> motherEvent_lines_1 = new List<string> {
+    "Is she hallucinating too?",
+    "You better look for the girl anyway"
+};
+
+public static List<List<string>> motherEvent_lines = new List<List<string>> {
+    motherEvent_lines_1
+};
+
+/*runningEvent comment lines*/
+public static List<string> runningEvent_lines_1 = new List<string> {
+    "He came from the forest over there"
+};
+
+public static List<string> runningEvent_lines_2 = new List<string> {
+    "Maybe you should keep looking for clues out here"
+};
+
+public static List<string> runningEvent_lines_3 = new List<string> {
+        "It's probably nothing... but",
+        "Maybe there's someone that needs help out there"
+};
+
+public static List<List<string>> runningEvent_lines = new List<List<string>> {
+    runningEvent_lines_1,
+    runningEvent_lines_2,
+    runningEvent_lines_3
+};
+
 
 // to do, make a dictionary of dictionaries instead of dictionary of lists
 public static Dictionary<string, List<List<string>>> dialoguesDictionary = new Dictionary<string, List<List<string>>> {
@@ -296,7 +326,9 @@ public static Dictionary<string, List<List<string>>> dialoguesDictionary = new D
     {"cutsceneStart", cutsceneStart_lines},
     {"centipede", centipede_lines},
     {"ADRIAN", adrian_lines},
-    {"GIRL", girl_lines}
+    {"GIRL", girl_lines},
+    {"motherEvent", motherEvent_lines},
+    {"runningEvent", runningEvent_lines}
 };
 
 public static List<string> scaryLines = new List<string> {

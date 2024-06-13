@@ -25,6 +25,7 @@ public class npcMovement : Character_Movement
                 // If the point is named "destroy", destroy the GameObject
                 if (points[pointsIndex].name == "destroy")
                 {
+                    routineDone = true;
                     Destroy(gameObject);
                     return;
                 }

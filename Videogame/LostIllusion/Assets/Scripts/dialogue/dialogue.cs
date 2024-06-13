@@ -19,7 +19,7 @@ public class dialogue : MonoBehaviour
     [SerializeField] TextMeshProUGUI dialogueBox;
     [SerializeField] TextMeshProUGUI dialogueName;
     List<string> lines;
-    float textSpeed = 0.05f;
+    float textSpeed = 0.025f;
     float elipsisSpeed = 0.3f;
     int index;
     AudioSource audioSource;
@@ -63,7 +63,7 @@ public class dialogue : MonoBehaviour
     // Update is called once per frame
     public virtual void Update()
     {
-        audioSource.volume = stateNameController.volume;
+        audioSource.volume = stateNameController.volume * 0.33f;
         
         if (stateNameController.gamePaused){
             StopAllCoroutines();

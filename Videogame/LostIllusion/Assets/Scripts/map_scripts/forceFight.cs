@@ -64,7 +64,7 @@ void onFight(GameObject other)
         
         //dialogueCanvas.GetComponent<dialogue>().Initialize(gameObject.name, dialogueIndex);
 
-        UnityEngine.SceneManagement.SceneManager.LoadScene("characterSelection");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("match_CENTIPEDE");
     }
 }
 

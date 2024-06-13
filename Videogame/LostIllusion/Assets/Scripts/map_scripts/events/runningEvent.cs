@@ -29,9 +29,26 @@ public class runningEvent : eventManager
     private IEnumerator WaitForDialogues()
     {
         yield return new WaitUntil(() => npcMovement.routineDone);
+        narratorCanvas = Object.Instantiate(descriptionCanvasPrefab);
+        narratorCanvas.GetComponent<dialogue>().Initialize("runningEvent", 0);
+
+        yield return new WaitUntil(() => narratorCanvas == null);
+
+        bool containsCutscene2 = stateNameController.playedCutscenes.Contains("cutscene2");
+        bool containsCutscene3 = stateNameController.playedCutscenes.Contains("cutscene3");
+        bool containsCutscene4 = stateNameController.playedCutscenes.Contains("cutscene4");
 
         narratorCanvas = Object.Instantiate(descriptionCanvasPrefab);
-        narratorCanvas.GetComponent<dialogue>().Initialize("COLOMETA", 1);
+        if (containsCutscene2 && containsCutscene3 && containsCutscene4)
+        {
+            Debug.Log("All cutscenes played");
+            narratorCanvas.GetComponent<dialogue>().Initialize("runningEvent", 2);
+        }
+        else
+        {
+            Debug.Log("Not all cutscenes played");
+            narratorCanvas.GetComponent<dialogue>().Initialize("runningEvent", 1);
+        }
     }
 }
 

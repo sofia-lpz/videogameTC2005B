@@ -32,7 +32,7 @@ public class motherEvent : eventManager
         yield return new WaitUntil(() => npcFollowPlayerAndBack.routineDone);
 
         narratorCanvas = Object.Instantiate(descriptionCanvasPrefab);
-        narratorCanvas.GetComponent<dialogue>().Initialize("COLOMETA", 1);
+        narratorCanvas.GetComponent<dialogue>().Initialize("motherEvent", 0);
     }
 }
 

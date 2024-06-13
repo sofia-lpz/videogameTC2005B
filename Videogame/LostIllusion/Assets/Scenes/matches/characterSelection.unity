@@ -556,7 +556,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 386901238}
         m_TargetAssemblyTypeName: menuButtons, Assembly-CSharp
-        m_MethodName: startDEV
+        m_MethodName: startMatch
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -962,7 +962,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start Match
+  m_text: 'CONTINUE
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 817a791b8f28d7c4f815d7985ee13db5, type: 2}
   m_sharedMaterial: {fileID: 5337005374529218324, guid: 817a791b8f28d7c4f815d7985ee13db5, type: 2}
