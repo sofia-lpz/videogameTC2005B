@@ -1,4 +1,4 @@
-# **Lost illusion**
+# **Searching for Colometa**
 
 ## _Game Design Document_
 
@@ -78,57 +78,51 @@ How will the player interact with the game? Will they be able to choose the cont
 
 ### **Mechanics**
 
-- Map (might be scrapped due to time constraints)
+- Map
 
-The player will be able to navigate a 2d pixel art map of the town in a top down angle using their arrow keys. They will be able to find objects in the map which can later be used in the card matches. They will also encounter characters as they progress through the map who they can interact with for the card matches. Because of the players distorted perception these characters might appear as fantastical beings, and act erratically because of their own distorted perceptions.
+The player will be able to navigate a 2D pixel art map of the town in a top down angle using their arrow keys. They will be able to find objects in the map which will trigger memories. They will also encounter characters as they progress through the map who they can interact with. Because of the players distorted perception these characters might appear as fantastical beings, and act erratically because of their own distorted perceptions.
 
 - TCG
 
-When the player encounters a character a 1v1 card match will start. There are 2 types of cards, the character cards and the action cards.
+When the player encounters an enemy a 1v1 card match will start. There are 2 types of cards, the character cards and the action cards.
 
-First, they will choose 3 characters cards from the characters cards they have in their inventory. Their deck will be made up of the action cards they've collected during the exploration part of the game and some will be predetermined. They are in the players inventory. Each character card has 10 health points.
+First, they will choose 2 characters cards from the characters cards that there . Their deck will be predetermined and the cards the player draws will be randomized. Each character card has 10 health points, a defense bar that has a maximum value of 5 and an attack value that has a maximum value of 3. Initial deffense and attack values will depend from the element of the character. The attack value will increase the damage by adding this value to the damage of the attack card that is played. The defense value will decrease by 1 every time the active character is being attacked and will reduce the incoming damage to the half.
 
 <p align="center">
   <img src="/Videogame/LostIllusion/Assets/Sprites/Preview.PNG" width="500" height="300">
 </p>
 
-There are 4 elements that the characters cards will have, fire, water, snow, air. If the element is countered, the winning element will make more damage and receive less damage. The elements synergy is the following:
-1. Fire beats Snow
-2. Snow beats Water
-3. Water beats Fire
-4. Air doesn't have a counter nor can counter other element, this will be explained later.
+There are 3 elements that the characters cards will have, Terror, Dream, and Reason. If the element is countered, the winning element will make more damage and receive less damage. The elements synergy is the following:
+1. Terror beats Dream
+2. Dream beats Reason
+3. Reason beats Terror
    
 <p align="center">
   <img src="/Videogame/LostIllusion/Assets/Sprites/ElementSynergy.png" width="500" height="300">
 </p>
 
-After selecting the 3 character cards, there will be a coin toss to decide which player starts their turn first, after this both players will roll 2 dice to determine the energy that they will have that turn, the energy will be used to use action cards, this will have an energy cost, the player can play all the cards they want, it is limited by the energy. After rolling the dice, both players at the same time will choose their active character. The player can choose the active character at any time but it will have energy cost to switch active characters.
+After selecting the 2 character cards, there will be a coin toss to decide which player starts their turn first, after this both players will have the energy that they will have that turn randomized, the energy will be used to use action cards, this will have an energy cost, the player can play all the cards they want, it is limited by the energy. The active character will be the first character that they choose. The player can choose the active character when it is their turn but it will have energy cost of 1 to switch active characters and will  only be able to do it once per turn.
 
 <p align="center">
   <img src="/Videogame/LostIllusion/Assets/Sprites/Dado.png" width="300" height="300">
 </p>
 
-Each character card will have a passive ability, depending on their role, the roles will be: dps, tank, support. Some examples of the passive abilities are:
-1. DPS character that his passive ability is to deal more damage of its element
-2. Tank character that when its attacked provides a shield
-3. Support character that if a character receives a lethal strike, this means that his health points reach zero, the character revives with 3 health points.
+Each character card will have a role, depending on their element, the roles will be: dps, tank, support. This goes like this:
+1. DPS characters will be the element Terror characters that will have 2 initial attack points but no initial defense points.
+2. Tank character will be the element Dream characters that will have 3 initial defense points but no initial attack points.
+3. Support character will be the element Reason characters that will have 1 initial attack point and 1 initial defense point. 
 
 <p align="center">
   <img src="/Videogame/LostIllusion/Assets/Sprites/Cartasmesa2.PNG" width="500" height="300">
 </p>
 
-The action cards will help to do the actions the character will do, within the action cards there are many actions that can be made, there are cards to attack the character card of the opponent, other to heal your current active character, other to buff the attack damage of the main character, and other to apply defense to your current active character. Also, some of the action cards will have an element, this will be for various purposes such as:
-1. For damage buffs, the card will only buff the damage of the element that the card has.
-2. For defense, the cards will apply defense against the element that the card has.
-3. For attack, the cards will attack causing damage of that element.
+The action cards will help to do the actions the character will do, within the action cards there are many actions that can be made, there are cards to attack the active character card of the opponent, other to heal your current active character, other to increase the attack points of the active character, other to decrease the attack points of the active enemy character, other to decrease the defense points of the active enemy character, other to apply defense to your current active character, and other to skip the enemy turn.
 
 <p align="center">
   <img src="/Videogame/LostIllusion/Assets/Sprites/Poderes2.PNG" width="500" height="300">
 </p>
 
- If the player uses the action card that has the same element as the active character it will produce a succesful attack that will apply the element effect on the opponent, this will help for the wind element, when the wind element attacks a character card that has an element effect, it will produce damage of that element to the character cards. If a player uses attack action card that the element of the card does not match the element of the active character, the damage will be decreasen and the element effect won't be applied.
-
- If the player has not enough energy points to use a card or doesn't want to use his energy points, he can end his turn. Every turn, both players will draw 2 cards from their deck, the cards will be random, also each round the energy points will be restarted and the dice will be rolled once again. The player that first defeats the 3 character cards of the other player, will win.
+ If the player has not enough energy points to use a card or doesn't want to use his energy points, he can end his turn. Every turn, both players will draw 3 cards from their deck, the cards will be random, also each round the energy points will be restarted and randomized once again. When a player is defeated, automatically it will change to the other character if this has not been defeated. The player that first defeats the 2 character cards of the other player, will win.
 
 
 ## _Level Design_
