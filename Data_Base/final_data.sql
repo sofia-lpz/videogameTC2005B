@@ -12,10 +12,10 @@ insert into villager (name, description, element) values
 ('BUNNY', 'A bluejay that is always flying', 'Dream');
 
 insert into card (cardId, name, energy_cost, effect, type, description, player_health, player_attack, player_defense, player_support, enemy_defense, enemy_attack) values
-('1', 'BANDAGE', 3, 'healing', 'snack', 'drinking this grants 3 hp', 3, 0, 0, 0, 0, 0),
-('2', 'FIRST AID KIT', 1, 'healing', 'snack', 'eating this grants 1 hp', 1, 0, 0, 0, 0, 0),
-('3', 'CANDY', 2, 'healing', 'snack', 'this candy grants 2 hp', 2, 0, 0, 0, 0, 0),
-('4', 'GRAPE SODA', 3, 'healing', 'skill', 'apply and heal 3 hp', 3, 0, 0, 0, 0, 0),
+('1', 'BANDAGE', 3, 'healing', 'snack', 'Using this grants 3 hp', 3, 0, 0, 0, 0, 0),
+('2', 'FIRST AID KIT', 1, 'healing', 'snack', 'Using this grants 1 hp', 1, 0, 0, 0, 0, 0),
+('3', 'CANDY', 2, 'healing', 'snack', 'This candy grants 2 hp', 2, 0, 0, 0, 0, 0),
+('4', 'GRAPE SODA', 3, 'healing', 'skill', 'drink and heal 3 hp', 3, 0, 0, 0, 0, 0),
 
 ('5', 'KNIFE', 3, 'attack', 'skill', 'deals 3 damage points to the opponent', 0, 3, 0, 0, 0, 0),
 ('11', 'BAT', 2, 'attack', 'weapon', 'deals 2 damage to the opponent', 0, 2, 0, 0, 0, 0),

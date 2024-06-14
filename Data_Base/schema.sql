@@ -78,6 +78,7 @@ create table stats(
     memories_found SMALLINT NOT NULL DEFAULT 0,
     matches_won SMALLINT NOT NULL DEFAULT 0,
     total_matches_played SMALLINT NOT NULL DEFAULT 0,
+    total_cards_used SMALLINT NOT NULL DEFAULT 0,
 
     primary key (username),
     constraint stats_player foreign key (username) references player(username) on delete restrict on update cascade,
