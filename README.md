@@ -10,11 +10,10 @@ Confirmacion dice: "Pronostico escuchando en puerto 3000"
 
 5. Entrar a la carpeta website
 6.  iniciar un proyecto de node e instalar las dependencias
-en una terminal dentro de website, mandar el comando "npm run dev"
+en una terminal dentro de /website, mandar el comando "npm run dev"
 
 Los botones estan desactivados y se activan cuando se hace una request correcta a la api
-Start tiene una funcion que ignora la autentificacion y directamente deja comenzar el juego para facilitar el desarrollo
-sin embargo login da un mensaje de error o exito de autentificacion
+
 user: player
 contraseña: admin
 
