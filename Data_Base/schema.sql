@@ -12,7 +12,7 @@ create table villager(
     villager_id SMALLINT NOT NULL AUTO_INCREMENT,
     name varchar(50) NOT NULL,
     description varchar(100) NOT NULL,
-    element enum('Reason', 'Dream', 'Terror', 'Ennui', 'Spirit') NOT NULL,
+    element enum('Reason', 'Dream', 'Terror') NOT NULL,
     primary key (villager_id)
 ) engine=InnoDB DEFAULT CHARSET=utf8mb4;
 
