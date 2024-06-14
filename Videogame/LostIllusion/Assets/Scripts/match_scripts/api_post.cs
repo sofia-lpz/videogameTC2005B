@@ -35,12 +35,12 @@ public IEnumerator PostMatchesData(string username, bool won){
 
         if (www.result != UnityWebRequest.Result.Success)
         {
-            Debug.Log("Post failed: " + www.error);
+            Debug.Log("Match Post failed: " + www.error);
         }
         else
         {
             string result = www.downloadHandler.text;
-            Debug.Log("Post successful: " + result);
+            Debug.Log("Match Post successful: " + result);
         }
     }
 }
@@ -69,12 +69,12 @@ public IEnumerator PostCardUseData(){
 
         if (www.result != UnityWebRequest.Result.Success)
         {
-            Debug.Log("Post failed: " + www.error);
+            Debug.Log("Card Post failed: " + www.error);
         }
         else
         {
             string result = www.downloadHandler.text;
-            Debug.Log("Post successful: " + result);
+            Debug.Log("Card Post successful: " + result);
         }
     }
 
@@ -104,12 +104,12 @@ public IEnumerator PostVillagerUseData(){
 
         if (www.result != UnityWebRequest.Result.Success)
         {
-            Debug.Log("Post failed: " + www.error);
+            Debug.Log("Villager use Post failed: " + www.error);
         }
         else
         {
             string result = www.downloadHandler.text;
-            Debug.Log("Post successful: " + result);
+            Debug.Log("Villager use Post successful: " + result);
         }
     }
 

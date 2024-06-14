@@ -591,7 +591,7 @@ public class TCG_Controller : MonoBehaviour
         Apipost.postMatchData(true);
         Apipost.postCardUse();
         resultHandler.match_won();
-        StartCoroutine(LoadScene("COLOMETA"));
+        StartCoroutine(LoadScene("youWincutscene"));
     }
 
     public void EnemyWins()
