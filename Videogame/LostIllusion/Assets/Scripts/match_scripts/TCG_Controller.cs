@@ -60,7 +60,7 @@ public class TCG_Controller : MonoBehaviour
         Apipost = GetComponent<api_post>();
         tcgData.villagerUsesCount[tcgData.pickedCharacters[0]] += 1;
         tcgData.villagerUsesCount[tcgData.pickedCharacters[1]] += 1;
-        Apipost.postVillagerUse();
+        //Apipost.postVillagerUse();
         feedbackscript = GetComponent<tcgFeedback>();
         
         currentTurn = (Turn)Random.Range(0, 2);
@@ -588,8 +588,8 @@ public class TCG_Controller : MonoBehaviour
     {
         feedbackscript.ShowFeedback("You win!");
         gameOver = true;
-        Apipost.postMatchData(true);
-        Apipost.postCardUse();
+        //Apipost.postMatchData(true);
+        //Apipost.postCardUse();
         resultHandler.match_won();
         StartCoroutine(LoadScene("youWincutscene"));
     }
@@ -598,8 +598,8 @@ public class TCG_Controller : MonoBehaviour
     {
         feedbackscript.ShowFeedback("You lose!");
         gameOver = true;
-        Apipost.postMatchData(false);
-        Apipost.postCardUse();
+        //Apipost.postMatchData(false);
+        //Apipost.postCardUse();
         resultHandler.match_lost();
         StartCoroutine(LoadScene("gameOver"));
     }

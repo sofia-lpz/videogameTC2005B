@@ -15,7 +15,7 @@ public class stateNameController : MonoBehaviour
     public static List<Player> Players = new List<Player>();
     public static string playerStatus = "None";
 
-    public static string player_username = "nombre de usuario";
+    public static string player_username = "Merce";
 
     public static List<string> inventory = new List<string>();
 
@@ -53,7 +53,7 @@ public class stateNameController : MonoBehaviour
 
     public static void resetAllValues(){
         playerStatus = "None";
-        player_username = "nombre de usuario";
+        player_username = "Merce";
         inventory = new List<string>();
         gamePaused = false;
         freezePlayer = false;

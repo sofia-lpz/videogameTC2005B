@@ -11,7 +11,7 @@ public class mainManuManager : MonoBehaviour
 
     public void Start()
     {
-        startButton.interactable = false; // disable the button
+        startButton.interactable = true; // disable the button
         loginButton.interactable = false; // disable the button
         registerButton.interactable = false; // disable the button
     }
